@@ -1,0 +1,70 @@
+﻿
+本系统界面颜色值：
+
+蓝浅：	#1FA3D7  RGB(31,163,215)
+蓝深：	#0F0864  RGB(15,8,100)
+
+深红色：	#DA1212  RGB(218,18,18)
+黄色：		#FAC608  RGB(250,198,8)
+
+警告橙色:	#FA9E00  RGB(250,158,0)
+
+绿色：		#008000	RGB(0,128,0) 或 Color.Green
+
+1、数据库命名规范
+	数据库名以“db_”开头，后面加数据库相关英文单词或缩写，如db_ALS；
+	数据表名以“tb_”开头，后面加数据表相关英文单词或缩写,如tb_users；
+	字段一律采用英文单词或词组；
+	视图命名以字母"view_"开头，后面跟该视图英文单词或缩写；
+	存储过程以字母"proc_"开头，后面跟该存储过程英文单词或缩写；
+	触发器以"trig_"开头，后面跟该触发器英文名称；
+2、程序代码命名规范
+	模块级变量： M_+数据类型简写+变量名称  如 ： M_str_username,M_frm_Method;
+	全局变量：   G_+数据类型简写+变量名称  如 ： G_int_count,G_frm_Pipeline;
+	局部变量：   P_+数据类型简写+变量名称  如 ： P_dbl_sl;
+
+	模块级常量： Mc_+数据类型简写+变量名称  如 ： Mc_str_username,Mc_frm_Method;
+	全局常量：   Gc_+数据类型简写+变量名称  如 ： Gc_int_count,Gc_frm_Pipeline;
+	局部常量：   Pc_+数据类型简写+变量名称  如 ： Pc_dbl_sl;
+3、数据类型简写规则
+	整型：int
+	字符串：str
+	布尔型：bl
+	短整型：sint
+	长整形：lint
+	单精度型:flt
+	双精度型：dbl
+	字节型：bt
+4、控件命名规则
+	Form			frm
+	TextBox			txt
+	Button			btn
+	ComboBox		cbox
+	Label			lbl
+	DataGridView	dgv
+	ListBox			lb
+	Timer			tmr
+	CheckBox		chb
+	LinkLabel		llbl
+	RichTextBox		rtbox
+	CheckedListBox	clbox
+	RadioButton		rbtn
+	NumericUpDown	nudown
+	Panel			pl
+	GroupBox		gbox
+	TabControl		tcl
+	ErrorProvider	epro
+	ImageList		ilist
+	Helprovider		hpro
+	ListView		lv
+	TreeView		tv
+	Picture			pbox
+	NotifyIcon		nicon
+	DateTimePicker	dtpicker
+	MonthCalendar	mcalen
+	ToolTip			ttip
+	ProgressBar		pbar
+
+
+
+

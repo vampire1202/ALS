@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E11FA1AF-BF46-458B-884A-4089B6C1EAC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ALSUI</RootNamespace>
+    <AssemblyName>ALSUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uc\A1Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="uc\A1Panel.Designer.cs">
+      <DependentUpon>A1Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc\A1PanelGraphics.cs" />
+    <Compile Include="uc\Globals.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD1Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD2Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD3Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AD4off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battery1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BPRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BPStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonfacesel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHDF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHDF2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHDF3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHDF4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHDF5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHDFTreat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_yellow_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipclose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipkeep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipopen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipstate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPEFA装管图11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DPRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DPStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FP2Run.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FP2Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FPRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FPStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotoff_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoton_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jiuxu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ldoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ldon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lials.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALS9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiALSTreat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\otherset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pattern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDFTreat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PE5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERT1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERT2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERT3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERT4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERT5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERT6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERTTreat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PETreat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipeline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PP1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PP2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PP3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PP4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PP5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PPTreat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\releasewarn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RPRun.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RPStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Set64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SetSyringe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SKL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp20off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp20on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp30off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp30off_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp30on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp30on_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp50off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp50on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spstart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spstop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syringe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tingzhi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treatment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warn_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warn_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yunxing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zanting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhiliaozhong.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zhunbei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

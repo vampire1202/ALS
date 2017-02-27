@@ -1,0 +1,862 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F717F720-4D14-4A31-B422-789963335EE6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ALS</RootNamespace>
+    <AssemblyName>ALS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>a5e0b9a3</NuGetPackageImportStamp>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>李氏人工肝支持系统</ProductName>
+    <PublisherName>威海威高生命科技有限公司</PublisherName>
+    <MinimumRequiredVersion>2.0.0.1</MinimumRequiredVersion>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ALS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>738186569F344A4712337BD7CC489605E4EC6B47</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ALS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cls\calsyringepump.cs" />
+    <Compile Include="Cls\clsSysWarn.cs" />
+    <Compile Include="Cls\Comm_pumpstatus.cs" />
+    <Compile Include="Cls\ControlClone.cs" />
+    <Compile Include="Cls\DrawingCurve.cs" />
+    <Compile Include="Cls\Comm_Main.cs" />
+    <Compile Include="Cls\Comm_PeristalticPump.cs" />
+    <Compile Include="Cls\Method_Config.cs" />
+    <Compile Include="Cls\Model_Balance.cs" />
+    <Compile Include="Cls\Model_CustomCMD.cs" />
+    <Compile Include="Cls\Model_MethodLstTsCmd.cs" />
+    <Compile Include="Cls\Model_PatientInfo.cs" />
+    <Compile Include="Cls\Model_SendCMD.cs" />
+    <Compile Include="Cls\Model_State.cs" />
+    <Compile Include="Cls\Model_PumpState.cs" />
+    <Compile Include="Cls\Model_Set.cs" />
+    <Compile Include="Cls\Model_TimeAndCmd.cs" />
+    <Compile Include="Cls\Model_Total.cs" />
+    <Compile Include="Cls\Model_TotalFlush.cs" />
+    <Compile Include="Cls\Model_TransData.cs" />
+    <Compile Include="Cls\Model_Value.cs" />
+    <Compile Include="Cls\Model_AlarmInfo.cs" />
+    <Compile Include="Cls\Model_ShowWarn.cs" />
+    <Compile Include="Cls\Model_WarnValue.cs" />
+    <Compile Include="Cls\ssf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cls\ssf.Designer.cs">
+      <DependentUpon>ssf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cls\StatusProgress.cs" />
+    <Compile Include="Cls\ReadMainComm.cs" />
+    <Compile Include="Cls\RWconfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cls\Comm_SyringePump.cs" />
+    <Compile Include="Cls\ToolStripEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cls\TransparentListbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cls\utils.cs" />
+    <Compile Include="DataGridViewExs\ColumnEx\DataGridViewButtonCellEx.cs" />
+    <Compile Include="DataGridViewExs\ColumnEx\DataGridViewButtonColumnEx.cs" />
+    <Compile Include="DataGridViewExs\ColumnEx\DataGridViewCheckBoxColumnEx.cs" />
+    <Compile Include="DataGridViewExs\CommonEx\RectangeCommon.cs" />
+    <Compile Include="DataGridViewExs\DataGridViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridViewExs\EventArgsEx\DataGridViewButtonClickEventArgs.cs" />
+    <Compile Include="DataGridViewExs\EventsEx\DataGridViewEventHandlersEx.cs" />
+    <Compile Include="FormOperation\step_PDF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\step_PDF.Designer.cs">
+      <DependentUpon>step_PDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\step_LiALS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\step_LiALS.Designer.cs">
+      <DependentUpon>step_LiALS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\step_CHDF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\step_CHDF.Designer.cs">
+      <DependentUpon>step_CHDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\step_PP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\step_PP.Designer.cs">
+      <DependentUpon>step_PP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\step_PE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\step_PE.Designer.cs">
+      <DependentUpon>step_PE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\step_PERT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\step_PERT.Designer.cs">
+      <DependentUpon>step_PERT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\ucAutoFlush.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\ucAutoFlush.Designer.cs">
+      <DependentUpon>ucAutoFlush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\ucPipeLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\ucPipeLine.Designer.cs">
+      <DependentUpon>ucPipeLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\ucRecycle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\ucRecycle.Designer.cs">
+      <DependentUpon>ucRecycle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\ucSelectFlush.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\ucSelectFlush.Designer.cs">
+      <DependentUpon>ucSelectFlush.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\ucTreat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\ucTreat.Designer.cs">
+      <DependentUpon>ucTreat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOperation\ucWarnInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormOperation\ucWarnInfo.Designer.cs">
+      <DependentUpon>ucWarnInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSet\frmSetSyringe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSet\frmSetSyringe.Designer.cs">
+      <DependentUpon>frmSetSyringe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSet\ucSetOther.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormSet\ucSetOther.Designer.cs">
+      <DependentUpon>ucSetOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSet\ucSetLiquidSurface.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormSet\ucSetLiquidSurface.Designer.cs">
+      <DependentUpon>ucSetLiquidSurface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSet\ucSetSum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormSet\ucSetSum.Designer.cs">
+      <DependentUpon>ucSetSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSet\ucSetFlow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormSet\ucSetFlow.Designer.cs">
+      <DependentUpon>ucSetFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomAction.Designer.cs">
+      <DependentUpon>frmCustomAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealWarn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDealWarn.Designer.cs">
+      <DependentUpon>frmDealWarn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExit.Designer.cs">
+      <DependentUpon>frmExit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProgress.Designer.cs">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelTreatMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelTreatMode.Designer.cs">
+      <DependentUpon>frmSelTreatMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetMethod.Designer.cs">
+      <DependentUpon>frmSetMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowWarn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowWarn.Designer.cs">
+      <DependentUpon>frmShowWarn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWarn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWarn.Designer.cs">
+      <DependentUpon>frmWarn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogClass.cs" />
+    <Compile Include="Manager\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\A1Panel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\A1Panel.Designer.cs">
+      <DependentUpon>A1Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\A1PanelGraphics.cs" />
+    <Compile Include="UserCtrl\AGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\AGauge.Designer.cs">
+      <DependentUpon>AGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\ColorSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\ColorSlider.Designer.cs">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\ColorSliderBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\ColorSliderBar.Designer.cs">
+      <DependentUpon>ColorSliderBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\Globals.cs" />
+    <Compile Include="UserCtrl\MsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\MsgBox.Designer.cs">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\numButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\numButton.Designer.cs">
+      <DependentUpon>numButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\numPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\numPad.Designer.cs">
+      <DependentUpon>numPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\uc_p1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\uc_p1.Designer.cs">
+      <DependentUpon>uc_p1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\uc_p.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\uc_p.Designer.cs">
+      <DependentUpon>uc_p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\uc_PumpSpeed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\uc_PumpSpeed.Designer.cs">
+      <DependentUpon>uc_PumpSpeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtrl\uc_ShowTreatP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtrl\uc_ShowTreatP.Designer.cs">
+      <DependentUpon>uc_ShowTreatP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cls\ssf.resx">
+      <DependentUpon>ssf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\step_PDF.resx">
+      <DependentUpon>step_PDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\step_LiALS.resx">
+      <DependentUpon>step_LiALS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\step_CHDF.resx">
+      <DependentUpon>step_CHDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\step_PP.resx">
+      <DependentUpon>step_PP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\step_PE.resx">
+      <DependentUpon>step_PE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\step_PERT.resx">
+      <DependentUpon>step_PERT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\ucAutoFlush.resx">
+      <DependentUpon>ucAutoFlush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\ucPipeLine.resx">
+      <DependentUpon>ucPipeLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\ucRecycle.resx">
+      <DependentUpon>ucRecycle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\ucSelectFlush.resx">
+      <DependentUpon>ucSelectFlush.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\ucTreat.resx">
+      <DependentUpon>ucTreat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOperation\ucWarnInfo.resx">
+      <DependentUpon>ucWarnInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSet\frmSetSyringe.resx">
+      <DependentUpon>frmSetSyringe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSet\ucSetOther.resx">
+      <DependentUpon>ucSetOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSet\ucSetLiquidSurface.resx">
+      <DependentUpon>ucSetLiquidSurface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSet\ucSetSum.resx">
+      <DependentUpon>ucSetSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSet\ucSetFlow.resx">
+      <DependentUpon>ucSetFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomAction.resx">
+      <DependentUpon>frmCustomAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDealWarn.resx">
+      <DependentUpon>frmDealWarn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExit.resx">
+      <DependentUpon>frmExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgress.resx">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelTreatMode.resx">
+      <DependentUpon>frmSelTreatMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetMethod.resx">
+      <DependentUpon>frmSetMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowWarn.resx">
+      <DependentUpon>frmShowWarn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWarn.resx">
+      <DependentUpon>frmWarn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\ColorSliderBar.resx">
+      <DependentUpon>ColorSliderBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\numButton.resx">
+      <DependentUpon>numButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\numPad.resx">
+      <DependentUpon>numPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\uc_p1.resx">
+      <DependentUpon>uc_p1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\uc_p.resx">
+      <DependentUpon>uc_p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\uc_PumpSpeed.resx">
+      <DependentUpon>uc_PumpSpeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtrl\uc_ShowTreatP.resx">
+      <DependentUpon>uc_ShowTreatP.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ALS_TemporaryKey.pfx" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SKL.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pattern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syringe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treatment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp20off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp20on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\otherset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\releasewarn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipeline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warn_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warn_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_32.png" />
+    <None Include="Resources\right_32.png" />
+    <None Include="Resources\down_64.png" />
+    <None Include="Resources\up_64.png" />
+    <None Include="Resources\ldon.png" />
+    <None Include="Resources\ldoff.png" />
+    <None Include="Resources\AD4off.png" />
+    <None Include="Resources\AD1.png" />
+    <None Include="Resources\AD2.png" />
+    <None Include="Resources\AD3.png" />
+    <None Include="Resources\AD4.png" />
+    <None Include="Resources\Set64.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\homepage1.png" />
+    <None Include="Resources\error_96.png" />
+    <None Include="Resources\AD1Off.png" />
+    <None Include="Resources\AD2Off.png" />
+    <None Include="Resources\AD3Off.png" />
+    <None Include="Resources\net.png" />
+    <None Include="Resources\spstart.png" />
+    <None Include="Resources\spstop.png" />
+    <None Include="Resources\sp30off.png" />
+    <None Include="Resources\sp30on.png" />
+    <None Include="Resources\sp50off.png" />
+    <None Include="Resources\sp50on.png" />
+    <Content Include="DataBase\artificial_liver.sql" />
+    <Content Include="DataBase\db_als.sql" />
+    <Content Include="logo.ico" />
+    <Content Include="logo1.ico" />
+    <None Include="Resources\stop64.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\fast.png" />
+    <None Include="Resources\circle_yellow_s.png" />
+    <None Include="Resources\sp.png" />
+    <None Include="Resources\PP.png" />
+    <None Include="Resources\PP1.png" />
+    <None Include="Resources\PP2.png" />
+    <None Include="Resources\PP3.png" />
+    <None Include="Resources\PP4.png" />
+    <None Include="Resources\PP5.png" />
+    <None Include="Resources\PE1.png" />
+    <None Include="Resources\PE.png" />
+    <None Include="Resources\PE2.png" />
+    <None Include="Resources\PE3.png" />
+    <None Include="Resources\PE4.png" />
+    <None Include="Resources\PE5.png" />
+    <None Include="Resources\LiALS1.png" />
+    <None Include="Resources\LiALS2.png" />
+    <None Include="Resources\LiALS3.png" />
+    <None Include="Resources\LiALS4.png" />
+    <None Include="Resources\LiALS5.png" />
+    <None Include="Resources\LiALS6.png" />
+    <None Include="Resources\LiALS7.png" />
+    <None Include="Resources\LiALS8.png" />
+    <None Include="Resources\LiALS9.png" />
+    <None Include="Resources\buttonface.png" />
+    <None Include="Resources\set.png" />
+    <None Include="Resources\SetSyringe.png" />
+    <None Include="Resources\buttonfacesel.png" />
+    <None Include="Resources\hotoff_32.png" />
+    <None Include="Resources\hoton_32.png" />
+    <None Include="Resources\PETreat.png" />
+    <None Include="Resources\PPTreat.png" />
+    <None Include="Resources\CHDF.png" />
+    <None Include="Resources\CHDF1.png" />
+    <None Include="Resources\CHDF2.png" />
+    <None Include="Resources\CHDF3.png" />
+    <None Include="Resources\CHDF4.png" />
+    <None Include="Resources\CHDF5.png" />
+    <None Include="Resources\CHDFTreat.png" />
+    <None Include="Resources\LiALSTreat.png" />
+    <None Include="Resources\lials.png" />
+    <None Include="Resources\error_32.png" />
+    <None Include="Resources\info_32.png" />
+    <None Include="Resources\tml.png" />
+    <None Include="Resources\a_first.png" />
+    <None Include="Resources\a_previous.png" />
+    <None Include="Resources\a_next.png" />
+    <None Include="Resources\a_last.png" />
+    <None Include="Resources\clipclose.png" />
+    <None Include="Resources\clipopen.png" />
+    <None Include="Resources\clipstate.png" />
+    <None Include="Resources\battery.png" />
+    <None Include="Resources\battery1.png" />
+    <None Include="Resources\default.png" />
+    <None Include="Resources\PERT.png" />
+    <None Include="Resources\PERTTreat.png" />
+    <None Include="Resources\PERT1.png" />
+    <None Include="Resources\PERT2.png" />
+    <None Include="Resources\PERT3.png" />
+    <None Include="Resources\PERT4.png" />
+    <None Include="Resources\PERT5.png" />
+    <None Include="Resources\PERT6.png" />
+    <None Include="Resources\clipkeep.png" />
+    <None Include="Resources\PDF.png" />
+    <None Include="Resources\PDF1.png" />
+    <None Include="Resources\PDF2.png" />
+    <None Include="Resources\PDF3.png" />
+    <None Include="Resources\PDF4.png" />
+    <None Include="Resources\PDF5.png" />
+    <None Include="Resources\PDF6.png" />
+    <None Include="Resources\PDFTreat.png" />
+    <None Include="Resources\zhiliaozhong.gif" />
+    <None Include="Resources\jiuxu.png" />
+    <None Include="Resources\zhunbei.png" />
+    <None Include="Resources\zanting.png" />
+    <None Include="Resources\yunxing.gif" />
+    <None Include="Resources\tingzhi.png" />
+    <None Include="Resources\BPStop.png" />
+    <None Include="Resources\BPRun.gif" />
+    <None Include="Resources\CPRun.gif" />
+    <None Include="Resources\CPStop.png" />
+    <None Include="Resources\DPRun.gif" />
+    <None Include="Resources\DPStop.png" />
+    <None Include="Resources\FP2Run.gif" />
+    <None Include="Resources\FP2Stop.png" />
+    <None Include="Resources\FPRun.gif" />
+    <None Include="Resources\FPStop.png" />
+    <None Include="Resources\RPRun.gif" />
+    <None Include="Resources\RPStop.png" />
+    <None Include="Resources\sp30on_32.png" />
+    <None Include="Resources\sp30off_32.png" />
+    <None Include="Resources\logo_wego.png" />
+    <None Include="Resources\logo_ccid.png" />
+    <None Include="Resources\logo_zheyi.png" />
+    <None Include="Resources\logo_wg2.png" />
+    <None Include="Resources\logo_zheyi2.png" />
+    <None Include="Resources\ready.png" />
+    <None Include="Resources\LiALSFlush.png" />
+    <None Include="Resources\huishou.png" />
+    <None Include="Resources\StepLi_1.png" />
+    <None Include="Resources\StepLi_2.png" />
+    <None Include="Resources\stepLi_3.png" />
+    <None Include="Resources\icon_done.png" />
+    <None Include="Resources\icon_editting.png" />
+    <None Include="Resources\icon_error.png" />
+    <None Include="Resources\icon_infomation.png" />
+    <None Include="Resources\icon_like.png" />
+    <None Include="Resources\icon_new.png" />
+    <None Include="Resources\icon_password.png" />
+    <None Include="Resources\icon_question.png" />
+    <None Include="Resources\icon_setting.png" />
+    <None Include="Resources\icon_updating.png" />
+    <None Include="Resources\iconwarning.png" />
+    <None Include="Resources\thanks.png" />
+    <None Include="Resources\end.png" />
+    <None Include="Resources\PERTTip1.png" />
+    <None Include="Resources\PERTTip2.png" />
+    <None Include="Resources\PERTTip3.png" />
+    <None Include="Resources\trackbar1.png" />
+    <None Include="Resources\trackbar2.png" />
+    <None Include="Resources\tip1.png" />
+    <None Include="Resources\tipPert1.png" />
+    <None Include="Resources\tipPert2.png" />
+    <None Include="Resources\LiALS10.png" />
+    <Content Include="代码规范及界面颜色.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="代码规范及界面颜色.txt">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AeroWizard\AeroWizard.csproj">
+      <Project>{199C12C4-3EEF-4D08-BAC3-F2A62BCF969C}</Project>
+      <Name>AeroWizard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38d7aa58-c95b-449b-86c6-a8073a56e11f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{e3d8759a-c5eb-402d-9f10-f5c6029a8d1a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9fe00521-3a8b-42b1-814e-585e99407b2e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
