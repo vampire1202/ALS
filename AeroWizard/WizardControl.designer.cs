@@ -242,16 +242,7 @@
             this.title.TabIndex = 2;
             this.title.Text = "Wizard Title";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // titleImage
-            // 
-            this.titleImage.Image = global::AeroWizard.Properties.Resources.item;
-            this.titleImage.Location = new System.Drawing.Point(3, 3);
-            this.titleImage.Name = "titleImage";
-            this.titleImage.Size = new System.Drawing.Size(29, 26);
-            this.titleImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.titleImage.TabIndex = 3;
-            this.titleImage.TabStop = false;
+          
             // 
             // WizardControl
             // 

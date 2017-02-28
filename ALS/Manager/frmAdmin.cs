@@ -10,17 +10,22 @@ using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
+using System.Windows.Forms.DataVisualization.Charting;
 namespace ALS.Manager
 {
     public partial class frmAdmin : Form
     {
         private SerialPort _port_ppump;
         bool m_isfast = false;
-        private double Sp_FastInjection;
+        private double Sp_FastInjection = 0;
         private int count_brand;
         System.Diagnostics.Stopwatch m_watchFast = new System.Diagnostics.Stopwatch();
 
         List<Cls.Model_SendCMD> m_lstModelSendCMD = new List<Cls.Model_SendCMD>();
+        //用来查询治疗数据 2017年2月22日
+        BLL.pump_speed_data pum_data = new BLL.pump_speed_data();
+        BLL.pressure_data pre_data = new BLL.pressure_data();
+
         /// <summary>
         /// 蠕动泵通讯端口
         /// </summary>
@@ -191,6 +196,9 @@ namespace ALS.Manager
                 case 5:
                     ReadWarnCode();
                     break;
+                case 7:
+                    //初始化图标格式 2017年2月22日
+                    Init_Chart();break;
             }
         }
 
@@ -832,13 +840,13 @@ namespace ALS.Manager
                 case "6": this.txtL100.Text = this.lblReallLen.Text; 
                           m_syrdata.Cal_SyPoten[10]=(byte)(Convert.ToInt32(this.lblReallLen.Text)>>8 & 0xFF);
                           m_syrdata.Cal_SyPoten[11]=(byte)(Convert.ToInt32(this.lblReallLen.Text) & 0xFF);break;
-                case "7": //this.txtP0.Text = this.lblRealP.Text;
+                case "7": this.txtP0.Text = this.lblRealP.Text;
                           m_syrdata.Cal_SyPoten[12] = (byte)(Convert.ToInt32(this.txtP0.Text) >> 8 & 0xFF);
                           m_syrdata.Cal_SyPoten[13]=(byte)(Convert.ToInt32(this.txtP0.Text) & 0xFF);break;
-                case "14": //this.txtP50.Text = this.lblRealP.Text;
+                case "14": this.txtP50.Text = this.lblRealP.Text;
                            m_syrdata.Cal_SyPoten[26] = (byte)(Convert.ToInt32(this.txtP50.Text) >> 8 & 0xFF);
                            m_syrdata.Cal_SyPoten[27]=(byte)(Convert.ToInt32(this.txtP50.Text) & 0xFF);break;
-                case "15": //this.txtP100.Text = this.lblRealP.Text;
+                case "15": this.txtP100.Text = this.lblRealP.Text;
                            m_syrdata.Cal_SyPoten[28] = (byte)(Convert.ToInt32(this.txtP100.Text) >> 8 & 0xFF);
                            m_syrdata.Cal_SyPoten[29]=(byte)(Convert.ToInt32(this.txtP100.Text) & 0xFF);break;
                 default: break;
@@ -957,13 +965,20 @@ namespace ALS.Manager
         //微量注射泵运行
         private void btnRun_Click(object sender, EventArgs e)
         {
+            //判断是否设置泵速 2017年2月15日
+            double spvalue = Math.Round((double.Parse(this.lblSpeed.Text)), 1);
+            if (spvalue < 1)
+            {
+                MessageBox.Show("请重新设置泵速");
+                return;
+            }
             this.btnStop.Enabled = true;
             this.btnFastRun.Enabled = true;
             this.btnRun.Enabled = false;
             double yuzhiValue = 50;
             if (m_mtm.IsTargetSP)
                 yuzhiValue = Convert.ToDouble(m_mtm.TargetSP);
-            Cls.utils.SendOrder(_port_hpump, Cls.Comm_SyringePump.Start(Convert.ToDouble(this.lblSpeed.Text), yuzhiValue));
+            //Cls.utils.SendOrder(_port_hpump, Cls.Comm_SyringePump.Start(Convert.ToDouble(this.lblSpeed.Text), yuzhiValue));
             Cls.utils.SendOrder(_port_hpump, Cls.Comm_SyringePump.Start(Convert.ToDouble(this.lblSpeed.Text), yuzhiValue));
         }
         //微量注射泵停止运行
@@ -979,7 +994,6 @@ namespace ALS.Manager
         private void btnFastRun_Click(object sender, EventArgs e)
         {
             this.btnFastRun.Enabled = false;
-            this.btnRun.Enabled = false;
             this.btnFastStop.Enabled = true;
             double spfast = Sp_FastInjection;
             //double spfast = m_mtm.SP_RapidInjectionValue.Value;// Convert.ToDouble(Cls.RWconfig.GetAppSettings("SP_RapidInjectionValue"));
@@ -995,9 +1009,8 @@ namespace ALS.Manager
         //微量注射泵 快送停止
         private void btnFastStop_Click(object sender, EventArgs e)
         {
-            this.btnRun.Enabled = true;
             this.btnFastStop.Enabled = false;
-            this.btnStop.Enabled = false;
+            this.btnFastRun.Enabled = true;
             Cls.utils.SendOrder(_port_hpump, Cls.Comm_SyringePump.EndFastForward);
         }
         void RunSPFast(object o)
@@ -1119,6 +1132,19 @@ namespace ALS.Manager
             UserCtrl.numPad np = new UserCtrl.numPad(tbx.Text);
             if(DialogResult.OK==np.ShowDialog())
                 tbx.Text = np.Value.ToString();
+            //更改数据后同时调用获取textbox里面的值  2017年2月17日
+            if ((Convert.ToString(tbx.Tag)) == "7")
+            {
+                Collect_PotnData(this.btnGetP0, e);
+            }
+            if ((Convert.ToString(tbx.Tag)) == "14")
+            {
+                Collect_PotnData(this.btnGetP50, e);
+            }
+            if ((Convert.ToString(tbx.Tag)) == "15")
+            {
+                Collect_PotnData(this.btnGetP100, e);
+            }
         }
 
         private void textBox1_Click(object sender, EventArgs e)
@@ -1310,6 +1336,295 @@ namespace ALS.Manager
             fca.Port_Main = _port_main;
             fca.Port_Pump = _port_ppump;
             fca.ShowDialog();
-        }  
+        }
+
+        private void Init_Chart()
+        {
+            //清空上次操作；
+            //this.c3_heat.Series.Clear();
+            //this.c1_pre.Series.Clear();
+            //this.c2_acc.Series.Clear();
+
+
+            //BLL.pressure_data prd = new BLL.pressure_data();
+            //prd.GetList();
+        }
+
+
+        /*
+         输入患者号，查询出该患者所有治疗数据
+         2017年2月22日
+         */
+        private void chck_surgery_no_click(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            UserCtrl.numPad np = new UserCtrl.numPad(tb.Text);
+            if (DialogResult.OK == np.ShowDialog())
+            {
+                tb.Text = np.Value.ToString();
+                //根据患者编号进行数据库查询
+                DataSet ds_surgery = pum_data.GetList(tb.Text.ToString());
+                int n = ds_surgery.Tables[0].Rows.Count;
+                if (n>1)
+                {
+                    //this.cb_sudata.DataSource = ds_surgery.Tables[0].Columns[1];
+                    int num = ds_surgery.Tables[0].Rows.Count;
+                    //遍历表格给combox赋值
+                    for (int i = 1; i < num; i++)
+                    {
+                        this.cb_sudata.Items.Add(ds_surgery.Tables[0].Rows[i][1].ToString());
+                    }
+                    //获取查询结果
+                    List<Model.pump_speed_data> mp = pum_data.GetModelList(tb.Text.ToString());
+                    //存储时间数据
+                    List<double > data_xtime = new List<double>();
+                    //存储温度值数据
+                    List<double> data_xwarmer = new List<double>();
+                    
+                    //遍历查询结果，存储时间&温度值数据
+                    foreach (Model.pump_speed_data psd in mp)
+                    {
+                        DateTime dt = (Convert.ToDateTime(psd.time_stamp));
+                        //dt = new DateTime(dt.Hour, dt.Minute, dt.Second);
+                        string ds = dt.ToShortTimeString();
+                        //时间轴只显示时分
+                        double dts = (DateTime.Parse(ds)).ToOADate();
+                        data_xtime.Add(dts);
+                        data_xwarmer.Add(Convert.ToDouble((psd.warmer)));
+                        //MessageBox.Show("时间:" + dt.ToString() + "  温度："+ psd.warmer);
+                    }
+                    MessageBox.Show(data_xtime.Count.ToString());
+                    //设置时间轴的最大最小值
+                    this.c3_heat.ChartAreas[0].AxisX.Maximum = data_xtime.Max();
+                    this.c3_heat.ChartAreas[0].AxisX.Minimum = data_xtime.Min();
+                    //设置时间轴步长
+                    this.c3_heat.ChartAreas[0].AxisX.Interval = (data_xtime.Max() - data_xtime.Min()) / 5;
+                    this.c3_heat.Series[0].Points.DataBindXY(data_xtime, data_xwarmer);
+                    MessageBox.Show(this.c3_heat.Series[0].Points.Count.ToString());
+
+                }
+                else
+                { 
+                    MessageBox.Show("查询为空");
+                    return;
+                }             
+            }           
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            //所要选择的时间
+            DateTime check_for = this.dtimep.Value;
+            //获得查询日期
+            string check_data = check_for.ToShortDateString();            
+            //获取列表 图2&图3
+            DataSet date1_all = pum_data.GetList("");
+            
+            //查询为空时返回
+            if(date1_all.Tables[0].Rows.Count<2)
+            {
+                MessageBox.Show("数据库(pump_speed_data)无数据存储！");
+                return;
+            }
+            //存储时间数据
+            List<double> data_xtime = new List<double>();
+            //存储温度值数据 图表3
+            List<double> data_xwarmer = new List<double>();
+            //累计值存储  图表2
+            List<double> data_totalbp = new List<double>();
+            List<double> data_totaldp = new List<double>();
+            List<double> data_totalsp = new List<double>();
+            List<double> data_totalfp = new List<double>();
+            List<double> data_totalrp = new List<double>();         
+
+            //遍历查询结果，存储时间&温度值数据
+            for (int i = 1; i < date1_all.Tables[0].Rows.Count;i++ )
+                //foreach (Model.pump_speed_data psd in mp)
+                {
+                    //获取当前行的年月日
+                    DateTime dt = (Convert.ToDateTime(date1_all.Tables[0].Rows[i][1]));
+                    //判断获取数据日期是否与查询日期一致
+                    if (dt.Date == check_for.Date)
+                    {
+
+                        string ds = dt.ToShortTimeString();
+                        //时间轴只显示时分
+                        double dts = (DateTime.Parse(ds)).ToOADate();
+                        data_xtime.Add(dts);
+                        data_xwarmer.Add(Convert.ToDouble((date1_all.Tables[0].Rows[i][10])));
+                        data_totalbp.Add(Convert.ToDouble((date1_all.Tables[0].Rows[i][11])));
+                        data_totaldp.Add(Convert.ToDouble((date1_all.Tables[0].Rows[i][13])));
+                        data_totalsp.Add(Convert.ToDouble((date1_all.Tables[0].Rows[i][17])));
+                        data_totalfp.Add(Convert.ToDouble((date1_all.Tables[0].Rows[i][12])));
+                        data_totalrp.Add(Convert.ToDouble((date1_all.Tables[0].Rows[i][14])));
+                    }
+                }
+            //有查询结果时，进行图表显示
+            //无查询结果时，进行提示
+            if (data_xtime.Count > 0)
+            {
+                //设置时间轴的最大最小值
+                this.c3_heat.ChartAreas[0].AxisX.Maximum = data_xtime.Max();
+                this.c3_heat.ChartAreas[0].AxisX.Minimum = data_xtime.Min();
+                this.c2_acc.ChartAreas[0].AxisX.Maximum = data_xtime.Max();
+                this.c2_acc.ChartAreas[0].AxisX.Minimum = data_xtime.Min();
+                //设置时间轴步长
+                this.c3_heat.ChartAreas[0].AxisX.Interval = (data_xtime.Max() - data_xtime.Min()) / 5;
+                this.c3_heat.Series[0].Points.DataBindXY(data_xtime, data_xwarmer);
+                this.c2_acc.ChartAreas[0].AxisX.Interval = (data_xtime.Max() - data_xtime.Min()) / 5;
+                this.c2_acc.Series[0].Points.DataBindXY(data_xtime, data_totalbp);
+                this.c2_acc.Series[1].Points.DataBindXY(data_xtime, data_totaldp);
+                this.c2_acc.Series[2].Points.DataBindXY(data_xtime, data_totalrp);
+                this.c2_acc.Series[3].Points.DataBindXY(data_xtime, data_totalfp);
+                this.c2_acc.Series[4].Points.DataBindXY(data_xtime, data_totalsp);
+
+                //this.c3_heat.ChartAreas[0].AxisY.LineDashStyle=
+
+                //处理压力数据
+                show_pre_data();
+            }
+            else
+            {
+                MessageBox.Show("当前查询日期数据库(pump_speed_data)无治疗数据！");
+                //return;
+            }
+        }
+        private void show_pre_data()
+        {
+            //所要选择的时间
+            DateTime check_for = this.dtimep.Value;
+            //获得年月日
+            string check_data = check_for.ToShortDateString();
+            //获取列表 图1
+            DataSet date2_all = pre_data.GetList("");
+            //查询为空时返回
+            if (date2_all.Tables[0].Rows.Count < 1)
+            {
+                MessageBox.Show("数据库(pressure_data)无数据存储！");
+                return;
+            }
+            //存储时间数据
+            List<double> data_xtime = new List<double>();
+            //压力值存储 图表1
+            List<double> data_pacc = new List<double>();
+            List<double> data_part = new List<double>();
+            List<double> data_pven = new List<double>();
+            List<double> data_p1st = new List<double>();
+            List<double> data_p2nd = new List<double>();
+            List<double> data_p3rd = new List<double>();
+            List<double> data_tmp = new List<double>();
+            //遍历查询结果，存储时间&温度值数据
+            for (int i = 1; i < date2_all.Tables[0].Rows.Count; i++)
+            //foreach (Model.pump_speed_data psd in mp)
+            {
+                //System.Data.Entity.DbFunctions.DiffDays(cs.StartTime.Value,DateTime.Now) == 0
+                DateTime dt = (Convert.ToDateTime(date2_all.Tables[0].Rows[i][1]));
+                //DateTime dt = (Convert.ToDateTime(psd.time_stamp));
+                if (dt.Date == check_for.Date)
+                {
+
+                    string ds = dt.ToShortTimeString();
+                    //时间轴只显示时分
+                    double dts = (DateTime.Parse(ds)).ToOADate();
+                    data_xtime.Add(dts);
+                    data_pacc.Add(Convert.ToDouble(date2_all.Tables[0].Rows[i][2]));
+                    data_part.Add(Convert.ToDouble(date2_all.Tables[0].Rows[i][4]));
+                    data_pven.Add(Convert.ToDouble(date2_all.Tables[0].Rows[i][5]));
+                    data_p1st.Add(Convert.ToDouble(date2_all.Tables[0].Rows[i][3]));
+                    data_p2nd.Add(Convert.ToDouble(date2_all.Tables[0].Rows[i][6]));
+                    data_p3rd.Add(Convert.ToDouble(date2_all.Tables[0].Rows[i][8]));
+                    data_tmp.Add(Convert.ToDouble(date2_all.Tables[0].Rows[i][7]));
+                }
+            }
+            if (data_xtime.Count > 0)
+            {
+                //设置时间轴的最大最小值
+                this.c1_pre.ChartAreas[0].AxisX.Maximum = data_xtime.Max();
+                this.c1_pre.ChartAreas[0].AxisX.Minimum = data_xtime.Min();
+                //设置时间轴步长
+                this.c1_pre.ChartAreas[0].AxisX.Interval = (data_xtime.Max() - data_xtime.Min()) / 5;
+                this.c1_pre.Series[0].Points.DataBindXY(data_xtime, data_pacc);
+                this.c1_pre.Series[1].Points.DataBindXY(data_xtime, data_part);
+                this.c1_pre.Series[2].Points.DataBindXY(data_xtime, data_pven);
+                this.c1_pre.Series[3].Points.DataBindXY(data_xtime, data_p1st);
+                this.c1_pre.Series[4].Points.DataBindXY(data_xtime, data_tmp);
+                this.c1_pre.Series[5].Points.DataBindXY(data_xtime, data_p2nd);
+                this.c1_pre.Series[6].Points.DataBindXY(data_xtime, data_p3rd);
+            }
+            else
+            {
+                MessageBox.Show("当前查询日期数据库(pressure_data)无数据存储");
+                return;
+            }
+            // Zoom into the X axis
+            //this.c1_pre.ChartAreas[0].AxisX.ScaleView.Zoom(2, 3);
+
+            //// Enable range selection and zooming end user interface
+            //this.c1_pre.ChartAreas[0].CursorX.IsUserEnabled = true;
+            //this.c1_pre.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+            //this.c1_pre.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+
+            ////将滚动内嵌到坐标轴中
+            //this.c1_pre.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = true;
+
+            //// 设置滚动条的大小"Default"
+            //this.c1_pre.ChartAreas[0].AxisX.ScrollBar.Size = 10;
+
+            //// 设置滚动条的按钮的风格，下面代码是将所有滚动条上的按钮都显示出来"Default"
+            //this.c1_pre.ChartAreas[0].AxisX.ScrollBar.ButtonStyle = System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonStyles.All;
+
+            ////System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonStyles.
+            //// 设置自动放大与缩小的最小量"Default"
+            //this.c1_pre.ChartAreas[0].AxisX.ScaleView.SmallScrollSize = double.NaN;
+            //this.c1_pre.ChartAreas[0].AxisX.ScaleView.SmallScrollMinSize = 2;
+
+
+
+
+            //this.c1_pre.ChartAreas[0].CursorX.AutoScroll = true;
+            //this.c1_pre.ChartAreas[0].AxisX.ScrollBar.Enabled = true;
+            //this.c1_pre.ChartAreas[0].CursorX.IsUserEnabled = true;
+            //this.c1_pre.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
+            ////this.c1_pre.ChartAreas[0].AxisX.Interval = _isopenAD1;
+            //this.c1_pre.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
+            //this.c1_pre.ChartAreas[0].AxisX.ScaleView.Position = 0;
+            //this.c1_pre.ChartAreas[0].AxisX.ScaleView.Size = (data_xtime.Max() - data_xtime.Min()) / 5;
+
+        }
+
+        private void c1_cb1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox cb = sender as CheckBox;
+            int int_tag = Convert.ToInt32(cb.Tag);
+            bool bl_checkstate=false;
+            if(cb.Checked == true)
+            {
+                bl_checkstate = true;
+                this.c1_pre.Series[int_tag].BorderWidth = 1;
+            }
+            else if(cb.Checked == false)
+            {
+                bl_checkstate = false;
+                this.c1_pre.Series[int_tag].BorderWidth = 0;
+            }
+        }
+
+        private void c2_cb1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox cb = sender as CheckBox;
+            int int_tag = Convert.ToInt32(cb.Tag);
+            bool bl_checkstate = false;
+            if (cb.Checked == true)
+            {
+                bl_checkstate = true;
+                this.c2_acc.Series[int_tag].BorderWidth = 1;
+            }
+            else if (cb.Checked == false)
+            {
+                bl_checkstate = false;
+                this.c2_acc.Series[int_tag].BorderWidth = 0;
+            }
+        }
+        
     }
 }

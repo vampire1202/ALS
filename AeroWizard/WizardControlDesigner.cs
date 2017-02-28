@@ -120,7 +120,7 @@ namespace AeroWizard.Design
 		public override void InitializeNewComponent(System.Collections.IDictionary defaultValues)
 		{
 			base.InitializeNewComponent(defaultValues);
-			this.Control.Text = Properties.Resources.WizardTitle;
+			this.Control.Text = "标题";
 		}
 
 		public void ToolPicked(ToolboxItem tool)

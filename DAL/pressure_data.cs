@@ -17,14 +17,30 @@ namespace ALS.DAL
         /// <summary>
         /// 是否存在该记录
         /// </summary>
-        public bool Exists(string surgery_no)
+        public bool Exists(string surgery_no, string time_stamp, string in_blood_pressure, string plasma_inlet_pressure, string arterial_pressure, string venous_pressure, string plasma_pressure, string transmembrane_pressure, string plasma2_pressure)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select count(1) from pressure_data");
-            strSql.Append(" where surgery_no=@surgery_no ");
+            strSql.Append(" where surgery_no=@surgery_no and time_stamp=@time_stamp and in_blood_pressure=@in_blood_pressure and plasma_inlet_pressure=@plasma_inlet_pressure and arterial_pressure=@arterial_pressure and venous_pressure=@venous_pressure and plasma_pressure=@plasma_pressure and transmembrane_pressure=@transmembrane_pressure and plasma2_pressure=@plasma2_pressure ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255)			};
+					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255),
+					new MySqlParameter("@time_stamp", MySqlDbType.VarChar,255),
+					new MySqlParameter("@in_blood_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma_inlet_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@arterial_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@venous_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@transmembrane_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma2_pressure", MySqlDbType.VarChar,255)			};
             parameters[0].Value = surgery_no;
+            parameters[1].Value = time_stamp;
+            parameters[2].Value = in_blood_pressure;
+            parameters[3].Value = plasma_inlet_pressure;
+            parameters[4].Value = arterial_pressure;
+            parameters[5].Value = venous_pressure;
+            parameters[6].Value = plasma_pressure;
+            parameters[7].Value = transmembrane_pressure;
+            parameters[8].Value = plasma2_pressure;
 
             return DbHelperMySQL_Data.Exists(strSql.ToString(), parameters);
         }
@@ -37,9 +53,9 @@ namespace ALS.DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into pressure_data(");
-            strSql.Append("surgery_no,time_stamp,in_blood_pressure,plasma_inlet_pressure,arterial_pressure,venous_pressure,plasma_pressure,transmembrane_pressure)");
+            strSql.Append("surgery_no,time_stamp,in_blood_pressure,plasma_inlet_pressure,arterial_pressure,venous_pressure,plasma_pressure,transmembrane_pressure,plasma2_pressure)");
             strSql.Append(" values (");
-            strSql.Append("@surgery_no,@time_stamp,@in_blood_pressure,@plasma_inlet_pressure,@arterial_pressure,@venous_pressure,@plasma_pressure,@transmembrane_pressure)");
+            strSql.Append("@surgery_no,@time_stamp,@in_blood_pressure,@plasma_inlet_pressure,@arterial_pressure,@venous_pressure,@plasma_pressure,@transmembrane_pressure,@plasma2_pressure)");
             MySqlParameter[] parameters = {
 					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255),
 					new MySqlParameter("@time_stamp", MySqlDbType.VarChar,255),
@@ -48,7 +64,8 @@ namespace ALS.DAL
 					new MySqlParameter("@arterial_pressure", MySqlDbType.VarChar,255),
 					new MySqlParameter("@venous_pressure", MySqlDbType.VarChar,255),
 					new MySqlParameter("@plasma_pressure", MySqlDbType.VarChar,255),
-					new MySqlParameter("@transmembrane_pressure", MySqlDbType.VarChar,255)};
+					new MySqlParameter("@transmembrane_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma2_pressure", MySqlDbType.VarChar,255)};
             parameters[0].Value = model.surgery_no;
             parameters[1].Value = model.time_stamp;
             parameters[2].Value = model.in_blood_pressure;
@@ -57,6 +74,7 @@ namespace ALS.DAL
             parameters[5].Value = model.venous_pressure;
             parameters[6].Value = model.plasma_pressure;
             parameters[7].Value = model.transmembrane_pressure;
+            parameters[8].Value = model.plasma2_pressure;
 
             int rows = DbHelperMySQL_Data.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -75,15 +93,18 @@ namespace ALS.DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("update pressure_data set ");
+            strSql.Append("surgery_no=@surgery_no,");
             strSql.Append("time_stamp=@time_stamp,");
             strSql.Append("in_blood_pressure=@in_blood_pressure,");
             strSql.Append("plasma_inlet_pressure=@plasma_inlet_pressure,");
             strSql.Append("arterial_pressure=@arterial_pressure,");
             strSql.Append("venous_pressure=@venous_pressure,");
             strSql.Append("plasma_pressure=@plasma_pressure,");
-            strSql.Append("transmembrane_pressure=@transmembrane_pressure");
-            strSql.Append(" where surgery_no=@surgery_no ");
+            strSql.Append("transmembrane_pressure=@transmembrane_pressure,");
+            strSql.Append("plasma2_pressure=@plasma2_pressure");
+            strSql.Append(" where surgery_no=@surgery_no and time_stamp=@time_stamp and in_blood_pressure=@in_blood_pressure and plasma_inlet_pressure=@plasma_inlet_pressure and arterial_pressure=@arterial_pressure and venous_pressure=@venous_pressure and plasma_pressure=@plasma_pressure and transmembrane_pressure=@transmembrane_pressure and plasma2_pressure=@plasma2_pressure ");
             MySqlParameter[] parameters = {
+					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255),
 					new MySqlParameter("@time_stamp", MySqlDbType.VarChar,255),
 					new MySqlParameter("@in_blood_pressure", MySqlDbType.VarChar,255),
 					new MySqlParameter("@plasma_inlet_pressure", MySqlDbType.VarChar,255),
@@ -91,15 +112,16 @@ namespace ALS.DAL
 					new MySqlParameter("@venous_pressure", MySqlDbType.VarChar,255),
 					new MySqlParameter("@plasma_pressure", MySqlDbType.VarChar,255),
 					new MySqlParameter("@transmembrane_pressure", MySqlDbType.VarChar,255),
-					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255)};
-            parameters[0].Value = model.time_stamp;
-            parameters[1].Value = model.in_blood_pressure;
-            parameters[2].Value = model.plasma_inlet_pressure;
-            parameters[3].Value = model.arterial_pressure;
-            parameters[4].Value = model.venous_pressure;
-            parameters[5].Value = model.plasma_pressure;
-            parameters[6].Value = model.transmembrane_pressure;
-            parameters[7].Value = model.surgery_no;
+					new MySqlParameter("@plasma2_pressure", MySqlDbType.VarChar,255)};
+            parameters[0].Value = model.surgery_no;
+            parameters[1].Value = model.time_stamp;
+            parameters[2].Value = model.in_blood_pressure;
+            parameters[3].Value = model.plasma_inlet_pressure;
+            parameters[4].Value = model.arterial_pressure;
+            parameters[5].Value = model.venous_pressure;
+            parameters[6].Value = model.plasma_pressure;
+            parameters[7].Value = model.transmembrane_pressure;
+            parameters[8].Value = model.plasma2_pressure;
 
             int rows = DbHelperMySQL_Data.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -115,35 +137,33 @@ namespace ALS.DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(string surgery_no)
+        public bool Delete(string surgery_no, string time_stamp, string in_blood_pressure, string plasma_inlet_pressure, string arterial_pressure, string venous_pressure, string plasma_pressure, string transmembrane_pressure, string plasma2_pressure)
         {
 
             StringBuilder strSql = new StringBuilder();
             strSql.Append("delete from pressure_data ");
-            strSql.Append(" where surgery_no=@surgery_no ");
+            strSql.Append(" where surgery_no=@surgery_no and time_stamp=@time_stamp and in_blood_pressure=@in_blood_pressure and plasma_inlet_pressure=@plasma_inlet_pressure and arterial_pressure=@arterial_pressure and venous_pressure=@venous_pressure and plasma_pressure=@plasma_pressure and transmembrane_pressure=@transmembrane_pressure and plasma2_pressure=@plasma2_pressure ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255)			};
+					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255),
+					new MySqlParameter("@time_stamp", MySqlDbType.VarChar,255),
+					new MySqlParameter("@in_blood_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma_inlet_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@arterial_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@venous_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@transmembrane_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma2_pressure", MySqlDbType.VarChar,255)			};
             parameters[0].Value = surgery_no;
+            parameters[1].Value = time_stamp;
+            parameters[2].Value = in_blood_pressure;
+            parameters[3].Value = plasma_inlet_pressure;
+            parameters[4].Value = arterial_pressure;
+            parameters[5].Value = venous_pressure;
+            parameters[6].Value = plasma_pressure;
+            parameters[7].Value = transmembrane_pressure;
+            parameters[8].Value = plasma2_pressure;
 
             int rows = DbHelperMySQL_Data.ExecuteSql(strSql.ToString(), parameters);
-            if (rows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        /// <summary>
-        /// 批量删除数据
-        /// </summary>
-        public bool DeleteList(string surgery_nolist)
-        {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("delete from pressure_data ");
-            strSql.Append(" where surgery_no in (" + surgery_nolist + ")  ");
-            int rows = DbHelperMySQL_Data.ExecuteSql(strSql.ToString());
             if (rows > 0)
             {
                 return true;
@@ -158,15 +178,31 @@ namespace ALS.DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public ALS.Model.pressure_data GetModel(string surgery_no)
+        public ALS.Model.pressure_data GetModel(string surgery_no, string time_stamp, string in_blood_pressure, string plasma_inlet_pressure, string arterial_pressure, string venous_pressure, string plasma_pressure, string transmembrane_pressure, string plasma2_pressure)
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select surgery_no,time_stamp,in_blood_pressure,plasma_inlet_pressure,arterial_pressure,venous_pressure,plasma_pressure,transmembrane_pressure from pressure_data ");
-            strSql.Append(" where surgery_no=@surgery_no ");
+            strSql.Append("select surgery_no,time_stamp,in_blood_pressure,plasma_inlet_pressure,arterial_pressure,venous_pressure,plasma_pressure,transmembrane_pressure,plasma2_pressure from pressure_data ");
+            strSql.Append(" where surgery_no=@surgery_no and time_stamp=@time_stamp and in_blood_pressure=@in_blood_pressure and plasma_inlet_pressure=@plasma_inlet_pressure and arterial_pressure=@arterial_pressure and venous_pressure=@venous_pressure and plasma_pressure=@plasma_pressure and transmembrane_pressure=@transmembrane_pressure and plasma2_pressure=@plasma2_pressure ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255)			};
+					new MySqlParameter("@surgery_no", MySqlDbType.VarChar,255),
+					new MySqlParameter("@time_stamp", MySqlDbType.VarChar,255),
+					new MySqlParameter("@in_blood_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma_inlet_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@arterial_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@venous_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@transmembrane_pressure", MySqlDbType.VarChar,255),
+					new MySqlParameter("@plasma2_pressure", MySqlDbType.VarChar,255)			};
             parameters[0].Value = surgery_no;
+            parameters[1].Value = time_stamp;
+            parameters[2].Value = in_blood_pressure;
+            parameters[3].Value = plasma_inlet_pressure;
+            parameters[4].Value = arterial_pressure;
+            parameters[5].Value = venous_pressure;
+            parameters[6].Value = plasma_pressure;
+            parameters[7].Value = transmembrane_pressure;
+            parameters[8].Value = plasma2_pressure;
 
             ALS.Model.pressure_data model = new ALS.Model.pressure_data();
             DataSet ds = DbHelperMySQL_Data.Query(strSql.ToString(), parameters);
@@ -221,6 +257,10 @@ namespace ALS.DAL
                 {
                     model.transmembrane_pressure = row["transmembrane_pressure"].ToString();
                 }
+                if (row["plasma2_pressure"] != null)
+                {
+                    model.plasma2_pressure = row["plasma2_pressure"].ToString();
+                }
             }
             return model;
         }
@@ -231,7 +271,7 @@ namespace ALS.DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select surgery_no,time_stamp,in_blood_pressure,plasma_inlet_pressure,arterial_pressure,venous_pressure,plasma_pressure,transmembrane_pressure ");
+            strSql.Append("select surgery_no,time_stamp,in_blood_pressure,plasma_inlet_pressure,arterial_pressure,venous_pressure,plasma_pressure,transmembrane_pressure,plasma2_pressure ");
             strSql.Append(" FROM pressure_data ");
             if (strWhere.Trim() != "")
             {
@@ -275,7 +315,7 @@ namespace ALS.DAL
             }
             else
             {
-                strSql.Append("order by T.surgery_no desc");
+                strSql.Append("order by T.plasma2_pressure desc");
             }
             strSql.Append(")AS Row, T.*  from pressure_data T ");
             if (!string.IsNullOrEmpty(strWhere.Trim()))
@@ -303,7 +343,7 @@ namespace ALS.DAL
                     new MySqlParameter("@strWhere", MySqlDbType.VarChar,1000),
                     };
             parameters[0].Value = "pressure_data";
-            parameters[1].Value = "surgery_no";
+            parameters[1].Value = "plasma2_pressure";
             parameters[2].Value = PageSize;
             parameters[3].Value = PageIndex;
             parameters[4].Value = 0;

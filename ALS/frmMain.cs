@@ -20,6 +20,8 @@
 //#define LOG_TREAT
 #undef LOG_TREAT                          //治疗log
 
+//define RunT
+#undef RunT
 
 using System;
 using System.Collections.Generic;
@@ -390,7 +392,7 @@ namespace ALS
                 SurgeryNo = DateTime.Now.ToString("yyMMddHHmmss"),
                 StartTime = (epoch * 1000 + DateTime.Now.Millisecond).ToString()
             };
-
+            
             //序列化            
             m_strStartEnd = SJson(m_PatientInfo);
             Cls.utils.AddText("START:" + m_strStartEnd);
@@ -4002,9 +4004,11 @@ namespace ALS
             //-------------------------
             if (M_cls_sy.CollectData_YN == true)
             {
-                m_frmAdmin.lblRealsLen.Text = (M_cls_sy.SLen_Syringe).ToString();
-                m_frmAdmin.lblReallLen.Text = (M_cls_sy.LLen_Syringe).ToString();
-                m_frmAdmin.lblRealP.Text = (M_cls_sy.P_Syringe).ToString();
+                //采集传感器数据
+                m_frmAdmin.lblRealsLen.Text = (M_cls_sy.SLen_Syringe).ToString();//短电位器值
+                m_frmAdmin.lblReallLen.Text = (M_cls_sy.LLen_Syringe).ToString();//长电位器值
+                m_frmAdmin.lblRealP.Text = (M_cls_sy.P_Syringe).ToString();      //压力值
+                m_frmAdmin.lblReallKp.Text = (M_cls_sy.Kp_Syringe).ToString();   //压力千帕值 2017年2月15日
             }
             if (M_cls_sy.CollectSyDta_YN)
             {
@@ -4026,13 +4030,16 @@ namespace ALS
             //采集压力数据
             Model.pressure_data mp = new Model.pressure_data();
             mp.surgery_no = m_PatientInfo.SurgeryNo;
+            //将时间格式改为ToOADate()，double类型。 2017年2月22日
             mp.time_stamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //mp.time_stamp = DateTime.Now.ToOADate();
             mp.in_blood_pressure = M_ModelValue.M_flt_PofPacc.ToString("f1");
             mp.arterial_pressure = M_ModelValue.M_flt_PofPart.ToString("f1");
             mp.venous_pressure = M_ModelValue.M_flt_PofPven.ToString("f1");
             mp.plasma_inlet_pressure = M_ModelValue.M_flt_PofP1st.ToString("f1");
             mp.plasma_pressure = M_ModelValue.M_flt_PofP2nd.ToString("f1");
             mp.transmembrane_pressure = M_ModelValue.M_flt_PofTMP.ToString("f1");
+            mp.plasma2_pressure = M_ModelValue.M_flt_PofP3rd.ToString("f1");
             BLL.pressure_data bp = new BLL.pressure_data();
             bp.Add(mp);
 
@@ -5773,9 +5780,10 @@ namespace ALS
                             break;
                         }
 
-                        M_cls_sy.SLen_Syringe = Convert.ToInt32((M_buffer_hpump[7] << 8) + M_buffer_hpump[8]);
-                        M_cls_sy.LLen_Syringe = Convert.ToInt32((M_buffer_hpump[9] << 8) + M_buffer_hpump[10]);
-                        M_cls_sy.P_Syringe = Convert.ToInt32((M_buffer_hpump[3] << 8) + M_buffer_hpump[4]);
+                        M_cls_sy.SLen_Syringe = Convert.ToInt32((M_buffer_hpump[7] << 8) + M_buffer_hpump[8]);//短电位器值
+                        M_cls_sy.LLen_Syringe = Convert.ToInt32((M_buffer_hpump[9] << 8) + M_buffer_hpump[10]);//长电位器值
+                        M_cls_sy.P_Syringe = Convert.ToInt32((M_buffer_hpump[3] << 8) + M_buffer_hpump[4]);//压力值
+                        M_cls_sy.Kp_Syringe = Convert.ToInt32((M_buffer_hpump[5] << 8) + M_buffer_hpump[6]);//压力千帕值 2017年2月15日
                         M_buffer_hpump.RemoveRange(0, len + 5);
                         M_cls_sy.CollectData_YN = true;
                         #endregion
@@ -6320,6 +6328,17 @@ namespace ALS
             M_uc_SetFlow.palDehydration.Visible = true;
             M_uc_SetFlow.btnReturn.Visible = false;
             M_uc_SetFlow.btnConfirmM.Visible = false;
+            /*流量设置界面屏蔽泵运转按键 2017年2月27日
+             * 若在治疗开始前，在流量设置界面运转泵时，点击右下角开始按键
+             * 会导致软件直接进入了非正常治疗。屏蔽运转按键，目的是屏蔽手动治疗
+            */
+            M_uc_SetFlow.btnRun1.Visible = false;
+            M_uc_SetFlow.btnRun2.Visible = false;
+            M_uc_SetFlow.btnRun3.Visible = false;
+            M_uc_SetFlow.btnRun4.Visible = false;
+            M_uc_SetFlow.btnRun5.Visible = false;
+            M_uc_SetFlow.btnRun6.Visible = false;
+
             M_uc_SetFlow.ReadPumpSet(M_ModelTreat);
             M_uc_SetFlow.ReadVState(M_PumpState);
             SetOtherfrmBtnState(M_PumpState);
@@ -8350,11 +8369,14 @@ namespace ALS
                 return;
             //偏离设定温度±1 Test
 
+            //开始时检测温度
+#if RunT 
             if (M_ModelValue.M_flt_Temperature < M_ModelTreat.TargetT.Value - 1 || M_ModelValue.M_flt_Temperature > M_ModelTreat.TargetT.Value + 1)
             {
                 ShowWarn("W2-10");
                 return;
             }
+#endif
 
             //是否治疗标记
             M_isTreat = !M_isTreat;
@@ -9857,6 +9879,11 @@ namespace ALS
             mbf.ShowMessageBoxDialog(new CCWin.MessageBoxArgs(this, "测试", "caption", MessageBoxButtons.OK, icon, MessageBoxDefaultButton.Button1));
             */
             //mbf.ShowDialog();
+
+        }
+
+        private void uc_pacc_Load(object sender, EventArgs e)
+        {
 
         }
     }

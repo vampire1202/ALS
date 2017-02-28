@@ -30,7 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.palCtrlV = new System.Windows.Forms.Panel();
@@ -118,6 +139,9 @@
             this.lblSpeed = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.lblReallKp = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
             this.sy_calstatus = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.lblRealsLen = new System.Windows.Forms.Label();
@@ -208,6 +232,9 @@
             this.tsBtnAD1 = new System.Windows.Forms.ToolStripButton();
             this.tsBtnAD2 = new System.Windows.Forms.ToolStripButton();
             this.tsBtnAD3 = new System.Windows.Forms.ToolStripButton();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.lblPaccDec = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.button32 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
@@ -275,17 +302,37 @@
             this.btnRecycle = new CCWin.SkinControl.SkinButton();
             this.btnTreat = new CCWin.SkinControl.SkinButton();
             this.btnFlush = new CCWin.SkinControl.SkinButton();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.c1_cb1 = new System.Windows.Forms.CheckBox();
+            this.c1_cb3 = new System.Windows.Forms.CheckBox();
+            this.c1_cb2 = new System.Windows.Forms.CheckBox();
+            this.c1_cb6 = new System.Windows.Forms.CheckBox();
+            this.c1_cb5 = new System.Windows.Forms.CheckBox();
+            this.c1_cb7 = new System.Windows.Forms.CheckBox();
+            this.c1_cb4 = new System.Windows.Forms.CheckBox();
+            this.c1_pre = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.c2_cb2 = new System.Windows.Forms.CheckBox();
+            this.c2_cb3 = new System.Windows.Forms.CheckBox();
+            this.c2_cb4 = new System.Windows.Forms.CheckBox();
+            this.c2_cb5 = new System.Windows.Forms.CheckBox();
+            this.c2_cb1 = new System.Windows.Forms.CheckBox();
+            this.chck_surgery_no = new System.Windows.Forms.TextBox();
+            this.dtimep = new System.Windows.Forms.DateTimePicker();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.cb_sudata = new System.Windows.Forms.ComboBox();
+            this.button30 = new System.Windows.Forms.Button();
+            this.c3_heat = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.c2_acc = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnExit = new System.Windows.Forms.Button();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.uc_pacc = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_part = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_pven = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_p1st = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_tmp = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_p2nd = new ALS.UserCtrl.uc_ShowTreatP();
-            this.label56 = new System.Windows.Forms.Label();
-            this.lblPaccDec = new System.Windows.Forms.Label();
             this.uc_p3rd = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_p2nd = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_tmp = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_p1st = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_pven = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_part = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_pacc = new ALS.UserCtrl.uc_ShowTreatP();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.palCtrlV.SuspendLayout();
@@ -311,6 +358,7 @@
             this.tabPage4.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -326,7 +374,11 @@
             this.tabPage15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWarnCmds)).BeginInit();
             this.tabPage7.SuspendLayout();
-            this.groupBox14.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.c1_pre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c3_heat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c2_acc)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -339,6 +391,7 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabControl1.ItemSize = new System.Drawing.Size(60, 58);
@@ -1445,10 +1498,14 @@
             this.btnCheck.TabIndex = 37;
             this.btnCheck.Text = "识别";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Visible = false;
             this.btnCheck.Click += new System.EventHandler(this.Recognize_SyVersion);
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.lblReallKp);
+            this.groupBox10.Controls.Add(this.label64);
+            this.groupBox10.Controls.Add(this.label63);
             this.groupBox10.Controls.Add(this.sy_calstatus);
             this.groupBox10.Controls.Add(this.label50);
             this.groupBox10.Controls.Add(this.lblRealsLen);
@@ -1495,6 +1552,33 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "①、抗凝剂泵校准流程";
             // 
+            // lblReallKp
+            // 
+            this.lblReallKp.AutoSize = true;
+            this.lblReallKp.Location = new System.Drawing.Point(626, 27);
+            this.lblReallKp.Name = "lblReallKp";
+            this.lblReallKp.Size = new System.Drawing.Size(16, 16);
+            this.lblReallKp.TabIndex = 24;
+            this.lblReallKp.Text = "0";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(543, 27);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(64, 16);
+            this.label64.TabIndex = 23;
+            this.label64.Text = "千帕值:";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(204, 27);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(56, 16);
+            this.label63.TabIndex = 22;
+            this.label63.Text = "实时值";
+            // 
             // sy_calstatus
             // 
             this.sy_calstatus.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1509,20 +1593,20 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("宋体", 10F);
-            this.label50.Location = new System.Drawing.Point(214, 28);
+            this.label50.Location = new System.Drawing.Point(267, 29);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(98, 14);
+            this.label50.Size = new System.Drawing.Size(42, 14);
             this.label50.TabIndex = 20;
-            this.label50.Text = "实时值(sLen):";
+            this.label50.Text = "sLen:";
             // 
             // lblRealsLen
             // 
             this.lblRealsLen.AutoSize = true;
-            this.lblRealsLen.Location = new System.Drawing.Point(312, 27);
+            this.lblRealsLen.Location = new System.Drawing.Point(321, 27);
             this.lblRealsLen.Name = "lblRealsLen";
-            this.lblRealsLen.Size = new System.Drawing.Size(40, 16);
+            this.lblRealsLen.Size = new System.Drawing.Size(16, 16);
             this.lblRealsLen.TabIndex = 19;
-            this.lblRealsLen.Text = "0000";
+            this.lblRealsLen.Text = "0";
             // 
             // btnExitCal
             // 
@@ -1556,37 +1640,37 @@
             this.label29.Font = new System.Drawing.Font("宋体", 10F);
             this.label29.Location = new System.Drawing.Point(368, 29);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(98, 14);
+            this.label29.Size = new System.Drawing.Size(42, 14);
             this.label29.TabIndex = 16;
-            this.label29.Text = "实时值(lLen):";
+            this.label29.Text = "lLen:";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("宋体", 10F);
-            this.label28.Location = new System.Drawing.Point(533, 29);
+            this.label28.Location = new System.Drawing.Point(454, 29);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(77, 14);
+            this.label28.Size = new System.Drawing.Size(56, 14);
             this.label28.TabIndex = 18;
-            this.label28.Text = "实时值(P):";
+            this.label28.Text = "压力值:";
             // 
             // lblReallLen
             // 
             this.lblReallLen.AutoSize = true;
-            this.lblReallLen.Location = new System.Drawing.Point(466, 28);
+            this.lblReallLen.Location = new System.Drawing.Point(416, 27);
             this.lblReallLen.Name = "lblReallLen";
-            this.lblReallLen.Size = new System.Drawing.Size(40, 16);
+            this.lblReallLen.Size = new System.Drawing.Size(16, 16);
             this.lblReallLen.TabIndex = 15;
-            this.lblReallLen.Text = "0000";
+            this.lblReallLen.Text = "0";
             // 
             // lblRealP
             // 
             this.lblRealP.AutoSize = true;
-            this.lblRealP.Location = new System.Drawing.Point(617, 28);
+            this.lblRealP.Location = new System.Drawing.Point(513, 27);
             this.lblRealP.Name = "lblRealP";
-            this.lblRealP.Size = new System.Drawing.Size(40, 16);
+            this.lblRealP.Size = new System.Drawing.Size(16, 16);
             this.lblRealP.TabIndex = 17;
-            this.lblRealP.Text = "0000";
+            this.lblRealP.Text = "0";
             // 
             // txtL100
             // 
@@ -2490,6 +2574,44 @@
             this.tsBtnAD3.Tag = "ad3";
             this.tsBtnAD3.Text = "toolStripButton3";
             // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.lblPaccDec);
+            this.groupBox14.Controls.Add(this.uc_p3rd);
+            this.groupBox14.Controls.Add(this.uc_p2nd);
+            this.groupBox14.Controls.Add(this.uc_tmp);
+            this.groupBox14.Controls.Add(this.label56);
+            this.groupBox14.Controls.Add(this.uc_p1st);
+            this.groupBox14.Controls.Add(this.uc_pven);
+            this.groupBox14.Controls.Add(this.uc_part);
+            this.groupBox14.Controls.Add(this.uc_pacc);
+            this.groupBox14.Font = new System.Drawing.Font("宋体", 12F);
+            this.groupBox14.Location = new System.Drawing.Point(524, 12);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(141, 557);
+            this.groupBox14.TabIndex = 1;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "压力";
+            // 
+            // lblPaccDec
+            // 
+            this.lblPaccDec.AutoSize = true;
+            this.lblPaccDec.Location = new System.Drawing.Point(91, 510);
+            this.lblPaccDec.Name = "lblPaccDec";
+            this.lblPaccDec.Size = new System.Drawing.Size(32, 16);
+            this.lblPaccDec.TabIndex = 2;
+            this.lblPaccDec.Text = "0.0";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("宋体", 9F);
+            this.label56.Location = new System.Drawing.Point(6, 512);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(83, 12);
+            this.label56.TabIndex = 1;
+            this.label56.Text = "采血压变化量:";
+            // 
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.button32);
@@ -3247,10 +3369,10 @@
             this.dgvWarnCmds.AllowUserToDeleteRows = false;
             this.dgvWarnCmds.AllowUserToResizeColumns = false;
             this.dgvWarnCmds.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvWarnCmds.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvWarnCmds.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvWarnCmds.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvWarnCmds.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvWarnCmds.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -3342,6 +3464,422 @@
             this.btnFlush.UseVisualStyleBackColor = false;
             this.btnFlush.Click += new System.EventHandler(this.btnFlush_Click);
             // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.panel1);
+            this.tabPage8.Controls.Add(this.c2_cb2);
+            this.tabPage8.Controls.Add(this.c2_cb3);
+            this.tabPage8.Controls.Add(this.c2_cb4);
+            this.tabPage8.Controls.Add(this.c2_cb5);
+            this.tabPage8.Controls.Add(this.c2_cb1);
+            this.tabPage8.Controls.Add(this.chck_surgery_no);
+            this.tabPage8.Controls.Add(this.dtimep);
+            this.tabPage8.Controls.Add(this.label60);
+            this.tabPage8.Controls.Add(this.label57);
+            this.tabPage8.Controls.Add(this.cb_sudata);
+            this.tabPage8.Controls.Add(this.button30);
+            this.tabPage8.Controls.Add(this.c3_heat);
+            this.tabPage8.Controls.Add(this.c2_acc);
+            this.tabPage8.Location = new System.Drawing.Point(4, 62);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1000, 584);
+            this.tabPage8.TabIndex = 13;
+            this.tabPage8.Text = "压力/累计/温控曲线图";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.c1_cb1);
+            this.panel1.Controls.Add(this.c1_cb3);
+            this.panel1.Controls.Add(this.c1_cb2);
+            this.panel1.Controls.Add(this.c1_cb6);
+            this.panel1.Controls.Add(this.c1_cb5);
+            this.panel1.Controls.Add(this.c1_cb7);
+            this.panel1.Controls.Add(this.c1_cb4);
+            this.panel1.Controls.Add(this.c1_pre);
+            this.panel1.Location = new System.Drawing.Point(16, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(314, 359);
+            this.panel1.TabIndex = 24;
+            // 
+            // c1_cb1
+            // 
+            this.c1_cb1.AutoSize = true;
+            this.c1_cb1.Checked = true;
+            this.c1_cb1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c1_cb1.Location = new System.Drawing.Point(3, 39);
+            this.c1_cb1.Name = "c1_cb1";
+            this.c1_cb1.Size = new System.Drawing.Size(15, 14);
+            this.c1_cb1.TabIndex = 11;
+            this.c1_cb1.Tag = "0";
+            this.c1_cb1.UseVisualStyleBackColor = true;
+            this.c1_cb1.CheckedChanged += new System.EventHandler(this.c1_cb1_CheckedChanged);
+            // 
+            // c1_cb3
+            // 
+            this.c1_cb3.AutoSize = true;
+            this.c1_cb3.Checked = true;
+            this.c1_cb3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c1_cb3.Location = new System.Drawing.Point(70, 39);
+            this.c1_cb3.Name = "c1_cb3";
+            this.c1_cb3.Size = new System.Drawing.Size(15, 14);
+            this.c1_cb3.TabIndex = 12;
+            this.c1_cb3.Tag = "2";
+            this.c1_cb3.UseVisualStyleBackColor = true;
+            this.c1_cb3.CheckedChanged += new System.EventHandler(this.c1_cb1_CheckedChanged);
+            // 
+            // c1_cb2
+            // 
+            this.c1_cb2.AutoSize = true;
+            this.c1_cb2.Checked = true;
+            this.c1_cb2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c1_cb2.Location = new System.Drawing.Point(3, 54);
+            this.c1_cb2.Name = "c1_cb2";
+            this.c1_cb2.Size = new System.Drawing.Size(15, 14);
+            this.c1_cb2.TabIndex = 13;
+            this.c1_cb2.Tag = "1";
+            this.c1_cb2.UseVisualStyleBackColor = true;
+            this.c1_cb2.CheckedChanged += new System.EventHandler(this.c1_cb1_CheckedChanged);
+            // 
+            // c1_cb6
+            // 
+            this.c1_cb6.AutoSize = true;
+            this.c1_cb6.Checked = true;
+            this.c1_cb6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c1_cb6.Location = new System.Drawing.Point(138, 54);
+            this.c1_cb6.Name = "c1_cb6";
+            this.c1_cb6.Size = new System.Drawing.Size(15, 14);
+            this.c1_cb6.TabIndex = 14;
+            this.c1_cb6.Tag = "5";
+            this.c1_cb6.UseVisualStyleBackColor = true;
+            this.c1_cb6.CheckedChanged += new System.EventHandler(this.c1_cb1_CheckedChanged);
+            // 
+            // c1_cb5
+            // 
+            this.c1_cb5.AutoSize = true;
+            this.c1_cb5.Checked = true;
+            this.c1_cb5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c1_cb5.Location = new System.Drawing.Point(138, 39);
+            this.c1_cb5.Name = "c1_cb5";
+            this.c1_cb5.Size = new System.Drawing.Size(15, 14);
+            this.c1_cb5.TabIndex = 15;
+            this.c1_cb5.Tag = "4";
+            this.c1_cb5.UseVisualStyleBackColor = true;
+            this.c1_cb5.CheckedChanged += new System.EventHandler(this.c1_cb1_CheckedChanged);
+            // 
+            // c1_cb7
+            // 
+            this.c1_cb7.AutoSize = true;
+            this.c1_cb7.Checked = true;
+            this.c1_cb7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c1_cb7.Location = new System.Drawing.Point(205, 39);
+            this.c1_cb7.Name = "c1_cb7";
+            this.c1_cb7.Size = new System.Drawing.Size(15, 14);
+            this.c1_cb7.TabIndex = 17;
+            this.c1_cb7.Tag = "6";
+            this.c1_cb7.UseVisualStyleBackColor = true;
+            this.c1_cb7.CheckedChanged += new System.EventHandler(this.c1_cb1_CheckedChanged);
+            // 
+            // c1_cb4
+            // 
+            this.c1_cb4.AutoSize = true;
+            this.c1_cb4.Checked = true;
+            this.c1_cb4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c1_cb4.Location = new System.Drawing.Point(70, 54);
+            this.c1_cb4.Name = "c1_cb4";
+            this.c1_cb4.Size = new System.Drawing.Size(15, 14);
+            this.c1_cb4.TabIndex = 16;
+            this.c1_cb4.Tag = "3";
+            this.c1_cb4.UseVisualStyleBackColor = true;
+            this.c1_cb4.CheckedChanged += new System.EventHandler(this.c1_cb1_CheckedChanged);
+            // 
+            // c1_pre
+            // 
+            chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.Title = "时间";
+            chartArea1.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.AxisY.Maximum = 500D;
+            chartArea1.AxisY.Minimum = -500D;
+            chartArea1.AxisY.Title = "压力/mmHg";
+            chartArea1.Name = "ChartArea1";
+            this.c1_pre.ChartAreas.Add(chartArea1);
+            this.c1_pre.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.c1_pre.Legends.Add(legend1);
+            this.c1_pre.Location = new System.Drawing.Point(0, 0);
+            this.c1_pre.Name = "c1_pre";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.DarkRed;
+            series1.Legend = "Legend1";
+            series1.Name = "Pacc";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Red;
+            series2.Legend = "Legend1";
+            series2.Name = "Part";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Color = System.Drawing.Color.DeepSkyBlue;
+            series3.Legend = "Legend1";
+            series3.Name = "Pven";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Color = System.Drawing.Color.Lime;
+            series4.Legend = "Legend1";
+            series4.Name = "P1st";
+            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series5.Color = System.Drawing.Color.Magenta;
+            series5.Legend = "Legend1";
+            series5.Name = "TMP";
+            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Color = System.Drawing.Color.Orange;
+            series6.Legend = "Legend1";
+            series6.Name = "P2nd";
+            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Color = System.Drawing.Color.Goldenrod;
+            series7.Legend = "Legend1";
+            series7.Name = "P3rd";
+            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.c1_pre.Series.Add(series1);
+            this.c1_pre.Series.Add(series2);
+            this.c1_pre.Series.Add(series3);
+            this.c1_pre.Series.Add(series4);
+            this.c1_pre.Series.Add(series5);
+            this.c1_pre.Series.Add(series6);
+            this.c1_pre.Series.Add(series7);
+            this.c1_pre.Size = new System.Drawing.Size(314, 359);
+            this.c1_pre.TabIndex = 0;
+            this.c1_pre.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            title1.Name = "Title1";
+            title1.Text = "压力值";
+            this.c1_pre.Titles.Add(title1);
+            // 
+            // c2_cb2
+            // 
+            this.c2_cb2.AutoSize = true;
+            this.c2_cb2.Checked = true;
+            this.c2_cb2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c2_cb2.Location = new System.Drawing.Point(436, 64);
+            this.c2_cb2.Name = "c2_cb2";
+            this.c2_cb2.Size = new System.Drawing.Size(15, 14);
+            this.c2_cb2.TabIndex = 23;
+            this.c2_cb2.Tag = "2";
+            this.c2_cb2.UseVisualStyleBackColor = true;
+            this.c2_cb2.CheckedChanged += new System.EventHandler(this.c2_cb1_CheckedChanged);
+            // 
+            // c2_cb3
+            // 
+            this.c2_cb3.AutoSize = true;
+            this.c2_cb3.Checked = true;
+            this.c2_cb3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c2_cb3.Location = new System.Drawing.Point(516, 64);
+            this.c2_cb3.Name = "c2_cb3";
+            this.c2_cb3.Size = new System.Drawing.Size(15, 14);
+            this.c2_cb3.TabIndex = 22;
+            this.c2_cb3.Tag = "4";
+            this.c2_cb3.UseVisualStyleBackColor = true;
+            this.c2_cb3.CheckedChanged += new System.EventHandler(this.c2_cb1_CheckedChanged);
+            // 
+            // c2_cb4
+            // 
+            this.c2_cb4.AutoSize = true;
+            this.c2_cb4.Checked = true;
+            this.c2_cb4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c2_cb4.Location = new System.Drawing.Point(354, 79);
+            this.c2_cb4.Name = "c2_cb4";
+            this.c2_cb4.Size = new System.Drawing.Size(15, 14);
+            this.c2_cb4.TabIndex = 21;
+            this.c2_cb4.Tag = "1";
+            this.c2_cb4.UseVisualStyleBackColor = true;
+            this.c2_cb4.CheckedChanged += new System.EventHandler(this.c2_cb1_CheckedChanged);
+            // 
+            // c2_cb5
+            // 
+            this.c2_cb5.AutoSize = true;
+            this.c2_cb5.Checked = true;
+            this.c2_cb5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c2_cb5.Location = new System.Drawing.Point(436, 79);
+            this.c2_cb5.Name = "c2_cb5";
+            this.c2_cb5.Size = new System.Drawing.Size(15, 14);
+            this.c2_cb5.TabIndex = 20;
+            this.c2_cb5.Tag = "3";
+            this.c2_cb5.UseVisualStyleBackColor = true;
+            this.c2_cb5.CheckedChanged += new System.EventHandler(this.c2_cb1_CheckedChanged);
+            // 
+            // c2_cb1
+            // 
+            this.c2_cb1.AutoSize = true;
+            this.c2_cb1.Checked = true;
+            this.c2_cb1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.c2_cb1.Location = new System.Drawing.Point(354, 64);
+            this.c2_cb1.Name = "c2_cb1";
+            this.c2_cb1.Size = new System.Drawing.Size(15, 14);
+            this.c2_cb1.TabIndex = 18;
+            this.c2_cb1.Tag = "0";
+            this.c2_cb1.UseVisualStyleBackColor = true;
+            this.c2_cb1.CheckedChanged += new System.EventHandler(this.c2_cb1_CheckedChanged);
+            // 
+            // chck_surgery_no
+            // 
+            this.chck_surgery_no.Location = new System.Drawing.Point(825, 523);
+            this.chck_surgery_no.Name = "chck_surgery_no";
+            this.chck_surgery_no.Size = new System.Drawing.Size(100, 26);
+            this.chck_surgery_no.TabIndex = 10;
+            this.chck_surgery_no.Visible = false;
+            this.chck_surgery_no.Click += new System.EventHandler(this.chck_surgery_no_click);
+            // 
+            // dtimep
+            // 
+            this.dtimep.Location = new System.Drawing.Point(308, 477);
+            this.dtimep.Name = "dtimep";
+            this.dtimep.Size = new System.Drawing.Size(200, 26);
+            this.dtimep.TabIndex = 9;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(358, 443);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(72, 16);
+            this.label60.TabIndex = 7;
+            this.label60.Text = "查询日期";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(892, 493);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(72, 16);
+            this.label57.TabIndex = 6;
+            this.label57.Text = "患者编号";
+            this.label57.Visible = false;
+            // 
+            // cb_sudata
+            // 
+            this.cb_sudata.FormattingEnabled = true;
+            this.cb_sudata.Location = new System.Drawing.Point(765, 493);
+            this.cb_sudata.Name = "cb_sudata";
+            this.cb_sudata.Size = new System.Drawing.Size(121, 24);
+            this.cb_sudata.TabIndex = 5;
+            this.cb_sudata.Visible = false;
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(552, 477);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(75, 32);
+            this.button30.TabIndex = 3;
+            this.button30.Text = "确定";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // c3_heat
+            // 
+            chartArea2.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea2.AxisX.LabelStyle.Format = "HH:mm";
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisX.Title = "时间";
+            chartArea2.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea2.AxisY.Interval = 5D;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.AxisY.Maximum = 55D;
+            chartArea2.AxisY.Minimum = 25D;
+            chartArea2.AxisY.Title = "温度值/℃";
+            chartArea2.Name = "ChartArea1";
+            this.c3_heat.ChartAreas.Add(chartArea2);
+            this.c3_heat.Location = new System.Drawing.Point(686, 25);
+            this.c3_heat.Name = "c3_heat";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.CustomProperties = "IsXAxisQuantitative=True, EmptyPointValue=Zero";
+            series8.MarkerColor = System.Drawing.Color.Magenta;
+            series8.Name = "Series1";
+            series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series8.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.c3_heat.Series.Add(series8);
+            this.c3_heat.Size = new System.Drawing.Size(300, 359);
+            this.c3_heat.TabIndex = 2;
+            this.c3_heat.Text = "chart3";
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            title2.Name = "Title1";
+            title2.Text = "温度";
+            this.c3_heat.Titles.Add(title2);
+            // 
+            // c2_acc
+            // 
+            chartArea3.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea3.AxisX.MajorGrid.Enabled = false;
+            chartArea3.AxisX.Title = "时间";
+            chartArea3.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea3.AxisY.Interval = 5D;
+            chartArea3.AxisY.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea3.AxisY.MajorGrid.Enabled = false;
+            chartArea3.AxisY.Maximum = 30D;
+            chartArea3.AxisY.Minimum = 0D;
+            chartArea3.AxisY.Title = "累计值/L";
+            chartArea3.Name = "ChartArea1";
+            this.c2_acc.ChartAreas.Add(chartArea3);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.c2_acc.Legends.Add(legend2);
+            this.c2_acc.Location = new System.Drawing.Point(350, 25);
+            this.c2_acc.Name = "c2_acc";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Legend = "Legend1";
+            series9.Name = "TotalBp";
+            series9.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Legend = "Legend1";
+            series10.Name = "TotalDp";
+            series10.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series11.Legend = "Legend1";
+            series11.Name = "TotalRp";
+            series11.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series12.Legend = "Legend1";
+            series12.Name = "TotalFp";
+            series12.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series13.Legend = "Legend1";
+            series13.Name = "TotalSp";
+            series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            this.c2_acc.Series.Add(series9);
+            this.c2_acc.Series.Add(series10);
+            this.c2_acc.Series.Add(series11);
+            this.c2_acc.Series.Add(series12);
+            this.c2_acc.Series.Add(series13);
+            this.c2_acc.Size = new System.Drawing.Size(306, 359);
+            this.c2_acc.TabIndex = 1;
+            this.c2_acc.Text = "温度";
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            title3.Name = "Title1";
+            title3.Text = "累计值";
+            this.c2_acc.Titles.Add(title3);
+            // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -3353,109 +3891,22 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
-            // groupBox14
+            // uc_p3rd
             // 
-            this.groupBox14.Controls.Add(this.lblPaccDec);
-            this.groupBox14.Controls.Add(this.uc_p3rd);
-            this.groupBox14.Controls.Add(this.uc_p2nd);
-            this.groupBox14.Controls.Add(this.uc_tmp);
-            this.groupBox14.Controls.Add(this.label56);
-            this.groupBox14.Controls.Add(this.uc_p1st);
-            this.groupBox14.Controls.Add(this.uc_pven);
-            this.groupBox14.Controls.Add(this.uc_part);
-            this.groupBox14.Controls.Add(this.uc_pacc);
-            this.groupBox14.Font = new System.Drawing.Font("宋体", 12F);
-            this.groupBox14.Location = new System.Drawing.Point(524, 12);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(141, 557);
-            this.groupBox14.TabIndex = 1;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "压力";
-            // 
-            // uc_pacc
-            // 
-            this.uc_pacc._ColorLine = System.Drawing.Color.DarkRed;
-            this.uc_pacc._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_pacc._ColorValue = System.Drawing.Color.Black;
-            this.uc_pacc._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_pacc._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_pacc._Title = "采血压";
-            this.uc_pacc._TitleEn = "Pacc";
-            this.uc_pacc._Value = "-000";
-            this.uc_pacc._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_pacc.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_pacc.Location = new System.Drawing.Point(6, 20);
-            this.uc_pacc.Name = "uc_pacc";
-            this.uc_pacc.Size = new System.Drawing.Size(128, 60);
-            this.uc_pacc.TabIndex = 0;
-            // 
-            // uc_part
-            // 
-            this.uc_part._ColorLine = System.Drawing.Color.Red;
-            this.uc_part._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_part._ColorValue = System.Drawing.Color.Black;
-            this.uc_part._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_part._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_part._Title = "动脉压";
-            this.uc_part._TitleEn = "Part";
-            this.uc_part._Value = "-000";
-            this.uc_part._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_part.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_part.Location = new System.Drawing.Point(6, 88);
-            this.uc_part.Name = "uc_part";
-            this.uc_part.Size = new System.Drawing.Size(128, 60);
-            this.uc_part.TabIndex = 0;
-            // 
-            // uc_pven
-            // 
-            this.uc_pven._ColorLine = System.Drawing.Color.SpringGreen;
-            this.uc_pven._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_pven._ColorValue = System.Drawing.Color.Black;
-            this.uc_pven._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_pven._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_pven._Title = "静脉压";
-            this.uc_pven._TitleEn = "Pven";
-            this.uc_pven._Value = "-000";
-            this.uc_pven._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_pven.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_pven.Location = new System.Drawing.Point(6, 156);
-            this.uc_pven.Name = "uc_pven";
-            this.uc_pven.Size = new System.Drawing.Size(128, 60);
-            this.uc_pven.TabIndex = 0;
-            // 
-            // uc_p1st
-            // 
-            this.uc_p1st._ColorLine = System.Drawing.Color.DarkGoldenrod;
-            this.uc_p1st._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_p1st._ColorValue = System.Drawing.Color.Black;
-            this.uc_p1st._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_p1st._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_p1st._Title = "血浆压";
-            this.uc_p1st._TitleEn = "P1st";
-            this.uc_p1st._Value = "-000";
-            this.uc_p1st._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_p1st.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_p1st.Location = new System.Drawing.Point(6, 224);
-            this.uc_p1st.Name = "uc_p1st";
-            this.uc_p1st.Size = new System.Drawing.Size(128, 60);
-            this.uc_p1st.TabIndex = 0;
-            // 
-            // uc_tmp
-            // 
-            this.uc_tmp._ColorLine = System.Drawing.Color.MediumAquamarine;
-            this.uc_tmp._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_tmp._ColorValue = System.Drawing.Color.Black;
-            this.uc_tmp._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_tmp._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_tmp._Title = "跨膜压";
-            this.uc_tmp._TitleEn = "TMP";
-            this.uc_tmp._Value = "-000";
-            this.uc_tmp._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_tmp.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_tmp.Location = new System.Drawing.Point(6, 292);
-            this.uc_tmp.Name = "uc_tmp";
-            this.uc_tmp.Size = new System.Drawing.Size(128, 60);
-            this.uc_tmp.TabIndex = 0;
+            this.uc_p3rd._ColorLine = System.Drawing.Color.DeepSkyBlue;
+            this.uc_p3rd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_p3rd._ColorValue = System.Drawing.Color.Black;
+            this.uc_p3rd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_p3rd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_p3rd._Title = "入口压2";
+            this.uc_p3rd._TitleEn = "P3rd";
+            this.uc_p3rd._Value = "-000";
+            this.uc_p3rd._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_p3rd.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_p3rd.Location = new System.Drawing.Point(6, 428);
+            this.uc_p3rd.Name = "uc_p3rd";
+            this.uc_p3rd.Size = new System.Drawing.Size(128, 60);
+            this.uc_p3rd.TabIndex = 0;
             // 
             // uc_p2nd
             // 
@@ -3474,41 +3925,90 @@
             this.uc_p2nd.Size = new System.Drawing.Size(128, 60);
             this.uc_p2nd.TabIndex = 0;
             // 
-            // label56
+            // uc_tmp
             // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("宋体", 9F);
-            this.label56.Location = new System.Drawing.Point(6, 512);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(83, 12);
-            this.label56.TabIndex = 1;
-            this.label56.Text = "采血压变化量:";
+            this.uc_tmp._ColorLine = System.Drawing.Color.MediumAquamarine;
+            this.uc_tmp._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_tmp._ColorValue = System.Drawing.Color.Black;
+            this.uc_tmp._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_tmp._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_tmp._Title = "跨膜压";
+            this.uc_tmp._TitleEn = "TMP";
+            this.uc_tmp._Value = "-000";
+            this.uc_tmp._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_tmp.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_tmp.Location = new System.Drawing.Point(6, 292);
+            this.uc_tmp.Name = "uc_tmp";
+            this.uc_tmp.Size = new System.Drawing.Size(128, 60);
+            this.uc_tmp.TabIndex = 0;
             // 
-            // lblPaccDec
+            // uc_p1st
             // 
-            this.lblPaccDec.AutoSize = true;
-            this.lblPaccDec.Location = new System.Drawing.Point(91, 510);
-            this.lblPaccDec.Name = "lblPaccDec";
-            this.lblPaccDec.Size = new System.Drawing.Size(32, 16);
-            this.lblPaccDec.TabIndex = 2;
-            this.lblPaccDec.Text = "0.0";
+            this.uc_p1st._ColorLine = System.Drawing.Color.DarkGoldenrod;
+            this.uc_p1st._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_p1st._ColorValue = System.Drawing.Color.Black;
+            this.uc_p1st._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_p1st._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_p1st._Title = "血浆压";
+            this.uc_p1st._TitleEn = "P1st";
+            this.uc_p1st._Value = "-000";
+            this.uc_p1st._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_p1st.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_p1st.Location = new System.Drawing.Point(6, 224);
+            this.uc_p1st.Name = "uc_p1st";
+            this.uc_p1st.Size = new System.Drawing.Size(128, 60);
+            this.uc_p1st.TabIndex = 0;
             // 
-            // uc_p3rd
+            // uc_pven
             // 
-            this.uc_p3rd._ColorLine = System.Drawing.Color.DeepSkyBlue;
-            this.uc_p3rd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_p3rd._ColorValue = System.Drawing.Color.Black;
-            this.uc_p3rd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_p3rd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_p3rd._Title = "入口压2";
-            this.uc_p3rd._TitleEn = "P3rd";
-            this.uc_p3rd._Value = "-000";
-            this.uc_p3rd._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_p3rd.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_p3rd.Location = new System.Drawing.Point(6, 428);
-            this.uc_p3rd.Name = "uc_p3rd";
-            this.uc_p3rd.Size = new System.Drawing.Size(128, 60);
-            this.uc_p3rd.TabIndex = 0;
+            this.uc_pven._ColorLine = System.Drawing.Color.SpringGreen;
+            this.uc_pven._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_pven._ColorValue = System.Drawing.Color.Black;
+            this.uc_pven._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_pven._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_pven._Title = "静脉压";
+            this.uc_pven._TitleEn = "Pven";
+            this.uc_pven._Value = "-000";
+            this.uc_pven._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_pven.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_pven.Location = new System.Drawing.Point(6, 156);
+            this.uc_pven.Name = "uc_pven";
+            this.uc_pven.Size = new System.Drawing.Size(128, 60);
+            this.uc_pven.TabIndex = 0;
+            // 
+            // uc_part
+            // 
+            this.uc_part._ColorLine = System.Drawing.Color.Red;
+            this.uc_part._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_part._ColorValue = System.Drawing.Color.Black;
+            this.uc_part._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_part._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_part._Title = "动脉压";
+            this.uc_part._TitleEn = "Part";
+            this.uc_part._Value = "-000";
+            this.uc_part._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_part.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_part.Location = new System.Drawing.Point(6, 88);
+            this.uc_part.Name = "uc_part";
+            this.uc_part.Size = new System.Drawing.Size(128, 60);
+            this.uc_part.TabIndex = 0;
+            // 
+            // uc_pacc
+            // 
+            this.uc_pacc._ColorLine = System.Drawing.Color.DarkRed;
+            this.uc_pacc._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_pacc._ColorValue = System.Drawing.Color.Black;
+            this.uc_pacc._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_pacc._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_pacc._Title = "采血压";
+            this.uc_pacc._TitleEn = "Pacc";
+            this.uc_pacc._Value = "-000";
+            this.uc_pacc._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_pacc.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_pacc.Location = new System.Drawing.Point(6, 20);
+            this.uc_pacc.Name = "uc_pacc";
+            this.uc_pacc.Size = new System.Drawing.Size(128, 60);
+            this.uc_pacc.TabIndex = 0;
             // 
             // frmAdmin
             // 
@@ -3568,6 +4068,8 @@
             this.groupBox13.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
@@ -3584,8 +4086,13 @@
             this.tabPage15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvWarnCmds)).EndInit();
             this.tabPage7.ResumeLayout(false);
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.c1_pre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c3_heat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c2_acc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3847,5 +4354,31 @@
         public UserCtrl.uc_ShowTreatP uc_pven;
         public UserCtrl.uc_ShowTreatP uc_part;
         public UserCtrl.uc_ShowTreatP uc_pacc;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.DataVisualization.Charting.Chart c3_heat;
+        private System.Windows.Forms.DataVisualization.Charting.Chart c2_acc;
+        private System.Windows.Forms.DataVisualization.Charting.Chart c1_pre;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.ComboBox cb_sudata;
+        private System.Windows.Forms.DateTimePicker dtimep;
+        private System.Windows.Forms.TextBox chck_surgery_no;
+        private System.Windows.Forms.CheckBox c1_cb7;
+        private System.Windows.Forms.CheckBox c1_cb4;
+        private System.Windows.Forms.CheckBox c1_cb5;
+        private System.Windows.Forms.CheckBox c1_cb6;
+        private System.Windows.Forms.CheckBox c1_cb2;
+        private System.Windows.Forms.CheckBox c1_cb3;
+        private System.Windows.Forms.CheckBox c1_cb1;
+        private System.Windows.Forms.CheckBox c2_cb2;
+        private System.Windows.Forms.CheckBox c2_cb3;
+        private System.Windows.Forms.CheckBox c2_cb4;
+        private System.Windows.Forms.CheckBox c2_cb5;
+        private System.Windows.Forms.CheckBox c2_cb1;
+        public System.Windows.Forms.Label lblReallKp;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Panel panel1;
     }
 }

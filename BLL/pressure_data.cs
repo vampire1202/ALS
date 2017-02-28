@@ -17,9 +17,9 @@ namespace ALS.BLL
         /// <summary>
         /// 是否存在该记录
         /// </summary>
-        public bool Exists(string surgery_no)
+        public bool Exists(string surgery_no, string time_stamp, string in_blood_pressure, string plasma_inlet_pressure, string arterial_pressure, string venous_pressure, string plasma_pressure, string transmembrane_pressure, string plasma2_pressure)
         {
-            return dal.Exists(surgery_no);
+            return dal.Exists(surgery_no, time_stamp, in_blood_pressure, plasma_inlet_pressure, arterial_pressure, venous_pressure, plasma_pressure, transmembrane_pressure, plasma2_pressure);
         }
 
         /// <summary>
@@ -41,41 +41,34 @@ namespace ALS.BLL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(string surgery_no)
+        public bool Delete(string surgery_no, string time_stamp, string in_blood_pressure, string plasma_inlet_pressure, string arterial_pressure, string venous_pressure, string plasma_pressure, string transmembrane_pressure, string plasma2_pressure)
         {
 
-            return dal.Delete(surgery_no);
-        }
-        /// <summary>
-        /// 删除一条数据
-        /// </summary>
-        public bool DeleteList(string surgery_nolist)
-        {
-            return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(surgery_nolist, 0));
+            return dal.Delete(surgery_no, time_stamp, in_blood_pressure, plasma_inlet_pressure, arterial_pressure, venous_pressure, plasma_pressure, transmembrane_pressure, plasma2_pressure);
         }
 
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public ALS.Model.pressure_data GetModel(string surgery_no)
+        public ALS.Model.pressure_data GetModel(string surgery_no, string time_stamp, string in_blood_pressure, string plasma_inlet_pressure, string arterial_pressure, string venous_pressure, string plasma_pressure, string transmembrane_pressure, string plasma2_pressure)
         {
 
-            return dal.GetModel(surgery_no);
+            return dal.GetModel(surgery_no, time_stamp, in_blood_pressure, plasma_inlet_pressure, arterial_pressure, venous_pressure, plasma_pressure, transmembrane_pressure, plasma2_pressure);
         }
 
         /// <summary>
         /// 得到一个对象实体，从缓存中
         /// </summary>
-        public ALS.Model.pressure_data GetModelByCache(string surgery_no)
+        public ALS.Model.pressure_data GetModelByCache(string surgery_no, string time_stamp, string in_blood_pressure, string plasma_inlet_pressure, string arterial_pressure, string venous_pressure, string plasma_pressure, string transmembrane_pressure, string plasma2_pressure)
         {
 
-            string CacheKey = "pressure_dataModel-" + surgery_no;
+            string CacheKey = "pressure_dataModel-" + surgery_no + time_stamp + in_blood_pressure + plasma_inlet_pressure + arterial_pressure + venous_pressure + plasma_pressure + transmembrane_pressure + plasma2_pressure;
             object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
             if (objModel == null)
             {
                 try
                 {
-                    objModel = dal.GetModel(surgery_no);
+                    objModel = dal.GetModel(surgery_no, time_stamp, in_blood_pressure, plasma_inlet_pressure, arterial_pressure, venous_pressure, plasma_pressure, transmembrane_pressure, plasma2_pressure);
                     if (objModel != null)
                     {
                         int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");

@@ -27,7 +27,7 @@ namespace AeroWizard
 			InitializeComponent();
 			Margin = Padding.Empty;
 			Suppress = false;
-			base.Text = Properties.Resources.WizardHeader;
+			base.Text = "步骤";
 		}
 
 		/// <summary>

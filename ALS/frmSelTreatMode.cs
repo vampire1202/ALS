@@ -1,4 +1,7 @@
-﻿using System;
+﻿//#define RunStartTest
+#undef RunStartTest
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,6 +61,7 @@ namespace ALS
             ssf.progressBar1.Value = e.Current;
             M_lstSendType.Add(e._sendType);
             //判断启动过程 Test
+#if RunStartTest
             if (M_lstSendType.Contains(Cls.utils.M_SendType.databasefalse))
             {
                 ssf.btnExit.Enabled = true;
@@ -67,8 +71,7 @@ namespace ALS
                 ssf.rtBox.SelectionColor = Color.Red;
                 m_ctsCancelLoad.Cancel();
                 return;
-            }
-
+            } 
             if (M_lstSendType.Contains(Cls.utils.M_SendType.portfalse))
             {
                 ssf.btnExit.Enabled = true;
@@ -99,9 +102,32 @@ namespace ALS
                 m_ctsCancelLoad.Cancel();
                 return;
             }
+#endif
+
+            if (M_lstSendType.Contains(Cls.utils.M_SendType.portfalse))
+            {
+                ssf.btnExit.Enabled = true;
+                ssf.btnExit.Visible = true;
+                ssf.rtBox.Visible = true;
+                ssf.rtBox.Text = "启动错误:初始化通讯端口失败!";
+                ssf.rtBox.SelectionColor = Color.Red;
+                m_ctsCancelLoad.Cancel();
+                return;
+            }
+            if (M_lstSendType.Contains(Cls.utils.M_SendType.vfalse))
+            {
+                ssf.btnExit.Enabled = true;
+                ssf.btnExit.Visible = true;
+                ssf.rtBox.Visible = true;
+                ssf.rtBox.Text = "启动错误:夹管阀故障!";
+                ssf.rtBox.SelectionColor = Color.Red;
+                m_ctsCancelLoad.Cancel();
+                return;
+            }
 
             if (e.Current == 100)
             {
+#if RunStartTest
                 if (M_lstSendType.Contains(Cls.utils.M_SendType.databasefalse) ||
                     M_lstSendType.Contains(Cls.utils.M_SendType.bubblefalse) ||
                     M_lstSendType.Contains(Cls.utils.M_SendType.portfalse) ||
@@ -112,17 +138,21 @@ namespace ALS
                     return;
                 else
                 {
-                    ssf.Hide();
-                    this.Show();
-                    this.Activate();
-                    this.MaximizedBounds = System.Windows.Forms.Screen.PrimaryScreen.Bounds;
-                    this.WindowState = FormWindowState.Maximized;
+#endif
+                ssf.Hide();
+                this.Show();
+                this.Activate();
+                this.MaximizedBounds = System.Windows.Forms.Screen.PrimaryScreen.Bounds;
+                this.WindowState = FormWindowState.Maximized;
+#if RunStartTest
                 }
+#endif
             }
+
         }
 
         private void frmSelTreatMode_Load(object sender, EventArgs e)
-        { 
+        {
             m_methodName = "Li-ALS";
             //创建传输文档
             string pah = @"D:/surgeryData.txt";
@@ -132,7 +162,7 @@ namespace ALS
             if (!File.Exists(pah))
                 File.CreateText(pah);
             else//清空
-                File.WriteAllText(pah,string.Empty);  
+                File.WriteAllText(pah, string.Empty);
             DoStartProgress();
         }
         async Task LoadSystem(IProgress<Cls.StatusProgress> progress, CancellationToken ct)
@@ -498,10 +528,12 @@ namespace ALS
                 _sp.RtsEnable = false;
                 _sp.DtrEnable = false;
                 _sp.ReceivedBytesThreshold = 5;
-                _sp.ReadBufferSize = 2048;
-                _sp.WriteBufferSize = 2048;
+                //_sp.ReadBufferSize = 2048;
+                //_sp.WriteBufferSize = 2048;
+                _sp.ReadBufferSize = 2;
+                _sp.WriteBufferSize = 2;
                 // _sp.NewLine = "\r\n";
-                try { _sp.Open(); return Cls.utils.M_SendType.porttrue;}
+                try { _sp.Open(); return Cls.utils.M_SendType.porttrue; }
                 catch { m_ctsCancelLoad.Cancel(); return Cls.utils.M_SendType.portfalse; }
             }
         }
@@ -583,12 +615,15 @@ namespace ALS
             {
                 if (_sp.IsOpen)
                 {
+                    await Task.Delay(100);
                     m_checkType = Cls.utils.M_SendType.NoResult;
                     if (_sp.PortName.ToLower() == "com3")
                         m_checkType = Cls.utils.M_SendType.pumptrue;
                     _sp.DiscardOutBuffer();
                     _sp.Write(_order, 0, _order.Length);
-                    await Task.Delay(1000);//Test
+#if RunStartTest
+                    await Task.Delay(900);//Test
+#endif
                     return m_checkType;
                 }
                 else
@@ -714,18 +749,18 @@ namespace ALS
                 m_frmMain.Port_hpump = port_hpump;
                 m_frmMain.Port_main = port_main;
                 m_frmMain.Port_ppump = port_ppump;
-                m_frmMain.LstShowWarn = m_lstShowWarn; 
-                m_frmMain.ShowDialog(); 
+                m_frmMain.LstShowWarn = m_lstShowWarn;
+                m_frmMain.ShowDialog();
             }
         }
 
         private void btnPatientInfo_Click(object sender, EventArgs e)
         {
-           
+
             frmSetMethod fsm = new frmSetMethod();
             if (DialogResult.OK == fsm.ShowDialog())
             {
-                m_methodName = fsm._Method;              
+                m_methodName = fsm._Method;
             }
         }
     }

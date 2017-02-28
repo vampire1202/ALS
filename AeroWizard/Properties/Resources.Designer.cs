@@ -61,123 +61,12 @@ namespace AeroWizard.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap BackBtnStrip {
-            get {
-                object obj = ResourceManager.GetObject("BackBtnStrip", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap item {
-            get {
-                object obj = ResourceManager.GetObject("item", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap ready {
-            get {
-                object obj = ResourceManager.GetObject("ready", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 返回上一步 的本地化字符串。
-        /// </summary>
-        internal static string WizardBackButtonToolTip {
-            get {
-                return ResourceManager.GetString("WizardBackButtonToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 &amp;上一步 的本地化字符串。
-        /// </summary>
-        internal static string WizardBackText {
-            get {
-                return ResourceManager.GetString("WizardBackText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 &amp;取消 的本地化字符串。
-        /// </summary>
-        internal static string WizardCancelText {
-            get {
-                return ResourceManager.GetString("WizardCancelText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Icon WizardControlIcon {
             get {
                 object obj = ResourceManager.GetObject("WizardControlIcon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 &amp;回收 的本地化字符串。
-        /// </summary>
-        internal static string WizardFinishText {
-            get {
-                return ResourceManager.GetString("WizardFinishText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Page Title 的本地化字符串。
-        /// </summary>
-        internal static string WizardHeader {
-            get {
-                return ResourceManager.GetString("WizardHeader", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 &amp;帮助 的本地化字符串。
-        /// </summary>
-        internal static string WizardHelpText {
-            get {
-                return ResourceManager.GetString("WizardHelpText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 &amp;下一步 的本地化字符串。
-        /// </summary>
-        internal static string WizardNextText {
-            get {
-                return ResourceManager.GetString("WizardNextText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 No wizard pages have been added. 的本地化字符串。
-        /// </summary>
-        internal static string WizardNoPagesNotice {
-            get {
-                return ResourceManager.GetString("WizardNoPagesNotice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 步骤描述 的本地化字符串。
-        /// </summary>
-        internal static string WizardTitle {
-            get {
-                return ResourceManager.GetString("WizardTitle", resourceCulture);
             }
         }
     }

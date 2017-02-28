@@ -389,6 +389,7 @@
             this.uc_pacc.Name = "uc_pacc";
             this.uc_pacc.Size = new System.Drawing.Size(300, 68);
             this.uc_pacc.TabIndex = 13;
+            this.uc_pacc.Load += new System.EventHandler(this.uc_pacc_Load);
             // 
             // uc_part
             // 

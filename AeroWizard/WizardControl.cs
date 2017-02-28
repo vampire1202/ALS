@@ -471,11 +471,11 @@ namespace AeroWizard
 		protected override void OnRightToLeftChanged(EventArgs e)
 		{
 			base.OnRightToLeftChanged(e);
-			bool r2l = (this.GetRightToLeftProperty() == System.Windows.Forms.RightToLeft.Yes);
-			Bitmap btnStrip = Properties.Resources.BackBtnStrip;
-			if (r2l) btnStrip.RotateFlip(RotateFlipType.RotateNoneFlipX);
-			backButton.SetImageListImageStrip(btnStrip, Orientation.Vertical);
-			backButton.StylePart = r2l ? 2 : 1;
+            //bool r2l = (this.GetRightToLeftProperty() == System.Windows.Forms.RightToLeft.Yes);
+            //Bitmap btnStrip = Properties.Resources.BackBtnStrip;
+            //if (r2l) btnStrip.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            //backButton.SetImageListImageStrip(btnStrip, Orientation.Vertical);
+            //backButton.StylePart = r2l ? 2 : 1;
 		}
 
 		/// <summary>
@@ -553,7 +553,7 @@ namespace AeroWizard
 		{
 			if (this.IsDesignMode() && this.Pages.Count == 0)
 			{
-				string noPagesText = Properties.Resources.WizardNoPagesNotice;
+				string noPagesText ="无步骤";
 				Rectangle r = this.GetContentAreaRectangle(false);
 
 				r.Inflate(-2, -2);
@@ -635,7 +635,7 @@ namespace AeroWizard
 
 		private void ResetBackButtonToolTipText()
 		{
-			BackButtonToolTipText = Properties.Resources.WizardBackButtonToolTip;
+			BackButtonToolTipText = "上一步";
 		}
 
 		private void ResetBackButtonText()
@@ -660,7 +660,7 @@ namespace AeroWizard
 
 		private void ResetTitle()
 		{
-			Title = Properties.Resources.WizardTitle;
+			Title = "标题";
 		}
 
 		private void ResetTitleIcon()
@@ -709,14 +709,14 @@ namespace AeroWizard
 			}
 			else
 			{
-				backButton.Size = new Size(Properties.Resources.BackBtnStrip.Width, Properties.Resources.BackBtnStrip.Height / 4);
+                backButton.Size = new Size(30, 30);// new Size(Properties.Resources.BackBtnStrip.Width, Properties.Resources.BackBtnStrip.Height / 4);
 				this.BackColor = UseAeroStyle ? SystemColors.Window : SystemColors.Control;
 			}
 		}
 
 		private bool ShouldSerializeBackButtonToolTipText()
 		{
-			return BackButtonToolTipText != Properties.Resources.WizardBackButtonToolTip;
+			return BackButtonToolTipText !="上一步";
 		}
 
 		private bool ShouldSerializeBackButtonText()
@@ -741,7 +741,7 @@ namespace AeroWizard
 
 		private bool ShouldSerializeTitle()
 		{
-			return Title != Properties.Resources.WizardTitle;
+			return Title != "标题";
 		}
 
 		private bool ShouldSerializeTitleIcon()

@@ -18,8 +18,9 @@ namespace ALS.Model
         private string _venous_pressure;
         private string _plasma_pressure;
         private string _transmembrane_pressure;
+        private string _plasma2_pressure;
         /// <summary>
-        /// 手术号
+        /// 
         /// </summary>
         public string surgery_no
         {
@@ -27,7 +28,7 @@ namespace ALS.Model
             get { return _surgery_no; }
         }
         /// <summary>
-        /// 治疗时间 s
+        /// 
         /// </summary>
         public string time_stamp
         {
@@ -35,7 +36,7 @@ namespace ALS.Model
             get { return _time_stamp; }
         }
         /// <summary>
-        /// 采血压
+        /// 
         /// </summary>
         public string in_blood_pressure
         {
@@ -43,7 +44,7 @@ namespace ALS.Model
             get { return _in_blood_pressure; }
         }
         /// <summary>
-        /// 血浆入口压P1st
+        /// 
         /// </summary>
         public string plasma_inlet_pressure
         {
@@ -51,7 +52,7 @@ namespace ALS.Model
             get { return _plasma_inlet_pressure; }
         }
         /// <summary>
-        /// 动脉压
+        /// 
         /// </summary>
         public string arterial_pressure
         {
@@ -59,7 +60,7 @@ namespace ALS.Model
             get { return _arterial_pressure; }
         }
         /// <summary>
-        /// 静脉压
+        /// 
         /// </summary>
         public string venous_pressure
         {
@@ -67,7 +68,7 @@ namespace ALS.Model
             get { return _venous_pressure; }
         }
         /// <summary>
-        /// 血浆压
+        /// 
         /// </summary>
         public string plasma_pressure
         {
@@ -75,12 +76,20 @@ namespace ALS.Model
             get { return _plasma_pressure; }
         }
         /// <summary>
-        /// 跨膜压
+        /// 
         /// </summary>
         public string transmembrane_pressure
         {
             set { _transmembrane_pressure = value; }
             get { return _transmembrane_pressure; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string plasma2_pressure
+        {
+            set { _plasma2_pressure = value; }
+            get { return _plasma2_pressure; }
         }
         #endregion Model
 

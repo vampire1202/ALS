@@ -716,22 +716,22 @@ namespace AeroWizard
 
         internal void ResetBackButtonText()
         {
-            BackButtonText = Properties.Resources.WizardBackText;
+            BackButtonText = "上一步";
         }
 
         internal void ResetCancelButtonText()
         {
-            CancelButtonText = Properties.Resources.WizardCancelText;
+            CancelButtonText = "取消";
         }
 
         internal void ResetFinishButtonText()
         {
-            FinishButtonText = Properties.Resources.WizardFinishText;
+            FinishButtonText ="回收";
         }
 
         internal void ResetNextButtonText()
         {
-            NextButtonText = Properties.Resources.WizardNextText;
+            NextButtonText = "下一步";
         }
 
         private void SetCmdButtonState(ButtonBase btn, WizardCommandButtonState value)
@@ -774,22 +774,22 @@ namespace AeroWizard
 
         internal bool ShouldSerializeBackButtonText()
         {
-            return BackButtonText != Properties.Resources.WizardBackText;
+            return BackButtonText != "返回";
         }
 
         internal bool ShouldSerializeCancelButtonText()
         {
-            return CancelButtonText != Properties.Resources.WizardCancelText;
+            return CancelButtonText != "取消";
         }
 
         internal bool ShouldSerializeFinishButtonText()
         {
-            return FinishButtonText != Properties.Resources.WizardFinishText;
+            return FinishButtonText != "回收";
         }
 
         internal bool ShouldSerializeNextButtonText()
         {
-            return NextButtonText != Properties.Resources.WizardNextText;
+            return NextButtonText !="下一步";
         }
     }
 }

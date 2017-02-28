@@ -26,9 +26,10 @@ namespace ALS.Cls
         static byte sy_version;
         //注射器品牌
         private  string sy_brand;
-        private int sLen_Syringe;
-        private int lLen_Syringe;
-        private int p_Syringe;
+        private int sLen_Syringe;//短电位器值
+        private int lLen_Syringe;//长电位器值
+        private int p_Syringe;//压力值
+        private int kp_Syringe;//压力千帕值
         private double sy_cali;
         private double sy_Compd;
 
@@ -86,6 +87,11 @@ namespace ALS.Cls
         {
             set { p_Syringe = value; }
             get { return p_Syringe; }
+        }
+        public int Kp_Syringe
+        {
+            set { kp_Syringe = value; }
+            get { return kp_Syringe; }
         }
         public double Sy_cali
         {
