@@ -529,159 +529,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SKL.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pattern.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\flow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\syringe.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\treatment.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\clean.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pipe.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sum.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\c.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\recycle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\start.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sp20off.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sp20on.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\heat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\clip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\otherset.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hoton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mute.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\releasewarn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hotoff.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pipeline.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\alarm_64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\warn_64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\warn_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\alarm_32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\homepage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\left_32.png" />
-    <None Include="Resources\right_32.png" />
-    <None Include="Resources\down_64.png" />
-    <None Include="Resources\up_64.png" />
-    <None Include="Resources\ldon.png" />
-    <None Include="Resources\ldoff.png" />
-    <None Include="Resources\AD4off.png" />
     <None Include="Resources\AD1.png" />
-    <None Include="Resources\AD2.png" />
-    <None Include="Resources\AD3.png" />
-    <None Include="Resources\AD4.png" />
-    <None Include="Resources\Set64.png" />
-    <None Include="Resources\stop.png" />
-    <None Include="Resources\homepage1.png" />
-    <None Include="Resources\error_96.png" />
     <None Include="Resources\AD1Off.png" />
+    <None Include="Resources\AD2.png" />
     <None Include="Resources\AD2Off.png" />
+    <None Include="Resources\AD3.png" />
     <None Include="Resources\AD3Off.png" />
-    <None Include="Resources\net.png" />
-    <None Include="Resources\spstart.png" />
-    <None Include="Resources\spstop.png" />
-    <None Include="Resources\sp30off.png" />
-    <None Include="Resources\sp30on.png" />
-    <None Include="Resources\sp50off.png" />
-    <None Include="Resources\sp50on.png" />
-    <Content Include="DataBase\artificial_liver.sql" />
-    <Content Include="DataBase\db_als.sql" />
-    <Content Include="logo.ico" />
-    <Content Include="logo1.ico" />
-    <None Include="Resources\stop64.png" />
-    <None Include="Resources\save.png" />
-    <None Include="Resources\pause.png" />
-    <None Include="Resources\fast.png" />
-    <None Include="Resources\circle_yellow_s.png" />
-    <None Include="Resources\sp.png" />
-    <None Include="Resources\PP.png" />
-    <None Include="Resources\PP1.png" />
-    <None Include="Resources\PP2.png" />
-    <None Include="Resources\PP3.png" />
-    <None Include="Resources\PP4.png" />
-    <None Include="Resources\PP5.png" />
-    <None Include="Resources\PE1.png" />
-    <None Include="Resources\PE.png" />
-    <None Include="Resources\PE2.png" />
-    <None Include="Resources\PE3.png" />
-    <None Include="Resources\PE4.png" />
-    <None Include="Resources\PE5.png" />
-    <None Include="Resources\LiALS1.png" />
-    <None Include="Resources\LiALS2.png" />
-    <None Include="Resources\LiALS3.png" />
-    <None Include="Resources\LiALS4.png" />
-    <None Include="Resources\LiALS5.png" />
-    <None Include="Resources\LiALS6.png" />
-    <None Include="Resources\LiALS7.png" />
-    <None Include="Resources\LiALS8.png" />
-    <None Include="Resources\LiALS9.png" />
+    <None Include="Resources\AD4.png" />
+    <None Include="Resources\AD4off.png" />
+    <None Include="Resources\alarm_32.png" />
+    <None Include="Resources\alarm_64.png" />
+    <None Include="Resources\a_first.png" />
+    <None Include="Resources\a_last.png" />
+    <None Include="Resources\a_next.png" />
+    <None Include="Resources\a_previous.png" />
+    <None Include="Resources\battery.png" />
+    <None Include="Resources\battery1.png" />
+    <None Include="Resources\BPRun.gif" />
+    <None Include="Resources\BPStop.png" />
     <None Include="Resources\buttonface.png" />
-    <None Include="Resources\set.png" />
-    <None Include="Resources\SetSyringe.png" />
     <None Include="Resources\buttonfacesel.png" />
-    <None Include="Resources\hotoff_32.png" />
-    <None Include="Resources\hoton_32.png" />
-    <None Include="Resources\PETreat.png" />
-    <None Include="Resources\PPTreat.png" />
+    <None Include="Resources\c.png" />
     <None Include="Resources\CHDF.png" />
     <None Include="Resources\CHDF1.png" />
     <None Include="Resources\CHDF2.png" />
@@ -689,69 +557,39 @@
     <None Include="Resources\CHDF4.png" />
     <None Include="Resources\CHDF5.png" />
     <None Include="Resources\CHDFTreat.png" />
-    <None Include="Resources\LiALSTreat.png" />
-    <None Include="Resources\lials.png" />
-    <None Include="Resources\error_32.png" />
-    <None Include="Resources\info_32.png" />
-    <None Include="Resources\tml.png" />
-    <None Include="Resources\a_first.png" />
-    <None Include="Resources\a_previous.png" />
-    <None Include="Resources\a_next.png" />
-    <None Include="Resources\a_last.png" />
+    <None Include="Resources\circle_yellow_s.png" />
+    <None Include="Resources\clean.png" />
+    <None Include="Resources\clip.png" />
     <None Include="Resources\clipclose.png" />
+    <None Include="Resources\clipkeep.png" />
     <None Include="Resources\clipopen.png" />
     <None Include="Resources\clipstate.png" />
-    <None Include="Resources\battery.png" />
-    <None Include="Resources\battery1.png" />
-    <None Include="Resources\default.png" />
-    <None Include="Resources\PERT.png" />
-    <None Include="Resources\PERTTreat.png" />
-    <None Include="Resources\PERT1.png" />
-    <None Include="Resources\PERT2.png" />
-    <None Include="Resources\PERT3.png" />
-    <None Include="Resources\PERT4.png" />
-    <None Include="Resources\PERT5.png" />
-    <None Include="Resources\PERT6.png" />
-    <None Include="Resources\clipkeep.png" />
-    <None Include="Resources\PDF.png" />
-    <None Include="Resources\PDF1.png" />
-    <None Include="Resources\PDF2.png" />
-    <None Include="Resources\PDF3.png" />
-    <None Include="Resources\PDF4.png" />
-    <None Include="Resources\PDF5.png" />
-    <None Include="Resources\PDF6.png" />
-    <None Include="Resources\PDFTreat.png" />
-    <None Include="Resources\zhiliaozhong.gif" />
-    <None Include="Resources\jiuxu.png" />
-    <None Include="Resources\zhunbei.png" />
-    <None Include="Resources\zanting.png" />
-    <None Include="Resources\yunxing.gif" />
-    <None Include="Resources\tingzhi.png" />
-    <None Include="Resources\BPStop.png" />
-    <None Include="Resources\BPRun.gif" />
     <None Include="Resources\CPRun.gif" />
     <None Include="Resources\CPStop.png" />
+    <None Include="Resources\default.png" />
+    <None Include="Resources\down_64.png" />
     <None Include="Resources\DPRun.gif" />
     <None Include="Resources\DPStop.png" />
+    <None Include="Resources\end.png" />
+    <None Include="Resources\error_32.png" />
+    <None Include="Resources\error_96.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\fast.png" />
+    <None Include="Resources\flow.png" />
     <None Include="Resources\FP2Run.gif" />
     <None Include="Resources\FP2Stop.png" />
     <None Include="Resources\FPRun.gif" />
     <None Include="Resources\FPStop.png" />
-    <None Include="Resources\RPRun.gif" />
-    <None Include="Resources\RPStop.png" />
-    <None Include="Resources\sp30on_32.png" />
-    <None Include="Resources\sp30off_32.png" />
-    <None Include="Resources\logo_wego.png" />
-    <None Include="Resources\logo_ccid.png" />
-    <None Include="Resources\logo_zheyi.png" />
-    <None Include="Resources\logo_wg2.png" />
-    <None Include="Resources\logo_zheyi2.png" />
-    <None Include="Resources\ready.png" />
-    <None Include="Resources\LiALSFlush.png" />
+    <None Include="Resources\heat.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\homepage.png" />
+    <None Include="Resources\homepage1.png" />
+    <None Include="Resources\hotoff.png" />
+    <None Include="Resources\hotoff_32.png" />
+    <None Include="Resources\hoton.png" />
+    <None Include="Resources\hoton_32.png" />
     <None Include="Resources\huishou.png" />
-    <None Include="Resources\StepLi_1.png" />
-    <None Include="Resources\StepLi_2.png" />
-    <None Include="Resources\stepLi_3.png" />
+    <None Include="Resources\iconwarning.png" />
     <None Include="Resources\icon_done.png" />
     <None Include="Resources\icon_editting.png" />
     <None Include="Resources\icon_error.png" />
@@ -762,18 +600,311 @@
     <None Include="Resources\icon_question.png" />
     <None Include="Resources\icon_setting.png" />
     <None Include="Resources\icon_updating.png" />
-    <None Include="Resources\iconwarning.png" />
-    <None Include="Resources\thanks.png" />
-    <None Include="Resources\end.png" />
+    <None Include="Resources\info_32.png" />
+    <None Include="Resources\jiuxu.png" />
+    <None Include="Resources\ldoff.png" />
+    <None Include="Resources\ldon.png" />
+    <None Include="Resources\left_32.png" />
+    <None Include="Resources\lials.png" />
+    <None Include="Resources\LiALS1.png" />
+    <None Include="Resources\LiALS10.png" />
+    <None Include="Resources\LiALS2.png" />
+    <None Include="Resources\LiALS3.png" />
+    <None Include="Resources\LiALS4.png" />
+    <None Include="Resources\LiALS5.png" />
+    <None Include="Resources\LiALS6.png" />
+    <None Include="Resources\LiALS7.png" />
+    <None Include="Resources\LiALS8.png" />
+    <None Include="Resources\LiALS9.png" />
+    <None Include="Resources\LiALSFlush.png" />
+    <None Include="Resources\LiALSTreat.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo_ccid.png" />
+    <None Include="Resources\logo_wego.png" />
+    <None Include="Resources\logo_wg2.png" />
+    <None Include="Resources\logo_zheyi.png" />
+    <None Include="Resources\logo_zheyi2.png" />
+    <None Include="Resources\mute.png" />
+    <None Include="Resources\net.png" />
+    <None Include="Resources\otherset.png" />
+    <None Include="Resources\pattern.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\PDF.png" />
+    <None Include="Resources\PDF1.png" />
+    <None Include="Resources\PDF2.png" />
+    <None Include="Resources\PDF3.png" />
+    <None Include="Resources\PDF4.png" />
+    <None Include="Resources\PDF5.png" />
+    <None Include="Resources\PDF6.png" />
+    <None Include="Resources\PDFTreat.png" />
+    <None Include="Resources\PE.png" />
+    <None Include="Resources\PE1.png" />
+    <None Include="Resources\PE2.png" />
+    <None Include="Resources\PE3.png" />
+    <None Include="Resources\PE4.png" />
+    <None Include="Resources\PE5.png" />
+    <None Include="Resources\PERT.png" />
+    <None Include="Resources\PERT1.png" />
+    <None Include="Resources\PERT2.png" />
+    <None Include="Resources\PERT3.png" />
+    <None Include="Resources\PERT4.png" />
+    <None Include="Resources\PERT5.png" />
+    <None Include="Resources\PERT6.png" />
     <None Include="Resources\PERTTip1.png" />
     <None Include="Resources\PERTTip2.png" />
     <None Include="Resources\PERTTip3.png" />
-    <None Include="Resources\trackbar1.png" />
-    <None Include="Resources\trackbar2.png" />
+    <None Include="Resources\PERTTreat.png" />
+    <None Include="Resources\PETreat.png" />
+    <None Include="Resources\pipe.png" />
+    <None Include="Resources\pipeline.png" />
+    <None Include="Resources\PP.png" />
+    <None Include="Resources\PP1.png" />
+    <None Include="Resources\PP2.png" />
+    <None Include="Resources\PP3.png" />
+    <None Include="Resources\PP4.png" />
+    <None Include="Resources\PP5.png" />
+    <None Include="Resources\PPTreat.png" />
+    <None Include="Resources\ready.png" />
+    <None Include="Resources\recycle.png" />
+    <None Include="Resources\releasewarn.png" />
+    <None Include="Resources\right_32.png" />
+    <None Include="Resources\RPRun.gif" />
+    <None Include="Resources\RPStop.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\set.png" />
+    <None Include="Resources\Set64.png" />
+    <None Include="Resources\SetSyringe.png" />
+    <None Include="Resources\SKL.jpg" />
+    <None Include="Resources\sp.png" />
+    <None Include="Resources\sp20off.png" />
+    <None Include="Resources\sp20on.png" />
+    <None Include="Resources\sp30off.png" />
+    <None Include="Resources\sp30off_32.png" />
+    <None Include="Resources\sp30on.png" />
+    <None Include="Resources\sp30on_32.png" />
+    <None Include="Resources\sp50off.png" />
+    <None Include="Resources\sp50on.png" />
+    <None Include="Resources\spstart.png" />
+    <None Include="Resources\spstop.png" />
+    <None Include="Resources\start.png" />
+    <None Include="Resources\StepLi_1.png" />
+    <None Include="Resources\StepLi_2.png" />
+    <None Include="Resources\stepLi_3.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\stop64.png" />
+    <None Include="Resources\sum.png" />
+    <None Include="Resources\syringe.png" />
+    <None Include="Resources\thanks.png" />
+    <None Include="Resources\tingzhi.png" />
     <None Include="Resources\tip1.png" />
     <None Include="Resources\tipPert1.png" />
     <None Include="Resources\tipPert2.png" />
-    <None Include="Resources\LiALS10.png" />
+    <None Include="Resources\tml.png" />
+    <None Include="Resources\trackbar1.png" />
+    <None Include="Resources\trackbar2.png" />
+    <None Include="Resources\treatment.png" />
+    <None Include="Resources\up_64.png" />
+    <None Include="Resources\warn_32.png" />
+    <None Include="Resources\warn_64.png" />
+    <None Include="Resources\yunxing.gif" />
+    <None Include="Resources\zanting.png" />
+    <None Include="Resources\zhiliaozhong.gif" />
+    <None Include="Resources\zhunbei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\artificial_liver.sql" />
+    <Content Include="DataBase\db_als.sql" />
+    <Content Include="logo.ico" />
+    <Content Include="logo1.ico" />
+    <Content Include="Resources\AD1.jpg" />
+    <Content Include="Resources\AD1Off.jpg" />
+    <Content Include="Resources\AD2.jpg" />
+    <Content Include="Resources\AD2Off.jpg" />
+    <Content Include="Resources\AD3.jpg" />
+    <Content Include="Resources\AD3Off.jpg" />
+    <Content Include="Resources\AD4.jpg" />
+    <Content Include="Resources\AD4off.jpg" />
+    <Content Include="Resources\alarm_32.jpg" />
+    <Content Include="Resources\alarm_64.jpg" />
+    <Content Include="Resources\a_first.jpg" />
+    <Content Include="Resources\a_last.jpg" />
+    <Content Include="Resources\a_next.jpg" />
+    <Content Include="Resources\a_previous.jpg" />
+    <Content Include="Resources\battery.jpg" />
+    <Content Include="Resources\battery1.jpg" />
+    <Content Include="Resources\BPStop.jpg" />
+    <Content Include="Resources\buttonface.jpg" />
+    <Content Include="Resources\buttonfacesel.jpg" />
+    <Content Include="Resources\c.jpg" />
+    <Content Include="Resources\CHDF.jpg" />
+    <Content Include="Resources\CHDF1.jpg" />
+    <Content Include="Resources\CHDF2.jpg" />
+    <Content Include="Resources\CHDF3.jpg" />
+    <Content Include="Resources\CHDF4.jpg" />
+    <Content Include="Resources\CHDF5.jpg" />
+    <Content Include="Resources\CHDFTreat.jpg" />
+    <Content Include="Resources\circle_yellow_s.jpg" />
+    <Content Include="Resources\clean.jpg" />
+    <Content Include="Resources\clip.jpg" />
+    <Content Include="Resources\clipclose.jpg" />
+    <Content Include="Resources\clipkeep.jpg" />
+    <Content Include="Resources\clipopen.jpg" />
+    <Content Include="Resources\clipstate.jpg" />
+    <Content Include="Resources\CPEFA装管图1.gif" />
+    <Content Include="Resources\CPEFA装管图10.gif" />
+    <Content Include="Resources\CPEFA装管图11.gif" />
+    <Content Include="Resources\CPEFA装管图2.gif" />
+    <Content Include="Resources\CPEFA装管图3.gif" />
+    <Content Include="Resources\CPEFA装管图4.gif" />
+    <Content Include="Resources\CPEFA装管图5.gif" />
+    <Content Include="Resources\CPEFA装管图6.gif" />
+    <Content Include="Resources\CPEFA装管图7.gif" />
+    <Content Include="Resources\CPEFA装管图8.gif" />
+    <Content Include="Resources\CPEFA装管图9.gif" />
+    <Content Include="Resources\CPStop.jpg" />
+    <Content Include="Resources\default.jpg" />
+    <Content Include="Resources\down_64.jpg" />
+    <Content Include="Resources\DPStop.jpg" />
+    <Content Include="Resources\end.jpg" />
+    <Content Include="Resources\error_32.jpg" />
+    <Content Include="Resources\error_96.jpg" />
+    <Content Include="Resources\exit.jpg" />
+    <Content Include="Resources\fast.jpg" />
+    <Content Include="Resources\flow.jpg" />
+    <Content Include="Resources\FP2Stop.jpg" />
+    <Content Include="Resources\FPStop.jpg" />
+    <Content Include="Resources\heat.jpg" />
+    <Content Include="Resources\home.jpg" />
+    <Content Include="Resources\homepage.jpg" />
+    <Content Include="Resources\homepage1.jpg" />
+    <Content Include="Resources\hotoff.jpg" />
+    <Content Include="Resources\hotoff_32.jpg" />
+    <Content Include="Resources\hoton.jpg" />
+    <Content Include="Resources\hoton_32.jpg" />
+    <Content Include="Resources\huishou.jpg" />
+    <Content Include="Resources\iconwarning.jpg" />
+    <Content Include="Resources\icon_done.jpg" />
+    <Content Include="Resources\icon_editting.jpg" />
+    <Content Include="Resources\icon_error.jpg" />
+    <Content Include="Resources\icon_infomation.jpg" />
+    <Content Include="Resources\icon_like.jpg" />
+    <Content Include="Resources\icon_new.jpg" />
+    <Content Include="Resources\icon_password.jpg" />
+    <Content Include="Resources\icon_question.jpg" />
+    <Content Include="Resources\icon_setting.jpg" />
+    <Content Include="Resources\icon_updating.jpg" />
+    <Content Include="Resources\info_32.jpg" />
+    <Content Include="Resources\jiuxu.jpg" />
+    <Content Include="Resources\ldoff.jpg" />
+    <Content Include="Resources\ldon.jpg" />
+    <Content Include="Resources\left_32.jpg" />
+    <Content Include="Resources\lials.jpg" />
+    <Content Include="Resources\LiALS1.jpg" />
+    <Content Include="Resources\LiALS10.jpg" />
+    <Content Include="Resources\LiALS2.jpg" />
+    <Content Include="Resources\LiALS3.jpg" />
+    <Content Include="Resources\LiALS4.jpg" />
+    <Content Include="Resources\LiALS5.jpg" />
+    <Content Include="Resources\LiALS6.jpg" />
+    <Content Include="Resources\LiALS7.jpg" />
+    <Content Include="Resources\LiALS8.jpg" />
+    <Content Include="Resources\LiALS9.jpg" />
+    <Content Include="Resources\LiALSFlush.jpg" />
+    <Content Include="Resources\LiALSFlush1.jpg" />
+    <Content Include="Resources\LiALSFlush1.png" />
+    <Content Include="Resources\LiALSTreat.jpg" />
+    <Content Include="Resources\logo.jpg" />
+    <Content Include="Resources\logo2.jpg" />
+    <Content Include="Resources\logo2.png" />
+    <Content Include="Resources\logo_ccid.jpg" />
+    <Content Include="Resources\logo_wego.jpg" />
+    <Content Include="Resources\logo_wg2.jpg" />
+    <Content Include="Resources\logo_zheyi.jpg" />
+    <Content Include="Resources\logo_zheyi2.jpg" />
+    <Content Include="Resources\mute.jpg" />
+    <Content Include="Resources\net.jpg" />
+    <Content Include="Resources\otherset.jpg" />
+    <Content Include="Resources\pattern.jpg" />
+    <Content Include="Resources\pause.jpg" />
+    <Content Include="Resources\PDF.jpg" />
+    <Content Include="Resources\PDF1.jpg" />
+    <Content Include="Resources\PDF2.jpg" />
+    <Content Include="Resources\PDF3.jpg" />
+    <Content Include="Resources\PDF4.jpg" />
+    <Content Include="Resources\PDF5.jpg" />
+    <Content Include="Resources\PDF6.jpg" />
+    <Content Include="Resources\PDFTreat.jpg" />
+    <Content Include="Resources\PE.jpg" />
+    <Content Include="Resources\PE1.jpg" />
+    <Content Include="Resources\PE2.jpg" />
+    <Content Include="Resources\PE3.jpg" />
+    <Content Include="Resources\PE4.jpg" />
+    <Content Include="Resources\PE5.jpg" />
+    <Content Include="Resources\PERT.jpg" />
+    <Content Include="Resources\PERT1.jpg" />
+    <Content Include="Resources\PERT2.jpg" />
+    <Content Include="Resources\PERT3.jpg" />
+    <Content Include="Resources\PERT4.jpg" />
+    <Content Include="Resources\PERT5.jpg" />
+    <Content Include="Resources\PERT6.jpg" />
+    <Content Include="Resources\PERTTip1.jpg" />
+    <Content Include="Resources\PERTTip2.jpg" />
+    <Content Include="Resources\PERTTip3.jpg" />
+    <Content Include="Resources\PERTTreat.jpg" />
+    <Content Include="Resources\PETreat.jpg" />
+    <Content Include="Resources\pipe.jpg" />
+    <Content Include="Resources\pipeline.jpg" />
+    <Content Include="Resources\PP.jpg" />
+    <Content Include="Resources\PP1.jpg" />
+    <Content Include="Resources\PP2.jpg" />
+    <Content Include="Resources\PP3.jpg" />
+    <Content Include="Resources\PP4.jpg" />
+    <Content Include="Resources\PP5.jpg" />
+    <Content Include="Resources\PPTreat.jpg" />
+    <Content Include="Resources\ready.jpg" />
+    <Content Include="Resources\recycle.jpg" />
+    <Content Include="Resources\releasewarn.jpg" />
+    <Content Include="Resources\right_32.jpg" />
+    <Content Include="Resources\RPStop.jpg" />
+    <Content Include="Resources\save.jpg" />
+    <Content Include="Resources\set.jpg" />
+    <Content Include="Resources\Set64.jpg" />
+    <Content Include="Resources\SetSyringe.jpg" />
+    <Content Include="Resources\sp.jpg" />
+    <Content Include="Resources\sp20off.jpg" />
+    <Content Include="Resources\sp20on.jpg" />
+    <Content Include="Resources\sp30off.jpg" />
+    <Content Include="Resources\sp30off_32.jpg" />
+    <Content Include="Resources\sp30on.jpg" />
+    <Content Include="Resources\sp30on_32.jpg" />
+    <Content Include="Resources\sp50off.jpg" />
+    <Content Include="Resources\sp50on.jpg" />
+    <Content Include="Resources\spstart.jpg" />
+    <Content Include="Resources\spstop.jpg" />
+    <Content Include="Resources\start.jpg" />
+    <Content Include="Resources\StepLi_1.jpg" />
+    <Content Include="Resources\StepLi_2.jpg" />
+    <Content Include="Resources\stepLi_3.jpg" />
+    <Content Include="Resources\stepLi_31.jpg" />
+    <Content Include="Resources\stepLi_31.png" />
+    <Content Include="Resources\stop.jpg" />
+    <Content Include="Resources\stop64.jpg" />
+    <Content Include="Resources\sum.jpg" />
+    <Content Include="Resources\syringe.jpg" />
+    <Content Include="Resources\thanks.jpg" />
+    <Content Include="Resources\tingzhi.jpg" />
+    <Content Include="Resources\tip1.jpg" />
+    <Content Include="Resources\tipPert1.jpg" />
+    <Content Include="Resources\tipPert2.jpg" />
+    <Content Include="Resources\tml.jpg" />
+    <Content Include="Resources\trackbar1.jpg" />
+    <Content Include="Resources\trackbar2.jpg" />
+    <Content Include="Resources\treatment.jpg" />
+    <Content Include="Resources\up_64.jpg" />
+    <Content Include="Resources\warn_32.jpg" />
+    <Content Include="Resources\warn_64.jpg" />
+    <Content Include="Resources\zanting.jpg" />
+    <Content Include="Resources\zhunbei.jpg" />
     <Content Include="代码规范及界面颜色.txt" />
   </ItemGroup>
   <ItemGroup>
