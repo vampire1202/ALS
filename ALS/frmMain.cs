@@ -34,7 +34,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 using System.Net;
 using System.Net.Sockets;
 using System.Diagnostics;
@@ -51,7 +51,7 @@ namespace ALS
         //------------------------------------------
         //             各子窗体定义                |
         //------------------------------------------  
-
+        
         FormOperation.ucPipeLine pipeLine = new FormOperation.ucPipeLine();
         FormOperation.ucAutoFlush M_uc_AutoFlush = new FormOperation.ucAutoFlush();
         FormOperation.ucSelectFlush M_uc_selFlush = new FormOperation.ucSelectFlush();
@@ -1251,6 +1251,7 @@ namespace ALS
         /// </summary>
         /// <param name="cts"></param>
         /// <returns></returns>
+        delegate void spstate();
         async Task RunFastSP(CancellationTokenSource cts)
         {
             await Task.Delay(50).ConfigureAwait(false);
@@ -1263,7 +1264,7 @@ namespace ALS
                 {
                     SendOrder(port_hpump, Cls.Comm_SyringePump.EndFastForward);
                     SendOrder(port_hpump, Cls.Comm_SyringePump.EndFastForward);
-                    this.BeginInvoke(new Action(() =>
+                    this.BeginInvoke(new spstate(() =>
                     {
                         M_uc_OtherSet.btnFastStopSP.Enabled = false;
                         M_uc_OtherSet.btnFastRunSP.Enabled = true;
