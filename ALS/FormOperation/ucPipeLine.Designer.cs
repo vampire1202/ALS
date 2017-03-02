@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.lvStep = new System.Windows.Forms.ListView();
             this.pboxShow = new System.Windows.Forms.PictureBox();
+            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
+            this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
             this.btnNext = new CCWin.SkinControl.SkinButton();
             this.btnReturn = new CCWin.SkinControl.SkinButton();
-            this.txGroupBox1 = new TX.Framework.WindowUI.Controls.TXGroupBox();
-            this.txGroupBox2 = new TX.Framework.WindowUI.Controls.TXGroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxShow)).BeginInit();
-            this.txGroupBox1.SuspendLayout();
-            this.txGroupBox2.SuspendLayout();
+            this.skinGroupBox1.SuspendLayout();
+            this.skinGroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lvStep
@@ -50,11 +50,11 @@
             this.lvStep.FullRowSelect = true;
             this.lvStep.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.lvStep.LabelWrap = false;
-            this.lvStep.Location = new System.Drawing.Point(3, 17);
+            this.lvStep.Location = new System.Drawing.Point(3, 25);
             this.lvStep.MultiSelect = false;
             this.lvStep.Name = "lvStep";
             this.lvStep.ShowGroups = false;
-            this.lvStep.Size = new System.Drawing.Size(156, 449);
+            this.lvStep.Size = new System.Drawing.Size(156, 386);
             this.lvStep.TabIndex = 11;
             this.lvStep.UseCompatibleStateImageBehavior = false;
             this.lvStep.View = System.Windows.Forms.View.Details;
@@ -65,12 +65,59 @@
             this.pboxShow.BackColor = System.Drawing.Color.Transparent;
             this.pboxShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pboxShow.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pboxShow.Location = new System.Drawing.Point(3, 17);
+            this.pboxShow.Location = new System.Drawing.Point(3, 29);
             this.pboxShow.Name = "pboxShow";
-            this.pboxShow.Size = new System.Drawing.Size(724, 584);
+            this.pboxShow.Size = new System.Drawing.Size(724, 572);
             this.pboxShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pboxShow.TabIndex = 10;
             this.pboxShow.TabStop = false;
+            // 
+            // skinGroupBox1
+            // 
+            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.BorderColor = System.Drawing.Color.Silver;
+            this.skinGroupBox1.Controls.Add(this.skinGroupBox2);
+            this.skinGroupBox1.Controls.Add(this.pboxShow);
+            this.skinGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinGroupBox1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinGroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.skinGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.skinGroupBox1.Name = "skinGroupBox1";
+            this.skinGroupBox1.Radius = 20;
+            this.skinGroupBox1.RectBackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox1.Size = new System.Drawing.Size(898, 604);
+            this.skinGroupBox1.TabIndex = 35;
+            this.skinGroupBox1.TabStop = false;
+            this.skinGroupBox1.Text = "安装管路";
+            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.Silver;
+            this.skinGroupBox1.TitleRadius = 16;
+            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.White;
+            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.Right;
+            // 
+            // skinGroupBox2
+            // 
+            this.skinGroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox2.BorderColor = System.Drawing.Color.Silver;
+            this.skinGroupBox2.Controls.Add(this.lvStep);
+            this.skinGroupBox2.Controls.Add(this.btnNext);
+            this.skinGroupBox2.Controls.Add(this.btnReturn);
+            this.skinGroupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.skinGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinGroupBox2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.skinGroupBox2.Location = new System.Drawing.Point(733, 29);
+            this.skinGroupBox2.Name = "skinGroupBox2";
+            this.skinGroupBox2.Radius = 20;
+            this.skinGroupBox2.RectBackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox2.Size = new System.Drawing.Size(162, 572);
+            this.skinGroupBox2.TabIndex = 64;
+            this.skinGroupBox2.TabStop = false;
+            this.skinGroupBox2.Text = "安装步骤";
+            this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.Silver;
+            this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.White;
+            this.skinGroupBox2.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
             // 
             // btnNext
             // 
@@ -82,7 +129,7 @@
             this.btnNext.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext.Location = new System.Drawing.Point(30, 528);
+            this.btnNext.Location = new System.Drawing.Point(31, 515);
             this.btnNext.MouseBack = null;
             this.btnNext.Name = "btnNext";
             this.btnNext.NormlBack = null;
@@ -105,7 +152,7 @@
             this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReturn.ForeColor = System.Drawing.Color.White;
             this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReturn.Location = new System.Drawing.Point(30, 472);
+            this.btnReturn.Location = new System.Drawing.Point(32, 454);
             this.btnReturn.MouseBack = null;
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.NormlBack = null;
@@ -118,56 +165,19 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // txGroupBox1
-            // 
-            this.txGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.txGroupBox1.BorderColor = System.Drawing.Color.Silver;
-            this.txGroupBox1.CaptionColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.txGroupBox1.CaptionFont = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txGroupBox1.Controls.Add(this.txGroupBox2);
-            this.txGroupBox1.Controls.Add(this.pboxShow);
-            this.txGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txGroupBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txGroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.txGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.txGroupBox1.Name = "txGroupBox1";
-            this.txGroupBox1.Size = new System.Drawing.Size(898, 604);
-            this.txGroupBox1.TabIndex = 64;
-            this.txGroupBox1.TabStop = false;
-            this.txGroupBox1.Text = "安装管路";
-            this.txGroupBox1.TextMargin = 6;
-            // 
-            // txGroupBox2
-            // 
-            this.txGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.txGroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(168)))), ((int)(((byte)(192)))));
-            this.txGroupBox2.CaptionColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.txGroupBox2.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
-            this.txGroupBox2.Controls.Add(this.lvStep);
-            this.txGroupBox2.Controls.Add(this.btnNext);
-            this.txGroupBox2.Controls.Add(this.btnReturn);
-            this.txGroupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.txGroupBox2.Location = new System.Drawing.Point(733, 17);
-            this.txGroupBox2.Name = "txGroupBox2";
-            this.txGroupBox2.Size = new System.Drawing.Size(162, 584);
-            this.txGroupBox2.TabIndex = 11;
-            this.txGroupBox2.TabStop = false;
-            this.txGroupBox2.Text = "安装步骤";
-            this.txGroupBox2.TextMargin = 6;
-            // 
             // ucPipeLine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Controls.Add(this.txGroupBox1);
+            this.Controls.Add(this.skinGroupBox1);
             this.Name = "ucPipeLine";
             this.Size = new System.Drawing.Size(898, 604);
             this.Load += new System.EventHandler(this.pipeLine_Load);
             this.SizeChanged += new System.EventHandler(this.pipeLine_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pboxShow)).EndInit();
-            this.txGroupBox1.ResumeLayout(false);
-            this.txGroupBox2.ResumeLayout(false);
+            this.skinGroupBox1.ResumeLayout(false);
+            this.skinGroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -176,9 +186,9 @@
 
         private System.Windows.Forms.PictureBox pboxShow;
         private System.Windows.Forms.ListView lvStep;
+        private CCWin.SkinControl.SkinGroupBox skinGroupBox1;
         public CCWin.SkinControl.SkinButton btnNext;
         public CCWin.SkinControl.SkinButton btnReturn;
-        private TX.Framework.WindowUI.Controls.TXGroupBox txGroupBox1;
-        private TX.Framework.WindowUI.Controls.TXGroupBox txGroupBox2;
+        private CCWin.SkinControl.SkinGroupBox skinGroupBox2;
     }
 }

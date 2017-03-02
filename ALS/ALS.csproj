@@ -967,10 +967,6 @@
       <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
       <Name>Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TX.Framework.WindowUI\TX.Framework.WindowUI.csproj">
-      <Project>{E8746B10-EAAF-44B7-95CC-29E4C42EC8D5}</Project>
-      <Name>TX.Framework.WindowUI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
