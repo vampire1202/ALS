@@ -32,9 +32,9 @@
             this.rtBox = new System.Windows.Forms.RichTextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.paltop = new Owf.Controls.A1Panel();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.paltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,8 +75,8 @@
             // paltop
             // 
             this.paltop.BorderColor = System.Drawing.Color.Silver;
-            this.paltop.Controls.Add(this.skinLabel2);
-            this.paltop.Controls.Add(this.skinLabel1);
+            this.paltop.Controls.Add(this.label1);
+            this.paltop.Controls.Add(this.label2);
             this.paltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.paltop.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
             this.paltop.GradientStartColor = System.Drawing.Color.White;
@@ -89,35 +89,6 @@
             this.paltop.ShadowOffSet = 0;
             this.paltop.Size = new System.Drawing.Size(650, 58);
             this.paltop.TabIndex = 29;
-            // 
-            // skinLabel2
-            // 
-            this.skinLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.skinLabel2.AutoSize = true;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.Silver;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.skinLabel2.Location = new System.Drawing.Point(562, 28);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(33, 17);
-            this.skinLabel2.TabIndex = 7;
-            this.skinLabel2.Text = "V1.0";
-            // 
-            // skinLabel1
-            // 
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderSize = 2;
-            this.skinLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinLabel1.Font = new System.Drawing.Font("楷体", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.ForeColor = System.Drawing.Color.Red;
-            this.skinLabel1.Location = new System.Drawing.Point(5, 0);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(645, 58);
-            this.skinLabel1.TabIndex = 6;
-            this.skinLabel1.Text = "李 氏 人 工 肝 治 疗 系 统";
-            this.skinLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -132,6 +103,30 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("宋体", 12F);
+            this.label1.Location = new System.Drawing.Point(553, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "V1.0";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("楷体", 24F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(645, 58);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "李 氏 人 工 肝 治 疗 系 统";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ssf
             // 
@@ -166,7 +161,7 @@
         public System.Windows.Forms.RichTextBox rtBox;
         public System.Windows.Forms.Button btnExit;
         private Owf.Controls.A1Panel paltop;
-        private CCWin.SkinControl.SkinLabel skinLabel2;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
