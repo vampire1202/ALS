@@ -975,6 +975,10 @@
       <Project>{53995dbb-9836-4647-ad22-865884fdeb9e}</Project>
       <Name>Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PulseButton\PulseButton.csproj">
+      <Project>{17A4D90E-2DEB-4BD7-82B6-16860C90B4E9}</Project>
+      <Name>PulseButton</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

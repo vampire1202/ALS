@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lvStep = new System.Windows.Forms.ListView();
             this.pboxShow = new System.Windows.Forms.PictureBox();
-            this.btnNext = new CCWin.SkinControl.SkinButton();
-            this.btnReturn = new CCWin.SkinControl.SkinButton();
             this.grouper1 = new CodeVendor.Controls.Grouper();
-            this.grouper2 = new CodeVendor.Controls.Grouper();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grouper2 = new CodeVendor.Controls.Grouper();
+            this.btnReturn = new PulseButton.PulseButton();
+            this.btnNext = new PulseButton.PulseButton();
             ((System.ComponentModel.ISupportInitialize)(this.pboxShow)).BeginInit();
             this.grouper1.SuspendLayout();
-            this.grouper2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.grouper2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lvStep
@@ -56,7 +55,7 @@
             this.lvStep.MultiSelect = false;
             this.lvStep.Name = "lvStep";
             this.lvStep.ShowGroups = false;
-            this.lvStep.Size = new System.Drawing.Size(165, 446);
+            this.lvStep.Size = new System.Drawing.Size(165, 430);
             this.lvStep.TabIndex = 11;
             this.lvStep.UseCompatibleStateImageBehavior = false;
             this.lvStep.View = System.Windows.Forms.View.Details;
@@ -73,52 +72,6 @@
             this.pboxShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pboxShow.TabIndex = 10;
             this.pboxShow.TabStop = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.Transparent;
-            this.btnNext.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnNext.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnNext.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnNext.DownBack = null;
-            this.btnNext.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNext.Location = new System.Drawing.Point(32, 533);
-            this.btnNext.MouseBack = null;
-            this.btnNext.Name = "btnNext";
-            this.btnNext.NormlBack = null;
-            this.btnNext.Radius = 50;
-            this.btnNext.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnNext.Size = new System.Drawing.Size(100, 50);
-            this.btnNext.TabIndex = 63;
-            this.btnNext.Tag = "";
-            this.btnNext.Text = "下一步";
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.Color.Transparent;
-            this.btnReturn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnReturn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnReturn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnReturn.DownBack = null;
-            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnReturn.ForeColor = System.Drawing.Color.White;
-            this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReturn.Location = new System.Drawing.Point(32, 477);
-            this.btnReturn.MouseBack = null;
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.NormlBack = null;
-            this.btnReturn.Radius = 50;
-            this.btnReturn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnReturn.Size = new System.Drawing.Size(100, 50);
-            this.btnReturn.TabIndex = 63;
-            this.btnReturn.Tag = "";
-            this.btnReturn.Text = "上一步";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // grouper1
             // 
@@ -137,39 +90,13 @@
             this.grouper1.Location = new System.Drawing.Point(0, 0);
             this.grouper1.Name = "grouper1";
             this.grouper1.Padding = new System.Windows.Forms.Padding(5, 12, 3, 3);
-            this.grouper1.PaintGroupBox = false;
+            this.grouper1.PaintGroupBox = true;
             this.grouper1.RoundCorners = 10;
             this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper1.ShadowControl = false;
             this.grouper1.ShadowThickness = 3;
             this.grouper1.Size = new System.Drawing.Size(898, 604);
             this.grouper1.TabIndex = 64;
-            // 
-            // grouper2
-            // 
-            this.grouper2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grouper2.BackgroundGradientColor = System.Drawing.Color.White;
-            this.grouper2.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
-            this.grouper2.BorderColor = System.Drawing.Color.Silver;
-            this.grouper2.BorderThickness = 1F;
-            this.grouper2.Controls.Add(this.lvStep);
-            this.grouper2.Controls.Add(this.btnNext);
-            this.grouper2.Controls.Add(this.btnReturn);
-            this.grouper2.CustomGroupBoxColor = System.Drawing.Color.White;
-            this.grouper2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.grouper2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grouper2.GroupImage = null;
-            this.grouper2.GroupTitle = "安装步骤";
-            this.grouper2.Location = new System.Drawing.Point(725, 12);
-            this.grouper2.Name = "grouper2";
-            this.grouper2.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
-            this.grouper2.PaintGroupBox = false;
-            this.grouper2.RoundCorners = 10;
-            this.grouper2.ShadowColor = System.Drawing.Color.DarkGray;
-            this.grouper2.ShadowControl = false;
-            this.grouper2.ShadowThickness = 3;
-            this.grouper2.Size = new System.Drawing.Size(170, 589);
-            this.grouper2.TabIndex = 64;
             // 
             // panel1
             // 
@@ -180,6 +107,72 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 16, 0, 0);
             this.panel1.Size = new System.Drawing.Size(721, 589);
             this.panel1.TabIndex = 65;
+            // 
+            // grouper2
+            // 
+            this.grouper2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grouper2.BackgroundGradientColor = System.Drawing.Color.White;
+            this.grouper2.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.grouper2.BorderColor = System.Drawing.Color.Silver;
+            this.grouper2.BorderThickness = 1F;
+            this.grouper2.Controls.Add(this.btnNext);
+            this.grouper2.Controls.Add(this.btnReturn);
+            this.grouper2.Controls.Add(this.lvStep);
+            this.grouper2.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.grouper2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.grouper2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grouper2.GroupImage = null;
+            this.grouper2.GroupTitle = "安装步骤";
+            this.grouper2.Location = new System.Drawing.Point(725, 12);
+            this.grouper2.Name = "grouper2";
+            this.grouper2.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.grouper2.PaintGroupBox = true;
+            this.grouper2.RoundCorners = 10;
+            this.grouper2.ShadowColor = System.Drawing.Color.DarkGray;
+            this.grouper2.ShadowControl = false;
+            this.grouper2.ShadowThickness = 3;
+            this.grouper2.Size = new System.Drawing.Size(170, 589);
+            this.grouper2.TabIndex = 64;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnReturn.CornerRadius = 25;
+            this.btnReturn.FocusColor = System.Drawing.Color.Black;
+            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReturn.Location = new System.Drawing.Point(30, 452);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
+            this.btnReturn.PulseSpeed = 0.3F;
+            this.btnReturn.PulseWidth = 8;
+            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnReturn.Size = new System.Drawing.Size(116, 66);
+            this.btnReturn.TabIndex = 64;
+            this.btnReturn.Text = "上一步";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnNext.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnNext.CornerRadius = 25;
+            this.btnNext.FocusColor = System.Drawing.Color.Black;
+            this.btnNext.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnNext.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNext.Location = new System.Drawing.Point(30, 519);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.PulseColor = System.Drawing.Color.DimGray;
+            this.btnNext.PulseSpeed = 0.3F;
+            this.btnNext.PulseWidth = 8;
+            this.btnNext.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnNext.Size = new System.Drawing.Size(116, 66);
+            this.btnNext.TabIndex = 64;
+            this.btnNext.Text = "下一步";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // ucPipeLine
             // 
@@ -193,8 +186,8 @@
             this.SizeChanged += new System.EventHandler(this.pipeLine_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pboxShow)).EndInit();
             this.grouper1.ResumeLayout(false);
-            this.grouper2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.grouper2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -203,10 +196,10 @@
 
         private System.Windows.Forms.PictureBox pboxShow;
         private System.Windows.Forms.ListView lvStep;
-        public CCWin.SkinControl.SkinButton btnNext;
-        public CCWin.SkinControl.SkinButton btnReturn;
         private CodeVendor.Controls.Grouper grouper1;
         private System.Windows.Forms.Panel panel1;
         private CodeVendor.Controls.Grouper grouper2;
+        public PulseButton.PulseButton btnReturn;
+        public PulseButton.PulseButton btnNext;
     }
 }
