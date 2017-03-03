@@ -67,7 +67,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
-<PropertyGroup>
+  <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
@@ -78,9 +78,6 @@
     <ApplicationIcon>Resources\WizardHat.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSkin">
-      <HintPath>..\Lib\CSkin.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
@@ -191,6 +188,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PulseButton\PulseButton.csproj">
+      <Project>{17A4D90E-2DEB-4BD7-82B6-16860C90B4E9}</Project>
+      <Name>PulseButton</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

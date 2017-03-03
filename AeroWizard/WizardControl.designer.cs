@@ -35,8 +35,8 @@
             this.contentArea = new AeroWizard.ThemedTableLayoutPanel();
             this.pageContainer = new AeroWizard.WizardPageContainer();
             this.backButton = new AeroWizard.ThemedImageButton();
-            this.cancelButton = new CCWin.SkinControl.SkinButton();
-            this.nextButton = new CCWin.SkinControl.SkinButton();
+            this.cancelButton = new PulseButton.PulseButton();
+            this.nextButton = new PulseButton.PulseButton();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.commandArea = new AeroWizard.ThemedTableLayoutPanel();
             this.titleBar = new AeroWizard.ThemedTableLayoutPanel();
@@ -102,12 +102,10 @@
             this.pageContainer.CancelButton = this.cancelButton;
             this.pageContainer.CancelButtonText = "抗凝剂泵";
             this.pageContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pageContainer.FinishButtonText = "回收";
             this.pageContainer.Location = new System.Drawing.Point(15, 0);
             this.pageContainer.Margin = new System.Windows.Forms.Padding(0);
             this.pageContainer.Name = "pageContainer";
             this.pageContainer.NextButton = this.nextButton;
-            this.pageContainer.NextButtonText = "下一步";
             this.pageContainer.Size = new System.Drawing.Size(593, 312);
             this.pageContainer.TabIndex = 0;
             this.pageContainer.Cancelling += new System.ComponentModel.CancelEventHandler(this.pageContainer_Cancelling);
@@ -132,19 +130,18 @@
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.cancelButton.BackColor = System.Drawing.Color.Transparent;
-            this.cancelButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.cancelButton.BorderColor = System.Drawing.Color.Silver;
-            this.cancelButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.cancelButton.DownBack = null;
+            this.cancelButton.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.cancelButton.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.cancelButton.CornerRadius = 4;
             this.cancelButton.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.cancelButton.ForeColor = System.Drawing.Color.White;
+            this.cancelButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cancelButton.Location = new System.Drawing.Point(307, 1);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(7, 0, 50, 0);
             this.cancelButton.MinimumSize = new System.Drawing.Size(70, 0);
-            this.cancelButton.MouseBack = null;
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.NormlBack = null;
-            this.cancelButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.cancelButton.PulseSpeed = 0.3F;
+            this.cancelButton.PulseWidth = 1;
+            this.cancelButton.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.cancelButton.Size = new System.Drawing.Size(80, 40);
             this.cancelButton.TabIndex = 1;
             this.cancelButton.Tag = "spset";
@@ -156,18 +153,17 @@
             this.nextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nextButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.nextButton.BackColor = System.Drawing.Color.Transparent;
-            this.nextButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.nextButton.BorderColor = System.Drawing.Color.Silver;
-            this.nextButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.nextButton.DownBack = null;
-            this.nextButton.ForeColor = System.Drawing.Color.White;
+            this.nextButton.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.nextButton.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.nextButton.CornerRadius = 4;
+            this.nextButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.nextButton.Location = new System.Drawing.Point(548, 1);
             this.nextButton.Margin = new System.Windows.Forms.Padding(0);
             this.nextButton.MinimumSize = new System.Drawing.Size(70, 0);
-            this.nextButton.MouseBack = null;
             this.nextButton.Name = "nextButton";
-            this.nextButton.NormlBack = null;
-            this.nextButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.nextButton.PulseSpeed = 0.3F;
+            this.nextButton.PulseWidth = 1;
+            this.nextButton.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.nextButton.Size = new System.Drawing.Size(70, 40);
             this.nextButton.TabIndex = 0;
             this.nextButton.Text = "下一步";
@@ -242,7 +238,14 @@
             this.title.TabIndex = 2;
             this.title.Text = "Wizard Title";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-          
+            // 
+            // titleImage
+            // 
+            this.titleImage.Location = new System.Drawing.Point(3, 3);
+            this.titleImage.Name = "titleImage";
+            this.titleImage.Size = new System.Drawing.Size(29, 26);
+            this.titleImage.TabIndex = 3;
+            this.titleImage.TabStop = false;
             // 
             // WizardControl
             // 
@@ -270,8 +273,8 @@
 
         private AeroWizard.ThemedTableLayoutPanel titleBar;
 		private AeroWizard.ThemedTableLayoutPanel commandArea;
-        private CCWin.SkinControl.SkinButton cancelButton;
-        internal CCWin.SkinControl.SkinButton nextButton;
+        private PulseButton.PulseButton cancelButton;
+        internal PulseButton.PulseButton nextButton;
 		internal AeroWizard.ThemedImageButton backButton;
 		private System.Windows.Forms.Panel commandAreaBorder;
 		private System.Windows.Forms.ImageList titleImageList;

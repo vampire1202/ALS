@@ -194,7 +194,7 @@ namespace ALS.FormOperation
                         this.btnRunFP2.Text = "停止";
                         this.btnRunFP2.Image = Properties.Resources.spstop;
                         this.btnRunFP2.ForeColor = Color.Red;
-                        //this.lblFP2.Text = _modelPumpState.FP2State.Speed.ToString();
+                        this.lblFP2.Text = _modelPumpState.FP2State.Speed.ToString();
                         this.lblFP2.Enabled = false; 
                     }
                     else

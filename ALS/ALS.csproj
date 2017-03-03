@@ -171,6 +171,12 @@
     </Compile>
     <Compile Include="DataGridViewExs\EventArgsEx\DataGridViewButtonClickEventArgs.cs" />
     <Compile Include="DataGridViewExs\EventsEx\DataGridViewEventHandlersEx.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOperation\step_PDF.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -411,6 +417,9 @@
     </Compile>
     <EmbeddedResource Include="Cls\ssf.resx">
       <DependentUpon>ssf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOperation\step_PDF.resx">
       <DependentUpon>step_PDF.cs</DependentUpon>

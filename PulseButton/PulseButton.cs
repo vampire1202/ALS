@@ -180,7 +180,7 @@ namespace PulseButton
             PulseColor = Color.Black;
             ShapeType = Shape.Round;
             CornerRadius = 10;
-            Image = null;
+            Image = null;  
             base.TextAlign = ContentAlignment.MiddleCenter;
             Size = new Size(40, 40);
             // Timer
@@ -306,7 +306,12 @@ namespace PulseButton
             DrawBorder(g);
             // Image
             if (Image != null)
-                g.DrawImage(Image, centerRect);
+            {
+                //计算Image的位置
+                
+                RectangleF imgRect = new RectangleF(new PointF(this.pulseWidth*2+3,(this.Height-Image.Height) / 2),Image.Size);
+                g.DrawImage(Image, imgRect);
+            }
 
             // Draw highlight
             if (mouseOver)
@@ -502,7 +507,7 @@ namespace PulseButton
             float top = rect.Y;
             // Right
             if ((align & (ContentAlignment.BottomRight | ContentAlignment.MiddleRight | ContentAlignment.TopRight)) != 0)
-                lft = rect.Right - element.Width;
+                lft = rect.Right - element.Width-10;
             // Center
             else if ((align & (ContentAlignment.BottomCenter | ContentAlignment.MiddleCenter | ContentAlignment.TopCenter)) != 0)
                 lft = (rect.Width / 2) - (element.Width / 2) + rect.Left;

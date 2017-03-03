@@ -33,8 +33,8 @@
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grouper2 = new CodeVendor.Controls.Grouper();
-            this.btnReturn = new PulseButton.PulseButton();
             this.btnNext = new PulseButton.PulseButton();
+            this.btnReturn = new PulseButton.PulseButton();
             ((System.ComponentModel.ISupportInitialize)(this.pboxShow)).BeginInit();
             this.grouper1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -134,26 +134,6 @@
             this.grouper2.Size = new System.Drawing.Size(170, 589);
             this.grouper2.TabIndex = 64;
             // 
-            // btnReturn
-            // 
-            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnReturn.CornerRadius = 25;
-            this.btnReturn.FocusColor = System.Drawing.Color.Black;
-            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(30, 452);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
-            this.btnReturn.PulseSpeed = 0.3F;
-            this.btnReturn.PulseWidth = 8;
-            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnReturn.Size = new System.Drawing.Size(116, 66);
-            this.btnReturn.TabIndex = 64;
-            this.btnReturn.Text = "上一步";
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
             // btnNext
             // 
             this.btnNext.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
@@ -166,13 +146,33 @@
             this.btnNext.Name = "btnNext";
             this.btnNext.PulseColor = System.Drawing.Color.DimGray;
             this.btnNext.PulseSpeed = 0.3F;
-            this.btnNext.PulseWidth = 8;
+            this.btnNext.PulseWidth = 6;
             this.btnNext.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnNext.Size = new System.Drawing.Size(116, 66);
+            this.btnNext.Size = new System.Drawing.Size(112, 62);
             this.btnNext.TabIndex = 64;
             this.btnNext.Text = "下一步";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnReturn.CornerRadius = 25;
+            this.btnReturn.FocusColor = System.Drawing.Color.Black;
+            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReturn.Location = new System.Drawing.Point(30, 455);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
+            this.btnReturn.PulseSpeed = 0.3F;
+            this.btnReturn.PulseWidth = 6;
+            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnReturn.Size = new System.Drawing.Size(112, 62);
+            this.btnReturn.TabIndex = 64;
+            this.btnReturn.Text = "上一步";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // ucPipeLine
             // 
