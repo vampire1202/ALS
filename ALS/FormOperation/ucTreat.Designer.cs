@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucTreat));
             this.btnChange = new System.Windows.Forms.Button();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
-            this.btnZero = new CCWin.SkinControl.SkinButton();
             this.label25 = new System.Windows.Forms.Label();
             this.lblDryDeviation = new System.Windows.Forms.Label();
             this.lblDehydrationSpeed = new System.Windows.Forms.Label();
@@ -51,29 +47,31 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.palWizard = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.skinLine2 = new CCWin.SkinControl.SkinLine();
-            this.skinLine1 = new CCWin.SkinControl.SkinLine();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblWeigh4 = new System.Windows.Forms.Label();
             this.lblWeigh2 = new System.Windows.Forms.Label();
             this.lblWeigh3 = new System.Windows.Forms.Label();
             this.palDry = new System.Windows.Forms.Panel();
+            this.btnZero = new PulseButton.PulseButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.sgbox = new CCWin.SkinControl.SkinGroupBox();
-            this.skinTabControl1 = new CCWin.SkinControl.SkinTabControl();
-            this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
-            this.skinTabPage2 = new CCWin.SkinControl.SkinTabPage();
-            this.picTreat = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.sgBox = new CodeVendor.Controls.Grouper();
+            this.customTabControl1 = new System.Windows.Forms.CustomTabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.palWizard = new System.Windows.Forms.Panel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.picTreat = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.palDry.SuspendLayout();
-            this.sgbox.SuspendLayout();
-            this.skinTabControl1.SuspendLayout();
-            this.skinTabPage1.SuspendLayout();
-            this.skinTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTreat)).BeginInit();
             this.panel2.SuspendLayout();
+            this.sgBox.SuspendLayout();
+            this.customTabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTreat)).BeginInit();
             this.SuspendLayout();
             // 
             // btnChange
@@ -88,42 +86,6 @@
             this.btnChange.Text = "更换液袋";
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.chkBalance_Click);
-            // 
-            // skinLabel1
-            // 
-            this.skinLabel1.AutoSize = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
-            this.skinLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.skinLabel1.Location = new System.Drawing.Point(207, 6);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(79, 22);
-            this.skinLabel1.TabIndex = 64;
-            this.skinLabel1.Text = "治疗时间:";
-            // 
-            // btnZero
-            // 
-            this.btnZero.BackColor = System.Drawing.Color.Transparent;
-            this.btnZero.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZero.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnZero.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnZero.DownBack = null;
-            this.btnZero.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnZero.ForeColor = System.Drawing.Color.White;
-            this.btnZero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnZero.Location = new System.Drawing.Point(137, 23);
-            this.btnZero.MouseBack = null;
-            this.btnZero.Name = "btnZero";
-            this.btnZero.NormlBack = null;
-            this.btnZero.Radius = 32;
-            this.btnZero.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnZero.Size = new System.Drawing.Size(79, 32);
-            this.btnZero.TabIndex = 62;
-            this.btnZero.Tag = "";
-            this.btnZero.Text = "脱水清零";
-            this.btnZero.UseVisualStyleBackColor = false;
-            this.btnZero.Click += new System.EventHandler(this.btnZeroTime_Click);
             // 
             // label25
             // 
@@ -141,9 +103,9 @@
             // 
             this.lblDryDeviation.AutoSize = true;
             this.lblDryDeviation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblDryDeviation.Location = new System.Drawing.Point(412, 5);
+            this.lblDryDeviation.Location = new System.Drawing.Point(412, 7);
             this.lblDryDeviation.Name = "lblDryDeviation";
-            this.lblDryDeviation.Size = new System.Drawing.Size(41, 26);
+            this.lblDryDeviation.Size = new System.Drawing.Size(32, 21);
             this.lblDryDeviation.TabIndex = 59;
             this.lblDryDeviation.Text = "0.0";
             this.lblDryDeviation.Visible = false;
@@ -181,7 +143,7 @@
             this.lblDryLilun.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.lblDryLilun.Location = new System.Drawing.Point(161, 76);
             this.lblDryLilun.Name = "lblDryLilun";
-            this.lblDryLilun.Size = new System.Drawing.Size(41, 26);
+            this.lblDryLilun.Size = new System.Drawing.Size(32, 21);
             this.lblDryLilun.TabIndex = 59;
             this.lblDryLilun.Text = "0.0";
             this.lblDryLilun.Visible = false;
@@ -348,52 +310,48 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "注:  1.在使用过程中，秤必须保持稳定不晃动;\r\n      2.更换袋子时，请先<更换液袋>;";
             // 
-            // palWizard
-            // 
-            this.palWizard.BackColor = System.Drawing.Color.White;
-            this.palWizard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.palWizard.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.palWizard.Location = new System.Drawing.Point(0, 0);
-            this.palWizard.Name = "palWizard";
-            this.palWizard.Size = new System.Drawing.Size(597, 308);
-            this.palWizard.TabIndex = 0;
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.splitter2);
+            this.panel1.Controls.Add(this.splitter1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblDryDeviation);
-            this.panel1.Controls.Add(this.skinLabel1);
             this.panel1.Controls.Add(this.lblTotalTime);
-            this.panel1.Controls.Add(this.skinLine2);
-            this.panel1.Controls.Add(this.skinLine1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(597, 34);
+            this.panel1.Size = new System.Drawing.Size(603, 34);
             this.panel1.TabIndex = 67;
             // 
-            // skinLine2
+            // splitter2
             // 
-            this.skinLine2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLine2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.skinLine2.LineColor = System.Drawing.Color.Silver;
-            this.skinLine2.LineHeight = 1;
-            this.skinLine2.Location = new System.Drawing.Point(0, 0);
-            this.skinLine2.Name = "skinLine2";
-            this.skinLine2.Size = new System.Drawing.Size(597, 2);
-            this.skinLine2.TabIndex = 65;
-            this.skinLine2.Text = "skinLine1";
+            this.splitter2.BackColor = System.Drawing.Color.Silver;
+            this.splitter2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.splitter2.Location = new System.Drawing.Point(0, 33);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(603, 1);
+            this.splitter2.TabIndex = 68;
+            this.splitter2.TabStop = false;
             // 
-            // skinLine1
+            // splitter1
             // 
-            this.skinLine1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLine1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skinLine1.LineColor = System.Drawing.Color.Silver;
-            this.skinLine1.LineHeight = 1;
-            this.skinLine1.Location = new System.Drawing.Point(0, 32);
-            this.skinLine1.Name = "skinLine1";
-            this.skinLine1.Size = new System.Drawing.Size(597, 2);
-            this.skinLine1.TabIndex = 65;
-            this.skinLine1.Text = "skinLine1";
+            this.splitter1.BackColor = System.Drawing.Color.Silver;
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(603, 1);
+            this.splitter1.TabIndex = 67;
+            this.splitter1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(192, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 26);
+            this.label3.TabIndex = 66;
+            this.label3.Text = "治疗时间:";
             // 
             // lblWeigh4
             // 
@@ -446,6 +404,26 @@
             this.palDry.Size = new System.Drawing.Size(220, 78);
             this.palDry.TabIndex = 66;
             // 
+            // btnZero
+            // 
+            this.btnZero.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnZero.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnZero.CornerRadius = 16;
+            this.btnZero.FocusColor = System.Drawing.Color.Black;
+            this.btnZero.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnZero.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnZero.Location = new System.Drawing.Point(128, 19);
+            this.btnZero.Name = "btnZero";
+            this.btnZero.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZero.PulseSpeed = 0.3F;
+            this.btnZero.PulseWidth = 4;
+            this.btnZero.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnZero.Size = new System.Drawing.Size(90, 42);
+            this.btnZero.TabIndex = 122;
+            this.btnZero.Text = "脱水清零";
+            this.btnZero.UseVisualStyleBackColor = true;
+            this.btnZero.Click += new System.EventHandler(this.btnZeroTime_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -458,95 +436,6 @@
             this.label2.TabIndex = 56;
             this.label2.Text = "当前脱水";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // sgbox
-            // 
-            this.sgbox.BackColor = System.Drawing.Color.Transparent;
-            this.sgbox.BorderColor = System.Drawing.Color.Silver;
-            this.sgbox.Controls.Add(this.skinTabControl1);
-            this.sgbox.Controls.Add(this.panel2);
-            this.sgbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sgbox.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sgbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.sgbox.Location = new System.Drawing.Point(0, 0);
-            this.sgbox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 8);
-            this.sgbox.Name = "sgbox";
-            this.sgbox.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.sgbox.Radius = 20;
-            this.sgbox.RectBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.sgbox.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.sgbox.Size = new System.Drawing.Size(603, 488);
-            this.sgbox.TabIndex = 71;
-            this.sgbox.TabStop = false;
-            this.sgbox.TitleBorderColor = System.Drawing.Color.Silver;
-            this.sgbox.TitleRadius = 20;
-            this.sgbox.TitleRectBackColor = System.Drawing.Color.White;
-            this.sgbox.TitleRoundStyle = CCWin.SkinClass.RoundStyle.Right;
-            // 
-            // skinTabControl1
-            // 
-            this.skinTabControl1.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
-            this.skinTabControl1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.skinTabControl1.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.skinTabControl1.Controls.Add(this.skinTabPage1);
-            this.skinTabControl1.Controls.Add(this.skinTabPage2);
-            this.skinTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabControl1.HeadBack = null;
-            this.skinTabControl1.ImgSize = new System.Drawing.Size(0, 0);
-            this.skinTabControl1.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl1.ItemSize = new System.Drawing.Size(80, 35);
-            this.skinTabControl1.Location = new System.Drawing.Point(3, 26);
-            this.skinTabControl1.Name = "skinTabControl1";
-            this.skinTabControl1.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageArrowDown")));
-            this.skinTabControl1.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageArrowHover")));
-            this.skinTabControl1.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageCloseHover")));
-            this.skinTabControl1.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageCloseNormal")));
-            this.skinTabControl1.PageDown = global::ALS.Properties.Resources.buttonfacesel;
-            this.skinTabControl1.PageDownTxtColor = System.Drawing.Color.White;
-            this.skinTabControl1.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageHover")));
-            this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
-            this.skinTabControl1.PageNorml = global::ALS.Properties.Resources.buttonface;
-            this.skinTabControl1.SelectedIndex = 0;
-            this.skinTabControl1.Size = new System.Drawing.Size(597, 343);
-            this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.skinTabControl1.TabIndex = 2;
-            // 
-            // skinTabPage1
-            // 
-            this.skinTabPage1.BackColor = System.Drawing.Color.White;
-            this.skinTabPage1.Controls.Add(this.palWizard);
-            this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage1.Location = new System.Drawing.Point(0, 35);
-            this.skinTabPage1.Name = "skinTabPage1";
-            this.skinTabPage1.Size = new System.Drawing.Size(597, 308);
-            this.skinTabPage1.TabIndex = 0;
-            this.skinTabPage1.TabItemImage = null;
-            this.skinTabPage1.Text = "治疗向导";
-            // 
-            // skinTabPage2
-            // 
-            this.skinTabPage2.BackColor = System.Drawing.Color.White;
-            this.skinTabPage2.Controls.Add(this.picTreat);
-            this.skinTabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage2.Location = new System.Drawing.Point(0, 35);
-            this.skinTabPage2.Name = "skinTabPage2";
-            this.skinTabPage2.Size = new System.Drawing.Size(597, 308);
-            this.skinTabPage2.TabIndex = 1;
-            this.skinTabPage2.TabItemImage = null;
-            this.skinTabPage2.Text = "模式图";
-            // 
-            // picTreat
-            // 
-            this.picTreat.BackColor = System.Drawing.Color.White;
-            this.picTreat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picTreat.Location = new System.Drawing.Point(0, 0);
-            this.picTreat.Name = "picTreat";
-            this.picTreat.Size = new System.Drawing.Size(597, 308);
-            this.picTreat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTreat.TabIndex = 0;
-            this.picTreat.TabStop = false;
             // 
             // panel2
             // 
@@ -567,17 +456,106 @@
             this.panel2.Controls.Add(this.lblWeigh2);
             this.panel2.Controls.Add(this.lblTargetTime);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 369);
+            this.panel2.Location = new System.Drawing.Point(0, 372);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(597, 116);
+            this.panel2.Size = new System.Drawing.Size(603, 116);
             this.panel2.TabIndex = 1;
+            // 
+            // sgBox
+            // 
+            this.sgBox.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.sgBox.BackgroundGradientColor = System.Drawing.SystemColors.ButtonFace;
+            this.sgBox.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.sgBox.BorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.sgBox.BorderThickness = 1F;
+            this.sgBox.Controls.Add(this.customTabControl1);
+            this.sgBox.Controls.Add(this.panel2);
+            this.sgBox.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.sgBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sgBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sgBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.sgBox.GroupImage = null;
+            this.sgBox.GroupTitle = "";
+            this.sgBox.Location = new System.Drawing.Point(0, 0);
+            this.sgBox.Name = "sgBox";
+            this.sgBox.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.sgBox.PaintGroupBox = true;
+            this.sgBox.RoundCorners = 10;
+            this.sgBox.ShadowColor = System.Drawing.SystemColors.ButtonFace;
+            this.sgBox.ShadowControl = false;
+            this.sgBox.ShadowThickness = 3;
+            this.sgBox.Size = new System.Drawing.Size(603, 488);
+            this.sgBox.TabIndex = 121;
+            // 
+            // customTabControl1
+            // 
+            this.customTabControl1.BorderColor = System.Drawing.Color.Silver;
+            this.customTabControl1.BorderColorSelected = System.Drawing.Color.Silver;
+            this.customTabControl1.Controls.Add(this.tabPage1);
+            this.customTabControl1.Controls.Add(this.tabPage2);
+            this.customTabControl1.DisplayStyle = System.Windows.Forms.TabStyle.Chrome;
+            this.customTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customTabControl1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.customTabControl1.Location = new System.Drawing.Point(0, 10);
+            this.customTabControl1.Name = "customTabControl1";
+            this.customTabControl1.Overlap = 16;
+            this.customTabControl1.Padding = new System.Drawing.Point(13, 5);
+            this.customTabControl1.Radius = 10;
+            this.customTabControl1.SelectedIndex = 0;
+            this.customTabControl1.Size = new System.Drawing.Size(603, 362);
+            this.customTabControl1.TabIndex = 3;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.palWizard);
+            this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.tabPage1.Location = new System.Drawing.Point(4, 35);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(595, 323);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "治疗向导";
+            // 
+            // palWizard
+            // 
+            this.palWizard.BackColor = System.Drawing.Color.White;
+            this.palWizard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.palWizard.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.palWizard.Location = new System.Drawing.Point(3, 3);
+            this.palWizard.Name = "palWizard";
+            this.palWizard.Size = new System.Drawing.Size(589, 317);
+            this.palWizard.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.picTreat);
+            this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.tabPage2.Location = new System.Drawing.Point(4, 35);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(595, 323);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "模式图";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // picTreat
+            // 
+            this.picTreat.BackColor = System.Drawing.Color.White;
+            this.picTreat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picTreat.Location = new System.Drawing.Point(3, 3);
+            this.picTreat.Name = "picTreat";
+            this.picTreat.Size = new System.Drawing.Size(589, 317);
+            this.picTreat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTreat.TabIndex = 0;
+            this.picTreat.TabStop = false;
             // 
             // ucTreat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.sgbox);
+            this.Controls.Add(this.sgBox);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.Name = "ucTreat";
             this.Size = new System.Drawing.Size(603, 488);
@@ -587,13 +565,13 @@
             this.panel1.PerformLayout();
             this.palDry.ResumeLayout(false);
             this.palDry.PerformLayout();
-            this.sgbox.ResumeLayout(false);
-            this.skinTabControl1.ResumeLayout(false);
-            this.skinTabPage1.ResumeLayout(false);
-            this.skinTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picTreat)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.sgBox.ResumeLayout(false);
+            this.customTabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picTreat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,8 +596,6 @@
         public System.Windows.Forms.Label lblDryDeviation;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        public CCWin.SkinControl.SkinButton btnZero;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
         public System.Windows.Forms.Button btnChange;
         public System.Windows.Forms.Label lblWeigh4;
         public System.Windows.Forms.Label lblWeigh2;
@@ -627,14 +603,16 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Panel palDry;
         public System.Windows.Forms.Panel palWizard;
-        public CCWin.SkinControl.SkinGroupBox sgbox;
-        private CCWin.SkinControl.SkinLine skinLine2;
-        private CCWin.SkinControl.SkinLine skinLine1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private CCWin.SkinControl.SkinTabPage skinTabPage1;
-        private CCWin.SkinControl.SkinTabPage skinTabPage2;
         public System.Windows.Forms.PictureBox picTreat;
-        public CCWin.SkinControl.SkinTabControl skinTabControl1;
+        private System.Windows.Forms.Label label3;
+        public CodeVendor.Controls.Grouper sgBox;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        public System.Windows.Forms.CustomTabControl customTabControl1;
+        private System.Windows.Forms.Splitter splitter2;
+        private System.Windows.Forms.Splitter splitter1;
+        public PulseButton.PulseButton btnZero;
     }
 }

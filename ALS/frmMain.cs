@@ -7684,7 +7684,7 @@ namespace ALS
             //    M_uc_Treat.sgbox.Text = "PEF";
             //else
             //    M_uc_Treat.sgbox.Text = M_modeName ;
-            M_uc_Treat.skinTabControl1.SelectedIndex = 0;
+            M_uc_Treat.customTabControl1.SelectedIndex = 0;
             switch (M_modeName.ToLower())
             {
                 case "pdf":

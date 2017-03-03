@@ -37,18 +37,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnChangeSP = new CCWin.SkinControl.SkinButton();
-            this.btnSetSyringe = new CCWin.SkinControl.SkinButton();
+            this.btnChangeSP = new PulseButton.PulseButton();
+            this.btnSetSyringe = new PulseButton.PulseButton();
             this.sp_ACC_current = new System.Windows.Forms.Label();
             this.Syringe_state = new System.Windows.Forms.Label();
             this.palSyringe = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
-            this.btnFastStopSP = new CCWin.SkinControl.SkinButton();
-            this.Sy_ClearWarning = new CCWin.SkinControl.SkinButton();
-            this.btnZeroSPSum = new CCWin.SkinControl.SkinButton();
-            this.btnFastRunSP = new CCWin.SkinControl.SkinButton();
-            this.btnStopSP = new CCWin.SkinControl.SkinButton();
-            this.btnRunSP = new CCWin.SkinControl.SkinButton();
+            this.btnFastStopSP = new PulseButton.PulseButton();
+            this.Sy_ClearWarning = new PulseButton.PulseButton();
+            this.btnZeroSPSum = new PulseButton.PulseButton();
+            this.btnFastRunSP = new PulseButton.PulseButton();
+            this.btnStopSP = new PulseButton.PulseButton();
+            this.btnRunSP = new PulseButton.PulseButton();
             this.label26 = new System.Windows.Forms.Label();
             this.lblAccvalue = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -63,38 +63,36 @@
             this.lblSPStandard = new System.Windows.Forms.Label();
             this.btnSaveSP = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.gboxV = new CCWin.SkinControl.SkinGroupBox();
+            this.gboxRecycle = new CodeVendor.Controls.Grouper();
+            this.btnZeroWS4 = new PulseButton.PulseButton();
+            this.label39 = new System.Windows.Forms.Label();
+            this.btnZeroWS3 = new PulseButton.PulseButton();
+            this.label37 = new System.Windows.Forms.Label();
+            this.btnZeroWS2 = new PulseButton.PulseButton();
+            this.lblWeigh3 = new System.Windows.Forms.Label();
+            this.btnZeroWS1 = new PulseButton.PulseButton();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblWeigh2 = new System.Windows.Forms.Label();
+            this.lblWeigh4 = new System.Windows.Forms.Label();
+            this.lblWeigh1 = new System.Windows.Forms.Label();
+            this.gboxV = new CodeVendor.Controls.Grouper();
             this.chkV6 = new System.Windows.Forms.CheckBox();
             this.chkV1 = new System.Windows.Forms.CheckBox();
-            this.chkV5 = new System.Windows.Forms.CheckBox();
-            this.chkV2 = new System.Windows.Forms.CheckBox();
-            this.chkV4 = new System.Windows.Forms.CheckBox();
             this.chkV3 = new System.Windows.Forms.CheckBox();
-            this.skinGroupBox3 = new CCWin.SkinControl.SkinGroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.btnZeroWS4 = new CCWin.SkinControl.SkinButton();
-            this.btnZeroWS3 = new CCWin.SkinControl.SkinButton();
-            this.btnZeroWS2 = new CCWin.SkinControl.SkinButton();
-            this.btnZeroWS1 = new CCWin.SkinControl.SkinButton();
-            this.label39 = new System.Windows.Forms.Label();
-            this.lblWeigh1 = new System.Windows.Forms.Label();
-            this.lblWeigh4 = new System.Windows.Forms.Label();
-            this.lblWeigh2 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.lblWeigh3 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.skinGroupBox4 = new CCWin.SkinControl.SkinGroupBox();
-            this.btnCloseHot = new CCWin.SkinControl.SkinButton();
-            this.btnSetTemperature = new CCWin.SkinControl.SkinButton();
+            this.chkV5 = new System.Windows.Forms.CheckBox();
+            this.chkV4 = new System.Windows.Forms.CheckBox();
+            this.chkV2 = new System.Windows.Forms.CheckBox();
+            this.grouper1 = new CodeVendor.Controls.Grouper();
+            this.btnCloseHot = new PulseButton.PulseButton();
+            this.label41 = new System.Windows.Forms.Label();
+            this.btnSetTemperature = new PulseButton.PulseButton();
+            this.lblTargetT = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTemperature = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.lblTargetT = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnDefault = new CCWin.SkinControl.SkinButton();
             this.lblRealBloodLeak = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnSaveDefault = new CCWin.SkinControl.SkinButton();
             this.skinGroupBox7 = new CCWin.SkinControl.SkinGroupBox();
             this.skinTrackBar1 = new CCWin.SkinControl.SkinTrackBar();
             this.lblBloodLeak = new System.Windows.Forms.Label();
@@ -122,7 +120,6 @@
             this.rbtnPrePart3 = new System.Windows.Forms.RadioButton();
             this.rbtnPrePart2 = new System.Windows.Forms.RadioButton();
             this.rbtnPrePart1 = new System.Windows.Forms.RadioButton();
-            this.skinGroupBox5 = new CCWin.SkinControl.SkinGroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblConcentration = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -154,7 +151,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.btnSaveWarnSet = new CCWin.SkinControl.SkinButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.gboxLiALS = new CCWin.SkinControl.SkinGroupBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -201,13 +197,17 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnSaveWarnSet = new PulseButton.PulseButton();
+            this.btnSaveDefault = new PulseButton.PulseButton();
+            this.btnDefault = new PulseButton.PulseButton();
+            this.grouper2 = new CodeVendor.Controls.Grouper();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.palSyringe.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.gboxRecycle.SuspendLayout();
             this.gboxV.SuspendLayout();
-            this.skinGroupBox3.SuspendLayout();
-            this.skinGroupBox4.SuspendLayout();
+            this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.skinGroupBox7.SuspendLayout();
@@ -216,7 +216,6 @@
             this.gboxPrePven.SuspendLayout();
             this.gboxPrePacc.SuspendLayout();
             this.gboxPrePart.SuspendLayout();
-            this.skinGroupBox5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.gboxLiALS.SuspendLayout();
             this.gboxPE.SuspendLayout();
@@ -227,6 +226,7 @@
             this.tpWarnLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             this.skinGroupBox1.SuspendLayout();
+            this.grouper2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -268,46 +268,44 @@
             // 
             // btnChangeSP
             // 
-            this.btnChangeSP.BackColor = System.Drawing.Color.Transparent;
-            this.btnChangeSP.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnChangeSP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnChangeSP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnChangeSP.DownBack = null;
+            this.btnChangeSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnChangeSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnChangeSP.CornerRadius = 25;
+            this.btnChangeSP.FocusColor = System.Drawing.Color.Black;
             this.btnChangeSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnChangeSP.ForeColor = System.Drawing.Color.White;
-            this.btnChangeSP.Location = new System.Drawing.Point(578, 54);
-            this.btnChangeSP.MouseBack = null;
+            this.btnChangeSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnChangeSP.Location = new System.Drawing.Point(578, 42);
             this.btnChangeSP.Name = "btnChangeSP";
-            this.btnChangeSP.NormlBack = null;
-            this.btnChangeSP.Radius = 50;
-            this.btnChangeSP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnChangeSP.Size = new System.Drawing.Size(100, 50);
-            this.btnChangeSP.TabIndex = 116;
+            this.btnChangeSP.NumberOfPulses = 2;
+            this.btnChangeSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnChangeSP.PulseSpeed = 0.3F;
+            this.btnChangeSP.PulseWidth = 6;
+            this.btnChangeSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnChangeSP.Size = new System.Drawing.Size(112, 62);
+            this.btnChangeSP.TabIndex = 123;
             this.btnChangeSP.Text = "更换注射器";
-            this.btnChangeSP.UseVisualStyleBackColor = false;
-            this.btnChangeSP.Visible = false;
+            this.btnChangeSP.UseVisualStyleBackColor = true;
             this.btnChangeSP.Click += new System.EventHandler(this.btnChangeSyringe_Click);
             // 
             // btnSetSyringe
             // 
-            this.btnSetSyringe.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetSyringe.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSetSyringe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.btnSetSyringe.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnSetSyringe.DownBack = null;
+            this.btnSetSyringe.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnSetSyringe.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnSetSyringe.CornerRadius = 25;
+            this.btnSetSyringe.FocusColor = System.Drawing.Color.Black;
             this.btnSetSyringe.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSetSyringe.ForeColor = System.Drawing.Color.White;
-            this.btnSetSyringe.Location = new System.Drawing.Point(440, 54);
-            this.btnSetSyringe.MouseBack = null;
+            this.btnSetSyringe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSetSyringe.Location = new System.Drawing.Point(434, 42);
             this.btnSetSyringe.Name = "btnSetSyringe";
-            this.btnSetSyringe.NormlBack = null;
-            this.btnSetSyringe.Radius = 50;
-            this.btnSetSyringe.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnSetSyringe.Size = new System.Drawing.Size(100, 50);
-            this.btnSetSyringe.TabIndex = 116;
+            this.btnSetSyringe.NumberOfPulses = 2;
+            this.btnSetSyringe.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSetSyringe.PulseSpeed = 0.3F;
+            this.btnSetSyringe.PulseWidth = 6;
+            this.btnSetSyringe.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnSetSyringe.Size = new System.Drawing.Size(112, 62);
+            this.btnSetSyringe.TabIndex = 122;
             this.btnSetSyringe.Text = "选择品牌";
-            this.btnSetSyringe.UseVisualStyleBackColor = false;
-            this.btnSetSyringe.Visible = false;
+            this.btnSetSyringe.UseVisualStyleBackColor = true;
             this.btnSetSyringe.Click += new System.EventHandler(this.btnSetSyringe_Click);
             // 
             // sp_ACC_current
@@ -372,141 +370,132 @@
             // 
             // btnFastStopSP
             // 
-            this.btnFastStopSP.BackColor = System.Drawing.Color.Transparent;
-            this.btnFastStopSP.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnFastStopSP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnFastStopSP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnFastStopSP.DownBack = null;
-            this.btnFastStopSP.Enabled = false;
+            this.btnFastStopSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnFastStopSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnFastStopSP.CornerRadius = 25;
+            this.btnFastStopSP.FocusColor = System.Drawing.Color.Black;
             this.btnFastStopSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnFastStopSP.ForeColor = System.Drawing.Color.White;
-            this.btnFastStopSP.Location = new System.Drawing.Point(537, 125);
-            this.btnFastStopSP.MouseBack = null;
+            this.btnFastStopSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFastStopSP.Location = new System.Drawing.Point(537, 120);
             this.btnFastStopSP.Name = "btnFastStopSP";
-            this.btnFastStopSP.NormlBack = null;
-            this.btnFastStopSP.Radius = 50;
-            this.btnFastStopSP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnFastStopSP.Size = new System.Drawing.Size(100, 50);
-            this.btnFastStopSP.TabIndex = 116;
+            this.btnFastStopSP.NumberOfPulses = 2;
+            this.btnFastStopSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnFastStopSP.PulseSpeed = 0.3F;
+            this.btnFastStopSP.PulseWidth = 6;
+            this.btnFastStopSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnFastStopSP.Size = new System.Drawing.Size(112, 62);
+            this.btnFastStopSP.TabIndex = 122;
             this.btnFastStopSP.Text = "快送停止";
-            this.btnFastStopSP.UseVisualStyleBackColor = false;
+            this.btnFastStopSP.UseVisualStyleBackColor = true;
             this.btnFastStopSP.Click += new System.EventHandler(this.btnFastStop_Click);
             // 
             // Sy_ClearWarning
             // 
-            this.Sy_ClearWarning.BackColor = System.Drawing.Color.Transparent;
-            this.Sy_ClearWarning.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.Sy_ClearWarning.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.Sy_ClearWarning.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.Sy_ClearWarning.DownBack = null;
+            this.Sy_ClearWarning.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.Sy_ClearWarning.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.Sy_ClearWarning.CornerRadius = 25;
+            this.Sy_ClearWarning.FocusColor = System.Drawing.Color.Black;
             this.Sy_ClearWarning.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Sy_ClearWarning.ForeColor = System.Drawing.Color.White;
-            this.Sy_ClearWarning.Location = new System.Drawing.Point(537, 221);
-            this.Sy_ClearWarning.MouseBack = null;
+            this.Sy_ClearWarning.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Sy_ClearWarning.Location = new System.Drawing.Point(537, 211);
             this.Sy_ClearWarning.Name = "Sy_ClearWarning";
-            this.Sy_ClearWarning.NormlBack = null;
-            this.Sy_ClearWarning.Radius = 50;
-            this.Sy_ClearWarning.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.Sy_ClearWarning.Size = new System.Drawing.Size(100, 50);
-            this.Sy_ClearWarning.TabIndex = 116;
-            this.Sy_ClearWarning.Text = "清除警报";
-            this.Sy_ClearWarning.UseVisualStyleBackColor = false;
+            this.Sy_ClearWarning.NumberOfPulses = 2;
+            this.Sy_ClearWarning.PulseColor = System.Drawing.Color.DimGray;
+            this.Sy_ClearWarning.PulseSpeed = 0.3F;
+            this.Sy_ClearWarning.PulseWidth = 6;
+            this.Sy_ClearWarning.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.Sy_ClearWarning.Size = new System.Drawing.Size(112, 62);
+            this.Sy_ClearWarning.TabIndex = 122;
+            this.Sy_ClearWarning.Text = "清除累计量";
+            this.Sy_ClearWarning.UseVisualStyleBackColor = true;
             this.Sy_ClearWarning.Click += new System.EventHandler(this.Sy_ClearWarning_Click);
             // 
             // btnZeroSPSum
             // 
-            this.btnZeroSPSum.BackColor = System.Drawing.Color.Transparent;
-            this.btnZeroSPSum.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroSPSum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnZeroSPSum.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnZeroSPSum.DownBack = null;
+            this.btnZeroSPSum.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnZeroSPSum.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnZeroSPSum.CornerRadius = 25;
+            this.btnZeroSPSum.FocusColor = System.Drawing.Color.Black;
             this.btnZeroSPSum.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnZeroSPSum.ForeColor = System.Drawing.Color.White;
-            this.btnZeroSPSum.Location = new System.Drawing.Point(399, 221);
-            this.btnZeroSPSum.MouseBack = null;
+            this.btnZeroSPSum.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnZeroSPSum.Location = new System.Drawing.Point(393, 211);
             this.btnZeroSPSum.Name = "btnZeroSPSum";
-            this.btnZeroSPSum.NormlBack = null;
-            this.btnZeroSPSum.Radius = 50;
-            this.btnZeroSPSum.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnZeroSPSum.Size = new System.Drawing.Size(100, 50);
-            this.btnZeroSPSum.TabIndex = 116;
+            this.btnZeroSPSum.NumberOfPulses = 2;
+            this.btnZeroSPSum.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroSPSum.PulseSpeed = 0.3F;
+            this.btnZeroSPSum.PulseWidth = 6;
+            this.btnZeroSPSum.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnZeroSPSum.Size = new System.Drawing.Size(112, 62);
+            this.btnZeroSPSum.TabIndex = 122;
             this.btnZeroSPSum.Text = "清除累计量";
-            this.btnZeroSPSum.UseVisualStyleBackColor = false;
+            this.btnZeroSPSum.UseVisualStyleBackColor = true;
             this.btnZeroSPSum.Click += new System.EventHandler(this.btnZeroSPSum_Click);
             // 
             // btnFastRunSP
             // 
-            this.btnFastRunSP.BackColor = System.Drawing.Color.Transparent;
-            this.btnFastRunSP.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnFastRunSP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnFastRunSP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnFastRunSP.DownBack = null;
-            this.btnFastRunSP.Enabled = false;
+            this.btnFastRunSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnFastRunSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnFastRunSP.CornerRadius = 25;
+            this.btnFastRunSP.FocusColor = System.Drawing.Color.Black;
             this.btnFastRunSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnFastRunSP.ForeColor = System.Drawing.Color.White;
-            this.btnFastRunSP.Location = new System.Drawing.Point(399, 125);
-            this.btnFastRunSP.MouseBack = null;
+            this.btnFastRunSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFastRunSP.Location = new System.Drawing.Point(393, 120);
             this.btnFastRunSP.Name = "btnFastRunSP";
-            this.btnFastRunSP.NormlBack = null;
-            this.btnFastRunSP.Radius = 50;
-            this.btnFastRunSP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnFastRunSP.Size = new System.Drawing.Size(100, 50);
-            this.btnFastRunSP.TabIndex = 116;
+            this.btnFastRunSP.NumberOfPulses = 2;
+            this.btnFastRunSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnFastRunSP.PulseSpeed = 0.3F;
+            this.btnFastRunSP.PulseWidth = 6;
+            this.btnFastRunSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnFastRunSP.Size = new System.Drawing.Size(112, 62);
+            this.btnFastRunSP.TabIndex = 122;
             this.btnFastRunSP.Text = "快送";
-            this.btnFastRunSP.UseVisualStyleBackColor = false;
+            this.btnFastRunSP.UseVisualStyleBackColor = true;
             this.btnFastRunSP.Click += new System.EventHandler(this.btnFastRun_Click);
             // 
             // btnStopSP
             // 
-            this.btnStopSP.BackColor = System.Drawing.Color.Transparent;
-            this.btnStopSP.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnStopSP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnStopSP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnStopSP.DownBack = null;
-            this.btnStopSP.Enabled = false;
+            this.btnStopSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnStopSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnStopSP.CornerRadius = 25;
+            this.btnStopSP.FocusColor = System.Drawing.Color.Black;
             this.btnStopSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStopSP.ForeColor = System.Drawing.Color.White;
+            this.btnStopSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnStopSP.Image = global::ALS.Properties.Resources.spstop;
-            this.btnStopSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStopSP.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnStopSP.Location = new System.Drawing.Point(537, 29);
-            this.btnStopSP.MouseBack = null;
+            this.btnStopSP.Location = new System.Drawing.Point(537, 24);
             this.btnStopSP.Name = "btnStopSP";
-            this.btnStopSP.NormlBack = null;
-            this.btnStopSP.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnStopSP.Radius = 50;
-            this.btnStopSP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnStopSP.Size = new System.Drawing.Size(100, 50);
-            this.btnStopSP.TabIndex = 116;
-            this.btnStopSP.Text = "停止";
+            this.btnStopSP.NumberOfPulses = 2;
+            this.btnStopSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnStopSP.PulseSpeed = 0.3F;
+            this.btnStopSP.PulseWidth = 6;
+            this.btnStopSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnStopSP.Size = new System.Drawing.Size(112, 62);
+            this.btnStopSP.TabIndex = 122;
+            this.btnStopSP.Text = "运行";
             this.btnStopSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStopSP.UseVisualStyleBackColor = false;
+            this.btnStopSP.UseVisualStyleBackColor = true;
             this.btnStopSP.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnRunSP
             // 
-            this.btnRunSP.BackColor = System.Drawing.Color.Transparent;
-            this.btnRunSP.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRunSP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnRunSP.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnRunSP.DownBack = null;
+            this.btnRunSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnRunSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnRunSP.CornerRadius = 25;
+            this.btnRunSP.FocusColor = System.Drawing.Color.Black;
             this.btnRunSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunSP.ForeColor = System.Drawing.Color.White;
+            this.btnRunSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRunSP.Image = global::ALS.Properties.Resources.spstart;
-            this.btnRunSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunSP.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnRunSP.Location = new System.Drawing.Point(399, 29);
-            this.btnRunSP.MouseBack = null;
+            this.btnRunSP.Location = new System.Drawing.Point(393, 24);
             this.btnRunSP.Name = "btnRunSP";
-            this.btnRunSP.NormlBack = null;
-            this.btnRunSP.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnRunSP.Radius = 50;
-            this.btnRunSP.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnRunSP.Size = new System.Drawing.Size(100, 50);
-            this.btnRunSP.TabIndex = 116;
+            this.btnRunSP.NumberOfPulses = 2;
+            this.btnRunSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnRunSP.PulseSpeed = 0.3F;
+            this.btnRunSP.PulseWidth = 6;
+            this.btnRunSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnRunSP.Size = new System.Drawing.Size(112, 62);
+            this.btnRunSP.TabIndex = 122;
             this.btnRunSP.Text = "运行";
             this.btnRunSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunSP.UseVisualStyleBackColor = false;
+            this.btnRunSP.UseVisualStyleBackColor = true;
             this.btnRunSP.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // label26
@@ -665,9 +654,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.gboxRecycle);
             this.tabPage2.Controls.Add(this.gboxV);
-            this.tabPage2.Controls.Add(this.skinGroupBox3);
-            this.tabPage2.Controls.Add(this.skinGroupBox4);
+            this.tabPage2.Controls.Add(this.grouper1);
             this.tabPage2.Location = new System.Drawing.Point(4, 49);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -675,29 +664,241 @@
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "加温器/夹管阀/称重";
             // 
+            // gboxRecycle
+            // 
+            this.gboxRecycle.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.gboxRecycle.BackgroundGradientColor = System.Drawing.Color.White;
+            this.gboxRecycle.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.gboxRecycle.BorderColor = System.Drawing.Color.Silver;
+            this.gboxRecycle.BorderThickness = 1F;
+            this.gboxRecycle.Controls.Add(this.btnZeroWS4);
+            this.gboxRecycle.Controls.Add(this.label39);
+            this.gboxRecycle.Controls.Add(this.btnZeroWS3);
+            this.gboxRecycle.Controls.Add(this.label37);
+            this.gboxRecycle.Controls.Add(this.btnZeroWS2);
+            this.gboxRecycle.Controls.Add(this.lblWeigh3);
+            this.gboxRecycle.Controls.Add(this.btnZeroWS1);
+            this.gboxRecycle.Controls.Add(this.label36);
+            this.gboxRecycle.Controls.Add(this.label20);
+            this.gboxRecycle.Controls.Add(this.lblWeigh2);
+            this.gboxRecycle.Controls.Add(this.lblWeigh4);
+            this.gboxRecycle.Controls.Add(this.lblWeigh1);
+            this.gboxRecycle.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.gboxRecycle.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gboxRecycle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxRecycle.GroupImage = null;
+            this.gboxRecycle.GroupTitle = "称重系统(单位:g)";
+            this.gboxRecycle.Location = new System.Drawing.Point(2, 240);
+            this.gboxRecycle.Name = "gboxRecycle";
+            this.gboxRecycle.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.gboxRecycle.PaintGroupBox = true;
+            this.gboxRecycle.RoundCorners = 10;
+            this.gboxRecycle.ShadowColor = System.Drawing.Color.DarkGray;
+            this.gboxRecycle.ShadowControl = false;
+            this.gboxRecycle.ShadowThickness = 3;
+            this.gboxRecycle.Size = new System.Drawing.Size(394, 275);
+            this.gboxRecycle.TabIndex = 122;
+            // 
+            // btnZeroWS4
+            // 
+            this.btnZeroWS4.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnZeroWS4.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnZeroWS4.CornerRadius = 25;
+            this.btnZeroWS4.FocusColor = System.Drawing.Color.Black;
+            this.btnZeroWS4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnZeroWS4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnZeroWS4.Location = new System.Drawing.Point(239, 209);
+            this.btnZeroWS4.Name = "btnZeroWS4";
+            this.btnZeroWS4.NumberOfPulses = 2;
+            this.btnZeroWS4.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroWS4.PulseSpeed = 0.3F;
+            this.btnZeroWS4.PulseWidth = 6;
+            this.btnZeroWS4.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnZeroWS4.Size = new System.Drawing.Size(112, 62);
+            this.btnZeroWS4.TabIndex = 122;
+            this.btnZeroWS4.Tag = "zerows4";
+            this.btnZeroWS4.Text = "清0";
+            this.btnZeroWS4.UseVisualStyleBackColor = true;
+            this.btnZeroWS4.Click += new System.EventHandler(this.btnZeroWS1_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(69, 33);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(48, 21);
+            this.label39.TabIndex = 18;
+            this.label39.Text = "WS1";
+            // 
+            // btnZeroWS3
+            // 
+            this.btnZeroWS3.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnZeroWS3.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnZeroWS3.CornerRadius = 25;
+            this.btnZeroWS3.FocusColor = System.Drawing.Color.Black;
+            this.btnZeroWS3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnZeroWS3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnZeroWS3.Location = new System.Drawing.Point(37, 209);
+            this.btnZeroWS3.Name = "btnZeroWS3";
+            this.btnZeroWS3.NumberOfPulses = 2;
+            this.btnZeroWS3.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroWS3.PulseSpeed = 0.3F;
+            this.btnZeroWS3.PulseWidth = 6;
+            this.btnZeroWS3.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnZeroWS3.Size = new System.Drawing.Size(112, 62);
+            this.btnZeroWS3.TabIndex = 122;
+            this.btnZeroWS3.Tag = "zerows3";
+            this.btnZeroWS3.Text = "清0";
+            this.btnZeroWS3.UseVisualStyleBackColor = true;
+            this.btnZeroWS3.Click += new System.EventHandler(this.btnZeroWS1_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(271, 33);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(48, 21);
+            this.label37.TabIndex = 18;
+            this.label37.Text = "WS2";
+            // 
+            // btnZeroWS2
+            // 
+            this.btnZeroWS2.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnZeroWS2.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnZeroWS2.CornerRadius = 25;
+            this.btnZeroWS2.FocusColor = System.Drawing.Color.Black;
+            this.btnZeroWS2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnZeroWS2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnZeroWS2.Location = new System.Drawing.Point(239, 84);
+            this.btnZeroWS2.Name = "btnZeroWS2";
+            this.btnZeroWS2.NumberOfPulses = 2;
+            this.btnZeroWS2.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroWS2.PulseSpeed = 0.3F;
+            this.btnZeroWS2.PulseWidth = 6;
+            this.btnZeroWS2.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnZeroWS2.Size = new System.Drawing.Size(112, 62);
+            this.btnZeroWS2.TabIndex = 122;
+            this.btnZeroWS2.Tag = "zerows2";
+            this.btnZeroWS2.Text = "清0";
+            this.btnZeroWS2.UseVisualStyleBackColor = true;
+            this.btnZeroWS2.Click += new System.EventHandler(this.btnZeroWS1_Click);
+            // 
+            // lblWeigh3
+            // 
+            this.lblWeigh3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeigh3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblWeigh3.Location = new System.Drawing.Point(41, 179);
+            this.lblWeigh3.Name = "lblWeigh3";
+            this.lblWeigh3.Size = new System.Drawing.Size(104, 32);
+            this.lblWeigh3.TabIndex = 16;
+            this.lblWeigh3.Text = "0.0";
+            this.lblWeigh3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnZeroWS1
+            // 
+            this.btnZeroWS1.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnZeroWS1.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnZeroWS1.CornerRadius = 25;
+            this.btnZeroWS1.FocusColor = System.Drawing.Color.Black;
+            this.btnZeroWS1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnZeroWS1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnZeroWS1.Location = new System.Drawing.Point(37, 84);
+            this.btnZeroWS1.Name = "btnZeroWS1";
+            this.btnZeroWS1.NumberOfPulses = 2;
+            this.btnZeroWS1.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroWS1.PulseSpeed = 0.3F;
+            this.btnZeroWS1.PulseWidth = 6;
+            this.btnZeroWS1.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnZeroWS1.Size = new System.Drawing.Size(112, 62);
+            this.btnZeroWS1.TabIndex = 122;
+            this.btnZeroWS1.Tag = "zerows1";
+            this.btnZeroWS1.Text = "清0";
+            this.btnZeroWS1.UseVisualStyleBackColor = true;
+            this.btnZeroWS1.Click += new System.EventHandler(this.btnZeroWS1_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(69, 157);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(48, 21);
+            this.label36.TabIndex = 18;
+            this.label36.Text = "WS3";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(271, 157);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(48, 21);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "WS4";
+            // 
+            // lblWeigh2
+            // 
+            this.lblWeigh2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeigh2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblWeigh2.Location = new System.Drawing.Point(243, 56);
+            this.lblWeigh2.Name = "lblWeigh2";
+            this.lblWeigh2.Size = new System.Drawing.Size(104, 32);
+            this.lblWeigh2.TabIndex = 16;
+            this.lblWeigh2.Text = "0.0";
+            this.lblWeigh2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblWeigh4
+            // 
+            this.lblWeigh4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeigh4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblWeigh4.Location = new System.Drawing.Point(243, 179);
+            this.lblWeigh4.Name = "lblWeigh4";
+            this.lblWeigh4.Size = new System.Drawing.Size(104, 32);
+            this.lblWeigh4.TabIndex = 20;
+            this.lblWeigh4.Text = "0.0";
+            this.lblWeigh4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblWeigh1
+            // 
+            this.lblWeigh1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeigh1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblWeigh1.Location = new System.Drawing.Point(41, 56);
+            this.lblWeigh1.Name = "lblWeigh1";
+            this.lblWeigh1.Size = new System.Drawing.Size(104, 32);
+            this.lblWeigh1.TabIndex = 16;
+            this.lblWeigh1.Text = "0.0";
+            this.lblWeigh1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // gboxV
             // 
-            this.gboxV.BackColor = System.Drawing.Color.Transparent;
+            this.gboxV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.gboxV.BackgroundGradientColor = System.Drawing.Color.White;
+            this.gboxV.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.gboxV.BorderColor = System.Drawing.Color.Silver;
+            this.gboxV.BorderThickness = 1F;
             this.gboxV.Controls.Add(this.chkV6);
             this.gboxV.Controls.Add(this.chkV1);
-            this.gboxV.Controls.Add(this.chkV5);
-            this.gboxV.Controls.Add(this.chkV2);
-            this.gboxV.Controls.Add(this.chkV4);
             this.gboxV.Controls.Add(this.chkV3);
-            this.gboxV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gboxV.ForeColor = System.Drawing.Color.Black;
+            this.gboxV.Controls.Add(this.chkV5);
+            this.gboxV.Controls.Add(this.chkV4);
+            this.gboxV.Controls.Add(this.chkV2);
+            this.gboxV.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.gboxV.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gboxV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxV.GroupImage = null;
+            this.gboxV.GroupTitle = "夹管阀控制";
             this.gboxV.Location = new System.Drawing.Point(3, 3);
             this.gboxV.Name = "gboxV";
-            this.gboxV.RectBackColor = System.Drawing.SystemColors.Control;
-            this.gboxV.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.gboxV.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.gboxV.PaintGroupBox = true;
+            this.gboxV.RoundCorners = 10;
+            this.gboxV.ShadowColor = System.Drawing.Color.DarkGray;
+            this.gboxV.ShadowControl = false;
+            this.gboxV.ShadowThickness = 3;
             this.gboxV.Size = new System.Drawing.Size(394, 232);
-            this.gboxV.TabIndex = 21;
-            this.gboxV.TabStop = false;
-            this.gboxV.Text = "夹管阀控制";
-            this.gboxV.TitleBorderColor = System.Drawing.Color.Silver;
-            this.gboxV.TitleRectBackColor = System.Drawing.Color.White;
-            this.gboxV.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.gboxV.TabIndex = 121;
             // 
             // chkV6
             // 
@@ -707,7 +908,7 @@
             this.chkV6.Font = new System.Drawing.Font("微软雅黑", 14F);
             this.chkV6.Image = ((System.Drawing.Image)(resources.GetObject("chkV6.Image")));
             this.chkV6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chkV6.Location = new System.Drawing.Point(272, 131);
+            this.chkV6.Location = new System.Drawing.Point(280, 133);
             this.chkV6.Name = "chkV6";
             this.chkV6.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.chkV6.Size = new System.Drawing.Size(76, 86);
@@ -727,7 +928,7 @@
             this.chkV1.Font = new System.Drawing.Font("微软雅黑", 14F);
             this.chkV1.Image = ((System.Drawing.Image)(resources.GetObject("chkV1.Image")));
             this.chkV1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chkV1.Location = new System.Drawing.Point(38, 33);
+            this.chkV1.Location = new System.Drawing.Point(46, 35);
             this.chkV1.Name = "chkV1";
             this.chkV1.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.chkV1.Size = new System.Drawing.Size(76, 86);
@@ -738,63 +939,6 @@
             this.chkV1.UseVisualStyleBackColor = false;
             this.chkV1.Click += new System.EventHandler(this.chkV1_Click);
             // 
-            // chkV5
-            // 
-            this.chkV5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkV5.Checked = true;
-            this.chkV5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkV5.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.chkV5.Image = ((System.Drawing.Image)(resources.GetObject("chkV5.Image")));
-            this.chkV5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chkV5.Location = new System.Drawing.Point(155, 131);
-            this.chkV5.Name = "chkV5";
-            this.chkV5.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.chkV5.Size = new System.Drawing.Size(76, 86);
-            this.chkV5.TabIndex = 6;
-            this.chkV5.Tag = "v5";
-            this.chkV5.Text = "5";
-            this.chkV5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.chkV5.UseVisualStyleBackColor = true;
-            this.chkV5.Click += new System.EventHandler(this.chkV1_Click);
-            // 
-            // chkV2
-            // 
-            this.chkV2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkV2.Checked = true;
-            this.chkV2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkV2.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.chkV2.Image = ((System.Drawing.Image)(resources.GetObject("chkV2.Image")));
-            this.chkV2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chkV2.Location = new System.Drawing.Point(155, 33);
-            this.chkV2.Name = "chkV2";
-            this.chkV2.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.chkV2.Size = new System.Drawing.Size(76, 86);
-            this.chkV2.TabIndex = 6;
-            this.chkV2.Tag = "v2";
-            this.chkV2.Text = "2";
-            this.chkV2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.chkV2.UseVisualStyleBackColor = true;
-            this.chkV2.Click += new System.EventHandler(this.chkV1_Click);
-            // 
-            // chkV4
-            // 
-            this.chkV4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkV4.Checked = true;
-            this.chkV4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkV4.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.chkV4.Image = ((System.Drawing.Image)(resources.GetObject("chkV4.Image")));
-            this.chkV4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chkV4.Location = new System.Drawing.Point(38, 131);
-            this.chkV4.Name = "chkV4";
-            this.chkV4.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.chkV4.Size = new System.Drawing.Size(76, 86);
-            this.chkV4.TabIndex = 6;
-            this.chkV4.Tag = "v4";
-            this.chkV4.Text = "4";
-            this.chkV4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.chkV4.UseVisualStyleBackColor = true;
-            this.chkV4.Click += new System.EventHandler(this.chkV1_Click);
-            // 
             // chkV3
             // 
             this.chkV3.Appearance = System.Windows.Forms.Appearance.Button;
@@ -803,7 +947,7 @@
             this.chkV3.Font = new System.Drawing.Font("微软雅黑", 14F);
             this.chkV3.Image = ((System.Drawing.Image)(resources.GetObject("chkV3.Image")));
             this.chkV3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chkV3.Location = new System.Drawing.Point(272, 33);
+            this.chkV3.Location = new System.Drawing.Point(280, 35);
             this.chkV3.Name = "chkV3";
             this.chkV3.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
             this.chkV3.Size = new System.Drawing.Size(76, 86);
@@ -814,282 +958,169 @@
             this.chkV3.UseVisualStyleBackColor = true;
             this.chkV3.Click += new System.EventHandler(this.chkV1_Click);
             // 
-            // skinGroupBox3
+            // chkV5
             // 
-            this.skinGroupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox3.BorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox3.Controls.Add(this.label20);
-            this.skinGroupBox3.Controls.Add(this.btnZeroWS4);
-            this.skinGroupBox3.Controls.Add(this.btnZeroWS3);
-            this.skinGroupBox3.Controls.Add(this.btnZeroWS2);
-            this.skinGroupBox3.Controls.Add(this.btnZeroWS1);
-            this.skinGroupBox3.Controls.Add(this.label39);
-            this.skinGroupBox3.Controls.Add(this.lblWeigh1);
-            this.skinGroupBox3.Controls.Add(this.lblWeigh4);
-            this.skinGroupBox3.Controls.Add(this.lblWeigh2);
-            this.skinGroupBox3.Controls.Add(this.label36);
-            this.skinGroupBox3.Controls.Add(this.lblWeigh3);
-            this.skinGroupBox3.Controls.Add(this.label37);
-            this.skinGroupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skinGroupBox3.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox3.Location = new System.Drawing.Point(3, 241);
-            this.skinGroupBox3.Name = "skinGroupBox3";
-            this.skinGroupBox3.RectBackColor = System.Drawing.SystemColors.Control;
-            this.skinGroupBox3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox3.Size = new System.Drawing.Size(394, 275);
-            this.skinGroupBox3.TabIndex = 22;
-            this.skinGroupBox3.TabStop = false;
-            this.skinGroupBox3.Text = "称重系统";
-            this.skinGroupBox3.TitleBorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox3.TitleRectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox3.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.chkV5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkV5.Checked = true;
+            this.chkV5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkV5.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.chkV5.Image = ((System.Drawing.Image)(resources.GetObject("chkV5.Image")));
+            this.chkV5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.chkV5.Location = new System.Drawing.Point(163, 133);
+            this.chkV5.Name = "chkV5";
+            this.chkV5.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.chkV5.Size = new System.Drawing.Size(76, 86);
+            this.chkV5.TabIndex = 6;
+            this.chkV5.Tag = "v5";
+            this.chkV5.Text = "5";
+            this.chkV5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chkV5.UseVisualStyleBackColor = true;
+            this.chkV5.Click += new System.EventHandler(this.chkV1_Click);
             // 
-            // label20
+            // chkV4
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(281, 155);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 21);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "WS4";
+            this.chkV4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkV4.Checked = true;
+            this.chkV4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkV4.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.chkV4.Image = ((System.Drawing.Image)(resources.GetObject("chkV4.Image")));
+            this.chkV4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.chkV4.Location = new System.Drawing.Point(46, 133);
+            this.chkV4.Name = "chkV4";
+            this.chkV4.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.chkV4.Size = new System.Drawing.Size(76, 86);
+            this.chkV4.TabIndex = 6;
+            this.chkV4.Tag = "v4";
+            this.chkV4.Text = "4";
+            this.chkV4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chkV4.UseVisualStyleBackColor = true;
+            this.chkV4.Click += new System.EventHandler(this.chkV1_Click);
             // 
-            // btnZeroWS4
+            // chkV2
             // 
-            this.btnZeroWS4.BackColor = System.Drawing.Color.Transparent;
-            this.btnZeroWS4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroWS4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnZeroWS4.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnZeroWS4.DownBack = null;
-            this.btnZeroWS4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnZeroWS4.ForeColor = System.Drawing.Color.White;
-            this.btnZeroWS4.Location = new System.Drawing.Point(255, 210);
-            this.btnZeroWS4.MouseBack = null;
-            this.btnZeroWS4.Name = "btnZeroWS4";
-            this.btnZeroWS4.NormlBack = null;
-            this.btnZeroWS4.Radius = 50;
-            this.btnZeroWS4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnZeroWS4.Size = new System.Drawing.Size(100, 50);
-            this.btnZeroWS4.TabIndex = 117;
-            this.btnZeroWS4.Tag = "zerows4";
-            this.btnZeroWS4.Text = "清0";
-            this.btnZeroWS4.UseVisualStyleBackColor = false;
-            this.btnZeroWS4.Click += new System.EventHandler(this.btnZeroWS1_Click);
+            this.chkV2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkV2.Checked = true;
+            this.chkV2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkV2.Font = new System.Drawing.Font("微软雅黑", 14F);
+            this.chkV2.Image = ((System.Drawing.Image)(resources.GetObject("chkV2.Image")));
+            this.chkV2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.chkV2.Location = new System.Drawing.Point(163, 35);
+            this.chkV2.Name = "chkV2";
+            this.chkV2.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.chkV2.Size = new System.Drawing.Size(76, 86);
+            this.chkV2.TabIndex = 6;
+            this.chkV2.Tag = "v2";
+            this.chkV2.Text = "2";
+            this.chkV2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chkV2.UseVisualStyleBackColor = true;
+            this.chkV2.Click += new System.EventHandler(this.chkV1_Click);
             // 
-            // btnZeroWS3
+            // grouper1
             // 
-            this.btnZeroWS3.BackColor = System.Drawing.Color.Transparent;
-            this.btnZeroWS3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroWS3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnZeroWS3.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnZeroWS3.DownBack = null;
-            this.btnZeroWS3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnZeroWS3.ForeColor = System.Drawing.Color.White;
-            this.btnZeroWS3.Location = new System.Drawing.Point(53, 210);
-            this.btnZeroWS3.MouseBack = null;
-            this.btnZeroWS3.Name = "btnZeroWS3";
-            this.btnZeroWS3.NormlBack = null;
-            this.btnZeroWS3.Radius = 50;
-            this.btnZeroWS3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnZeroWS3.Size = new System.Drawing.Size(100, 50);
-            this.btnZeroWS3.TabIndex = 117;
-            this.btnZeroWS3.Tag = "zerows3";
-            this.btnZeroWS3.Text = "清0";
-            this.btnZeroWS3.UseVisualStyleBackColor = false;
-            this.btnZeroWS3.Click += new System.EventHandler(this.btnZeroWS1_Click);
-            // 
-            // btnZeroWS2
-            // 
-            this.btnZeroWS2.BackColor = System.Drawing.Color.Transparent;
-            this.btnZeroWS2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroWS2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnZeroWS2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnZeroWS2.DownBack = null;
-            this.btnZeroWS2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnZeroWS2.ForeColor = System.Drawing.Color.White;
-            this.btnZeroWS2.Location = new System.Drawing.Point(255, 88);
-            this.btnZeroWS2.MouseBack = null;
-            this.btnZeroWS2.Name = "btnZeroWS2";
-            this.btnZeroWS2.NormlBack = null;
-            this.btnZeroWS2.Radius = 50;
-            this.btnZeroWS2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnZeroWS2.Size = new System.Drawing.Size(100, 50);
-            this.btnZeroWS2.TabIndex = 117;
-            this.btnZeroWS2.Tag = "zerows2";
-            this.btnZeroWS2.Text = "清0";
-            this.btnZeroWS2.UseVisualStyleBackColor = false;
-            this.btnZeroWS2.Click += new System.EventHandler(this.btnZeroWS1_Click);
-            // 
-            // btnZeroWS1
-            // 
-            this.btnZeroWS1.BackColor = System.Drawing.Color.Transparent;
-            this.btnZeroWS1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroWS1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnZeroWS1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnZeroWS1.DownBack = null;
-            this.btnZeroWS1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnZeroWS1.ForeColor = System.Drawing.Color.White;
-            this.btnZeroWS1.Location = new System.Drawing.Point(53, 88);
-            this.btnZeroWS1.MouseBack = null;
-            this.btnZeroWS1.Name = "btnZeroWS1";
-            this.btnZeroWS1.NormlBack = null;
-            this.btnZeroWS1.Radius = 50;
-            this.btnZeroWS1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnZeroWS1.Size = new System.Drawing.Size(100, 50);
-            this.btnZeroWS1.TabIndex = 117;
-            this.btnZeroWS1.Tag = "zerows1";
-            this.btnZeroWS1.Text = "清0";
-            this.btnZeroWS1.UseVisualStyleBackColor = false;
-            this.btnZeroWS1.Click += new System.EventHandler(this.btnZeroWS1_Click);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(79, 31);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(48, 21);
-            this.label39.TabIndex = 18;
-            this.label39.Text = "WS1";
-            // 
-            // lblWeigh1
-            // 
-            this.lblWeigh1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeigh1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblWeigh1.Location = new System.Drawing.Point(51, 54);
-            this.lblWeigh1.Name = "lblWeigh1";
-            this.lblWeigh1.Size = new System.Drawing.Size(104, 32);
-            this.lblWeigh1.TabIndex = 16;
-            this.lblWeigh1.Text = "0.0";
-            this.lblWeigh1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblWeigh4
-            // 
-            this.lblWeigh4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeigh4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblWeigh4.Location = new System.Drawing.Point(253, 177);
-            this.lblWeigh4.Name = "lblWeigh4";
-            this.lblWeigh4.Size = new System.Drawing.Size(104, 32);
-            this.lblWeigh4.TabIndex = 20;
-            this.lblWeigh4.Text = "0.0";
-            this.lblWeigh4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblWeigh2
-            // 
-            this.lblWeigh2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeigh2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblWeigh2.Location = new System.Drawing.Point(253, 54);
-            this.lblWeigh2.Name = "lblWeigh2";
-            this.lblWeigh2.Size = new System.Drawing.Size(104, 32);
-            this.lblWeigh2.TabIndex = 16;
-            this.lblWeigh2.Text = "0.0";
-            this.lblWeigh2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(79, 155);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(48, 21);
-            this.label36.TabIndex = 18;
-            this.label36.Text = "WS3";
-            // 
-            // lblWeigh3
-            // 
-            this.lblWeigh3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeigh3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblWeigh3.Location = new System.Drawing.Point(51, 177);
-            this.lblWeigh3.Name = "lblWeigh3";
-            this.lblWeigh3.Size = new System.Drawing.Size(104, 32);
-            this.lblWeigh3.TabIndex = 16;
-            this.lblWeigh3.Text = "0.0";
-            this.lblWeigh3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(281, 31);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(48, 21);
-            this.label37.TabIndex = 18;
-            this.label37.Text = "WS2";
-            // 
-            // skinGroupBox4
-            // 
-            this.skinGroupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox4.BorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox4.Controls.Add(this.btnCloseHot);
-            this.skinGroupBox4.Controls.Add(this.btnSetTemperature);
-            this.skinGroupBox4.Controls.Add(this.pictureBox1);
-            this.skinGroupBox4.Controls.Add(this.lblTemperature);
-            this.skinGroupBox4.Controls.Add(this.label41);
-            this.skinGroupBox4.Controls.Add(this.lblTargetT);
-            this.skinGroupBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.skinGroupBox4.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox4.Location = new System.Drawing.Point(397, 3);
-            this.skinGroupBox4.Name = "skinGroupBox4";
-            this.skinGroupBox4.RectBackColor = System.Drawing.SystemColors.Control;
-            this.skinGroupBox4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox4.Size = new System.Drawing.Size(376, 513);
-            this.skinGroupBox4.TabIndex = 23;
-            this.skinGroupBox4.TabStop = false;
-            this.skinGroupBox4.Text = "温控系统℃";
-            this.skinGroupBox4.TitleBorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox4.TitleRectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox4.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.grouper1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grouper1.BackgroundGradientColor = System.Drawing.Color.White;
+            this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.grouper1.BorderColor = System.Drawing.Color.Silver;
+            this.grouper1.BorderThickness = 1F;
+            this.grouper1.Controls.Add(this.btnCloseHot);
+            this.grouper1.Controls.Add(this.label41);
+            this.grouper1.Controls.Add(this.btnSetTemperature);
+            this.grouper1.Controls.Add(this.lblTargetT);
+            this.grouper1.Controls.Add(this.pictureBox1);
+            this.grouper1.Controls.Add(this.lblTemperature);
+            this.grouper1.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.grouper1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.grouper1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grouper1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.grouper1.GroupImage = null;
+            this.grouper1.GroupTitle = "温控系统℃";
+            this.grouper1.Location = new System.Drawing.Point(403, 3);
+            this.grouper1.Name = "grouper1";
+            this.grouper1.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.grouper1.PaintGroupBox = true;
+            this.grouper1.RoundCorners = 10;
+            this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
+            this.grouper1.ShadowControl = false;
+            this.grouper1.ShadowThickness = 3;
+            this.grouper1.Size = new System.Drawing.Size(370, 513);
+            this.grouper1.TabIndex = 123;
             // 
             // btnCloseHot
             // 
-            this.btnCloseHot.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloseHot.BaseColor = System.Drawing.Color.Red;
-            this.btnCloseHot.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnCloseHot.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnCloseHot.DownBack = null;
+            this.btnCloseHot.ButtonColorBottom = System.Drawing.Color.Red;
+            this.btnCloseHot.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCloseHot.CornerRadius = 25;
+            this.btnCloseHot.FocusColor = System.Drawing.Color.Black;
             this.btnCloseHot.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCloseHot.ForeColor = System.Drawing.Color.White;
-            this.btnCloseHot.Location = new System.Drawing.Point(213, 126);
-            this.btnCloseHot.MouseBack = null;
+            this.btnCloseHot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCloseHot.Location = new System.Drawing.Point(201, 122);
             this.btnCloseHot.Name = "btnCloseHot";
-            this.btnCloseHot.NormlBack = null;
-            this.btnCloseHot.Radius = 50;
-            this.btnCloseHot.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnCloseHot.Size = new System.Drawing.Size(100, 50);
-            this.btnCloseHot.TabIndex = 117;
+            this.btnCloseHot.NumberOfPulses = 2;
+            this.btnCloseHot.PulseColor = System.Drawing.Color.DimGray;
+            this.btnCloseHot.PulseSpeed = 0.3F;
+            this.btnCloseHot.PulseWidth = 6;
+            this.btnCloseHot.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnCloseHot.Size = new System.Drawing.Size(112, 62);
+            this.btnCloseHot.TabIndex = 123;
+            this.btnCloseHot.Tag = "zerows2";
             this.btnCloseHot.Text = "关闭加温";
-            this.btnCloseHot.UseVisualStyleBackColor = false;
+            this.btnCloseHot.UseVisualStyleBackColor = true;
             this.btnCloseHot.Click += new System.EventHandler(this.btnCloseHot_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label41.Location = new System.Drawing.Point(125, 33);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(78, 21);
+            this.label41.TabIndex = 15;
+            this.label41.Text = "实时温度:";
             // 
             // btnSetTemperature
             // 
-            this.btnSetTemperature.BackColor = System.Drawing.Color.Transparent;
-            this.btnSetTemperature.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSetTemperature.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnSetTemperature.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnSetTemperature.DownBack = null;
+            this.btnSetTemperature.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnSetTemperature.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnSetTemperature.CornerRadius = 25;
+            this.btnSetTemperature.FocusColor = System.Drawing.Color.Black;
             this.btnSetTemperature.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSetTemperature.ForeColor = System.Drawing.Color.White;
-            this.btnSetTemperature.Location = new System.Drawing.Point(84, 126);
-            this.btnSetTemperature.MouseBack = null;
+            this.btnSetTemperature.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSetTemperature.Location = new System.Drawing.Point(67, 122);
             this.btnSetTemperature.Name = "btnSetTemperature";
-            this.btnSetTemperature.NormlBack = null;
-            this.btnSetTemperature.Radius = 50;
-            this.btnSetTemperature.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnSetTemperature.Size = new System.Drawing.Size(100, 50);
-            this.btnSetTemperature.TabIndex = 117;
+            this.btnSetTemperature.NumberOfPulses = 2;
+            this.btnSetTemperature.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSetTemperature.PulseSpeed = 0.3F;
+            this.btnSetTemperature.PulseWidth = 6;
+            this.btnSetTemperature.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnSetTemperature.Size = new System.Drawing.Size(112, 62);
+            this.btnSetTemperature.TabIndex = 123;
+            this.btnSetTemperature.Tag = "zerows2";
             this.btnSetTemperature.Text = "打开加温";
-            this.btnSetTemperature.UseVisualStyleBackColor = false;
+            this.btnSetTemperature.UseVisualStyleBackColor = true;
             this.btnSetTemperature.Click += new System.EventHandler(this.btnSetTemperature_Click);
+            // 
+            // lblTargetT
+            // 
+            this.lblTargetT.BackColor = System.Drawing.Color.Transparent;
+            this.lblTargetT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTargetT.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTargetT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblTargetT.Location = new System.Drawing.Point(144, 66);
+            this.lblTargetT.Name = "lblTargetT";
+            this.lblTargetT.Size = new System.Drawing.Size(100, 49);
+            this.lblTargetT.TabIndex = 13;
+            this.lblTargetT.Text = "38";
+            this.lblTargetT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTargetT.Click += new System.EventHandler(this.lblTargetT_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 194);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 194);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(370, 316);
+            this.pictureBox1.Size = new System.Drawing.Size(365, 316);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -1099,48 +1130,24 @@
             this.lblTemperature.AutoSize = true;
             this.lblTemperature.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTemperature.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.lblTemperature.Location = new System.Drawing.Point(209, 33);
+            this.lblTemperature.Location = new System.Drawing.Point(203, 32);
             this.lblTemperature.Name = "lblTemperature";
             this.lblTemperature.Size = new System.Drawing.Size(48, 24);
             this.lblTemperature.TabIndex = 16;
             this.lblTemperature.Text = "38.5";
             // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label41.Location = new System.Drawing.Point(126, 34);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(78, 21);
-            this.label41.TabIndex = 15;
-            this.label41.Text = "实时温度:";
-            // 
-            // lblTargetT
-            // 
-            this.lblTargetT.BackColor = System.Drawing.Color.Transparent;
-            this.lblTargetT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTargetT.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTargetT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblTargetT.Location = new System.Drawing.Point(145, 67);
-            this.lblTargetT.Name = "lblTargetT";
-            this.lblTargetT.Size = new System.Drawing.Size(100, 49);
-            this.lblTargetT.TabIndex = 13;
-            this.lblTargetT.Text = "38";
-            this.lblTargetT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTargetT.Click += new System.EventHandler(this.lblTargetT_Click);
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.grouper2);
             this.tabPage3.Controls.Add(this.btnDefault);
+            this.tabPage3.Controls.Add(this.btnSaveDefault);
+            this.tabPage3.Controls.Add(this.btnSaveWarnSet);
             this.tabPage3.Controls.Add(this.lblRealBloodLeak);
             this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.btnSaveDefault);
             this.tabPage3.Controls.Add(this.skinGroupBox7);
             this.tabPage3.Controls.Add(this.skinGroupBox6);
-            this.tabPage3.Controls.Add(this.skinGroupBox5);
             this.tabPage3.Controls.Add(this.label29);
-            this.tabPage3.Controls.Add(this.btnSaveWarnSet);
             this.tabPage3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage3.Location = new System.Drawing.Point(4, 49);
             this.tabPage3.Name = "tabPage3";
@@ -1148,27 +1155,6 @@
             this.tabPage3.Size = new System.Drawing.Size(776, 519);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = " 报警设置 ";
-            // 
-            // btnDefault
-            // 
-            this.btnDefault.BackColor = System.Drawing.Color.Transparent;
-            this.btnDefault.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnDefault.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnDefault.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnDefault.DownBack = null;
-            this.btnDefault.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDefault.ForeColor = System.Drawing.Color.White;
-            this.btnDefault.Location = new System.Drawing.Point(236, 417);
-            this.btnDefault.MouseBack = null;
-            this.btnDefault.Name = "btnDefault";
-            this.btnDefault.NormlBack = null;
-            this.btnDefault.Radius = 50;
-            this.btnDefault.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnDefault.Size = new System.Drawing.Size(100, 50);
-            this.btnDefault.TabIndex = 119;
-            this.btnDefault.Text = "恢复默认值";
-            this.btnDefault.UseVisualStyleBackColor = false;
-            this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
             // 
             // lblRealBloodLeak
             // 
@@ -1188,27 +1174,6 @@
             this.label12.Size = new System.Drawing.Size(51, 20);
             this.label12.TabIndex = 22;
             this.label12.Text = "实时值";
-            // 
-            // btnSaveDefault
-            // 
-            this.btnSaveDefault.BackColor = System.Drawing.Color.Transparent;
-            this.btnSaveDefault.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSaveDefault.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnSaveDefault.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnSaveDefault.DownBack = null;
-            this.btnSaveDefault.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSaveDefault.ForeColor = System.Drawing.Color.White;
-            this.btnSaveDefault.Location = new System.Drawing.Point(125, 417);
-            this.btnSaveDefault.MouseBack = null;
-            this.btnSaveDefault.Name = "btnSaveDefault";
-            this.btnSaveDefault.NormlBack = null;
-            this.btnSaveDefault.Radius = 50;
-            this.btnSaveDefault.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnSaveDefault.Size = new System.Drawing.Size(100, 50);
-            this.btnSaveDefault.TabIndex = 119;
-            this.btnSaveDefault.Text = "保存为默认";
-            this.btnSaveDefault.UseVisualStyleBackColor = false;
-            this.btnSaveDefault.Click += new System.EventHandler(this.btnSaveDefault_Click);
             // 
             // skinGroupBox7
             // 
@@ -1583,58 +1548,11 @@
             this.rbtnPrePart1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbtnPrePart1.UseVisualStyleBackColor = true;
             // 
-            // skinGroupBox5
-            // 
-            this.skinGroupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox5.BorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox5.Controls.Add(this.label1);
-            this.skinGroupBox5.Controls.Add(this.lblConcentration);
-            this.skinGroupBox5.Controls.Add(this.label11);
-            this.skinGroupBox5.Controls.Add(this.lblPvenLower);
-            this.skinGroupBox5.Controls.Add(this.label6);
-            this.skinGroupBox5.Controls.Add(this.label15);
-            this.skinGroupBox5.Controls.Add(this.lblPartLower);
-            this.skinGroupBox5.Controls.Add(this.lblP1stUpper);
-            this.skinGroupBox5.Controls.Add(this.lblPvenUpper);
-            this.skinGroupBox5.Controls.Add(this.label7);
-            this.skinGroupBox5.Controls.Add(this.lblPartUpper);
-            this.skinGroupBox5.Controls.Add(this.lblP1stLower);
-            this.skinGroupBox5.Controls.Add(this.label5);
-            this.skinGroupBox5.Controls.Add(this.label9);
-            this.skinGroupBox5.Controls.Add(this.label3);
-            this.skinGroupBox5.Controls.Add(this.label13);
-            this.skinGroupBox5.Controls.Add(this.lblPaccLower);
-            this.skinGroupBox5.Controls.Add(this.lblTmpUpper);
-            this.skinGroupBox5.Controls.Add(this.lblP3rdLower);
-            this.skinGroupBox5.Controls.Add(this.label4);
-            this.skinGroupBox5.Controls.Add(this.label10);
-            this.skinGroupBox5.Controls.Add(this.lblP3rdUpper);
-            this.skinGroupBox5.Controls.Add(this.label8);
-            this.skinGroupBox5.Controls.Add(this.lblP2ndLower);
-            this.skinGroupBox5.Controls.Add(this.lblTmpLower);
-            this.skinGroupBox5.Controls.Add(this.label28);
-            this.skinGroupBox5.Controls.Add(this.lblP2ndUpper);
-            this.skinGroupBox5.Controls.Add(this.lblPaccUpper);
-            this.skinGroupBox5.Controls.Add(this.label2);
-            this.skinGroupBox5.Controls.Add(this.label27);
-            this.skinGroupBox5.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox5.Location = new System.Drawing.Point(5, 6);
-            this.skinGroupBox5.Name = "skinGroupBox5";
-            this.skinGroupBox5.RectBackColor = System.Drawing.SystemColors.Control;
-            this.skinGroupBox5.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox5.Size = new System.Drawing.Size(507, 351);
-            this.skinGroupBox5.TabIndex = 31;
-            this.skinGroupBox5.TabStop = false;
-            this.skinGroupBox5.Text = "压力报警范围设置(mmHg)";
-            this.skinGroupBox5.TitleBorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox5.TitleRectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox5.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label1.Location = new System.Drawing.Point(64, 35);
+            this.label1.Location = new System.Drawing.Point(65, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 20);
             this.label1.TabIndex = 19;
@@ -1647,7 +1565,7 @@
             this.lblConcentration.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblConcentration.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblConcentration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblConcentration.Location = new System.Drawing.Point(395, 286);
+            this.lblConcentration.Location = new System.Drawing.Point(396, 288);
             this.lblConcentration.Name = "lblConcentration";
             this.lblConcentration.Size = new System.Drawing.Size(80, 40);
             this.lblConcentration.TabIndex = 20;
@@ -1659,7 +1577,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(111, 302);
+            this.label11.Location = new System.Drawing.Point(112, 304);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 21);
             this.label11.TabIndex = 23;
@@ -1672,7 +1590,7 @@
             this.lblPvenLower.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPvenLower.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblPvenLower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPvenLower.Location = new System.Drawing.Point(27, 213);
+            this.lblPvenLower.Location = new System.Drawing.Point(28, 215);
             this.lblPvenLower.Name = "lblPvenLower";
             this.lblPvenLower.Size = new System.Drawing.Size(80, 40);
             this.lblPvenLower.TabIndex = 20;
@@ -1684,7 +1602,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(363, 68);
+            this.label6.Location = new System.Drawing.Point(364, 70);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 21);
             this.label6.TabIndex = 23;
@@ -1694,7 +1612,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(272, 285);
+            this.label15.Location = new System.Drawing.Point(273, 287);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(114, 42);
             this.label15.TabIndex = 21;
@@ -1707,7 +1625,7 @@
             this.lblPartLower.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPartLower.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblPartLower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPartLower.Location = new System.Drawing.Point(27, 135);
+            this.lblPartLower.Location = new System.Drawing.Point(28, 137);
             this.lblPartLower.Name = "lblPartLower";
             this.lblPartLower.Size = new System.Drawing.Size(80, 40);
             this.lblPartLower.TabIndex = 20;
@@ -1723,7 +1641,7 @@
             this.lblP1stUpper.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblP1stUpper.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblP1stUpper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblP1stUpper.Location = new System.Drawing.Point(142, 290);
+            this.lblP1stUpper.Location = new System.Drawing.Point(143, 292);
             this.lblP1stUpper.Name = "lblP1stUpper";
             this.lblP1stUpper.Size = new System.Drawing.Size(80, 40);
             this.lblP1stUpper.TabIndex = 20;
@@ -1739,7 +1657,7 @@
             this.lblPvenUpper.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPvenUpper.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblPvenUpper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPvenUpper.Location = new System.Drawing.Point(143, 213);
+            this.lblPvenUpper.Location = new System.Drawing.Point(144, 215);
             this.lblPvenUpper.Name = "lblPvenUpper";
             this.lblPvenUpper.Size = new System.Drawing.Size(80, 40);
             this.lblPvenUpper.TabIndex = 20;
@@ -1752,7 +1670,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label7.Location = new System.Drawing.Point(317, 35);
+            this.label7.Location = new System.Drawing.Point(318, 37);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 20);
             this.label7.TabIndex = 19;
@@ -1765,7 +1683,7 @@
             this.lblPartUpper.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPartUpper.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblPartUpper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPartUpper.Location = new System.Drawing.Point(143, 135);
+            this.lblPartUpper.Location = new System.Drawing.Point(144, 137);
             this.lblPartUpper.Name = "lblPartUpper";
             this.lblPartUpper.Size = new System.Drawing.Size(80, 40);
             this.lblPartUpper.TabIndex = 20;
@@ -1781,7 +1699,7 @@
             this.lblP1stLower.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblP1stLower.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblP1stLower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblP1stLower.Location = new System.Drawing.Point(26, 290);
+            this.lblP1stLower.Location = new System.Drawing.Point(27, 292);
             this.lblP1stLower.Name = "lblP1stLower";
             this.lblP1stLower.Size = new System.Drawing.Size(80, 40);
             this.lblP1stLower.TabIndex = 20;
@@ -1794,7 +1712,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label5.Location = new System.Drawing.Point(63, 190);
+            this.label5.Location = new System.Drawing.Point(64, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 20);
             this.label5.TabIndex = 19;
@@ -1804,7 +1722,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label9.Location = new System.Drawing.Point(42, 267);
+            this.label9.Location = new System.Drawing.Point(43, 269);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(165, 20);
             this.label9.TabIndex = 19;
@@ -1814,7 +1732,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label3.Location = new System.Drawing.Point(66, 112);
+            this.label3.Location = new System.Drawing.Point(67, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 20);
             this.label3.TabIndex = 19;
@@ -1823,7 +1741,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(363, 145);
+            this.label13.Location = new System.Drawing.Point(364, 147);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(26, 21);
             this.label13.TabIndex = 23;
@@ -1836,7 +1754,7 @@
             this.lblPaccLower.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPaccLower.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblPaccLower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPaccLower.Location = new System.Drawing.Point(27, 59);
+            this.lblPaccLower.Location = new System.Drawing.Point(28, 61);
             this.lblPaccLower.Name = "lblPaccLower";
             this.lblPaccLower.Size = new System.Drawing.Size(80, 40);
             this.lblPaccLower.TabIndex = 20;
@@ -1852,7 +1770,7 @@
             this.lblTmpUpper.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTmpUpper.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblTmpUpper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblTmpUpper.Location = new System.Drawing.Point(395, 59);
+            this.lblTmpUpper.Location = new System.Drawing.Point(396, 61);
             this.lblTmpUpper.Name = "lblTmpUpper";
             this.lblTmpUpper.Size = new System.Drawing.Size(80, 40);
             this.lblTmpUpper.TabIndex = 20;
@@ -1868,7 +1786,7 @@
             this.lblP3rdLower.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblP3rdLower.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblP3rdLower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblP3rdLower.Location = new System.Drawing.Point(277, 213);
+            this.lblP3rdLower.Location = new System.Drawing.Point(278, 215);
             this.lblP3rdLower.Name = "lblP3rdLower";
             this.lblP3rdLower.Size = new System.Drawing.Size(80, 40);
             this.lblP3rdLower.TabIndex = 20;
@@ -1880,7 +1798,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(112, 146);
+            this.label4.Location = new System.Drawing.Point(113, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 21);
             this.label4.TabIndex = 23;
@@ -1890,7 +1808,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label10.Location = new System.Drawing.Point(301, 112);
+            this.label10.Location = new System.Drawing.Point(302, 114);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(152, 20);
             this.label10.TabIndex = 19;
@@ -1903,7 +1821,7 @@
             this.lblP3rdUpper.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblP3rdUpper.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblP3rdUpper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblP3rdUpper.Location = new System.Drawing.Point(395, 213);
+            this.lblP3rdUpper.Location = new System.Drawing.Point(396, 215);
             this.lblP3rdUpper.Name = "lblP3rdUpper";
             this.lblP3rdUpper.Size = new System.Drawing.Size(80, 40);
             this.lblP3rdUpper.TabIndex = 20;
@@ -1915,7 +1833,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(112, 224);
+            this.label8.Location = new System.Drawing.Point(113, 226);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 21);
             this.label8.TabIndex = 23;
@@ -1928,7 +1846,7 @@
             this.lblP2ndLower.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblP2ndLower.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblP2ndLower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblP2ndLower.Location = new System.Drawing.Point(277, 135);
+            this.lblP2ndLower.Location = new System.Drawing.Point(278, 137);
             this.lblP2ndLower.Name = "lblP2ndLower";
             this.lblP2ndLower.Size = new System.Drawing.Size(80, 40);
             this.lblP2ndLower.TabIndex = 20;
@@ -1944,7 +1862,7 @@
             this.lblTmpLower.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTmpLower.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblTmpLower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblTmpLower.Location = new System.Drawing.Point(277, 59);
+            this.lblTmpLower.Location = new System.Drawing.Point(278, 61);
             this.lblTmpLower.Name = "lblTmpLower";
             this.lblTmpLower.Size = new System.Drawing.Size(80, 40);
             this.lblTmpLower.TabIndex = 20;
@@ -1957,7 +1875,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label28.Location = new System.Drawing.Point(303, 190);
+            this.label28.Location = new System.Drawing.Point(304, 192);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(148, 20);
             this.label28.TabIndex = 19;
@@ -1970,7 +1888,7 @@
             this.lblP2ndUpper.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblP2ndUpper.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblP2ndUpper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblP2ndUpper.Location = new System.Drawing.Point(395, 135);
+            this.lblP2ndUpper.Location = new System.Drawing.Point(396, 137);
             this.lblP2ndUpper.Name = "lblP2ndUpper";
             this.lblP2ndUpper.Size = new System.Drawing.Size(80, 40);
             this.lblP2ndUpper.TabIndex = 20;
@@ -1986,7 +1904,7 @@
             this.lblPaccUpper.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblPaccUpper.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
             this.lblPaccUpper.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPaccUpper.Location = new System.Drawing.Point(143, 59);
+            this.lblPaccUpper.Location = new System.Drawing.Point(144, 61);
             this.lblPaccUpper.Name = "lblPaccUpper";
             this.lblPaccUpper.Size = new System.Drawing.Size(80, 40);
             this.lblPaccUpper.TabIndex = 20;
@@ -1998,7 +1916,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 69);
+            this.label2.Location = new System.Drawing.Point(113, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 21);
             this.label2.TabIndex = 23;
@@ -2007,7 +1925,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(363, 222);
+            this.label27.Location = new System.Drawing.Point(364, 224);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(26, 21);
             this.label27.TabIndex = 23;
@@ -2022,32 +1940,6 @@
             this.label29.Size = new System.Drawing.Size(326, 21);
             this.label29.TabIndex = 30;
             this.label29.Text = "注:恢复默认值后需要点击 [保存] 以确认修改;";
-            // 
-            // btnSaveWarnSet
-            // 
-            this.btnSaveWarnSet.BackColor = System.Drawing.Color.Transparent;
-            this.btnSaveWarnSet.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSaveWarnSet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnSaveWarnSet.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnSaveWarnSet.DownBack = null;
-            this.btnSaveWarnSet.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSaveWarnSet.ForeColor = System.Drawing.Color.White;
-            this.btnSaveWarnSet.Image = global::ALS.Properties.Resources.save;
-            this.btnSaveWarnSet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveWarnSet.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSaveWarnSet.Location = new System.Drawing.Point(14, 417);
-            this.btnSaveWarnSet.MouseBack = null;
-            this.btnSaveWarnSet.Name = "btnSaveWarnSet";
-            this.btnSaveWarnSet.NormlBack = null;
-            this.btnSaveWarnSet.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnSaveWarnSet.Radius = 50;
-            this.btnSaveWarnSet.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnSaveWarnSet.Size = new System.Drawing.Size(100, 50);
-            this.btnSaveWarnSet.TabIndex = 118;
-            this.btnSaveWarnSet.Text = "保存";
-            this.btnSaveWarnSet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveWarnSet.UseVisualStyleBackColor = false;
-            this.btnSaveWarnSet.Click += new System.EventHandler(this.btnSetLevel_Click);
             // 
             // tabPage4
             // 
@@ -2696,6 +2588,122 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewImageColumn1.Width = 60;
             // 
+            // btnSaveWarnSet
+            // 
+            this.btnSaveWarnSet.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnSaveWarnSet.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnSaveWarnSet.CornerRadius = 25;
+            this.btnSaveWarnSet.FocusColor = System.Drawing.Color.Black;
+            this.btnSaveWarnSet.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSaveWarnSet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSaveWarnSet.Location = new System.Drawing.Point(7, 411);
+            this.btnSaveWarnSet.Name = "btnSaveWarnSet";
+            this.btnSaveWarnSet.NumberOfPulses = 2;
+            this.btnSaveWarnSet.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSaveWarnSet.PulseSpeed = 0.3F;
+            this.btnSaveWarnSet.PulseWidth = 6;
+            this.btnSaveWarnSet.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnSaveWarnSet.Size = new System.Drawing.Size(112, 62);
+            this.btnSaveWarnSet.TabIndex = 122;
+            this.btnSaveWarnSet.Text = "保存设置";
+            this.btnSaveWarnSet.UseVisualStyleBackColor = true;
+            this.btnSaveWarnSet.Click += new System.EventHandler(this.btnSetLevel_Click);
+            // 
+            // btnSaveDefault
+            // 
+            this.btnSaveDefault.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnSaveDefault.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnSaveDefault.CornerRadius = 25;
+            this.btnSaveDefault.FocusColor = System.Drawing.Color.Black;
+            this.btnSaveDefault.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSaveDefault.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSaveDefault.Location = new System.Drawing.Point(125, 411);
+            this.btnSaveDefault.Name = "btnSaveDefault";
+            this.btnSaveDefault.NumberOfPulses = 2;
+            this.btnSaveDefault.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSaveDefault.PulseSpeed = 0.3F;
+            this.btnSaveDefault.PulseWidth = 6;
+            this.btnSaveDefault.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnSaveDefault.Size = new System.Drawing.Size(112, 62);
+            this.btnSaveDefault.TabIndex = 123;
+            this.btnSaveDefault.Text = "保存为默认";
+            this.btnSaveDefault.UseVisualStyleBackColor = true;
+            this.btnSaveDefault.Click += new System.EventHandler(this.btnSaveDefault_Click);
+            // 
+            // btnDefault
+            // 
+            this.btnDefault.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnDefault.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnDefault.CornerRadius = 25;
+            this.btnDefault.FocusColor = System.Drawing.Color.Black;
+            this.btnDefault.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDefault.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDefault.Location = new System.Drawing.Point(243, 411);
+            this.btnDefault.Name = "btnDefault";
+            this.btnDefault.NumberOfPulses = 2;
+            this.btnDefault.PulseColor = System.Drawing.Color.DimGray;
+            this.btnDefault.PulseSpeed = 0.3F;
+            this.btnDefault.PulseWidth = 6;
+            this.btnDefault.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnDefault.Size = new System.Drawing.Size(112, 62);
+            this.btnDefault.TabIndex = 123;
+            this.btnDefault.Text = "恢复默认值";
+            this.btnDefault.UseVisualStyleBackColor = true;
+            this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
+            // 
+            // grouper2
+            // 
+            this.grouper2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grouper2.BackgroundGradientColor = System.Drawing.Color.White;
+            this.grouper2.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.grouper2.BorderColor = System.Drawing.Color.Silver;
+            this.grouper2.BorderThickness = 1F;
+            this.grouper2.Controls.Add(this.label1);
+            this.grouper2.Controls.Add(this.lblConcentration);
+            this.grouper2.Controls.Add(this.label27);
+            this.grouper2.Controls.Add(this.label11);
+            this.grouper2.Controls.Add(this.label2);
+            this.grouper2.Controls.Add(this.lblPvenLower);
+            this.grouper2.Controls.Add(this.lblPaccUpper);
+            this.grouper2.Controls.Add(this.label6);
+            this.grouper2.Controls.Add(this.lblP2ndUpper);
+            this.grouper2.Controls.Add(this.label15);
+            this.grouper2.Controls.Add(this.label28);
+            this.grouper2.Controls.Add(this.lblPartLower);
+            this.grouper2.Controls.Add(this.lblTmpLower);
+            this.grouper2.Controls.Add(this.lblP1stUpper);
+            this.grouper2.Controls.Add(this.lblP2ndLower);
+            this.grouper2.Controls.Add(this.lblPvenUpper);
+            this.grouper2.Controls.Add(this.label8);
+            this.grouper2.Controls.Add(this.label7);
+            this.grouper2.Controls.Add(this.lblP3rdUpper);
+            this.grouper2.Controls.Add(this.lblPartUpper);
+            this.grouper2.Controls.Add(this.label10);
+            this.grouper2.Controls.Add(this.lblP1stLower);
+            this.grouper2.Controls.Add(this.label4);
+            this.grouper2.Controls.Add(this.label5);
+            this.grouper2.Controls.Add(this.lblP3rdLower);
+            this.grouper2.Controls.Add(this.label9);
+            this.grouper2.Controls.Add(this.lblTmpUpper);
+            this.grouper2.Controls.Add(this.label3);
+            this.grouper2.Controls.Add(this.lblPaccLower);
+            this.grouper2.Controls.Add(this.label13);
+            this.grouper2.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.grouper2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grouper2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.grouper2.GroupImage = null;
+            this.grouper2.GroupTitle = "压力报警范围设置(mmHg)";
+            this.grouper2.Location = new System.Drawing.Point(6, 6);
+            this.grouper2.Name = "grouper2";
+            this.grouper2.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.grouper2.PaintGroupBox = true;
+            this.grouper2.RoundCorners = 10;
+            this.grouper2.ShadowColor = System.Drawing.Color.DarkGray;
+            this.grouper2.ShadowControl = false;
+            this.grouper2.ShadowThickness = 3;
+            this.grouper2.Size = new System.Drawing.Size(506, 351);
+            this.grouper2.TabIndex = 124;
+            // 
             // ucSetOther
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2712,11 +2720,11 @@
             this.palSyringe.ResumeLayout(false);
             this.palSyringe.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.gboxRecycle.ResumeLayout(false);
+            this.gboxRecycle.PerformLayout();
             this.gboxV.ResumeLayout(false);
-            this.skinGroupBox3.ResumeLayout(false);
-            this.skinGroupBox3.PerformLayout();
-            this.skinGroupBox4.ResumeLayout(false);
-            this.skinGroupBox4.PerformLayout();
+            this.grouper1.ResumeLayout(false);
+            this.grouper1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -2727,8 +2735,6 @@
             this.gboxPrePacc.ResumeLayout(false);
             this.gboxPrePacc.PerformLayout();
             this.gboxPrePart.ResumeLayout(false);
-            this.skinGroupBox5.ResumeLayout(false);
-            this.skinGroupBox5.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.gboxLiALS.ResumeLayout(false);
             this.gboxLiALS.PerformLayout();
@@ -2745,6 +2751,8 @@
             this.tpWarnLog.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
             this.skinGroupBox1.ResumeLayout(false);
+            this.grouper2.ResumeLayout(false);
+            this.grouper2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2855,31 +2863,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox1;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox3;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox4;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox5;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox6;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox7;
         private CCWin.SkinControl.SkinGroupBox gboxPP;
         private CCWin.SkinControl.SkinGroupBox gboxPE;
         private CCWin.SkinControl.SkinGroupBox gboxCHDF;
-        public CCWin.SkinControl.SkinButton btnSetSyringe;
-        public CCWin.SkinControl.SkinButton btnChangeSP;
-        public CCWin.SkinControl.SkinButton btnRunSP;
-        public CCWin.SkinControl.SkinButton btnStopSP;
-        public CCWin.SkinControl.SkinButton btnFastRunSP;
-        public CCWin.SkinControl.SkinButton btnFastStopSP;
-        public CCWin.SkinControl.SkinButton btnZeroSPSum;
-        public CCWin.SkinControl.SkinButton Sy_ClearWarning;
-        public CCWin.SkinControl.SkinButton btnCloseHot;
-        public CCWin.SkinControl.SkinButton btnSetTemperature;
-        public CCWin.SkinControl.SkinButton btnZeroWS4;
-        public CCWin.SkinControl.SkinButton btnZeroWS3;
-        public CCWin.SkinControl.SkinButton btnZeroWS2;
-        public CCWin.SkinControl.SkinButton btnZeroWS1;
-        public CCWin.SkinControl.SkinButton btnSaveWarnSet;
-        public CCWin.SkinControl.SkinButton btnDefault;
-        public CCWin.SkinControl.SkinButton btnSaveDefault;
         public CCWin.SkinControl.SkinButton btnSetFlush;
         public System.Windows.Forms.CheckBox chkV6;
         public System.Windows.Forms.CheckBox chkV1;
@@ -2888,7 +2876,6 @@
         public System.Windows.Forms.CheckBox chkV4;
         public System.Windows.Forms.CheckBox chkV3;
         public System.Windows.Forms.TabPage tabPage2;
-        public CCWin.SkinControl.SkinGroupBox gboxV;
         private CCWin.SkinControl.SkinLine skinLine1;
         private System.Windows.Forms.Label label16;
         private CCWin.SkinControl.SkinLabel skinLabel1;
@@ -2916,6 +2903,27 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label lblPEFFlush1;
         private System.Windows.Forms.Label lblPEFFlush2;
-        public System.Windows.Forms.Label lblBloodLeak; 
+        public System.Windows.Forms.Label lblBloodLeak;
+        public PulseButton.PulseButton btnSetSyringe;
+        public PulseButton.PulseButton btnChangeSP;
+        public PulseButton.PulseButton btnRunSP;
+        public PulseButton.PulseButton btnFastStopSP;
+        public PulseButton.PulseButton Sy_ClearWarning;
+        public PulseButton.PulseButton btnZeroSPSum;
+        public PulseButton.PulseButton btnFastRunSP;
+        public PulseButton.PulseButton btnStopSP;
+        public PulseButton.PulseButton btnZeroWS4;
+        public PulseButton.PulseButton btnZeroWS3;
+        public PulseButton.PulseButton btnZeroWS2;
+        public PulseButton.PulseButton btnZeroWS1;
+        public PulseButton.PulseButton btnCloseHot;
+        public PulseButton.PulseButton btnSetTemperature;
+        public CodeVendor.Controls.Grouper gboxV;
+        public CodeVendor.Controls.Grouper gboxRecycle;
+        public CodeVendor.Controls.Grouper grouper1;
+        public PulseButton.PulseButton btnDefault;
+        public PulseButton.PulseButton btnSaveDefault;
+        public PulseButton.PulseButton btnSaveWarnSet;
+        public CodeVendor.Controls.Grouper grouper2; 
     }
 }

@@ -35,7 +35,6 @@
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.btnNext = new PulseButton.PulseButton();
             this.btnReturn = new PulseButton.PulseButton();
-            this.userControl11 = new ALS.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.pboxShow)).BeginInit();
             this.grouper1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,7 +100,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.userControl11);
             this.panel1.Controls.Add(this.pboxShow);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(5, 12);
@@ -176,23 +174,6 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // userControl11
-            // 
-            this.userControl11.BackColor = System.Drawing.Color.Transparent;
-            this.userControl11.BorderColor = System.Drawing.Color.Red;
-            this.userControl11.ForeColor = System.Drawing.Color.Blue;
-            this.userControl11.Location = new System.Drawing.Point(98, 73);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.RectBackColor = System.Drawing.Color.White;
-            this.userControl11.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.userControl11.Size = new System.Drawing.Size(363, 234);
-            this.userControl11.TabIndex = 11;
-            this.userControl11.TabStop = false;
-            this.userControl11.Text = "userControl11";
-            this.userControl11.TitleBorderColor = System.Drawing.Color.Red;
-            this.userControl11.TitleRectBackColor = System.Drawing.Color.White;
-            this.userControl11.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
             // ucPipeLine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -220,6 +201,5 @@
         private CodeVendor.Controls.Grouper grouper2;
         public PulseButton.PulseButton btnReturn;
         public PulseButton.PulseButton btnNext;
-        private UserControl1 userControl11;
     }
 }

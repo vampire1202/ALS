@@ -30,6 +30,7 @@
         {
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.gboxRecycle = new CodeVendor.Controls.Grouper();
+            this.btnReturn = new PulseButton.PulseButton();
             this.SuspendLayout();
             // 
             // grouper1
@@ -66,7 +67,7 @@
             this.gboxRecycle.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gboxRecycle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.gboxRecycle.GroupImage = null;
-            this.gboxRecycle.GroupTitle = "PE回收方法,请参照以下步骤回收";
+            this.gboxRecycle.GroupTitle = "夹管阀控制";
             this.gboxRecycle.Location = new System.Drawing.Point(460, 30);
             this.gboxRecycle.Name = "gboxRecycle";
             this.gboxRecycle.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
@@ -78,11 +79,32 @@
             this.gboxRecycle.Size = new System.Drawing.Size(196, 162);
             this.gboxRecycle.TabIndex = 120;
             // 
+            // btnReturn
+            // 
+            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnReturn.CornerRadius = 25;
+            this.btnReturn.FocusColor = System.Drawing.Color.Black;
+            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReturn.Location = new System.Drawing.Point(673, 51);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.NumberOfPulses = 2;
+            this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
+            this.btnReturn.PulseSpeed = 0.3F;
+            this.btnReturn.PulseWidth = 6;
+            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnReturn.Size = new System.Drawing.Size(112, 62);
+            this.btnReturn.TabIndex = 121;
+            this.btnReturn.Text = "上一步";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 262);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.gboxRecycle);
             this.Controls.Add(this.grouper1);
             this.Name = "Form1";
@@ -93,7 +115,8 @@
 
         #endregion
 
-        private CodeVendor.Controls.Grouper grouper1;
         public CodeVendor.Controls.Grouper gboxRecycle;
+        public PulseButton.PulseButton btnReturn;
+        public CodeVendor.Controls.Grouper grouper1;
     }
 }

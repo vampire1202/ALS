@@ -40,8 +40,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMute = new CCWin.SkinControl.SkinButton();
-            this.btnReleaseWarn = new CCWin.SkinControl.SkinButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -56,6 +54,8 @@
             this.reason = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new ALS.DataGridViewExs.ColumnEx.DataGridViewButtonColumnEx();
+            this.btnReleaseWarn = new PulseButton.PulseButton();
+            this.btnMute = new PulseButton.PulseButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -74,56 +74,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(399, 42);
             this.panel1.TabIndex = 1;
-            // 
-            // btnMute
-            // 
-            this.btnMute.BackColor = System.Drawing.Color.Tomato;
-            this.btnMute.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.btnMute.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnMute.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMute.DownBack = null;
-            this.btnMute.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMute.Image = global::ALS.Properties.Resources.mute;
-            this.btnMute.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMute.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnMute.Location = new System.Drawing.Point(219, 0);
-            this.btnMute.MouseBack = null;
-            this.btnMute.Name = "btnMute";
-            this.btnMute.NormlBack = null;
-            this.btnMute.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnMute.Radius = 42;
-            this.btnMute.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnMute.Size = new System.Drawing.Size(90, 42);
-            this.btnMute.TabIndex = 3;
-            this.btnMute.Text = "声音\r\n暂停";
-            this.btnMute.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMute.UseVisualStyleBackColor = false;
-            this.btnMute.Click += new System.EventHandler(this.btnMute_Click);
-            // 
-            // btnReleaseWarn
-            // 
-            this.btnReleaseWarn.BackColor = System.Drawing.Color.Tomato;
-            this.btnReleaseWarn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
-            this.btnReleaseWarn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnReleaseWarn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnReleaseWarn.DownBack = null;
-            this.btnReleaseWarn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnReleaseWarn.Image = global::ALS.Properties.Resources.releasewarn;
-            this.btnReleaseWarn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReleaseWarn.ImageSize = new System.Drawing.Size(35, 32);
-            this.btnReleaseWarn.Location = new System.Drawing.Point(309, 0);
-            this.btnReleaseWarn.MouseBack = null;
-            this.btnReleaseWarn.Name = "btnReleaseWarn";
-            this.btnReleaseWarn.NormlBack = null;
-            this.btnReleaseWarn.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.btnReleaseWarn.Radius = 42;
-            this.btnReleaseWarn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnReleaseWarn.Size = new System.Drawing.Size(90, 42);
-            this.btnReleaseWarn.TabIndex = 3;
-            this.btnReleaseWarn.Text = "报警\r\n复位";
-            this.btnReleaseWarn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReleaseWarn.UseVisualStyleBackColor = false;
-            this.btnReleaseWarn.Click += new System.EventHandler(this.btnRelease_Click);
             // 
             // bindingNavigator1
             // 
@@ -352,6 +302,52 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 50;
             // 
+            // btnReleaseWarn
+            // 
+            this.btnReleaseWarn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(204)))), ((int)(((byte)(153)))));
+            this.btnReleaseWarn.ButtonColorTop = System.Drawing.Color.Honeydew;
+            this.btnReleaseWarn.CornerRadius = 20;
+            this.btnReleaseWarn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnReleaseWarn.FocusColor = System.Drawing.Color.Black;
+            this.btnReleaseWarn.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.btnReleaseWarn.ForeColor = System.Drawing.Color.Black;
+            this.btnReleaseWarn.Image = global::ALS.Properties.Resources.releasewarn;
+            this.btnReleaseWarn.Location = new System.Drawing.Point(305, 0);
+            this.btnReleaseWarn.Name = "btnReleaseWarn";
+            this.btnReleaseWarn.PulseColor = System.Drawing.Color.DimGray;
+            this.btnReleaseWarn.PulseSpeed = 0.3F;
+            this.btnReleaseWarn.PulseWidth = 1;
+            this.btnReleaseWarn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnReleaseWarn.Size = new System.Drawing.Size(94, 42);
+            this.btnReleaseWarn.TabIndex = 122;
+            this.btnReleaseWarn.Text = "报警\r\n复位";
+            this.btnReleaseWarn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReleaseWarn.UseVisualStyleBackColor = true;
+            this.btnReleaseWarn.Click += new System.EventHandler(this.btnRelease_Click);
+            // 
+            // btnMute
+            // 
+            this.btnMute.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.btnMute.ButtonColorTop = System.Drawing.Color.White;
+            this.btnMute.CornerRadius = 20;
+            this.btnMute.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMute.FocusColor = System.Drawing.Color.Black;
+            this.btnMute.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.btnMute.ForeColor = System.Drawing.Color.Black;
+            this.btnMute.Image = global::ALS.Properties.Resources.mute;
+            this.btnMute.Location = new System.Drawing.Point(215, 0);
+            this.btnMute.Name = "btnMute";
+            this.btnMute.PulseColor = System.Drawing.Color.DimGray;
+            this.btnMute.PulseSpeed = 0.3F;
+            this.btnMute.PulseWidth = 1;
+            this.btnMute.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnMute.Size = new System.Drawing.Size(90, 42);
+            this.btnMute.TabIndex = 122;
+            this.btnMute.Text = "声音\r\n暂停";
+            this.btnMute.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMute.UseVisualStyleBackColor = true;
+            this.btnMute.Click += new System.EventHandler(this.btnMute_Click);
+            // 
             // ucWarnInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -384,8 +380,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         public DataGridViewExs.DataGridViewEx dgvView;
-        public CCWin.SkinControl.SkinButton btnReleaseWarn;
-        public CCWin.SkinControl.SkinButton btnMute;
         private System.Windows.Forms.DataGridViewTextBoxColumn databasegrade;
         private System.Windows.Forms.DataGridViewTextBoxColumn grade;
         private System.Windows.Forms.DataGridViewTextBoxColumn code;
@@ -393,5 +387,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn reason;
         private System.Windows.Forms.DataGridViewTextBoxColumn deal;
         private DataGridViewExs.ColumnEx.DataGridViewButtonColumnEx Column5;
+        public PulseButton.PulseButton btnMute;
+        public PulseButton.PulseButton btnReleaseWarn;
     }
 }

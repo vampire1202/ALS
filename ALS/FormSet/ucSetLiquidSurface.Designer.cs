@@ -39,8 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
-            this.skinGroupBox1.SuspendLayout();
+            this.grouper1 = new CodeVendor.Controls.Grouper();
+            this.grouper1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button5
@@ -48,7 +48,7 @@
             this.button5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button5.Image = global::ALS.Properties.Resources.down_64;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(575, 316);
+            this.button5.Location = new System.Drawing.Point(570, 333);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(85, 83);
             this.button5.TabIndex = 34;
@@ -63,7 +63,7 @@
             this.button3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button3.Image = global::ALS.Properties.Resources.down_64;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(350, 316);
+            this.button3.Location = new System.Drawing.Point(345, 333);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(85, 83);
             this.button3.TabIndex = 34;
@@ -78,7 +78,7 @@
             this.button1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.Image = global::ALS.Properties.Resources.down_64;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(125, 316);
+            this.button1.Location = new System.Drawing.Point(120, 333);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 83);
             this.button1.TabIndex = 34;
@@ -93,7 +93,7 @@
             this.button4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button4.Image = global::ALS.Properties.Resources.up_64;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(575, 227);
+            this.button4.Location = new System.Drawing.Point(570, 244);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 83);
             this.button4.TabIndex = 34;
@@ -108,7 +108,7 @@
             this.button2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.Image = global::ALS.Properties.Resources.up_64;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(350, 227);
+            this.button2.Location = new System.Drawing.Point(345, 244);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 83);
             this.button2.TabIndex = 34;
@@ -123,7 +123,7 @@
             this.chkUpC1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.chkUpC1.Image = global::ALS.Properties.Resources.up_64;
             this.chkUpC1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.chkUpC1.Location = new System.Drawing.Point(125, 227);
+            this.chkUpC1.Location = new System.Drawing.Point(120, 244);
             this.chkUpC1.Name = "chkUpC1";
             this.chkUpC1.Size = new System.Drawing.Size(85, 83);
             this.chkUpC1.TabIndex = 34;
@@ -137,7 +137,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(126, 193);
+            this.label1.Location = new System.Drawing.Point(121, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 21);
             this.label1.TabIndex = 0;
@@ -148,7 +148,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(128, 166);
+            this.label2.Location = new System.Drawing.Point(123, 183);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 1;
@@ -159,7 +159,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(347, 193);
+            this.label3.Location = new System.Drawing.Point(342, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 21);
             this.label3.TabIndex = 0;
@@ -170,7 +170,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(351, 166);
+            this.label4.Location = new System.Drawing.Point(346, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 23);
             this.label4.TabIndex = 1;
@@ -181,58 +181,60 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(571, 166);
+            this.label6.Location = new System.Drawing.Point(566, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 23);
             this.label6.TabIndex = 1;
             this.label6.Text = "C3(P2nd)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // skinGroupBox1
+            // grouper1
             // 
-            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.BorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox1.Controls.Add(this.button5);
-            this.skinGroupBox1.Controls.Add(this.label2);
-            this.skinGroupBox1.Controls.Add(this.button3);
-            this.skinGroupBox1.Controls.Add(this.label6);
-            this.skinGroupBox1.Controls.Add(this.button1);
-            this.skinGroupBox1.Controls.Add(this.label4);
-            this.skinGroupBox1.Controls.Add(this.button4);
-            this.skinGroupBox1.Controls.Add(this.label3);
-            this.skinGroupBox1.Controls.Add(this.button2);
-            this.skinGroupBox1.Controls.Add(this.label1);
-            this.skinGroupBox1.Controls.Add(this.chkUpC1);
-            this.skinGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinGroupBox1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinGroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.skinGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.skinGroupBox1.Name = "skinGroupBox1";
-            this.skinGroupBox1.Radius = 20;
-            this.skinGroupBox1.RectBackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox1.Size = new System.Drawing.Size(790, 604);
-            this.skinGroupBox1.TabIndex = 35;
-            this.skinGroupBox1.TabStop = false;
-            this.skinGroupBox1.Text = "液面调整";
-            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox1.TitleRadius = 16;
-            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.Right;
+            this.grouper1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grouper1.BackgroundGradientColor = System.Drawing.Color.White;
+            this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.grouper1.BorderColor = System.Drawing.Color.Silver;
+            this.grouper1.BorderThickness = 1F;
+            this.grouper1.Controls.Add(this.button5);
+            this.grouper1.Controls.Add(this.label2);
+            this.grouper1.Controls.Add(this.chkUpC1);
+            this.grouper1.Controls.Add(this.button3);
+            this.grouper1.Controls.Add(this.label1);
+            this.grouper1.Controls.Add(this.label6);
+            this.grouper1.Controls.Add(this.button2);
+            this.grouper1.Controls.Add(this.button1);
+            this.grouper1.Controls.Add(this.label3);
+            this.grouper1.Controls.Add(this.label4);
+            this.grouper1.Controls.Add(this.button4);
+            this.grouper1.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.grouper1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grouper1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grouper1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.grouper1.GroupImage = null;
+            this.grouper1.GroupTitle = "液面调整";
+            this.grouper1.Location = new System.Drawing.Point(0, 0);
+            this.grouper1.Name = "grouper1";
+            this.grouper1.Padding = new System.Windows.Forms.Padding(5, 12, 3, 3);
+            this.grouper1.PaintGroupBox = true;
+            this.grouper1.RoundCorners = 10;
+            this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
+            this.grouper1.ShadowControl = false;
+            this.grouper1.ShadowThickness = 3;
+            this.grouper1.Size = new System.Drawing.Size(790, 604);
+            this.grouper1.TabIndex = 120;
             // 
             // ucSetLiquidSurface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Controls.Add(this.skinGroupBox1);
+            this.Controls.Add(this.grouper1);
             this.Name = "ucSetLiquidSurface";
             this.Size = new System.Drawing.Size(790, 604);
             this.Load += new System.EventHandler(this.ucSetLiquidSurface_Load);
             this.SizeChanged += new System.EventHandler(this.ucSetLiquidSurface_SizeChanged);
-            this.skinGroupBox1.ResumeLayout(false);
-            this.skinGroupBox1.PerformLayout();
+            this.grouper1.ResumeLayout(false);
+            this.grouper1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -250,6 +252,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox1;
+        private CodeVendor.Controls.Grouper grouper1;
     }
 }
