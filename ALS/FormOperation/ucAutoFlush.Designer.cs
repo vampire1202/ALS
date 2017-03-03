@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.grouper1 = new CodeVendor.Controls.Grouper();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFlush)).BeginInit();
             this.grouper2.SuspendLayout();
@@ -155,14 +156,14 @@
             this.dgvStep.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvStep.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvStep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStep.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStep.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStep.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStep.Enabled = false;
             this.dgvStep.GridColor = System.Drawing.SystemColors.ButtonFace;
@@ -186,7 +187,7 @@
             this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
             this.skinLabel1.BorderColor = System.Drawing.Color.Transparent;
             this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.Location = new System.Drawing.Point(4, 447);
+            this.skinLabel1.Location = new System.Drawing.Point(297, 332);
             this.skinLabel1.Name = "skinLabel1";
             this.skinLabel1.Size = new System.Drawing.Size(107, 154);
             this.skinLabel1.TabIndex = 40;
@@ -330,6 +331,7 @@
             this.grouper2.BorderThickness = 1F;
             this.grouper2.Controls.Add(this.dgvStep);
             this.grouper2.Controls.Add(this.pboxFlush);
+            this.grouper2.Controls.Add(this.skinLabel1);
             this.grouper2.CustomGroupBoxColor = System.Drawing.Color.White;
             this.grouper2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grouper2.GroupImage = null;
@@ -352,11 +354,11 @@
             this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.grouper1.BorderColor = System.Drawing.Color.Silver;
             this.grouper1.BorderThickness = 1F;
+            this.grouper1.Controls.Add(this.textBox1);
             this.grouper1.Controls.Add(this.grouper2);
             this.grouper1.Controls.Add(this.lblRequire);
             this.grouper1.Controls.Add(this.label5);
             this.grouper1.Controls.Add(this.label1);
-            this.grouper1.Controls.Add(this.skinLabel1);
             this.grouper1.Controls.Add(this.label8);
             this.grouper1.Controls.Add(this.btnReturn);
             this.grouper1.Controls.Add(this.label2);
@@ -384,6 +386,20 @@
             this.grouper1.ShadowThickness = 3;
             this.grouper1.Size = new System.Drawing.Size(790, 604);
             this.grouper1.TabIndex = 66;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.textBox1.Location = new System.Drawing.Point(4, 431);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(110, 171);
+            this.textBox1.TabIndex = 39;
+            this.textBox1.Text = "追加预冲说明:\r\n    ① 只有在自动预冲完成后才能使用;\r\n    ② 追加预冲功能只能选择单个步骤进行 , 持续时间为该步骤自动预冲时的时间；";
             // 
             // ucAutoFlush
             // 
@@ -424,5 +440,6 @@
         private System.Windows.Forms.Label label2;
         private CodeVendor.Controls.Grouper grouper2;
         private CodeVendor.Controls.Grouper grouper1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
