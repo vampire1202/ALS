@@ -963,10 +963,6 @@
       <Project>{0988c62e-247f-471f-a183-db509c7a3839}</Project>
       <Name>DBUtility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GlassButton\GlassButton.csproj">
-      <Project>{73A80AFA-C186-477A-A564-6936605AB6F0}</Project>
-      <Name>GlassButton</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Grouper\CodeVendor.Controls.csproj">
       <Project>{D5D88EB0-23B9-46CE-B23C-C6245ECF023C}</Project>
       <Name>CodeVendor.Controls</Name>
