@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -39,16 +38,16 @@
             this.lblFullTime = new System.Windows.Forms.Label();
             this.lblRequire = new System.Windows.Forms.Label();
             this.dgvStep = new System.Windows.Forms.DataGridView();
-            this.btnReturn = new CCWin.SkinControl.SkinButton();
             this.pboxFlush = new System.Windows.Forms.PictureBox();
-            this.btnAddFlush = new CCWin.SkinControl.SkinButton();
-            this.btnFinish = new CCWin.SkinControl.SkinButton();
-            this.btnContinue = new CCWin.SkinControl.SkinButton();
-            this.btnStart = new CCWin.SkinControl.SkinButton();
             this.label2 = new System.Windows.Forms.Label();
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnStart = new PulseButton.PulseButton();
+            this.btnContinue = new PulseButton.PulseButton();
+            this.btnFinish = new PulseButton.PulseButton();
+            this.btnAddFlush = new PulseButton.PulseButton();
+            this.btnReturn = new PulseButton.PulseButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxFlush)).BeginInit();
             this.grouper2.SuspendLayout();
@@ -155,14 +154,14 @@
             this.dgvStep.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvStep.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvStep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStep.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStep.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStep.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStep.Enabled = false;
             this.dgvStep.GridColor = System.Drawing.SystemColors.ButtonFace;
@@ -175,128 +174,21 @@
             this.dgvStep.RowTemplate.Height = 25;
             this.dgvStep.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvStep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStep.Size = new System.Drawing.Size(665, 187);
+            this.dgvStep.Size = new System.Drawing.Size(665, 199);
             this.dgvStep.TabIndex = 19;
             this.dgvStep.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStep_CellClick);
             this.dgvStep.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStep_CellContentClick);
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.Color.Transparent;
-            this.btnReturn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnReturn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnReturn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnReturn.DownBack = null;
-            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnReturn.ForeColor = System.Drawing.Color.White;
-            this.btnReturn.Location = new System.Drawing.Point(678, 23);
-            this.btnReturn.MouseBack = null;
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.NormlBack = null;
-            this.btnReturn.Radius = 40;
-            this.btnReturn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnReturn.Size = new System.Drawing.Size(100, 40);
-            this.btnReturn.TabIndex = 37;
-            this.btnReturn.Text = "返回选择";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // pboxFlush
             // 
             this.pboxFlush.BackColor = System.Drawing.Color.Transparent;
             this.pboxFlush.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pboxFlush.Location = new System.Drawing.Point(2, 212);
+            this.pboxFlush.Location = new System.Drawing.Point(2, 224);
             this.pboxFlush.Name = "pboxFlush";
             this.pboxFlush.Size = new System.Drawing.Size(665, 322);
             this.pboxFlush.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxFlush.TabIndex = 38;
             this.pboxFlush.TabStop = false;
-            // 
-            // btnAddFlush
-            // 
-            this.btnAddFlush.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddFlush.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnAddFlush.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnAddFlush.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnAddFlush.DownBack = null;
-            this.btnAddFlush.Enabled = false;
-            this.btnAddFlush.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAddFlush.ForeColor = System.Drawing.Color.White;
-            this.btnAddFlush.Location = new System.Drawing.Point(8, 380);
-            this.btnAddFlush.MouseBack = null;
-            this.btnAddFlush.Name = "btnAddFlush";
-            this.btnAddFlush.NormlBack = null;
-            this.btnAddFlush.Radius = 50;
-            this.btnAddFlush.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnAddFlush.Size = new System.Drawing.Size(100, 50);
-            this.btnAddFlush.TabIndex = 37;
-            this.btnAddFlush.Text = "追加预冲";
-            this.btnAddFlush.UseVisualStyleBackColor = false;
-            this.btnAddFlush.Click += new System.EventHandler(this.btnAddFlush_Click);
-            // 
-            // btnFinish
-            // 
-            this.btnFinish.BackColor = System.Drawing.Color.Transparent;
-            this.btnFinish.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnFinish.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnFinish.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnFinish.DownBack = null;
-            this.btnFinish.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnFinish.ForeColor = System.Drawing.Color.White;
-            this.btnFinish.Location = new System.Drawing.Point(8, 300);
-            this.btnFinish.MouseBack = null;
-            this.btnFinish.Name = "btnFinish";
-            this.btnFinish.NormlBack = null;
-            this.btnFinish.Radius = 50;
-            this.btnFinish.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnFinish.Size = new System.Drawing.Size(100, 50);
-            this.btnFinish.TabIndex = 37;
-            this.btnFinish.Text = "预冲完成";
-            this.btnFinish.UseVisualStyleBackColor = false;
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
-            // 
-            // btnContinue
-            // 
-            this.btnContinue.BackColor = System.Drawing.Color.Transparent;
-            this.btnContinue.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnContinue.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnContinue.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnContinue.DownBack = null;
-            this.btnContinue.Enabled = false;
-            this.btnContinue.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnContinue.ForeColor = System.Drawing.Color.White;
-            this.btnContinue.Location = new System.Drawing.Point(8, 220);
-            this.btnContinue.MouseBack = null;
-            this.btnContinue.Name = "btnContinue";
-            this.btnContinue.NormlBack = null;
-            this.btnContinue.Radius = 50;
-            this.btnContinue.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnContinue.Size = new System.Drawing.Size(100, 50);
-            this.btnContinue.TabIndex = 37;
-            this.btnContinue.Text = "暂停";
-            this.btnContinue.UseVisualStyleBackColor = false;
-            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.Transparent;
-            this.btnStart.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnStart.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnStart.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnStart.DownBack = null;
-            this.btnStart.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.Location = new System.Drawing.Point(8, 140);
-            this.btnStart.MouseBack = null;
-            this.btnStart.Name = "btnStart";
-            this.btnStart.NormlBack = null;
-            this.btnStart.Radius = 50;
-            this.btnStart.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnStart.Size = new System.Drawing.Size(100, 50);
-            this.btnStart.TabIndex = 37;
-            this.btnStart.Text = "开始预冲";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // label2
             // 
@@ -322,7 +214,7 @@
             this.grouper2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grouper2.GroupImage = null;
             this.grouper2.GroupTitle = "预冲步骤";
-            this.grouper2.Location = new System.Drawing.Point(117, 66);
+            this.grouper2.Location = new System.Drawing.Point(117, 54);
             this.grouper2.Name = "grouper2";
             this.grouper2.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.grouper2.PaintGroupBox = true;
@@ -330,7 +222,7 @@
             this.grouper2.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper2.ShadowControl = false;
             this.grouper2.ShadowThickness = 3;
-            this.grouper2.Size = new System.Drawing.Size(670, 537);
+            this.grouper2.Size = new System.Drawing.Size(670, 549);
             this.grouper2.TabIndex = 65;
             // 
             // grouper1
@@ -340,21 +232,21 @@
             this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.grouper1.BorderColor = System.Drawing.Color.Silver;
             this.grouper1.BorderThickness = 1F;
+            this.grouper1.Controls.Add(this.btnReturn);
+            this.grouper1.Controls.Add(this.btnAddFlush);
             this.grouper1.Controls.Add(this.textBox1);
+            this.grouper1.Controls.Add(this.btnFinish);
             this.grouper1.Controls.Add(this.grouper2);
+            this.grouper1.Controls.Add(this.btnContinue);
             this.grouper1.Controls.Add(this.lblRequire);
+            this.grouper1.Controls.Add(this.btnStart);
             this.grouper1.Controls.Add(this.label5);
             this.grouper1.Controls.Add(this.label1);
             this.grouper1.Controls.Add(this.label8);
-            this.grouper1.Controls.Add(this.btnReturn);
             this.grouper1.Controls.Add(this.label2);
-            this.grouper1.Controls.Add(this.btnAddFlush);
             this.grouper1.Controls.Add(this.lblCurrent);
-            this.grouper1.Controls.Add(this.btnFinish);
             this.grouper1.Controls.Add(this.lblTime);
-            this.grouper1.Controls.Add(this.btnContinue);
             this.grouper1.Controls.Add(this.lblFullTime);
-            this.grouper1.Controls.Add(this.btnStart);
             this.grouper1.Controls.Add(this.label13);
             this.grouper1.CustomGroupBoxColor = System.Drawing.Color.White;
             this.grouper1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -387,6 +279,106 @@
             this.textBox1.TabIndex = 39;
             this.textBox1.Text = "追加预冲说明:\r\n    ① 只有在自动预冲完成后才能使用;\r\n    ② 追加预冲功能只能选择单个步骤进行 , 持续时间为该步骤自动预冲时的时间；";
             // 
+            // btnStart
+            // 
+            this.btnStart.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnStart.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnStart.CornerRadius = 25;
+            this.btnStart.FocusColor = System.Drawing.Color.Black;
+            this.btnStart.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnStart.ForeColor = System.Drawing.Color.Snow;
+            this.btnStart.Location = new System.Drawing.Point(3, 135);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.PulseColor = System.Drawing.Color.DimGray;
+            this.btnStart.PulseSpeed = 0.3F;
+            this.btnStart.PulseWidth = 6;
+            this.btnStart.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnStart.Size = new System.Drawing.Size(112, 62);
+            this.btnStart.TabIndex = 66;
+            this.btnStart.Text = "开始预冲";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnContinue
+            // 
+            this.btnContinue.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnContinue.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnContinue.CornerRadius = 25;
+            this.btnContinue.FocusColor = System.Drawing.Color.Black;
+            this.btnContinue.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnContinue.ForeColor = System.Drawing.Color.Snow;
+            this.btnContinue.Location = new System.Drawing.Point(3, 211);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.PulseColor = System.Drawing.Color.DimGray;
+            this.btnContinue.PulseSpeed = 0.3F;
+            this.btnContinue.PulseWidth = 6;
+            this.btnContinue.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnContinue.Size = new System.Drawing.Size(112, 62);
+            this.btnContinue.TabIndex = 66;
+            this.btnContinue.Text = "暂停";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            // 
+            // btnFinish
+            // 
+            this.btnFinish.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnFinish.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnFinish.CornerRadius = 25;
+            this.btnFinish.FocusColor = System.Drawing.Color.Black;
+            this.btnFinish.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnFinish.ForeColor = System.Drawing.Color.Snow;
+            this.btnFinish.Location = new System.Drawing.Point(3, 287);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.PulseColor = System.Drawing.Color.DimGray;
+            this.btnFinish.PulseSpeed = 0.3F;
+            this.btnFinish.PulseWidth = 6;
+            this.btnFinish.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnFinish.Size = new System.Drawing.Size(112, 62);
+            this.btnFinish.TabIndex = 66;
+            this.btnFinish.Text = "预冲完成";
+            this.btnFinish.UseVisualStyleBackColor = true;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
+            // btnAddFlush
+            // 
+            this.btnAddFlush.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnAddFlush.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnAddFlush.CornerRadius = 25;
+            this.btnAddFlush.FocusColor = System.Drawing.Color.Black;
+            this.btnAddFlush.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAddFlush.ForeColor = System.Drawing.Color.Snow;
+            this.btnAddFlush.Location = new System.Drawing.Point(3, 363);
+            this.btnAddFlush.Name = "btnAddFlush";
+            this.btnAddFlush.PulseColor = System.Drawing.Color.DimGray;
+            this.btnAddFlush.PulseSpeed = 0.3F;
+            this.btnAddFlush.PulseWidth = 6;
+            this.btnAddFlush.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnAddFlush.Size = new System.Drawing.Size(112, 62);
+            this.btnAddFlush.TabIndex = 66;
+            this.btnAddFlush.Text = "追加预冲";
+            this.btnAddFlush.UseVisualStyleBackColor = true;
+            this.btnAddFlush.Click += new System.EventHandler(this.btnAddFlush_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnReturn.CornerRadius = 20;
+            this.btnReturn.FocusColor = System.Drawing.Color.Black;
+            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnReturn.ForeColor = System.Drawing.Color.Snow;
+            this.btnReturn.Location = new System.Drawing.Point(677, 12);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
+            this.btnReturn.PulseSpeed = 0.3F;
+            this.btnReturn.PulseWidth = 6;
+            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnReturn.Size = new System.Drawing.Size(112, 52);
+            this.btnReturn.TabIndex = 67;
+            this.btnReturn.Text = "返回选择";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // ucAutoFlush
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -416,15 +408,15 @@
         public System.Windows.Forms.DataGridView dgvStep;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label lblCurrent;
-        public CCWin.SkinControl.SkinButton btnStart;
-        public CCWin.SkinControl.SkinButton btnReturn;
-        public CCWin.SkinControl.SkinButton btnAddFlush;
-        public CCWin.SkinControl.SkinButton btnFinish;
-        public CCWin.SkinControl.SkinButton btnContinue;
         public System.Windows.Forms.PictureBox pboxFlush;
         private System.Windows.Forms.Label label2;
         private CodeVendor.Controls.Grouper grouper2;
         private CodeVendor.Controls.Grouper grouper1;
         private System.Windows.Forms.TextBox textBox1;
+        public PulseButton.PulseButton btnReturn;
+        public PulseButton.PulseButton btnAddFlush;
+        public PulseButton.PulseButton btnFinish;
+        public PulseButton.PulseButton btnContinue;
+        public PulseButton.PulseButton btnStart;
     }
 }
