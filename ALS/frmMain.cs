@@ -330,8 +330,8 @@ namespace ALS
         //            压力折线图参数               |
         //------------------------------------------
         //wss
-        private Random random = new Random();
-        DateTime Curve_Start;
+        //private Random random = new Random();
+        //DateTime Curve_Start;
         //旋钮运动方向存储器
         List<byte> m_lstCircleDirection = new List<byte>();
         //当前的警报列表
@@ -8467,7 +8467,7 @@ namespace ALS
                 this.btnStart.ForeColor = Color.FromArgb(218, 18, 18);
                 M_uc_OtherSet.gboxV.Enabled = false;
                 //wss 压力曲线
-                Curve_Start = DateTime.Now;
+                //Curve_Start = DateTime.Now;
 #if LOG_TREAT
                 getLog.WriteLogFile("T2");
 #endif
@@ -9646,59 +9646,6 @@ namespace ALS
         //    M_uc_Treat.Series_array[6].Points.AddXY(DateTime.Now.ToOADate(), M_ModelValue.M_flt_PofP3rd);
         //    M_uc_Treat.chart1.Invalidate();
         //}
-
-        void Check_show(object sender, EventArgs e)
-        {
-            if (!M_isTreat)
-                return;
-            Button Check_T = sender as Button;
-            TimeSpan check_Duration;
-            check_Duration = DateTime.Now - Curve_Start;
-            //M_uc_Treat.check_back.Enabled = true;
-
-            //if (check_Duration.TotalSeconds < Convert.ToInt32(Check_T.Tag) * 3600)
-            //{
-            //    MessageBox.Show("治疗时间未达到！");
-            //    return;
-            //}
-
-            //switch (Check_T.Tag.ToString())
-            //{
-            //    case "1":
-            //    case "2":
-            //    case "4":
-            //    case "6":
-            //    case "8":
-            //    case "24":
-            //        M_uc_Treat.chart1.ChartAreas[0].AxisX.Maximum = Curve_Start.AddHours(Convert.ToInt32(Check_T.Tag)).ToOADate();
-            //        M_uc_Treat.chart1.ChartAreas[0].AxisX.Minimum = Curve_Start.ToOADate();
-            //        M_uc_Treat.chart1.ChartAreas[0].AxisX.Interval = (Convert.ToInt32(Check_T.Tag) * 3600) / 5;
-            //        break;
-            //    default:
-            //        break;
-            //}
-        }
-        //void Check_back(object sender, EventArgs e)
-        //{
-        //    M_uc_Treat.chart1.ChartAreas[0].AxisX.Minimum = DateTime.Now.AddSeconds(-60).ToOADate();
-        //    M_uc_Treat.chart1.ChartAreas[0].AxisX.Maximum = DateTime.Now.AddSeconds(240).ToOADate();
-        //    M_uc_Treat.chart1.ChartAreas[0].AxisX.Interval = 60;
-        //    M_uc_Treat.check_back.Enabled = false;
-        //}
-
-        //void Check_Series1(object sender, EventArgs e)
-        //{
-        //    CheckBox chkbox = sender as CheckBox;
-        //    M_uc_Treat.chart1.Series[Convert.ToInt32(chkbox.Tag) - 1].Enabled = chkbox.Checked ? true : false;
-        //}
-
-        //void Chk_TotalFlux(object sender, EventArgs e)
-        //{
-        //    CheckBox cb = sender as CheckBox;
-        //    if (cb.Tag.ToString() != "9")
-        //        M_uc_Sum.chart1.Series[Convert.ToInt32(cb.Tag)].Enabled = cb.Checked ? true : false;
-        //}
-
 
         //治疗向导 相关按键状态改变
         void ChgTreStep_State(string Modename)
