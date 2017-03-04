@@ -28,30 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.btnMin = new CCWin.SkinControl.SkinButton();
             this.ucWarnInfo1 = new ALS.FormOperation.ucWarnInfo();
+            this.btnMin = new PulseButton.PulseButton();
             this.SuspendLayout();
-            // 
-            // btnMin
-            // 
-            this.btnMin.BackColor = System.Drawing.Color.Tomato;
-            this.btnMin.BaseColor = System.Drawing.Color.Yellow;
-            this.btnMin.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnMin.DownBack = null;
-            this.btnMin.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMin.GlowColor = System.Drawing.Color.Transparent;
-            this.btnMin.Location = new System.Drawing.Point(3, 8);
-            this.btnMin.MouseBack = null;
-            this.btnMin.Name = "btnMin";
-            this.btnMin.NormlBack = null;
-            this.btnMin.Radius = 30;
-            this.btnMin.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnMin.Size = new System.Drawing.Size(70, 30);
-            this.btnMin.TabIndex = 2;
-            this.btnMin.Text = "缩小";
-            this.btnMin.UseVisualStyleBackColor = false;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // ucWarnInfo1
             // 
@@ -63,6 +42,28 @@
             this.ucWarnInfo1.Size = new System.Drawing.Size(400, 388);
             this.ucWarnInfo1.TabIndex = 0;
             this.ucWarnInfo1.Load += new System.EventHandler(this.ucWarnInfo1_Load);
+            // 
+            // btnMin
+            // 
+            this.btnMin.BackColor = System.Drawing.Color.Tomato;
+            this.btnMin.ButtonColorBottom = System.Drawing.Color.Orange;
+            this.btnMin.ButtonColorTop = System.Drawing.Color.Gold;
+            this.btnMin.CornerRadius = 15;
+            this.btnMin.FocusColor = System.Drawing.Color.Black;
+            this.btnMin.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMin.Location = new System.Drawing.Point(3, 1);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.NumberOfPulses = 2;
+            this.btnMin.PulseColor = System.Drawing.Color.Yellow;
+            this.btnMin.PulseSpeed = 0.3F;
+            this.btnMin.PulseWidth = 6;
+            this.btnMin.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnMin.Size = new System.Drawing.Size(82, 42);
+            this.btnMin.TabIndex = 122;
+            this.btnMin.Text = "缩小";
+            this.btnMin.UseVisualStyleBackColor = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // frmShowWarn
             // 
@@ -84,7 +85,7 @@
         #endregion
 
         public FormOperation.ucWarnInfo ucWarnInfo1;
-        public CCWin.SkinControl.SkinButton btnMin;
+        public PulseButton.PulseButton btnMin;
 
     }
 }

@@ -49,36 +49,15 @@
             this.palContent = new System.Windows.Forms.Panel();
             this.gBoxP = new System.Windows.Forms.Panel();
             this.layoutP = new System.Windows.Forms.FlowLayoutPanel();
-            this.uc_pacc = new ALS.UserCtrl.uc_p();
-            this.uc_part = new ALS.UserCtrl.uc_p();
-            this.uc_pven = new ALS.UserCtrl.uc_p();
-            this.uc_ptmp = new ALS.UserCtrl.uc_p();
-            this.uc_p1st = new ALS.UserCtrl.uc_p();
-            this.uc_p2nd = new ALS.UserCtrl.uc_p();
-            this.uc_p3rd = new ALS.UserCtrl.uc_p();
             this.layoutPump = new System.Windows.Forms.FlowLayoutPanel();
-            this.uc_SpeedFP = new ALS.UserCtrl.uc_PumpSpeed();
-            this.uc_SpeedDP = new ALS.UserCtrl.uc_PumpSpeed();
-            this.uc_SpeedRP = new ALS.UserCtrl.uc_PumpSpeed();
-            this.uc_SpeedFP2 = new ALS.UserCtrl.uc_PumpSpeed();
-            this.uc_SpeedCP = new ALS.UserCtrl.uc_PumpSpeed();
             this.palTreat = new System.Windows.Forms.Panel();
             this.palSet = new System.Windows.Forms.Panel();
-            this.toolStripOther = new ALS.Cls.ToolStripEx();
-            this.tsbtnSP = new System.Windows.Forms.ToolStripLabel();
-            this.tsbtnHT = new System.Windows.Forms.ToolStripLabel();
-            this.tslblBloodLeak = new System.Windows.Forms.ToolStripLabel();
-            this.tsbtnAD1 = new System.Windows.Forms.ToolStripLabel();
-            this.tsbtnAD2 = new System.Windows.Forms.ToolStripLabel();
-            this.tsbtnAD3 = new System.Windows.Forms.ToolStripLabel();
             this.palBtnTreat = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblBloodSpeed = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblMethod = new System.Windows.Forms.Label();
-            this.picBP = new CCWin.SkinControl.GifBox();
-            this.gifRuning = new CCWin.SkinControl.GifBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTotalBP = new System.Windows.Forms.Label();
             this.palTooltip = new System.Windows.Forms.Panel();
@@ -94,14 +73,34 @@
             this.tsbtnLevel = new System.Windows.Forms.ToolStripButton();
             this.tsbtnOtherSet = new System.Windows.Forms.ToolStripButton();
             this.tsbtnExit = new System.Windows.Forms.ToolStripButton();
+            this.gifRuning = new System.Windows.Forms.PictureBox();
+            this.picBP = new System.Windows.Forms.PictureBox();
+            this.uc_pacc = new ALS.UserCtrl.uc_p();
+            this.uc_part = new ALS.UserCtrl.uc_p();
+            this.uc_pven = new ALS.UserCtrl.uc_p();
+            this.uc_ptmp = new ALS.UserCtrl.uc_p();
+            this.uc_p1st = new ALS.UserCtrl.uc_p();
+            this.uc_p2nd = new ALS.UserCtrl.uc_p();
+            this.uc_p3rd = new ALS.UserCtrl.uc_p();
+            this.uc_SpeedFP = new ALS.UserCtrl.uc_PumpSpeed();
+            this.uc_SpeedDP = new ALS.UserCtrl.uc_PumpSpeed();
+            this.uc_SpeedRP = new ALS.UserCtrl.uc_PumpSpeed();
+            this.uc_SpeedFP2 = new ALS.UserCtrl.uc_PumpSpeed();
+            this.uc_SpeedCP = new ALS.UserCtrl.uc_PumpSpeed();
+            this.toolStripOther = new ALS.Cls.ToolStripEx();
+            this.tsbtnSP = new System.Windows.Forms.ToolStripLabel();
+            this.tsbtnHT = new System.Windows.Forms.ToolStripLabel();
+            this.tslblBloodLeak = new System.Windows.Forms.ToolStripLabel();
+            this.tsbtnAD1 = new System.Windows.Forms.ToolStripLabel();
+            this.tsbtnAD2 = new System.Windows.Forms.ToolStripLabel();
+            this.tsbtnAD3 = new System.Windows.Forms.ToolStripLabel();
             this.paltop = new Owf.Controls.A1Panel();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.lblElectric = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTime = new CCWin.SkinControl.SkinLabel();
-            this.progressBar = new CCWin.SkinControl.SkinProgressBar();
-            this.lblElectric = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
-            this.miniToolStrip = new CCWin.SkinControl.SkinToolStrip();
+            this.label8 = new System.Windows.Forms.Label();
             this.palBottom.SuspendLayout();
             this.palBottomC.SuspendLayout();
             this.palRight.SuspendLayout();
@@ -112,10 +111,12 @@
             this.layoutPump.SuspendLayout();
             this.palTreat.SuspendLayout();
             this.palSet.SuspendLayout();
-            this.toolStripOther.SuspendLayout();
             this.palBtnTreat.SuspendLayout();
             this.palTooltip.SuspendLayout();
             this.toolStripControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gifRuning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBP)).BeginInit();
+            this.toolStripOther.SuspendLayout();
             this.paltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -374,119 +375,6 @@
             this.layoutP.Size = new System.Drawing.Size(300, 488);
             this.layoutP.TabIndex = 118;
             // 
-            // uc_pacc
-            // 
-            this.uc_pacc._LineColor = System.Drawing.Color.Maroon;
-            this.uc_pacc._Lower = "-100";
-            this.uc_pacc._Title = "采血压Pacc";
-            this.uc_pacc._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
-            this.uc_pacc._Upper = "500";
-            this.uc_pacc._Value = "000.0";
-            this.uc_pacc._VisibleLeft = true;
-            this.uc_pacc.BackColor = System.Drawing.Color.Transparent;
-            this.uc_pacc.Location = new System.Drawing.Point(0, 3);
-            this.uc_pacc.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.uc_pacc.Name = "uc_pacc";
-            this.uc_pacc.Size = new System.Drawing.Size(300, 68);
-            this.uc_pacc.TabIndex = 13;
-            this.uc_pacc.Load += new System.EventHandler(this.uc_pacc_Load);
-            // 
-            // uc_part
-            // 
-            this.uc_part._LineColor = System.Drawing.Color.Red;
-            this.uc_part._Lower = "-100";
-            this.uc_part._Title = "动脉压Part";
-            this.uc_part._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
-            this.uc_part._Upper = "500";
-            this.uc_part._Value = "000.0";
-            this.uc_part._VisibleLeft = true;
-            this.uc_part.BackColor = System.Drawing.Color.Transparent;
-            this.uc_part.Location = new System.Drawing.Point(0, 71);
-            this.uc_part.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_part.Name = "uc_part";
-            this.uc_part.Size = new System.Drawing.Size(300, 68);
-            this.uc_part.TabIndex = 1;
-            // 
-            // uc_pven
-            // 
-            this.uc_pven._LineColor = System.Drawing.Color.DodgerBlue;
-            this.uc_pven._Lower = "-100";
-            this.uc_pven._Title = "静脉压Pven";
-            this.uc_pven._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
-            this.uc_pven._Upper = "500";
-            this.uc_pven._Value = "000.0";
-            this.uc_pven._VisibleLeft = true;
-            this.uc_pven.BackColor = System.Drawing.Color.Transparent;
-            this.uc_pven.Location = new System.Drawing.Point(0, 139);
-            this.uc_pven.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_pven.Name = "uc_pven";
-            this.uc_pven.Size = new System.Drawing.Size(300, 68);
-            this.uc_pven.TabIndex = 2;
-            // 
-            // uc_ptmp
-            // 
-            this.uc_ptmp._LineColor = System.Drawing.Color.DeepPink;
-            this.uc_ptmp._Lower = "-100";
-            this.uc_ptmp._Title = "跨膜压TMP";
-            this.uc_ptmp._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
-            this.uc_ptmp._Upper = "500";
-            this.uc_ptmp._Value = "000.0";
-            this.uc_ptmp._VisibleLeft = true;
-            this.uc_ptmp.BackColor = System.Drawing.Color.Transparent;
-            this.uc_ptmp.Location = new System.Drawing.Point(0, 207);
-            this.uc_ptmp.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_ptmp.Name = "uc_ptmp";
-            this.uc_ptmp.Size = new System.Drawing.Size(300, 68);
-            this.uc_ptmp.TabIndex = 3;
-            // 
-            // uc_p1st
-            // 
-            this.uc_p1st._LineColor = System.Drawing.Color.Lime;
-            this.uc_p1st._Lower = "-100";
-            this.uc_p1st._Title = "血浆压P1st";
-            this.uc_p1st._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
-            this.uc_p1st._Upper = "500";
-            this.uc_p1st._Value = "000.0";
-            this.uc_p1st._VisibleLeft = true;
-            this.uc_p1st.BackColor = System.Drawing.Color.Transparent;
-            this.uc_p1st.Location = new System.Drawing.Point(0, 275);
-            this.uc_p1st.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_p1st.Name = "uc_p1st";
-            this.uc_p1st.Size = new System.Drawing.Size(300, 68);
-            this.uc_p1st.TabIndex = 10;
-            // 
-            // uc_p2nd
-            // 
-            this.uc_p2nd._LineColor = System.Drawing.Color.DarkOrange;
-            this.uc_p2nd._Lower = "-100";
-            this.uc_p2nd._Title = "入口压P2nd";
-            this.uc_p2nd._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
-            this.uc_p2nd._Upper = "500";
-            this.uc_p2nd._Value = "000.0";
-            this.uc_p2nd._VisibleLeft = true;
-            this.uc_p2nd.BackColor = System.Drawing.Color.Transparent;
-            this.uc_p2nd.Location = new System.Drawing.Point(0, 343);
-            this.uc_p2nd.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_p2nd.Name = "uc_p2nd";
-            this.uc_p2nd.Size = new System.Drawing.Size(300, 68);
-            this.uc_p2nd.TabIndex = 11;
-            // 
-            // uc_p3rd
-            // 
-            this.uc_p3rd._LineColor = System.Drawing.Color.Peru;
-            this.uc_p3rd._Lower = "-100";
-            this.uc_p3rd._Title = "入口压P3rd";
-            this.uc_p3rd._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
-            this.uc_p3rd._Upper = "500";
-            this.uc_p3rd._Value = "000.0";
-            this.uc_p3rd._VisibleLeft = true;
-            this.uc_p3rd.BackColor = System.Drawing.Color.Transparent;
-            this.uc_p3rd.Location = new System.Drawing.Point(0, 411);
-            this.uc_p3rd.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_p3rd.Name = "uc_p3rd";
-            this.uc_p3rd.Size = new System.Drawing.Size(300, 68);
-            this.uc_p3rd.TabIndex = 12;
-            // 
             // layoutPump
             // 
             this.layoutPump.Controls.Add(this.uc_SpeedFP);
@@ -500,124 +388,6 @@
             this.layoutPump.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.layoutPump.Size = new System.Drawing.Size(903, 116);
             this.layoutPump.TabIndex = 0;
-            // 
-            // uc_SpeedFP
-            // 
-            this.uc_SpeedFP._BackColor = System.Drawing.Color.LightYellow;
-            this.uc_SpeedFP._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_SpeedFP._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_SpeedFP._OtherInfo = "∑:  0.00 L";
-            this.uc_SpeedFP._PicPump = global::ALS.Properties.Resources.FPStop;
-            this.uc_SpeedFP._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedFP._SpeedValue = "0";
-            this.uc_SpeedFP._Title = "分离泵(FP)";
-            this.uc_SpeedFP._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedFP._Unit = "mL/min";
-            this.uc_SpeedFP._VisibleOtherInfo = true;
-            this.uc_SpeedFP._VisiblePicpump = true;
-            this.uc_SpeedFP.BackColor = System.Drawing.Color.Transparent;
-            this.uc_SpeedFP.Location = new System.Drawing.Point(1, 0);
-            this.uc_SpeedFP.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_SpeedFP.Name = "uc_SpeedFP";
-            this.uc_SpeedFP.Size = new System.Drawing.Size(180, 113);
-            this.uc_SpeedFP.TabIndex = 36;
-            this.uc_SpeedFP.Tag = "fp";
-            this.uc_SpeedFP.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
-            // 
-            // uc_SpeedDP
-            // 
-            this.uc_SpeedDP._BackColor = System.Drawing.Color.MintCream;
-            this.uc_SpeedDP._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_SpeedDP._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_SpeedDP._OtherInfo = "∑: 0.00 L";
-            this.uc_SpeedDP._PicPump = global::ALS.Properties.Resources.DPStop;
-            this.uc_SpeedDP._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedDP._SpeedValue = "0";
-            this.uc_SpeedDP._Title = "透析泵(DP)";
-            this.uc_SpeedDP._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedDP._Unit = "mL/min";
-            this.uc_SpeedDP._VisibleOtherInfo = true;
-            this.uc_SpeedDP._VisiblePicpump = true;
-            this.uc_SpeedDP.BackColor = System.Drawing.Color.Transparent;
-            this.uc_SpeedDP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.uc_SpeedDP.Location = new System.Drawing.Point(181, 0);
-            this.uc_SpeedDP.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_SpeedDP.Name = "uc_SpeedDP";
-            this.uc_SpeedDP.Size = new System.Drawing.Size(180, 113);
-            this.uc_SpeedDP.TabIndex = 36;
-            this.uc_SpeedDP.Tag = "dp";
-            this.uc_SpeedDP.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
-            // 
-            // uc_SpeedRP
-            // 
-            this.uc_SpeedRP._BackColor = System.Drawing.Color.Lavender;
-            this.uc_SpeedRP._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_SpeedRP._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_SpeedRP._OtherInfo = "∑: 0.00 L";
-            this.uc_SpeedRP._PicPump = global::ALS.Properties.Resources.RPStop;
-            this.uc_SpeedRP._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedRP._SpeedValue = "0";
-            this.uc_SpeedRP._Title = "补液泵(RP)";
-            this.uc_SpeedRP._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedRP._Unit = "mL/min";
-            this.uc_SpeedRP._VisibleOtherInfo = true;
-            this.uc_SpeedRP._VisiblePicpump = true;
-            this.uc_SpeedRP.BackColor = System.Drawing.Color.Transparent;
-            this.uc_SpeedRP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.uc_SpeedRP.Location = new System.Drawing.Point(361, 0);
-            this.uc_SpeedRP.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_SpeedRP.Name = "uc_SpeedRP";
-            this.uc_SpeedRP.Size = new System.Drawing.Size(180, 113);
-            this.uc_SpeedRP.TabIndex = 36;
-            this.uc_SpeedRP.Tag = "rp";
-            this.uc_SpeedRP.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
-            // 
-            // uc_SpeedFP2
-            // 
-            this.uc_SpeedFP2._BackColor = System.Drawing.Color.AntiqueWhite;
-            this.uc_SpeedFP2._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_SpeedFP2._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_SpeedFP2._OtherInfo = "∑: 0.00 L";
-            this.uc_SpeedFP2._PicPump = global::ALS.Properties.Resources.FP2Stop;
-            this.uc_SpeedFP2._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedFP2._SpeedValue = "0";
-            this.uc_SpeedFP2._Title = "滤过泵(FP2)";
-            this.uc_SpeedFP2._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedFP2._Unit = "mL/min";
-            this.uc_SpeedFP2._VisibleOtherInfo = true;
-            this.uc_SpeedFP2._VisiblePicpump = true;
-            this.uc_SpeedFP2.BackColor = System.Drawing.Color.Transparent;
-            this.uc_SpeedFP2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.uc_SpeedFP2.Location = new System.Drawing.Point(541, 0);
-            this.uc_SpeedFP2.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_SpeedFP2.Name = "uc_SpeedFP2";
-            this.uc_SpeedFP2.Size = new System.Drawing.Size(180, 113);
-            this.uc_SpeedFP2.TabIndex = 36;
-            this.uc_SpeedFP2.Tag = "fp2";
-            this.uc_SpeedFP2.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
-            // 
-            // uc_SpeedCP
-            // 
-            this.uc_SpeedCP._BackColor = System.Drawing.Color.Thistle;
-            this.uc_SpeedCP._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_SpeedCP._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_SpeedCP._OtherInfo = "";
-            this.uc_SpeedCP._PicPump = global::ALS.Properties.Resources.CPStop;
-            this.uc_SpeedCP._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedCP._SpeedValue = "0";
-            this.uc_SpeedCP._Title = "循环泵(CP)";
-            this.uc_SpeedCP._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_SpeedCP._Unit = "mL/min";
-            this.uc_SpeedCP._VisibleOtherInfo = true;
-            this.uc_SpeedCP._VisiblePicpump = true;
-            this.uc_SpeedCP.BackColor = System.Drawing.Color.Transparent;
-            this.uc_SpeedCP.Location = new System.Drawing.Point(721, 0);
-            this.uc_SpeedCP.Margin = new System.Windows.Forms.Padding(0);
-            this.uc_SpeedCP.Name = "uc_SpeedCP";
-            this.uc_SpeedCP.Size = new System.Drawing.Size(180, 113);
-            this.uc_SpeedCP.TabIndex = 36;
-            this.uc_SpeedCP.Tag = "cp";
-            this.uc_SpeedCP.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
             // 
             // palTreat
             // 
@@ -639,129 +409,15 @@
             this.palSet.Size = new System.Drawing.Size(475, 73);
             this.palSet.TabIndex = 3;
             // 
-            // toolStripOther
-            // 
-            this.toolStripOther.AutoSize = false;
-            this.toolStripOther.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripOther.GripMargin = new System.Windows.Forms.Padding(0);
-            this.toolStripOther.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbtnSP,
-            this.tsbtnHT,
-            this.tslblBloodLeak,
-            this.tsbtnAD1,
-            this.tsbtnAD2,
-            this.tsbtnAD3});
-            this.toolStripOther.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.toolStripOther.Location = new System.Drawing.Point(0, 0);
-            this.toolStripOther.Name = "toolStripOther";
-            this.toolStripOther.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStripOther.ShowItemToolTips = false;
-            this.toolStripOther.Size = new System.Drawing.Size(475, 75);
-            this.toolStripOther.TabIndex = 0;
-            this.toolStripOther.Text = "toolStrip1";
-            this.toolStripOther.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripOther_ItemClicked);
-            // 
-            // tsbtnSP
-            // 
-            this.tsbtnSP.AutoSize = false;
-            this.tsbtnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tsbtnSP.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tsbtnSP.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.tsbtnSP.Image = global::ALS.Properties.Resources.sp30off;
-            this.tsbtnSP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnSP.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnSP.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
-            this.tsbtnSP.Name = "tsbtnSP";
-            this.tsbtnSP.Size = new System.Drawing.Size(75, 68);
-            this.tsbtnSP.Tag = "spoff";
-            this.tsbtnSP.Text = "3 mL/h";
-            this.tsbtnSP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tsbtnSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsbtnSP.Click += new System.EventHandler(this.tsbtnSP_Click);
-            // 
-            // tsbtnHT
-            // 
-            this.tsbtnHT.AutoSize = false;
-            this.tsbtnHT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tsbtnHT.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tsbtnHT.ForeColor = System.Drawing.Color.DarkRed;
-            this.tsbtnHT.Image = global::ALS.Properties.Resources.hotoff;
-            this.tsbtnHT.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnHT.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnHT.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
-            this.tsbtnHT.Name = "tsbtnHT";
-            this.tsbtnHT.Size = new System.Drawing.Size(75, 68);
-            this.tsbtnHT.Tag = "ht";
-            this.tsbtnHT.Text = "0.0";
-            this.tsbtnHT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tsbtnHT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsbtnHT.Click += new System.EventHandler(this.tsbtnHT_Click);
-            // 
-            // tslblBloodLeak
-            // 
-            this.tslblBloodLeak.AutoSize = false;
-            this.tslblBloodLeak.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tslblBloodLeak.Image = global::ALS.Properties.Resources.ldoff;
-            this.tslblBloodLeak.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tslblBloodLeak.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tslblBloodLeak.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
-            this.tslblBloodLeak.Name = "tslblBloodLeak";
-            this.tslblBloodLeak.Size = new System.Drawing.Size(70, 68);
-            this.tslblBloodLeak.Tag = "ad1";
-            this.tslblBloodLeak.Text = "气泡检测1关";
-            this.tslblBloodLeak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // tsbtnAD1
-            // 
-            this.tsbtnAD1.AutoSize = false;
-            this.tsbtnAD1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnAD1.Image = global::ALS.Properties.Resources.AD1Off;
-            this.tsbtnAD1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnAD1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAD1.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
-            this.tsbtnAD1.Name = "tsbtnAD1";
-            this.tsbtnAD1.Size = new System.Drawing.Size(75, 68);
-            this.tsbtnAD1.Tag = "ad1";
-            this.tsbtnAD1.Text = "气泡检测1关";
-            this.tsbtnAD1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // tsbtnAD2
-            // 
-            this.tsbtnAD2.AutoSize = false;
-            this.tsbtnAD2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnAD2.Image = global::ALS.Properties.Resources.AD2Off;
-            this.tsbtnAD2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnAD2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAD2.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
-            this.tsbtnAD2.Name = "tsbtnAD2";
-            this.tsbtnAD2.Size = new System.Drawing.Size(75, 68);
-            this.tsbtnAD2.Tag = "ad2";
-            this.tsbtnAD2.Text = "气泡检测2关";
-            this.tsbtnAD2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // tsbtnAD3
-            // 
-            this.tsbtnAD3.AutoSize = false;
-            this.tsbtnAD3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnAD3.Image = global::ALS.Properties.Resources.AD3Off;
-            this.tsbtnAD3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnAD3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAD3.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
-            this.tsbtnAD3.Name = "tsbtnAD3";
-            this.tsbtnAD3.Size = new System.Drawing.Size(75, 68);
-            this.tsbtnAD3.Tag = "ad3";
-            this.tsbtnAD3.Text = "气泡检测3关";
-            this.tsbtnAD3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // palBtnTreat
             // 
+            this.palBtnTreat.Controls.Add(this.picBP);
+            this.palBtnTreat.Controls.Add(this.gifRuning);
             this.palBtnTreat.Controls.Add(this.label6);
             this.palBtnTreat.Controls.Add(this.label9);
             this.palBtnTreat.Controls.Add(this.lblBloodSpeed);
             this.palBtnTreat.Controls.Add(this.label7);
             this.palBtnTreat.Controls.Add(this.lblMethod);
-            this.palBtnTreat.Controls.Add(this.picBP);
-            this.palBtnTreat.Controls.Add(this.gifRuning);
             this.palBtnTreat.Controls.Add(this.btnStart);
             this.palBtnTreat.Controls.Add(this.lblTotalBP);
             this.palBtnTreat.Dock = System.Windows.Forms.DockStyle.Right;
@@ -824,28 +480,6 @@
             this.lblMethod.TabIndex = 23;
             this.lblMethod.Text = "( Li-ALS )";
             this.lblMethod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // picBP
-            // 
-            this.picBP.BorderColor = System.Drawing.Color.Transparent;
-            this.picBP.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.picBP.Image = global::ALS.Properties.Resources.BPStop;
-            this.picBP.Location = new System.Drawing.Point(198, 3);
-            this.picBP.Name = "picBP";
-            this.picBP.Size = new System.Drawing.Size(32, 32);
-            this.picBP.TabIndex = 20;
-            // 
-            // gifRuning
-            // 
-            this.gifRuning.BackColor = System.Drawing.Color.Transparent;
-            this.gifRuning.BorderColor = System.Drawing.Color.Transparent;
-            this.gifRuning.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.gifRuning.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gifRuning.Image = global::ALS.Properties.Resources.zhunbei;
-            this.gifRuning.Location = new System.Drawing.Point(262, 0);
-            this.gifRuning.Name = "gifRuning";
-            this.gifRuning.Size = new System.Drawing.Size(48, 73);
-            this.gifRuning.TabIndex = 18;
             // 
             // btnStart
             // 
@@ -1095,15 +729,380 @@
             this.tsbtnExit.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.tsbtnExit.Click += new System.EventHandler(this.tsbtnExit_Click);
             // 
+            // gifRuning
+            // 
+            this.gifRuning.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gifRuning.Image = global::ALS.Properties.Resources.zhunbei;
+            this.gifRuning.Location = new System.Drawing.Point(262, 0);
+            this.gifRuning.Name = "gifRuning";
+            this.gifRuning.Size = new System.Drawing.Size(48, 73);
+            this.gifRuning.TabIndex = 26;
+            this.gifRuning.TabStop = false;
+            // 
+            // picBP
+            // 
+            this.picBP.BackColor = System.Drawing.Color.Transparent;
+            this.picBP.Image = global::ALS.Properties.Resources.BPStop;
+            this.picBP.Location = new System.Drawing.Point(201, 4);
+            this.picBP.Name = "picBP";
+            this.picBP.Size = new System.Drawing.Size(32, 32);
+            this.picBP.TabIndex = 27;
+            this.picBP.TabStop = false;
+            // 
+            // uc_pacc
+            // 
+            this.uc_pacc._LineColor = System.Drawing.Color.Maroon;
+            this.uc_pacc._Lower = "-100";
+            this.uc_pacc._Title = "采血压Pacc";
+            this.uc_pacc._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
+            this.uc_pacc._Upper = "500";
+            this.uc_pacc._Value = "000.0";
+            this.uc_pacc._VisibleLeft = true;
+            this.uc_pacc.BackColor = System.Drawing.Color.Transparent;
+            this.uc_pacc.Location = new System.Drawing.Point(0, 3);
+            this.uc_pacc.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.uc_pacc.Name = "uc_pacc";
+            this.uc_pacc.Size = new System.Drawing.Size(300, 68);
+            this.uc_pacc.TabIndex = 13;
+            this.uc_pacc.Load += new System.EventHandler(this.uc_pacc_Load);
+            // 
+            // uc_part
+            // 
+            this.uc_part._LineColor = System.Drawing.Color.Red;
+            this.uc_part._Lower = "-100";
+            this.uc_part._Title = "动脉压Part";
+            this.uc_part._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
+            this.uc_part._Upper = "500";
+            this.uc_part._Value = "000.0";
+            this.uc_part._VisibleLeft = true;
+            this.uc_part.BackColor = System.Drawing.Color.Transparent;
+            this.uc_part.Location = new System.Drawing.Point(0, 71);
+            this.uc_part.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_part.Name = "uc_part";
+            this.uc_part.Size = new System.Drawing.Size(300, 68);
+            this.uc_part.TabIndex = 1;
+            // 
+            // uc_pven
+            // 
+            this.uc_pven._LineColor = System.Drawing.Color.DodgerBlue;
+            this.uc_pven._Lower = "-100";
+            this.uc_pven._Title = "静脉压Pven";
+            this.uc_pven._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
+            this.uc_pven._Upper = "500";
+            this.uc_pven._Value = "000.0";
+            this.uc_pven._VisibleLeft = true;
+            this.uc_pven.BackColor = System.Drawing.Color.Transparent;
+            this.uc_pven.Location = new System.Drawing.Point(0, 139);
+            this.uc_pven.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_pven.Name = "uc_pven";
+            this.uc_pven.Size = new System.Drawing.Size(300, 68);
+            this.uc_pven.TabIndex = 2;
+            // 
+            // uc_ptmp
+            // 
+            this.uc_ptmp._LineColor = System.Drawing.Color.DeepPink;
+            this.uc_ptmp._Lower = "-100";
+            this.uc_ptmp._Title = "跨膜压TMP";
+            this.uc_ptmp._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
+            this.uc_ptmp._Upper = "500";
+            this.uc_ptmp._Value = "000.0";
+            this.uc_ptmp._VisibleLeft = true;
+            this.uc_ptmp.BackColor = System.Drawing.Color.Transparent;
+            this.uc_ptmp.Location = new System.Drawing.Point(0, 207);
+            this.uc_ptmp.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_ptmp.Name = "uc_ptmp";
+            this.uc_ptmp.Size = new System.Drawing.Size(300, 68);
+            this.uc_ptmp.TabIndex = 3;
+            // 
+            // uc_p1st
+            // 
+            this.uc_p1st._LineColor = System.Drawing.Color.Lime;
+            this.uc_p1st._Lower = "-100";
+            this.uc_p1st._Title = "血浆压P1st";
+            this.uc_p1st._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
+            this.uc_p1st._Upper = "500";
+            this.uc_p1st._Value = "000.0";
+            this.uc_p1st._VisibleLeft = true;
+            this.uc_p1st.BackColor = System.Drawing.Color.Transparent;
+            this.uc_p1st.Location = new System.Drawing.Point(0, 275);
+            this.uc_p1st.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_p1st.Name = "uc_p1st";
+            this.uc_p1st.Size = new System.Drawing.Size(300, 68);
+            this.uc_p1st.TabIndex = 10;
+            // 
+            // uc_p2nd
+            // 
+            this.uc_p2nd._LineColor = System.Drawing.Color.DarkOrange;
+            this.uc_p2nd._Lower = "-100";
+            this.uc_p2nd._Title = "入口压P2nd";
+            this.uc_p2nd._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
+            this.uc_p2nd._Upper = "500";
+            this.uc_p2nd._Value = "000.0";
+            this.uc_p2nd._VisibleLeft = true;
+            this.uc_p2nd.BackColor = System.Drawing.Color.Transparent;
+            this.uc_p2nd.Location = new System.Drawing.Point(0, 343);
+            this.uc_p2nd.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_p2nd.Name = "uc_p2nd";
+            this.uc_p2nd.Size = new System.Drawing.Size(300, 68);
+            this.uc_p2nd.TabIndex = 11;
+            // 
+            // uc_p3rd
+            // 
+            this.uc_p3rd._LineColor = System.Drawing.Color.Peru;
+            this.uc_p3rd._Lower = "-100";
+            this.uc_p3rd._Title = "入口压P3rd";
+            this.uc_p3rd._TitleFont = new System.Drawing.Font("微软雅黑", 10F);
+            this.uc_p3rd._Upper = "500";
+            this.uc_p3rd._Value = "000.0";
+            this.uc_p3rd._VisibleLeft = true;
+            this.uc_p3rd.BackColor = System.Drawing.Color.Transparent;
+            this.uc_p3rd.Location = new System.Drawing.Point(0, 411);
+            this.uc_p3rd.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_p3rd.Name = "uc_p3rd";
+            this.uc_p3rd.Size = new System.Drawing.Size(300, 68);
+            this.uc_p3rd.TabIndex = 12;
+            // 
+            // uc_SpeedFP
+            // 
+            this.uc_SpeedFP._BackColor = System.Drawing.Color.LightYellow;
+            this.uc_SpeedFP._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_SpeedFP._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_SpeedFP._OtherInfo = "∑:  0.00 L";
+            this.uc_SpeedFP._PicPump = global::ALS.Properties.Resources.FPStop;
+            this.uc_SpeedFP._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedFP._SpeedValue = "0";
+            this.uc_SpeedFP._Title = "分离泵(FP)";
+            this.uc_SpeedFP._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedFP._Unit = "mL/min";
+            this.uc_SpeedFP._VisibleOtherInfo = true;
+            this.uc_SpeedFP._VisiblePicpump = true;
+            this.uc_SpeedFP.BackColor = System.Drawing.Color.Transparent;
+            this.uc_SpeedFP.Location = new System.Drawing.Point(1, 0);
+            this.uc_SpeedFP.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_SpeedFP.Name = "uc_SpeedFP";
+            this.uc_SpeedFP.Size = new System.Drawing.Size(180, 113);
+            this.uc_SpeedFP.TabIndex = 36;
+            this.uc_SpeedFP.Tag = "fp";
+            this.uc_SpeedFP.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
+            // 
+            // uc_SpeedDP
+            // 
+            this.uc_SpeedDP._BackColor = System.Drawing.Color.MintCream;
+            this.uc_SpeedDP._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_SpeedDP._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_SpeedDP._OtherInfo = "∑: 0.00 L";
+            this.uc_SpeedDP._PicPump = global::ALS.Properties.Resources.DPStop;
+            this.uc_SpeedDP._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedDP._SpeedValue = "0";
+            this.uc_SpeedDP._Title = "透析泵(DP)";
+            this.uc_SpeedDP._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedDP._Unit = "mL/min";
+            this.uc_SpeedDP._VisibleOtherInfo = true;
+            this.uc_SpeedDP._VisiblePicpump = true;
+            this.uc_SpeedDP.BackColor = System.Drawing.Color.Transparent;
+            this.uc_SpeedDP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.uc_SpeedDP.Location = new System.Drawing.Point(181, 0);
+            this.uc_SpeedDP.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_SpeedDP.Name = "uc_SpeedDP";
+            this.uc_SpeedDP.Size = new System.Drawing.Size(180, 113);
+            this.uc_SpeedDP.TabIndex = 36;
+            this.uc_SpeedDP.Tag = "dp";
+            this.uc_SpeedDP.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
+            // 
+            // uc_SpeedRP
+            // 
+            this.uc_SpeedRP._BackColor = System.Drawing.Color.Lavender;
+            this.uc_SpeedRP._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_SpeedRP._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_SpeedRP._OtherInfo = "∑: 0.00 L";
+            this.uc_SpeedRP._PicPump = global::ALS.Properties.Resources.RPStop;
+            this.uc_SpeedRP._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedRP._SpeedValue = "0";
+            this.uc_SpeedRP._Title = "补液泵(RP)";
+            this.uc_SpeedRP._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedRP._Unit = "mL/min";
+            this.uc_SpeedRP._VisibleOtherInfo = true;
+            this.uc_SpeedRP._VisiblePicpump = true;
+            this.uc_SpeedRP.BackColor = System.Drawing.Color.Transparent;
+            this.uc_SpeedRP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.uc_SpeedRP.Location = new System.Drawing.Point(361, 0);
+            this.uc_SpeedRP.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_SpeedRP.Name = "uc_SpeedRP";
+            this.uc_SpeedRP.Size = new System.Drawing.Size(180, 113);
+            this.uc_SpeedRP.TabIndex = 36;
+            this.uc_SpeedRP.Tag = "rp";
+            this.uc_SpeedRP.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
+            // 
+            // uc_SpeedFP2
+            // 
+            this.uc_SpeedFP2._BackColor = System.Drawing.Color.AntiqueWhite;
+            this.uc_SpeedFP2._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_SpeedFP2._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_SpeedFP2._OtherInfo = "∑: 0.00 L";
+            this.uc_SpeedFP2._PicPump = global::ALS.Properties.Resources.FP2Stop;
+            this.uc_SpeedFP2._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedFP2._SpeedValue = "0";
+            this.uc_SpeedFP2._Title = "滤过泵(FP2)";
+            this.uc_SpeedFP2._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedFP2._Unit = "mL/min";
+            this.uc_SpeedFP2._VisibleOtherInfo = true;
+            this.uc_SpeedFP2._VisiblePicpump = true;
+            this.uc_SpeedFP2.BackColor = System.Drawing.Color.Transparent;
+            this.uc_SpeedFP2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.uc_SpeedFP2.Location = new System.Drawing.Point(541, 0);
+            this.uc_SpeedFP2.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_SpeedFP2.Name = "uc_SpeedFP2";
+            this.uc_SpeedFP2.Size = new System.Drawing.Size(180, 113);
+            this.uc_SpeedFP2.TabIndex = 36;
+            this.uc_SpeedFP2.Tag = "fp2";
+            this.uc_SpeedFP2.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
+            // 
+            // uc_SpeedCP
+            // 
+            this.uc_SpeedCP._BackColor = System.Drawing.Color.Thistle;
+            this.uc_SpeedCP._FontSpeed = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_SpeedCP._FontTitle = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_SpeedCP._OtherInfo = "";
+            this.uc_SpeedCP._PicPump = global::ALS.Properties.Resources.CPStop;
+            this.uc_SpeedCP._SpeedColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedCP._SpeedValue = "0";
+            this.uc_SpeedCP._Title = "循环泵(CP)";
+            this.uc_SpeedCP._TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_SpeedCP._Unit = "mL/min";
+            this.uc_SpeedCP._VisibleOtherInfo = true;
+            this.uc_SpeedCP._VisiblePicpump = true;
+            this.uc_SpeedCP.BackColor = System.Drawing.Color.Transparent;
+            this.uc_SpeedCP.Location = new System.Drawing.Point(721, 0);
+            this.uc_SpeedCP.Margin = new System.Windows.Forms.Padding(0);
+            this.uc_SpeedCP.Name = "uc_SpeedCP";
+            this.uc_SpeedCP.Size = new System.Drawing.Size(180, 113);
+            this.uc_SpeedCP.TabIndex = 36;
+            this.uc_SpeedCP.Tag = "cp";
+            this.uc_SpeedCP.Click += new System.EventHandler(this.M_uc_Treat_btnChangePumpSpeed);
+            // 
+            // toolStripOther
+            // 
+            this.toolStripOther.AutoSize = false;
+            this.toolStripOther.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripOther.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolStripOther.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbtnSP,
+            this.tsbtnHT,
+            this.tslblBloodLeak,
+            this.tsbtnAD1,
+            this.tsbtnAD2,
+            this.tsbtnAD3});
+            this.toolStripOther.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.toolStripOther.Location = new System.Drawing.Point(0, 0);
+            this.toolStripOther.Name = "toolStripOther";
+            this.toolStripOther.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStripOther.ShowItemToolTips = false;
+            this.toolStripOther.Size = new System.Drawing.Size(475, 75);
+            this.toolStripOther.TabIndex = 0;
+            this.toolStripOther.Text = "toolStrip1";
+            this.toolStripOther.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripOther_ItemClicked);
+            // 
+            // tsbtnSP
+            // 
+            this.tsbtnSP.AutoSize = false;
+            this.tsbtnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tsbtnSP.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tsbtnSP.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.tsbtnSP.Image = global::ALS.Properties.Resources.sp30off;
+            this.tsbtnSP.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnSP.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSP.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
+            this.tsbtnSP.Name = "tsbtnSP";
+            this.tsbtnSP.Size = new System.Drawing.Size(75, 68);
+            this.tsbtnSP.Tag = "spoff";
+            this.tsbtnSP.Text = "3 mL/h";
+            this.tsbtnSP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsbtnSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbtnSP.Click += new System.EventHandler(this.tsbtnSP_Click);
+            // 
+            // tsbtnHT
+            // 
+            this.tsbtnHT.AutoSize = false;
+            this.tsbtnHT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tsbtnHT.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tsbtnHT.ForeColor = System.Drawing.Color.DarkRed;
+            this.tsbtnHT.Image = global::ALS.Properties.Resources.hotoff;
+            this.tsbtnHT.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnHT.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnHT.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
+            this.tsbtnHT.Name = "tsbtnHT";
+            this.tsbtnHT.Size = new System.Drawing.Size(75, 68);
+            this.tsbtnHT.Tag = "ht";
+            this.tsbtnHT.Text = "0.0";
+            this.tsbtnHT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsbtnHT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbtnHT.Click += new System.EventHandler(this.tsbtnHT_Click);
+            // 
+            // tslblBloodLeak
+            // 
+            this.tslblBloodLeak.AutoSize = false;
+            this.tslblBloodLeak.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tslblBloodLeak.Image = global::ALS.Properties.Resources.ldoff;
+            this.tslblBloodLeak.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tslblBloodLeak.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tslblBloodLeak.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
+            this.tslblBloodLeak.Name = "tslblBloodLeak";
+            this.tslblBloodLeak.Size = new System.Drawing.Size(70, 68);
+            this.tslblBloodLeak.Tag = "ad1";
+            this.tslblBloodLeak.Text = "气泡检测1关";
+            this.tslblBloodLeak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // tsbtnAD1
+            // 
+            this.tsbtnAD1.AutoSize = false;
+            this.tsbtnAD1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnAD1.Image = global::ALS.Properties.Resources.AD1Off;
+            this.tsbtnAD1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnAD1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAD1.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
+            this.tsbtnAD1.Name = "tsbtnAD1";
+            this.tsbtnAD1.Size = new System.Drawing.Size(75, 68);
+            this.tsbtnAD1.Tag = "ad1";
+            this.tsbtnAD1.Text = "气泡检测1关";
+            this.tsbtnAD1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // tsbtnAD2
+            // 
+            this.tsbtnAD2.AutoSize = false;
+            this.tsbtnAD2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnAD2.Image = global::ALS.Properties.Resources.AD2Off;
+            this.tsbtnAD2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnAD2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAD2.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
+            this.tsbtnAD2.Name = "tsbtnAD2";
+            this.tsbtnAD2.Size = new System.Drawing.Size(75, 68);
+            this.tsbtnAD2.Tag = "ad2";
+            this.tsbtnAD2.Text = "气泡检测2关";
+            this.tsbtnAD2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // tsbtnAD3
+            // 
+            this.tsbtnAD3.AutoSize = false;
+            this.tsbtnAD3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnAD3.Image = global::ALS.Properties.Resources.AD3Off;
+            this.tsbtnAD3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnAD3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAD3.Margin = new System.Windows.Forms.Padding(2, 1, 0, 2);
+            this.tsbtnAD3.Name = "tsbtnAD3";
+            this.tsbtnAD3.Size = new System.Drawing.Size(75, 68);
+            this.tsbtnAD3.Tag = "ad3";
+            this.tsbtnAD3.Text = "气泡检测3关";
+            this.tsbtnAD3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // paltop
             // 
             this.paltop.BorderColor = System.Drawing.Color.Silver;
-            this.paltop.Controls.Add(this.pictureBox1);
-            this.paltop.Controls.Add(this.lblTime);
             this.paltop.Controls.Add(this.progressBar);
             this.paltop.Controls.Add(this.lblElectric);
-            this.paltop.Controls.Add(this.skinLabel2);
-            this.paltop.Controls.Add(this.skinLabel1);
+            this.paltop.Controls.Add(this.lblTime);
+            this.paltop.Controls.Add(this.label10);
+            this.paltop.Controls.Add(this.pictureBox1);
+            this.paltop.Controls.Add(this.label8);
             this.paltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.paltop.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
             this.paltop.GradientStartColor = System.Drawing.Color.White;
@@ -1116,6 +1115,46 @@
             this.paltop.ShadowOffSet = 3;
             this.paltop.Size = new System.Drawing.Size(1020, 78);
             this.paltop.TabIndex = 27;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(59, 38);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(100, 23);
+            this.progressBar.TabIndex = 17;
+            this.progressBar.Value = 90;
+            // 
+            // lblElectric
+            // 
+            this.lblElectric.AutoSize = true;
+            this.lblElectric.ForeColor = System.Drawing.Color.White;
+            this.lblElectric.Location = new System.Drawing.Point(4, 42);
+            this.lblElectric.Name = "lblElectric";
+            this.lblElectric.Size = new System.Drawing.Size(53, 12);
+            this.lblElectric.TabIndex = 16;
+            this.lblElectric.Text = "正在充电";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("宋体", 12F);
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(3, 17);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(160, 16);
+            this.lblTime.TabIndex = 15;
+            this.lblTime.Text = "2016-08-08 08:08:08";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("宋体", 12F);
+            this.label10.Location = new System.Drawing.Point(761, 37);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 16);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "V1.0";
             // 
             // pictureBox1
             // 
@@ -1130,129 +1169,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // lblTime
+            // label8
             // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.BorderColor = System.Drawing.Color.White;
-            this.lblTime.BorderSize = 2;
-            this.lblTime.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblTime.Location = new System.Drawing.Point(4, 17);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(143, 20);
-            this.lblTime.TabIndex = 10;
-            this.lblTime.Text = "2016-08-08 08:08:08";
-            // 
-            // progressBar
-            // 
-            this.progressBar.Back = null;
-            this.progressBar.BackColor = System.Drawing.Color.Transparent;
-            this.progressBar.BarBack = null;
-            this.progressBar.BarRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.progressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.progressBar.Location = new System.Drawing.Point(59, 37);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.progressBar.Size = new System.Drawing.Size(82, 23);
-            this.progressBar.TabIndex = 9;
-            this.progressBar.TrackBack = System.Drawing.Color.LightGray;
-            this.progressBar.TrackFore = System.Drawing.Color.SpringGreen;
-            this.progressBar.Value = 90;
-            // 
-            // lblElectric
-            // 
-            this.lblElectric.AutoSize = true;
-            this.lblElectric.BackColor = System.Drawing.Color.Transparent;
-            this.lblElectric.BorderColor = System.Drawing.Color.White;
-            this.lblElectric.BorderSize = 2;
-            this.lblElectric.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblElectric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblElectric.Location = new System.Drawing.Point(4, 39);
-            this.lblElectric.Name = "lblElectric";
-            this.lblElectric.Size = new System.Drawing.Size(59, 17);
-            this.lblElectric.TabIndex = 8;
-            this.lblElectric.Text = "正在充电:";
-            // 
-            // skinLabel2
-            // 
-            this.skinLabel2.AutoSize = true;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.Silver;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.skinLabel2.Location = new System.Drawing.Point(748, 37);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(33, 17);
-            this.skinLabel2.TabIndex = 7;
-            this.skinLabel2.Text = "V1.0";
-            // 
-            // skinLabel1
-            // 
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.White;
-            this.skinLabel1.BorderSize = 3;
-            this.skinLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinLabel1.Font = new System.Drawing.Font("楷体", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.ForeColor = System.Drawing.Color.Red;
-            this.skinLabel1.Location = new System.Drawing.Point(5, 0);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(1015, 78);
-            this.skinLabel1.TabIndex = 6;
-            this.skinLabel1.Text = "李 氏 人 工 肝 治 疗 系 统";
-            this.skinLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // miniToolStrip
-            // 
-            this.miniToolStrip.Arrow = System.Drawing.Color.Black;
-            this.miniToolStrip.AutoSize = false;
-            this.miniToolStrip.Back = System.Drawing.Color.White;
-            this.miniToolStrip.BackRadius = 4;
-            this.miniToolStrip.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
-            this.miniToolStrip.Base = System.Drawing.Color.Transparent;
-            this.miniToolStrip.BaseFore = System.Drawing.Color.Black;
-            this.miniToolStrip.BaseForeAnamorphosis = false;
-            this.miniToolStrip.BaseForeAnamorphosisBorder = 4;
-            this.miniToolStrip.BaseForeAnamorphosisColor = System.Drawing.Color.White;
-            this.miniToolStrip.BaseForeOffset = new System.Drawing.Point(0, 0);
-            this.miniToolStrip.BaseHoverFore = System.Drawing.Color.White;
-            this.miniToolStrip.BaseItemAnamorphosis = true;
-            this.miniToolStrip.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.miniToolStrip.BaseItemBorderShow = true;
-            this.miniToolStrip.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("miniToolStrip.BaseItemDown")));
-            this.miniToolStrip.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.miniToolStrip.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("miniToolStrip.BaseItemMouse")));
-            this.miniToolStrip.BaseItemNorml = null;
-            this.miniToolStrip.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.miniToolStrip.BaseItemRadius = 4;
-            this.miniToolStrip.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.miniToolStrip.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.miniToolStrip.BindTabControl = null;
-            this.miniToolStrip.CanOverflow = false;
-            this.miniToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.miniToolStrip.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.miniToolStrip.Fore = System.Drawing.Color.Black;
-            this.miniToolStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
-            this.miniToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.miniToolStrip.HoverFore = System.Drawing.Color.White;
-            this.miniToolStrip.ItemAnamorphosis = true;
-            this.miniToolStrip.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.miniToolStrip.ItemBorderShow = true;
-            this.miniToolStrip.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.miniToolStrip.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
-            this.miniToolStrip.ItemRadius = 4;
-            this.miniToolStrip.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.miniToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.miniToolStrip.Location = new System.Drawing.Point(40, 77);
-            this.miniToolStrip.Name = "miniToolStrip";
-            this.miniToolStrip.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.miniToolStrip.Size = new System.Drawing.Size(114, 79);
-            this.miniToolStrip.SkinAllColor = true;
-            this.miniToolStrip.TabIndex = 0;
-            this.miniToolStrip.TitleAnamorphosis = true;
-            this.miniToolStrip.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
-            this.miniToolStrip.TitleRadius = 4;
-            this.miniToolStrip.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(1015, 78);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "李 氏 人 工 肝 治 疗 系 统";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain
             // 
@@ -1278,13 +1205,15 @@
             this.layoutPump.ResumeLayout(false);
             this.palTreat.ResumeLayout(false);
             this.palSet.ResumeLayout(false);
-            this.toolStripOther.ResumeLayout(false);
-            this.toolStripOther.PerformLayout();
             this.palBtnTreat.ResumeLayout(false);
             this.palBtnTreat.PerformLayout();
             this.palTooltip.ResumeLayout(false);
             this.toolStripControl.ResumeLayout(false);
             this.toolStripControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gifRuning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBP)).EndInit();
+            this.toolStripOther.ResumeLayout(false);
+            this.toolStripOther.PerformLayout();
             this.paltop.ResumeLayout(false);
             this.paltop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1329,15 +1258,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripLabel tsbtnSP;
         private System.Windows.Forms.ToolStripLabel tsbtnHT;
-        private CCWin.SkinControl.GifBox gifRuning;
-        public CCWin.SkinControl.GifBox picBP;
         private System.Windows.Forms.Panel palTooltip;
-        private CCWin.SkinControl.SkinToolStrip miniToolStrip;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
-        private CCWin.SkinControl.SkinLabel skinLabel2;
-        private CCWin.SkinControl.SkinLabel lblTime;
-        private CCWin.SkinControl.SkinProgressBar progressBar;
-        private CCWin.SkinControl.SkinLabel lblElectric;
         private Owf.Controls.A1Panel paltop;
         private System.Windows.Forms.Label lblMethod;
         private System.Windows.Forms.Label lblBloodSpeed;
@@ -1367,6 +1288,13 @@
         private System.Windows.Forms.Panel gBoxP;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStripLabel tslblBloodLeak;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblElectric;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.PictureBox gifRuning;
+        private System.Windows.Forms.PictureBox picBP;
+        private System.Windows.Forms.ProgressBar progressBar;
 
 
     }

@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 //using System.Windows.Forms.DataVisualization.Charting;
-using System.IO.Ports;
-using CCWin;
+using System.IO.Ports; 
 
 namespace ALS.FormOperation
 {

@@ -31,6 +31,9 @@
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.gboxRecycle = new CodeVendor.Controls.Grouper();
             this.btnReturn = new PulseButton.PulseButton();
+            this.pulseButton1 = new PulseButton.PulseButton();
+            this.pulseButton2 = new PulseButton.PulseButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // grouper1
@@ -68,7 +71,7 @@
             this.gboxRecycle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.gboxRecycle.GroupImage = null;
             this.gboxRecycle.GroupTitle = "夹管阀控制";
-            this.gboxRecycle.Location = new System.Drawing.Point(460, 30);
+            this.gboxRecycle.Location = new System.Drawing.Point(398, 21);
             this.gboxRecycle.Name = "gboxRecycle";
             this.gboxRecycle.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.gboxRecycle.PaintGroupBox = true;
@@ -87,7 +90,7 @@
             this.btnReturn.FocusColor = System.Drawing.Color.Black;
             this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReturn.Location = new System.Drawing.Point(673, 51);
+            this.btnReturn.Location = new System.Drawing.Point(663, 12);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.NumberOfPulses = 2;
             this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
@@ -99,17 +102,77 @@
             this.btnReturn.Text = "上一步";
             this.btnReturn.UseVisualStyleBackColor = true;
             // 
+            // pulseButton1
+            // 
+            this.pulseButton1.ButtonColorBottom = System.Drawing.Color.DarkGreen;
+            this.pulseButton1.ButtonColorTop = System.Drawing.Color.LimeGreen;
+            this.pulseButton1.CornerRadius = 25;
+            this.pulseButton1.FocusColor = System.Drawing.Color.Black;
+            this.pulseButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pulseButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pulseButton1.Location = new System.Drawing.Point(600, 90);
+            this.pulseButton1.Name = "pulseButton1";
+            this.pulseButton1.NumberOfPulses = 2;
+            this.pulseButton1.PulseColor = System.Drawing.Color.DimGray;
+            this.pulseButton1.PulseSpeed = 0.3F;
+            this.pulseButton1.PulseWidth = 6;
+            this.pulseButton1.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.pulseButton1.Size = new System.Drawing.Size(112, 62);
+            this.pulseButton1.TabIndex = 123;
+            this.pulseButton1.Text = "启动治疗";
+            this.pulseButton1.UseVisualStyleBackColor = true;
+            // 
+            // pulseButton2
+            // 
+            this.pulseButton2.ButtonColorBottom = System.Drawing.Color.DarkGoldenrod;
+            this.pulseButton2.ButtonColorTop = System.Drawing.Color.Orange;
+            this.pulseButton2.CornerRadius = 25;
+            this.pulseButton2.Enabled = false;
+            this.pulseButton2.FocusColor = System.Drawing.Color.Black;
+            this.pulseButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pulseButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pulseButton2.Location = new System.Drawing.Point(745, 90);
+            this.pulseButton2.Name = "pulseButton2";
+            this.pulseButton2.NumberOfPulses = 2;
+            this.pulseButton2.PulseColor = System.Drawing.Color.DimGray;
+            this.pulseButton2.PulseSpeed = 0.3F;
+            this.pulseButton2.PulseWidth = 6;
+            this.pulseButton2.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.pulseButton2.Size = new System.Drawing.Size(112, 62);
+            this.pulseButton2.TabIndex = 124;
+            this.pulseButton2.Text = "暂停";
+            this.pulseButton2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("宋体", 10F);
+            this.textBox1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.textBox1.Location = new System.Drawing.Point(398, 216);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(415, 51);
+            this.textBox1.TabIndex = 125;
+            this.textBox1.Text = "    ① 若需要脱水平衡，需要点击右侧 <泵秤平衡> 按钮，此时按钮呈选中状态；\r\n    ② 若需要更换液袋，请先点 <泵秤平衡> 取消联动，然后更换液袋，待" +
+    "秤平稳后再点<泵秤平衡>；";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 262);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pulseButton2);
+            this.Controls.Add(this.pulseButton1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.gboxRecycle);
             this.Controls.Add(this.grouper1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,5 +181,8 @@
         public CodeVendor.Controls.Grouper gboxRecycle;
         public PulseButton.PulseButton btnReturn;
         public CodeVendor.Controls.Grouper grouper1;
+        public PulseButton.PulseButton pulseButton1;
+        public PulseButton.PulseButton pulseButton2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

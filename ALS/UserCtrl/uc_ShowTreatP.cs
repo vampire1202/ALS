@@ -42,8 +42,8 @@ namespace ALS.UserCtrl
 
         public Color _ColorLine
         {
-            get { return line.LineColor; }
-            set { lblTitleEn.ForeColor = line.LineColor = value; }
+            get { return this.splitter1.BackColor; }
+            set { lblTitleEn.ForeColor = this.splitter1.BackColor = value; }
         }
 
         public Color _ColorTitle

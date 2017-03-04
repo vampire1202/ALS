@@ -32,9 +32,9 @@
             this.lblUpper = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblValue = new System.Windows.Forms.Label();
-            this.line = new CCWin.SkinControl.SkinLine();
             this.palLeft = new System.Windows.Forms.Splitter();
             this.colorSliderBar1 = new ALS.UserCtrl.ColorSliderBar();
+            this.line = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblLower
@@ -85,16 +85,6 @@
             this.lblValue.Text = "000.0";
             this.lblValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // line
-            // 
-            this.line.BackColor = System.Drawing.Color.Transparent;
-            this.line.LineColor = System.Drawing.Color.Transparent;
-            this.line.LineHeight = 2;
-            this.line.Location = new System.Drawing.Point(7, 34);
-            this.line.Name = "line";
-            this.line.Size = new System.Drawing.Size(70, 2);
-            this.line.TabIndex = 13;
-            // 
             // palLeft
             // 
             this.palLeft.BackColor = System.Drawing.SystemColors.Control;
@@ -117,13 +107,21 @@
             this.colorSliderBar1.Size = new System.Drawing.Size(182, 21);
             this.colorSliderBar1.TabIndex = 15;
             // 
+            // line
+            // 
+            this.line.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.line.Location = new System.Drawing.Point(8, 33);
+            this.line.Name = "line";
+            this.line.Size = new System.Drawing.Size(70, 2);
+            this.line.TabIndex = 16;
+            // 
             // uc_p
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.line);
             this.Controls.Add(this.colorSliderBar1);
             this.Controls.Add(this.palLeft);
-            this.Controls.Add(this.line);
             this.Controls.Add(this.lblLower);
             this.Controls.Add(this.lblUpper);
             this.Controls.Add(this.lblValue);
@@ -141,8 +139,8 @@
         private System.Windows.Forms.Label lblUpper;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblValue;
-        private CCWin.SkinControl.SkinLine line;
         private System.Windows.Forms.Splitter palLeft;
         public ColorSliderBar colorSliderBar1;
+        private System.Windows.Forms.Panel line;
     }
 }

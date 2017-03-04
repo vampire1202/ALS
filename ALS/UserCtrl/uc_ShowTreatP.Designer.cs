@@ -31,9 +31,11 @@
             this.lblValue = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.line = new CCWin.SkinControl.SkinLine();
             this.lblTitleEn = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblValue
@@ -63,8 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.line);
-            this.panel1.Controls.Add(this.lblTitleEn);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblValue);
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -73,28 +74,36 @@
             this.panel1.Size = new System.Drawing.Size(128, 60);
             this.panel1.TabIndex = 1;
             // 
-            // line
-            // 
-            this.line.BackColor = System.Drawing.Color.Transparent;
-            this.line.LineColor = System.Drawing.Color.Green;
-            this.line.LineHeight = 2;
-            this.line.Location = new System.Drawing.Point(3, 30);
-            this.line.Name = "line";
-            this.line.Size = new System.Drawing.Size(60, 4);
-            this.line.TabIndex = 3;
-            this.line.Text = "skinLine1";
-            // 
             // lblTitleEn
             // 
             this.lblTitleEn.AutoSize = true;
             this.lblTitleEn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleEn.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblTitleEn.Location = new System.Drawing.Point(5, 33);
+            this.lblTitleEn.Location = new System.Drawing.Point(7, 7);
             this.lblTitleEn.Name = "lblTitleEn";
             this.lblTitleEn.Size = new System.Drawing.Size(50, 22);
             this.lblTitleEn.TabIndex = 2;
             this.lblTitleEn.Text = "Pacc";
             this.lblTitleEn.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.splitter1);
+            this.panel2.Controls.Add(this.lblTitleEn);
+            this.panel2.Location = new System.Drawing.Point(3, 28);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(67, 31);
+            this.panel2.TabIndex = 4;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.Green;
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(67, 4);
+            this.splitter1.TabIndex = 3;
+            this.splitter1.TabStop = false;
             // 
             // uc_ShowTreatP
             // 
@@ -105,6 +114,8 @@
             this.Size = new System.Drawing.Size(128, 60);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -115,6 +126,7 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitleEn;
-        private CCWin.SkinControl.SkinLine line;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Splitter splitter1;
     }
 }

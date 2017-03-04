@@ -14,16 +14,16 @@ namespace ALS.UserCtrl
         [Description("标题字体")]
         [Category("泵速控件属性")]
         public Font _FontTitle {
-            get { return lblTitle.Font; }
-            set { lblTitle.Font = value; }
+            get { return gbox.Font; }
+            set { gbox.Font = value; }
         }
 
         [Description("背景色")]
         [Category("泵速控件属性")]
         public Color _BackColor
         {
-            get { return this.lblTitle.RectBackColor; }
-            set { this.lblTitle.TitleRectBackColor = this.lblTitle.RectBackColor = value; }
+            get { return this.gbox.BackgroundColor; }
+            set { this.gbox.CustomGroupBoxColor = this.gbox.BackgroundColor = value; }
         }
 
         [Description("图标可见性")]
@@ -51,15 +51,15 @@ namespace ALS.UserCtrl
         [Category("泵速控件属性")]
         public string _Title
         {
-            get { return this.lblTitle.Text; }
-            set { this.lblTitle.Text = value; }
+            get { return this.gbox.GroupTitle; }
+            set { this.gbox.GroupTitle = value; }
         }
         [Description("标题颜色")]
         [Category("泵速控件属性")]
         public Color _TitleColor
         {
-            get { return this.lblTitle.ForeColor; }
-            set { this.lblTitle.ForeColor = value; }
+            get { return this.gbox.ForeColor; }
+            set { this.gbox.ForeColor = value; }
         }
         [Description("速度")]
         [Category("泵速控件属性")]

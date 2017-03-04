@@ -363,10 +363,10 @@ namespace ALS
         {
             //更新UI
             if (e.Success == false)
-            {
-                m_fp.btnExit.Visible = true;
-                m_fp.btnExit.Enabled = true;
+            { 
                 m_fp.lblTip.Visible = true;
+                Application.Exit();
+                Application.ExitThread();
             }
             m_fp.lblTip.Text = e.Tipinfo;
             m_fp.progressBar1.Value = e.Current;

@@ -339,7 +339,7 @@ namespace ALS.FormSet
                                 MessageBox.Show("漏血值灵敏度设置范围为(0 - 100)%");
                                 return;
                             }
-                            this.skinTrackBar1.Value = (int)np.Value;
+                            this.trackBar1.Value = (int)np.Value;
                             break;
                         case "paccDecrement":
                             if (np.Value < 0 || np.Value > 150)
@@ -450,11 +450,11 @@ namespace ALS.FormSet
             }
             this.lblBloodLeak.Text = mtreat.BloodLeak.Value.ToString();
             if (mtreat.BloodLeak.Value > 100)
-                this.skinTrackBar1.Value = 100;
+                this.trackBar1.Value = 100;
             else if (mtreat.BloodLeak.Value < 0)
-                this.skinTrackBar1.Value = 0;
+                this.trackBar1.Value = 0;
             else
-                this.skinTrackBar1.Value = mtreat.BloodLeak.Value;
+                this.trackBar1.Value = mtreat.BloodLeak.Value;
 
             this.lblConcentration.Text = mtreat.Concentration.Value.ToString();
             this.lblPaccDecWarn.Text = mtreat.PaccDecrement.Value.ToString();
@@ -932,7 +932,7 @@ namespace ALS.FormSet
 
         private void skinTrackBar1_ValueChanged(object sender, EventArgs e)
         {
-            this.lblBloodLeak.Text = skinTrackBar1.Value.ToString();
+            this.lblBloodLeak.Text = trackBar1.Value.ToString();
         }
 
         private void lblBloodLeak_TextChanged(object sender, EventArgs e)

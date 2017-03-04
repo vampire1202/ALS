@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.wizardControl1 = new AeroWizard.StepWizardControl();
             this.wizardPage1 = new AeroWizard.WizardPage();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.lblTargetSpeed = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,9 +39,9 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.wizardPage2 = new AeroWizard.WizardPage();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.btnPauseCHDF = new CCWin.SkinControl.SkinButton();
-            this.btnStartCHDF = new CCWin.SkinControl.SkinButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnPauseCHDF = new PulseButton.PulseButton();
+            this.btnStartCHDF = new PulseButton.PulseButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardPage1.SuspendLayout();
@@ -61,10 +60,8 @@
             // wizardControl1
             // 
             this.wizardControl1.CancelButtonText = "抗凝剂泵";
-            this.wizardControl1.FinishButtonText = "回收";
             this.wizardControl1.Location = new System.Drawing.Point(0, 0);
             this.wizardControl1.Name = "wizardControl1";
-            this.wizardControl1.NextButtonText = "下一步";
             this.wizardControl1.Pages.Add(this.wizardPage1);
             this.wizardControl1.Pages.Add(this.wizardPage2);
             this.wizardControl1.Size = new System.Drawing.Size(597, 315);
@@ -77,7 +74,7 @@
             // 
             // wizardPage1
             // 
-            this.wizardPage1.Controls.Add(this.skinLabel1);
+            this.wizardPage1.Controls.Add(this.textBox1);
             this.wizardPage1.Controls.Add(this.label24);
             this.wizardPage1.Controls.Add(this.lblTargetSpeed);
             this.wizardPage1.Controls.Add(this.label4);
@@ -89,20 +86,20 @@
             this.wizardPage1.TabIndex = 0;
             this.wizardPage1.Text = "1. 引血";
             // 
-            // skinLabel1
+            // textBox1
             // 
-            this.skinLabel1.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
-            this.skinLabel1.AutoEllipsis = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.skinLabel1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.skinLabel1.Location = new System.Drawing.Point(0, 162);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(482, 60);
-            this.skinLabel1.TabIndex = 1;
-            this.skinLabel1.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox1.Font = new System.Drawing.Font("宋体", 10F);
+            this.textBox1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.textBox1.Location = new System.Drawing.Point(0, 173);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(482, 49);
+            this.textBox1.TabIndex = 12;
+            this.textBox1.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
     "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
             // 
             // label24
@@ -168,7 +165,7 @@
             // wizardPage2
             // 
             this.wizardPage2.AllowCancel = false;
-            this.wizardPage2.Controls.Add(this.skinLabel2);
+            this.wizardPage2.Controls.Add(this.textBox2);
             this.wizardPage2.Controls.Add(this.btnPauseCHDF);
             this.wizardPage2.Controls.Add(this.btnStartCHDF);
             this.wizardPage2.Name = "wizardPage2";
@@ -177,64 +174,64 @@
             this.wizardPage2.TabIndex = 1;
             this.wizardPage2.Text = "2. 血滤治疗";
             // 
-            // skinLabel2
+            // textBox2
             // 
-            this.skinLabel2.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.White;
-            this.skinLabel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.skinLabel2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.skinLabel2.Location = new System.Drawing.Point(0, 166);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(482, 56);
-            this.skinLabel2.TabIndex = 13;
-            this.skinLabel2.Text = "    ① 在 <启动治疗> 前，请确认各泵的速度；\r\n    ② 可点击 <脱水速度> 的速度值进行修改速度大小；";
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox2.Font = new System.Drawing.Font("宋体", 10F);
+            this.textBox2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.textBox2.Location = new System.Drawing.Point(0, 190);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(482, 32);
+            this.textBox2.TabIndex = 126;
+            this.textBox2.Text = "    ① 在 <启动治疗> 前，请确认各泵的速度；\r\n    ② 可点击 <脱水速度> 的速度值进行修改速度大小；";
             // 
             // btnPauseCHDF
             // 
-            this.btnPauseCHDF.BackColor = System.Drawing.Color.Transparent;
-            this.btnPauseCHDF.BackRectangle = new System.Drawing.Rectangle(20, 20, 20, 20);
-            this.btnPauseCHDF.BaseColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnPauseCHDF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnPauseCHDF.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnPauseCHDF.DownBack = null;
+            this.btnPauseCHDF.ButtonColorBottom = System.Drawing.Color.DarkGoldenrod;
+            this.btnPauseCHDF.ButtonColorTop = System.Drawing.Color.Orange;
+            this.btnPauseCHDF.CornerRadius = 25;
             this.btnPauseCHDF.Enabled = false;
-            this.btnPauseCHDF.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPauseCHDF.ForeColor = System.Drawing.Color.White;
-            this.btnPauseCHDF.Location = new System.Drawing.Point(266, 61);
-            this.btnPauseCHDF.MouseBack = null;
+            this.btnPauseCHDF.FocusColor = System.Drawing.Color.Black;
+            this.btnPauseCHDF.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPauseCHDF.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPauseCHDF.Location = new System.Drawing.Point(252, 57);
             this.btnPauseCHDF.Name = "btnPauseCHDF";
-            this.btnPauseCHDF.NormlBack = null;
-            this.btnPauseCHDF.Radius = 50;
-            this.btnPauseCHDF.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnPauseCHDF.Size = new System.Drawing.Size(100, 50);
-            this.btnPauseCHDF.TabIndex = 1;
+            this.btnPauseCHDF.NumberOfPulses = 2;
+            this.btnPauseCHDF.PulseColor = System.Drawing.Color.DimGray;
+            this.btnPauseCHDF.PulseSpeed = 0.3F;
+            this.btnPauseCHDF.PulseWidth = 6;
+            this.btnPauseCHDF.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnPauseCHDF.Size = new System.Drawing.Size(112, 62);
+            this.btnPauseCHDF.TabIndex = 122;
             this.btnPauseCHDF.Tag = "pauseCHDF";
             this.btnPauseCHDF.Text = "暂停";
-            this.btnPauseCHDF.UseVisualStyleBackColor = false;
-            this.btnPauseCHDF.Click += new System.EventHandler(this.btnPauseCHDF_Click);
+            this.btnPauseCHDF.UseVisualStyleBackColor = true;
+            this.btnPauseCHDF.ClientSizeChanged += new System.EventHandler(this.btnPauseCHDF_Click);
             // 
             // btnStartCHDF
             // 
-            this.btnStartCHDF.BackColor = System.Drawing.Color.Transparent;
-            this.btnStartCHDF.BaseColor = System.Drawing.Color.DarkGreen;
-            this.btnStartCHDF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.btnStartCHDF.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnStartCHDF.DownBack = null;
-            this.btnStartCHDF.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStartCHDF.ForeColor = System.Drawing.Color.White;
-            this.btnStartCHDF.Location = new System.Drawing.Point(121, 61);
-            this.btnStartCHDF.MouseBack = null;
+            this.btnStartCHDF.ButtonColorBottom = System.Drawing.Color.DarkGreen;
+            this.btnStartCHDF.ButtonColorTop = System.Drawing.Color.LimeGreen;
+            this.btnStartCHDF.CornerRadius = 25;
+            this.btnStartCHDF.FocusColor = System.Drawing.Color.Black;
+            this.btnStartCHDF.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnStartCHDF.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnStartCHDF.Location = new System.Drawing.Point(110, 57);
             this.btnStartCHDF.Name = "btnStartCHDF";
-            this.btnStartCHDF.NormlBack = null;
-            this.btnStartCHDF.Radius = 50;
-            this.btnStartCHDF.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnStartCHDF.Size = new System.Drawing.Size(100, 50);
-            this.btnStartCHDF.TabIndex = 1;
+            this.btnStartCHDF.NumberOfPulses = 2;
+            this.btnStartCHDF.PulseColor = System.Drawing.Color.DimGray;
+            this.btnStartCHDF.PulseSpeed = 0.3F;
+            this.btnStartCHDF.PulseWidth = 6;
+            this.btnStartCHDF.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnStartCHDF.Size = new System.Drawing.Size(112, 62);
+            this.btnStartCHDF.TabIndex = 122;
             this.btnStartCHDF.Tag = "startCHDF";
             this.btnStartCHDF.Text = "启动治疗";
-            this.btnStartCHDF.UseVisualStyleBackColor = false;
+            this.btnStartCHDF.UseVisualStyleBackColor = true;
             this.btnStartCHDF.Click += new System.EventHandler(this.btnStartCHDF_Click);
             // 
             // step_CHDF
@@ -250,6 +247,7 @@
             this.wizardPage1.ResumeLayout(false);
             this.wizardPage1.PerformLayout();
             this.wizardPage2.ResumeLayout(false);
+            this.wizardPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -266,10 +264,10 @@
         public AeroWizard.StepWizardControl wizardControl1;
         public AeroWizard.WizardPage wizardPage1;
         public AeroWizard.WizardPage wizardPage2;
-        public CCWin.SkinControl.SkinButton btnStartCHDF;
-        public CCWin.SkinControl.SkinButton btnPauseCHDF;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
-        private CCWin.SkinControl.SkinLabel skinLabel2;
+        public PulseButton.PulseButton btnPauseCHDF;
+        public PulseButton.PulseButton btnStartCHDF;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
 
 
 

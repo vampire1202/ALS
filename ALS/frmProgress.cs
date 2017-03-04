@@ -16,12 +16,7 @@ namespace ALS
         {
             InitializeComponent();
         }
-
-        private void skinButton1_Click(object sender, EventArgs e)
-        {
-            Application.ExitThread();
-            Application.Exit();
-        }
+ 
 
         private void frmProgress_SizeChanged(object sender, EventArgs e)
         {

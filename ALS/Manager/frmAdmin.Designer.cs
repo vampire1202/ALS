@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
@@ -234,7 +233,14 @@
             this.tsBtnAD3 = new System.Windows.Forms.ToolStripButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.lblPaccDec = new System.Windows.Forms.Label();
+            this.uc_p3rd = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_p2nd = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_tmp = new ALS.UserCtrl.uc_ShowTreatP();
             this.label56 = new System.Windows.Forms.Label();
+            this.uc_p1st = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_pven = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_part = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_pacc = new ALS.UserCtrl.uc_ShowTreatP();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.button32 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
@@ -299,9 +305,6 @@
             this.button20 = new System.Windows.Forms.Button();
             this.dgvWarnCmds = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.btnRecycle = new CCWin.SkinControl.SkinButton();
-            this.btnTreat = new CCWin.SkinControl.SkinButton();
-            this.btnFlush = new CCWin.SkinControl.SkinButton();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.c1_cb1 = new System.Windows.Forms.CheckBox();
@@ -326,13 +329,9 @@
             this.c3_heat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.c2_acc = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnExit = new System.Windows.Forms.Button();
-            this.uc_p3rd = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_p2nd = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_tmp = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_p1st = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_pven = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_part = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_pacc = new ALS.UserCtrl.uc_ShowTreatP();
+            this.btnReturn = new PulseButton.PulseButton();
+            this.pulseButton1 = new PulseButton.PulseButton();
+            this.pulseButton2 = new PulseButton.PulseButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.palCtrlV.SuspendLayout();
@@ -2602,6 +2601,57 @@
             this.lblPaccDec.TabIndex = 2;
             this.lblPaccDec.Text = "0.0";
             // 
+            // uc_p3rd
+            // 
+            this.uc_p3rd._ColorLine = System.Drawing.Color.DeepSkyBlue;
+            this.uc_p3rd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_p3rd._ColorValue = System.Drawing.Color.Black;
+            this.uc_p3rd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_p3rd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_p3rd._Title = "入口压2";
+            this.uc_p3rd._TitleEn = "P3rd";
+            this.uc_p3rd._Value = "-000";
+            this.uc_p3rd._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_p3rd.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_p3rd.Location = new System.Drawing.Point(6, 428);
+            this.uc_p3rd.Name = "uc_p3rd";
+            this.uc_p3rd.Size = new System.Drawing.Size(128, 60);
+            this.uc_p3rd.TabIndex = 0;
+            // 
+            // uc_p2nd
+            // 
+            this.uc_p2nd._ColorLine = System.Drawing.Color.DarkKhaki;
+            this.uc_p2nd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_p2nd._ColorValue = System.Drawing.Color.Black;
+            this.uc_p2nd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_p2nd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_p2nd._Title = "入口压1";
+            this.uc_p2nd._TitleEn = "P2nd";
+            this.uc_p2nd._Value = "-000";
+            this.uc_p2nd._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_p2nd.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_p2nd.Location = new System.Drawing.Point(6, 360);
+            this.uc_p2nd.Name = "uc_p2nd";
+            this.uc_p2nd.Size = new System.Drawing.Size(128, 60);
+            this.uc_p2nd.TabIndex = 0;
+            // 
+            // uc_tmp
+            // 
+            this.uc_tmp._ColorLine = System.Drawing.Color.MediumAquamarine;
+            this.uc_tmp._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_tmp._ColorValue = System.Drawing.Color.Black;
+            this.uc_tmp._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_tmp._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_tmp._Title = "跨膜压";
+            this.uc_tmp._TitleEn = "TMP";
+            this.uc_tmp._Value = "-000";
+            this.uc_tmp._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_tmp.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_tmp.Location = new System.Drawing.Point(6, 292);
+            this.uc_tmp.Name = "uc_tmp";
+            this.uc_tmp.Size = new System.Drawing.Size(128, 60);
+            this.uc_tmp.TabIndex = 0;
+            // 
             // label56
             // 
             this.label56.AutoSize = true;
@@ -2611,6 +2661,74 @@
             this.label56.Size = new System.Drawing.Size(83, 12);
             this.label56.TabIndex = 1;
             this.label56.Text = "采血压变化量:";
+            // 
+            // uc_p1st
+            // 
+            this.uc_p1st._ColorLine = System.Drawing.Color.DarkGoldenrod;
+            this.uc_p1st._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_p1st._ColorValue = System.Drawing.Color.Black;
+            this.uc_p1st._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_p1st._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_p1st._Title = "血浆压";
+            this.uc_p1st._TitleEn = "P1st";
+            this.uc_p1st._Value = "-000";
+            this.uc_p1st._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_p1st.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_p1st.Location = new System.Drawing.Point(6, 224);
+            this.uc_p1st.Name = "uc_p1st";
+            this.uc_p1st.Size = new System.Drawing.Size(128, 60);
+            this.uc_p1st.TabIndex = 0;
+            // 
+            // uc_pven
+            // 
+            this.uc_pven._ColorLine = System.Drawing.Color.SpringGreen;
+            this.uc_pven._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_pven._ColorValue = System.Drawing.Color.Black;
+            this.uc_pven._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_pven._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_pven._Title = "静脉压";
+            this.uc_pven._TitleEn = "Pven";
+            this.uc_pven._Value = "-000";
+            this.uc_pven._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_pven.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_pven.Location = new System.Drawing.Point(6, 156);
+            this.uc_pven.Name = "uc_pven";
+            this.uc_pven.Size = new System.Drawing.Size(128, 60);
+            this.uc_pven.TabIndex = 0;
+            // 
+            // uc_part
+            // 
+            this.uc_part._ColorLine = System.Drawing.Color.Red;
+            this.uc_part._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_part._ColorValue = System.Drawing.Color.Black;
+            this.uc_part._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_part._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_part._Title = "动脉压";
+            this.uc_part._TitleEn = "Part";
+            this.uc_part._Value = "-000";
+            this.uc_part._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_part.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_part.Location = new System.Drawing.Point(6, 88);
+            this.uc_part.Name = "uc_part";
+            this.uc_part.Size = new System.Drawing.Size(128, 60);
+            this.uc_part.TabIndex = 0;
+            // 
+            // uc_pacc
+            // 
+            this.uc_pacc._ColorLine = System.Drawing.Color.DarkRed;
+            this.uc_pacc._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_pacc._ColorValue = System.Drawing.Color.Black;
+            this.uc_pacc._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_pacc._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_pacc._Title = "采血压";
+            this.uc_pacc._TitleEn = "Pacc";
+            this.uc_pacc._Value = "-000";
+            this.uc_pacc._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_pacc.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_pacc.Location = new System.Drawing.Point(6, 20);
+            this.uc_pacc.Name = "uc_pacc";
+            this.uc_pacc.Size = new System.Drawing.Size(128, 60);
+            this.uc_pacc.TabIndex = 0;
             // 
             // groupBox12
             // 
@@ -3393,9 +3511,9 @@
             // 
             // tabPage7
             // 
-            this.tabPage7.Controls.Add(this.btnRecycle);
-            this.tabPage7.Controls.Add(this.btnTreat);
-            this.tabPage7.Controls.Add(this.btnFlush);
+            this.tabPage7.Controls.Add(this.pulseButton2);
+            this.tabPage7.Controls.Add(this.pulseButton1);
+            this.tabPage7.Controls.Add(this.btnReturn);
             this.tabPage7.Location = new System.Drawing.Point(4, 62);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -3403,66 +3521,6 @@
             this.tabPage7.TabIndex = 12;
             this.tabPage7.Text = "预冲回收步骤管理";
             this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // btnRecycle
-            // 
-            this.btnRecycle.BackColor = System.Drawing.Color.Transparent;
-            this.btnRecycle.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRecycle.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnRecycle.DownBack = null;
-            this.btnRecycle.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRecycle.ForeColor = System.Drawing.Color.White;
-            this.btnRecycle.Location = new System.Drawing.Point(297, 29);
-            this.btnRecycle.MouseBack = null;
-            this.btnRecycle.Name = "btnRecycle";
-            this.btnRecycle.NormlBack = null;
-            this.btnRecycle.Radius = 35;
-            this.btnRecycle.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnRecycle.Size = new System.Drawing.Size(88, 35);
-            this.btnRecycle.TabIndex = 21;
-            this.btnRecycle.Text = "回收";
-            this.btnRecycle.UseVisualStyleBackColor = true;
-            this.btnRecycle.Click += new System.EventHandler(this.btnRecycle_Click);
-            // 
-            // btnTreat
-            // 
-            this.btnTreat.BackColor = System.Drawing.Color.Transparent;
-            this.btnTreat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnTreat.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnTreat.DownBack = null;
-            this.btnTreat.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTreat.ForeColor = System.Drawing.Color.White;
-            this.btnTreat.Location = new System.Drawing.Point(160, 29);
-            this.btnTreat.MouseBack = null;
-            this.btnTreat.Name = "btnTreat";
-            this.btnTreat.NormlBack = null;
-            this.btnTreat.Radius = 35;
-            this.btnTreat.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnTreat.Size = new System.Drawing.Size(88, 35);
-            this.btnTreat.TabIndex = 22;
-            this.btnTreat.Text = "治疗";
-            this.btnTreat.UseVisualStyleBackColor = false;
-            this.btnTreat.Click += new System.EventHandler(this.btnTreat_Click);
-            // 
-            // btnFlush
-            // 
-            this.btnFlush.BackColor = System.Drawing.Color.Transparent;
-            this.btnFlush.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnFlush.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnFlush.DownBack = null;
-            this.btnFlush.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnFlush.ForeColor = System.Drawing.Color.White;
-            this.btnFlush.Location = new System.Drawing.Point(28, 29);
-            this.btnFlush.MouseBack = null;
-            this.btnFlush.Name = "btnFlush";
-            this.btnFlush.NormlBack = null;
-            this.btnFlush.Radius = 35;
-            this.btnFlush.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnFlush.Size = new System.Drawing.Size(88, 35);
-            this.btnFlush.TabIndex = 23;
-            this.btnFlush.Text = "预冲";
-            this.btnFlush.UseVisualStyleBackColor = false;
-            this.btnFlush.Click += new System.EventHandler(this.btnFlush_Click);
             // 
             // tabPage8
             // 
@@ -3891,124 +3949,68 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
-            // uc_p3rd
+            // btnReturn
             // 
-            this.uc_p3rd._ColorLine = System.Drawing.Color.DeepSkyBlue;
-            this.uc_p3rd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_p3rd._ColorValue = System.Drawing.Color.Black;
-            this.uc_p3rd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_p3rd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_p3rd._Title = "入口压2";
-            this.uc_p3rd._TitleEn = "P3rd";
-            this.uc_p3rd._Value = "-000";
-            this.uc_p3rd._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_p3rd.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_p3rd.Location = new System.Drawing.Point(6, 428);
-            this.uc_p3rd.Name = "uc_p3rd";
-            this.uc_p3rd.Size = new System.Drawing.Size(128, 60);
-            this.uc_p3rd.TabIndex = 0;
+            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnReturn.CornerRadius = 25;
+            this.btnReturn.FocusColor = System.Drawing.Color.Black;
+            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReturn.Location = new System.Drawing.Point(34, 25);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.NumberOfPulses = 2;
+            this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
+            this.btnReturn.PulseSpeed = 0.3F;
+            this.btnReturn.PulseWidth = 6;
+            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnReturn.Size = new System.Drawing.Size(112, 62);
+            this.btnReturn.TabIndex = 122;
+            this.btnReturn.Text = "预  冲";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnFlush_Click);
             // 
-            // uc_p2nd
+            // pulseButton1
             // 
-            this.uc_p2nd._ColorLine = System.Drawing.Color.DarkKhaki;
-            this.uc_p2nd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_p2nd._ColorValue = System.Drawing.Color.Black;
-            this.uc_p2nd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_p2nd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_p2nd._Title = "入口压1";
-            this.uc_p2nd._TitleEn = "P2nd";
-            this.uc_p2nd._Value = "-000";
-            this.uc_p2nd._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_p2nd.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_p2nd.Location = new System.Drawing.Point(6, 360);
-            this.uc_p2nd.Name = "uc_p2nd";
-            this.uc_p2nd.Size = new System.Drawing.Size(128, 60);
-            this.uc_p2nd.TabIndex = 0;
+            this.pulseButton1.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.pulseButton1.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.pulseButton1.CornerRadius = 25;
+            this.pulseButton1.FocusColor = System.Drawing.Color.Black;
+            this.pulseButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pulseButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pulseButton1.Location = new System.Drawing.Point(167, 25);
+            this.pulseButton1.Name = "pulseButton1";
+            this.pulseButton1.NumberOfPulses = 2;
+            this.pulseButton1.PulseColor = System.Drawing.Color.DimGray;
+            this.pulseButton1.PulseSpeed = 0.3F;
+            this.pulseButton1.PulseWidth = 6;
+            this.pulseButton1.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.pulseButton1.Size = new System.Drawing.Size(112, 62);
+            this.pulseButton1.TabIndex = 122;
+            this.pulseButton1.Text = "治  疗";
+            this.pulseButton1.UseVisualStyleBackColor = true;
+            this.pulseButton1.Click += new System.EventHandler(this.btnTreat_Click);
             // 
-            // uc_tmp
+            // pulseButton2
             // 
-            this.uc_tmp._ColorLine = System.Drawing.Color.MediumAquamarine;
-            this.uc_tmp._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_tmp._ColorValue = System.Drawing.Color.Black;
-            this.uc_tmp._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_tmp._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_tmp._Title = "跨膜压";
-            this.uc_tmp._TitleEn = "TMP";
-            this.uc_tmp._Value = "-000";
-            this.uc_tmp._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_tmp.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_tmp.Location = new System.Drawing.Point(6, 292);
-            this.uc_tmp.Name = "uc_tmp";
-            this.uc_tmp.Size = new System.Drawing.Size(128, 60);
-            this.uc_tmp.TabIndex = 0;
-            // 
-            // uc_p1st
-            // 
-            this.uc_p1st._ColorLine = System.Drawing.Color.DarkGoldenrod;
-            this.uc_p1st._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_p1st._ColorValue = System.Drawing.Color.Black;
-            this.uc_p1st._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_p1st._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_p1st._Title = "血浆压";
-            this.uc_p1st._TitleEn = "P1st";
-            this.uc_p1st._Value = "-000";
-            this.uc_p1st._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_p1st.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_p1st.Location = new System.Drawing.Point(6, 224);
-            this.uc_p1st.Name = "uc_p1st";
-            this.uc_p1st.Size = new System.Drawing.Size(128, 60);
-            this.uc_p1st.TabIndex = 0;
-            // 
-            // uc_pven
-            // 
-            this.uc_pven._ColorLine = System.Drawing.Color.SpringGreen;
-            this.uc_pven._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_pven._ColorValue = System.Drawing.Color.Black;
-            this.uc_pven._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_pven._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_pven._Title = "静脉压";
-            this.uc_pven._TitleEn = "Pven";
-            this.uc_pven._Value = "-000";
-            this.uc_pven._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_pven.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_pven.Location = new System.Drawing.Point(6, 156);
-            this.uc_pven.Name = "uc_pven";
-            this.uc_pven.Size = new System.Drawing.Size(128, 60);
-            this.uc_pven.TabIndex = 0;
-            // 
-            // uc_part
-            // 
-            this.uc_part._ColorLine = System.Drawing.Color.Red;
-            this.uc_part._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_part._ColorValue = System.Drawing.Color.Black;
-            this.uc_part._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_part._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_part._Title = "动脉压";
-            this.uc_part._TitleEn = "Part";
-            this.uc_part._Value = "-000";
-            this.uc_part._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_part.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_part.Location = new System.Drawing.Point(6, 88);
-            this.uc_part.Name = "uc_part";
-            this.uc_part.Size = new System.Drawing.Size(128, 60);
-            this.uc_part.TabIndex = 0;
-            // 
-            // uc_pacc
-            // 
-            this.uc_pacc._ColorLine = System.Drawing.Color.DarkRed;
-            this.uc_pacc._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_pacc._ColorValue = System.Drawing.Color.Black;
-            this.uc_pacc._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_pacc._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_pacc._Title = "采血压";
-            this.uc_pacc._TitleEn = "Pacc";
-            this.uc_pacc._Value = "-000";
-            this.uc_pacc._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_pacc.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_pacc.Location = new System.Drawing.Point(6, 20);
-            this.uc_pacc.Name = "uc_pacc";
-            this.uc_pacc.Size = new System.Drawing.Size(128, 60);
-            this.uc_pacc.TabIndex = 0;
+            this.pulseButton2.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.pulseButton2.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.pulseButton2.CornerRadius = 25;
+            this.pulseButton2.FocusColor = System.Drawing.Color.Black;
+            this.pulseButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pulseButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pulseButton2.Location = new System.Drawing.Point(301, 25);
+            this.pulseButton2.Name = "pulseButton2";
+            this.pulseButton2.NumberOfPulses = 2;
+            this.pulseButton2.PulseColor = System.Drawing.Color.DimGray;
+            this.pulseButton2.PulseSpeed = 0.3F;
+            this.pulseButton2.PulseWidth = 6;
+            this.pulseButton2.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.pulseButton2.Size = new System.Drawing.Size(112, 62);
+            this.pulseButton2.TabIndex = 122;
+            this.pulseButton2.Text = "回  收";
+            this.pulseButton2.UseVisualStyleBackColor = true;
+            this.pulseButton2.Click += new System.EventHandler(this.btnRecycle_Click);
             // 
             // frmAdmin
             // 
@@ -4341,9 +4343,6 @@
         public System.Windows.Forms.ToolStripButton tsBtnAD2;
         public System.Windows.Forms.ToolStripButton tsBtnAD3;
         private System.Windows.Forms.TabPage tabPage7;
-        private CCWin.SkinControl.SkinButton btnRecycle;
-        private CCWin.SkinControl.SkinButton btnTreat;
-        private CCWin.SkinControl.SkinButton btnFlush;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Label label56;
         public System.Windows.Forms.Label lblPaccDec;
@@ -4380,5 +4379,8 @@
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Panel panel1;
+        public PulseButton.PulseButton pulseButton2;
+        public PulseButton.PulseButton pulseButton1;
+        public PulseButton.PulseButton btnReturn;
     }
 }

@@ -710,14 +710,7 @@ namespace ALS
                 Application.Exit();
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CCWin.MessageBoxForm c = new CCWin.MessageBoxForm();
-            c.ShowDrawIcon = true;
-            c.ShowIcon = true;
-            c.Show();
-        }
+ 
 
         private void btnLiALS_Click(object sender, EventArgs e)
         {
