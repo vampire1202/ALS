@@ -31,7 +31,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.wizardControl1 = new AeroWizard.StepWizardControl();
             this.wizardPage1 = new AeroWizard.WizardPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -41,21 +40,22 @@
             this.wizardPage2 = new AeroWizard.WizardPage();
             this.btnPausePE = new PulseButton.PulseButton();
             this.btnStartPE = new PulseButton.PulseButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.wizardPage3 = new AeroWizard.WizardPage();
             this.btnStopShouji = new PulseButton.PulseButton();
             this.btnStartShouji = new PulseButton.PulseButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.wizardPage4 = new AeroWizard.WizardPage();
             this.btnPauseTreat = new PulseButton.PulseButton();
             this.btnStartTreat = new PulseButton.PulseButton();
             this.btnPreCircle = new PulseButton.PulseButton();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.lblPreCircleTime = new System.Windows.Forms.Label();
             this.wizardPage5 = new AeroWizard.WizardPage();
             this.btnStopReady = new PulseButton.PulseButton();
             this.btnReadRecycle = new PulseButton.PulseButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.RichLabel5 = new RichLabel.RichLabel();
+            this.richLabel1 = new RichLabel.RichLabel();
+            this.richLabel2 = new RichLabel.RichLabel();
+            this.richLabel3 = new RichLabel.RichLabel();
+            this.richLabel4 = new RichLabel.RichLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardPage1.SuspendLayout();
@@ -87,14 +87,14 @@
             this.wizardControl1.Size = new System.Drawing.Size(597, 315);
             this.wizardControl1.StepListWidth = 90;
             this.wizardControl1.TabIndex = 0;
-            this.wizardControl1.Title = "2. 血浆置换";
+            this.wizardControl1.Title = "5. 准备回收";
             this.wizardControl1.Cancelling += new System.ComponentModel.CancelEventHandler(this.wizardControl1_Cancelling);
             this.wizardControl1.Finished += new System.EventHandler(this.wizardControl1_Finished);
             this.wizardControl1.SelectedPageChanged += new System.EventHandler(this.wizardControl1_SelectedPageChanged);
             // 
             // wizardPage1
             // 
-            this.wizardPage1.Controls.Add(this.textBox1);
+            this.wizardPage1.Controls.Add(this.RichLabel5);
             this.wizardPage1.Controls.Add(this.label24);
             this.wizardPage1.Controls.Add(this.label1);
             this.wizardPage1.Controls.Add(this.label26);
@@ -103,25 +103,9 @@
             this.wizardPage1.Controls.Add(this.lblLeadBloodSpeed);
             this.wizardPage1.Name = "wizardPage1";
             this.wizardPage1.NextPage = this.wizardPage2;
-            this.wizardPage1.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage1.Size = new System.Drawing.Size(491, 222);
             this.wizardPage1.TabIndex = 0;
             this.wizardPage1.Text = "1. 引血";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox1.Location = new System.Drawing.Point(0, 171);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(482, 51);
-            this.textBox1.TabIndex = 126;
-            this.textBox1.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
-    "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
             // 
             // label24
             // 
@@ -186,13 +170,13 @@
             // wizardPage2
             // 
             this.wizardPage2.AllowCancel = false;
+            this.wizardPage2.Controls.Add(this.richLabel1);
             this.wizardPage2.Controls.Add(this.btnPausePE);
             this.wizardPage2.Controls.Add(this.btnStartPE);
-            this.wizardPage2.Controls.Add(this.textBox2);
             this.wizardPage2.Name = "wizardPage2";
             this.wizardPage2.NextPage = this.wizardPage3;
             this.wizardPage2.ShowCancel = false;
-            this.wizardPage2.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage2.Size = new System.Drawing.Size(491, 222);
             this.wizardPage2.TabIndex = 1;
             this.wizardPage2.Text = "2. 血浆置换";
             // 
@@ -241,32 +225,16 @@
             this.btnStartPE.UseVisualStyleBackColor = true;
             this.btnStartPE.Click += new System.EventHandler(this.btnStartZhihuan_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox2.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox2.Location = new System.Drawing.Point(0, 171);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(482, 51);
-            this.textBox2.TabIndex = 126;
-            this.textBox2.Text = "    ① 确认 <双腔储液袋> 下方的 <管夹C1>  松开;\r\n    ② 确认<分离泵FP> 和 <透析液泵DP> 的设定速度，可点击泵速显示标签进行修改；" +
-    "\r\n    ③ 点 <血浆置换> 开始治疗;";
-            // 
             // wizardPage3
             // 
             this.wizardPage3.AllowCancel = false;
+            this.wizardPage3.Controls.Add(this.richLabel2);
             this.wizardPage3.Controls.Add(this.btnStopShouji);
             this.wizardPage3.Controls.Add(this.btnStartShouji);
-            this.wizardPage3.Controls.Add(this.textBox3);
             this.wizardPage3.Name = "wizardPage3";
             this.wizardPage3.NextPage = this.wizardPage4;
             this.wizardPage3.ShowCancel = false;
-            this.wizardPage3.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage3.Size = new System.Drawing.Size(491, 222);
             this.wizardPage3.TabIndex = 2;
             this.wizardPage3.Text = "3. 收集血浆";
             // 
@@ -315,34 +283,18 @@
             this.btnStartShouji.UseVisualStyleBackColor = true;
             this.btnStartShouji.Click += new System.EventHandler(this.btnStartShouji_Click);
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox3.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox3.Location = new System.Drawing.Point(0, 148);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(482, 74);
-            this.textBox3.TabIndex = 126;
-            this.textBox3.Text = "    ① 确认 <双腔储液袋> 下方<管夹C1> 闭合；\r\n    ② 点 <开始收集> 将血浆收集至 <双腔储液袋>的外袋 , 请时刻查看 <双腔储液袋> 中" +
-    "的外袋腔内液位高度! \r\n    ③ <双腔储液袋> 中的血浆量达到 500-800 mL时，请 <停止收集>,再进行 <下一步> 操作；";
-            // 
             // wizardPage4
             // 
             this.wizardPage4.AllowCancel = false;
+            this.wizardPage4.Controls.Add(this.richLabel3);
             this.wizardPage4.Controls.Add(this.btnPauseTreat);
             this.wizardPage4.Controls.Add(this.btnStartTreat);
             this.wizardPage4.Controls.Add(this.btnPreCircle);
-            this.wizardPage4.Controls.Add(this.textBox4);
             this.wizardPage4.Controls.Add(this.lblPreCircleTime);
             this.wizardPage4.Name = "wizardPage4";
             this.wizardPage4.NextPage = this.wizardPage5;
             this.wizardPage4.ShowCancel = false;
-            this.wizardPage4.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage4.Size = new System.Drawing.Size(491, 222);
             this.wizardPage4.TabIndex = 3;
             this.wizardPage4.Text = "4. 整体治疗";
             // 
@@ -413,21 +365,6 @@
             this.btnPreCircle.UseVisualStyleBackColor = true;
             this.btnPreCircle.Click += new System.EventHandler(this.btnPreCircle_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox4.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox4.Location = new System.Drawing.Point(0, 189);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(482, 33);
-            this.textBox4.TabIndex = 126;
-            this.textBox4.Text = "    ① 确认循环泵CP的速度，点 <预循环> ，运行30秒左右自动停止；\r\n    ② 确认各泵的运行速度，然后点 <启动治疗> ；";
-            // 
             // lblPreCircleTime
             // 
             this.lblPreCircleTime.AutoSize = true;
@@ -441,13 +378,13 @@
             // wizardPage5
             // 
             this.wizardPage5.AllowCancel = false;
+            this.wizardPage5.Controls.Add(this.richLabel4);
             this.wizardPage5.Controls.Add(this.btnStopReady);
             this.wizardPage5.Controls.Add(this.btnReadRecycle);
-            this.wizardPage5.Controls.Add(this.textBox5);
             this.wizardPage5.IsFinishPage = true;
             this.wizardPage5.Name = "wizardPage5";
             this.wizardPage5.ShowCancel = false;
-            this.wizardPage5.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage5.Size = new System.Drawing.Size(491, 222);
             this.wizardPage5.TabIndex = 4;
             this.wizardPage5.Text = "5. 准备回收";
             // 
@@ -496,22 +433,125 @@
             this.btnReadRecycle.UseVisualStyleBackColor = true;
             this.btnReadRecycle.Click += new System.EventHandler(this.btnReadRecycle_Click);
             // 
-            // textBox5
+            // RichLabel5
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox5.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox5.Location = new System.Drawing.Point(0, 147);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(482, 75);
-            this.textBox5.TabIndex = 126;
-            this.textBox5.Text = "    ① 将 <AD2> 放置于 <夹管阀V6>  与 <双腔储液袋> 之间的管路上;\r\n    ② <准备回收> 是将 <滤过泵FP2> 的速度在原速度上增加" +
+            this.RichLabel5.BackColor = System.Drawing.Color.White;
+            this.RichLabel5.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.RichLabel5.BorderBottom = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderLeft = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderRight = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderTop = System.Drawing.Color.Transparent;
+            this.RichLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RichLabel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RichLabel5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.RichLabel5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.RichLabel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.RichLabel5.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.RichLabel5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RichLabel5.Location = new System.Drawing.Point(0, 142);
+            this.RichLabel5.Name = "RichLabel5";
+            this.RichLabel5.Shadow = true;
+            this.RichLabel5.Size = new System.Drawing.Size(491, 80);
+            this.RichLabel5.TabIndex = 130;
+            this.RichLabel5.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
+    "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
+            this.RichLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel1
+            // 
+            this.richLabel1.BackColor = System.Drawing.Color.White;
+            this.richLabel1.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel1.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel1.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel1.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel1.Location = new System.Drawing.Point(0, 142);
+            this.richLabel1.Name = "richLabel1";
+            this.richLabel1.Shadow = true;
+            this.richLabel1.Size = new System.Drawing.Size(491, 80);
+            this.richLabel1.TabIndex = 130;
+            this.richLabel1.Text = "    ① 确认 <双腔储液袋> 下方的 <管夹C1>  松开;\r\n    ② 确认<分离泵FP> 和 <透析液泵DP> 的设定速度，可点击泵速显示标签进行修改；" +
+    "\r\n    ③ 点 <血浆置换> 开始治疗;";
+            this.richLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel2
+            // 
+            this.richLabel2.BackColor = System.Drawing.Color.White;
+            this.richLabel2.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel2.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel2.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel2.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel2.Location = new System.Drawing.Point(0, 142);
+            this.richLabel2.Name = "richLabel2";
+            this.richLabel2.Shadow = true;
+            this.richLabel2.Size = new System.Drawing.Size(491, 80);
+            this.richLabel2.TabIndex = 130;
+            this.richLabel2.Text = "    ① 确认 <双腔储液袋> 下方<管夹C1> 闭合；\r\n    ② 点 <开始收集> 将血浆收集至 <双腔储液袋>的外袋 , 请时刻查看 <双腔储液袋> 中" +
+    "的外袋腔内液位高度! \r\n    ③ <双腔储液袋> 中的血浆量达到 500-800 mL时，请 <停止收集>,再进行 <下一步> 操作；";
+            this.richLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel3
+            // 
+            this.richLabel3.BackColor = System.Drawing.Color.White;
+            this.richLabel3.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel3.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel3.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel3.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel3.Location = new System.Drawing.Point(0, 142);
+            this.richLabel3.Name = "richLabel3";
+            this.richLabel3.Shadow = true;
+            this.richLabel3.Size = new System.Drawing.Size(491, 80);
+            this.richLabel3.TabIndex = 130;
+            this.richLabel3.Text = "    ① 确认循环泵CP的速度，点 <预循环> ，运行30秒左右自动停止；\r\n    ② 确认各泵的运行速度，然后点 <启动治疗> ；";
+            this.richLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel4
+            // 
+            this.richLabel4.BackColor = System.Drawing.Color.White;
+            this.richLabel4.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel4.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel4.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel4.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel4.Location = new System.Drawing.Point(0, 142);
+            this.richLabel4.Name = "richLabel4";
+            this.richLabel4.Shadow = true;
+            this.richLabel4.Size = new System.Drawing.Size(491, 80);
+            this.richLabel4.TabIndex = 130;
+            this.richLabel4.Text = "    ① 将 <AD2> 放置于 <夹管阀V6>  与 <双腔储液袋> 之间的管路上;\r\n    ② <准备回收> 是将 <滤过泵FP2> 的速度在原速度上增加" +
     "5mL/min,请手动调节 <滤过泵FP2> 的速度；\r\n    ③ 注意 <双腔储液袋> 的液位高度，可手动 <暂停>，也可以等待补液空 <AD2> 报警； " +
     "";
+            this.richLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // step_LiAlS
             // 
@@ -525,13 +565,10 @@
             this.wizardPage1.ResumeLayout(false);
             this.wizardPage1.PerformLayout();
             this.wizardPage2.ResumeLayout(false);
-            this.wizardPage2.PerformLayout();
             this.wizardPage3.ResumeLayout(false);
-            this.wizardPage3.PerformLayout();
             this.wizardPage4.ResumeLayout(false);
             this.wizardPage4.PerformLayout();
             this.wizardPage5.ResumeLayout(false);
-            this.wizardPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -552,20 +589,20 @@
         public AeroWizard.WizardPage wizardPage4;
         public AeroWizard.WizardPage wizardPage5;
         public System.Windows.Forms.Label lblPreCircleTime;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         public PulseButton.PulseButton btnStartPE;
         public PulseButton.PulseButton btnPausePE;
-        private System.Windows.Forms.TextBox textBox3;
         public PulseButton.PulseButton btnStartShouji;
         public PulseButton.PulseButton btnStopShouji;
-        private System.Windows.Forms.TextBox textBox4;
         public PulseButton.PulseButton btnPreCircle;
         public PulseButton.PulseButton btnStartTreat;
         public PulseButton.PulseButton btnPauseTreat;
-        private System.Windows.Forms.TextBox textBox5;
         public PulseButton.PulseButton btnReadRecycle;
         public PulseButton.PulseButton btnStopReady;
+        internal RichLabel.RichLabel RichLabel5;
+        internal RichLabel.RichLabel richLabel1;
+        internal RichLabel.RichLabel richLabel2;
+        internal RichLabel.RichLabel richLabel3;
+        internal RichLabel.RichLabel richLabel4;
 
 
 

@@ -6905,9 +6905,7 @@ namespace ALS
             {
                 MessageBox.Show(this, "请确认治疗模式!", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }
-            layoutPump.Visible = false;
-            ShowP(_style.hide);
+            }                
             ShowPipeLine();
         }
 
@@ -6922,6 +6920,8 @@ namespace ALS
             this.palContent.Controls.SetChildIndex(pipeLine, 0);
             pipeLine.BringToFront();
             pipeLine.Dock = DockStyle.Fill;
+            ShowP(_style.hide);
+            layoutPump.Visible = false;     
         }
 
         void M_uc_Pipeline_btnNextClicked(object sender, EventArgs e)
@@ -6983,9 +6983,7 @@ namespace ALS
             //如果没选择预冲方式 0 未选择 1 自动 2 手动
             switch (M_SelFlushType)
             {
-                case 0://未选择，出现选择预冲方式界面
-                    layoutPump.Visible = false;
-                    ShowP(_style.hide);
+                case 0://未选择，出现选择预冲方式界面                 
                     if (!this.palContent.Controls.Contains(M_uc_selFlush))
                         this.palContent.Controls.Add(M_uc_selFlush);
                     //M_uc_AutoFlush._ModelSet = M_ModelTreat;
@@ -6999,16 +6997,18 @@ namespace ALS
                     this.tsbtnPipeline.Enabled = false;
                     this.tsbtnSetFlow.Enabled = false;
                     this.btnStart.Enabled = false;
+                       layoutPump.Visible = false;
+                    ShowP(_style.hide);
                     break;
-                case 1://自动
+                case 1://自动                   
+                    M_uc_selFlush__btnSelAutoFlush(sender, e); 
                     layoutPump.Visible = false;
                     ShowP(_style.w180);
-                    M_uc_selFlush__btnSelAutoFlush(sender, e);
                     break;
-                case 2://手动
+                case 2://手动                   
+                    M_uc_selFlush__btnSelManualFlush(sender, e); 
                     layoutPump.Visible = false;
                     ShowP(_style.w180);
-                    M_uc_selFlush__btnSelManualFlush(sender, e);
                     break;
             }
             //添加列表选中状态清除
@@ -7083,6 +7083,7 @@ namespace ALS
 
         void M_uc_selFlush__btnSelAutoFlush(object sender, EventArgs e)
         {
+            
             layoutPump.Visible = false;
             ShowP(_style.w180);
             M_SelFlushType = 1;
@@ -7134,10 +7135,10 @@ namespace ALS
                 }
             }
             //M_uc_AutoFlush._Port_Main = port_main;
-            //M_uc_AutoFlush._Port_Pump = port_ppump;
+            //M_uc_AutoFlush._Port_Pump = port_ppump; 
+            M_uc_AutoFlush.Dock = DockStyle.Fill;           
             if (!this.palContent.Controls.Contains(M_uc_AutoFlush))
                 this.palContent.Controls.Add(M_uc_AutoFlush);
-            M_uc_AutoFlush.Dock = DockStyle.Fill;
             M_uc_AutoFlush.BringToFront();
             this.palContent.Controls.SetChildIndex(M_uc_AutoFlush, 0);
         }
@@ -7673,8 +7674,7 @@ namespace ALS
                 M_BackCheckedInterface();
                 return;
             }
-            layoutPump.Visible = true;
-            ShowP(_style.w300);
+      
             M_uc_Treat._ModelTreat = M_ModelTreat;
             M_uc_Treat.ReadSet(M_ModelTreat);
             //M_uc_Treat.ReadTreatPic(M_modeName);
@@ -7791,6 +7791,8 @@ namespace ALS
             //MessageBox.Show(this.palContent.Controls.GetChildIndex(M_uc_Treat).ToString() + this.palContent.Controls.GetChildIndex(M_uc_Method).ToString());
             M_uc_Treat.BringToFront();
             M_uc_Treat.Dock = DockStyle.Fill;
+            layoutPump.Visible = true;
+            ShowP(_style.w300);
         }
 
         void ChangeShowPControlEnabled(string method)
@@ -7961,8 +7963,7 @@ namespace ALS
             //    MessageBox.Show("未完成治疗!", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //    return;
             //}
-            ShowP(_style.w180);
-            layoutPump.Visible = false;
+          
             this.tsbtnPipeline.Enabled = false;
             this.tsbtnPreFlush.Enabled = false;
             this.tsbtnTherapy.Enabled = false;
@@ -7999,6 +8000,8 @@ namespace ALS
             toolStripControl_ItemClicked(toolStripControl, new ToolStripItemClickedEventArgs(tsbtnRecycle));
             //完成治疗,进入回收状态true；
             M_bl_isFinishTreat = true;
+            ShowP(_style.w180);
+            layoutPump.Visible = false;
         }
 
         void M_uc_Recycle_recyle_btnCloseAll(object sender, EventArgs e)

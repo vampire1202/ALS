@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.palLiALS = new System.Windows.Forms.Panel();
-            this.paltop = new Owf.Controls.A1Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnReturn = new PulseButton.PulseButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,13 +41,17 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.btnRun1 = new PulseButton.PulseButton();
             this.pulseButton1 = new PulseButton.PulseButton();
+            this.paltop = new Owf.Controls.A1Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.palLiALS.SuspendLayout();
-            this.paltop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            this.paltop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // palLiALS
@@ -62,77 +62,22 @@
             this.palLiALS.Size = new System.Drawing.Size(512, 192);
             this.palLiALS.TabIndex = 36;
             // 
-            // paltop
-            // 
-            this.paltop.BorderColor = System.Drawing.Color.Silver;
-            this.paltop.Controls.Add(this.label1);
-            this.paltop.Controls.Add(this.pictureBox1);
-            this.paltop.Controls.Add(this.label8);
-            this.paltop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paltop.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
-            this.paltop.GradientStartColor = System.Drawing.Color.White;
-            this.paltop.Image = null;
-            this.paltop.ImageLocation = new System.Drawing.Point(4, 4);
-            this.paltop.Location = new System.Drawing.Point(0, 0);
-            this.paltop.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.paltop.Name = "paltop";
-            this.paltop.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.paltop.ShadowOffSet = 3;
-            this.paltop.Size = new System.Drawing.Size(1024, 78);
-            this.paltop.TabIndex = 28;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F);
-            this.label1.Location = new System.Drawing.Point(760, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "V1.0";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::ALS.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(868, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1019, 78);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "李 氏 人 工 肝 治 疗 系 统";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnReturn
             // 
             this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
             this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnReturn.CornerRadius = 50;
-            this.btnReturn.FocusColor = System.Drawing.Color.DarkOrange;
+            this.btnReturn.FocusColor = System.Drawing.Color.DimGray;
             this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReturn.Location = new System.Drawing.Point(48, 24);
+            this.btnReturn.Location = new System.Drawing.Point(53, 36);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.NumberOfPulses = 4;
+            this.btnReturn.NumberOfPulses = 2;
             this.btnReturn.PulseColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.PulseSpeed = 0.3F;
-            this.btnReturn.PulseWidth = 20;
+            this.btnReturn.PulseWidth = 8;
             this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnReturn.Size = new System.Drawing.Size(422, 140);
+            this.btnReturn.Size = new System.Drawing.Size(406, 124);
             this.btnReturn.TabIndex = 122;
             this.btnReturn.Text = "李 氏 人 工 肝";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -239,6 +184,7 @@
             // 
             // btnRun1
             // 
+            this.btnRun1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRun1.AutoEllipsis = true;
             this.btnRun1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnRun1.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
@@ -267,6 +213,7 @@
             // 
             // pulseButton1
             // 
+            this.pulseButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pulseButton1.AutoEllipsis = true;
             this.pulseButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pulseButton1.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
@@ -293,6 +240,61 @@
             this.pulseButton1.UseVisualStyleBackColor = true;
             this.pulseButton1.Click += new System.EventHandler(this.btnMin_Click);
             // 
+            // paltop
+            // 
+            this.paltop.BorderColor = System.Drawing.Color.Silver;
+            this.paltop.Controls.Add(this.label1);
+            this.paltop.Controls.Add(this.pictureBox1);
+            this.paltop.Controls.Add(this.label8);
+            this.paltop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paltop.GradientEndColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(163)))), ((int)(((byte)(215)))));
+            this.paltop.GradientStartColor = System.Drawing.Color.White;
+            this.paltop.Image = null;
+            this.paltop.ImageLocation = new System.Drawing.Point(4, 4);
+            this.paltop.Location = new System.Drawing.Point(0, 0);
+            this.paltop.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.paltop.Name = "paltop";
+            this.paltop.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.paltop.ShadowOffSet = 3;
+            this.paltop.Size = new System.Drawing.Size(1024, 78);
+            this.paltop.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("宋体", 12F);
+            this.label1.Location = new System.Drawing.Point(760, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "V1.0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::ALS.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(868, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(1019, 78);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "李 氏 人 工 肝 治 疗 系 统";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmSelTreatMode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -316,14 +318,14 @@
             this.Load += new System.EventHandler(this.frmSelTreatMode_Load);
             this.SizeChanged += new System.EventHandler(this.frmSelTreatMode_SizeChanged);
             this.palLiALS.ResumeLayout(false);
-            this.paltop.ResumeLayout(false);
-            this.paltop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.paltop.ResumeLayout(false);
+            this.paltop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

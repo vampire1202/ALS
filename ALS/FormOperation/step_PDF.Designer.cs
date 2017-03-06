@@ -38,10 +38,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.wizardPage2 = new AeroWizard.WizardPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnPausePDF = new PulseButton.PulseButton();
             this.btnStartPDF = new PulseButton.PulseButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.RichLabel5 = new RichLabel.RichLabel();
+            this.richLabel1 = new RichLabel.RichLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardPage1.SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             // wizardPage1
             // 
-            this.wizardPage1.Controls.Add(this.textBox1);
+            this.wizardPage1.Controls.Add(this.RichLabel5);
             this.wizardPage1.Controls.Add(this.label24);
             this.wizardPage1.Controls.Add(this.lblTargetSpeed);
             this.wizardPage1.Controls.Add(this.label26);
@@ -82,7 +82,7 @@
             this.wizardPage1.Controls.Add(this.label4);
             this.wizardPage1.Controls.Add(this.label7);
             this.wizardPage1.Name = "wizardPage1";
-            this.wizardPage1.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage1.Size = new System.Drawing.Size(491, 222);
             this.wizardPage1.TabIndex = 0;
             this.wizardPage1.Text = "1. 引血";
             // 
@@ -149,31 +149,15 @@
             // wizardPage2
             // 
             this.wizardPage2.AllowCancel = false;
-            this.wizardPage2.Controls.Add(this.textBox2);
+            this.wizardPage2.Controls.Add(this.richLabel1);
             this.wizardPage2.Controls.Add(this.btnPausePDF);
             this.wizardPage2.Controls.Add(this.btnStartPDF);
             this.wizardPage2.IsFinishPage = true;
             this.wizardPage2.Name = "wizardPage2";
             this.wizardPage2.ShowCancel = false;
-            this.wizardPage2.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage2.Size = new System.Drawing.Size(491, 222);
             this.wizardPage2.TabIndex = 1;
             this.wizardPage2.Text = "2. 治疗";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox1.Location = new System.Drawing.Point(0, 171);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(482, 51);
-            this.textBox1.TabIndex = 126;
-            this.textBox1.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
-    "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
             // 
             // btnPausePDF
             // 
@@ -220,21 +204,53 @@
             this.btnStartPDF.UseVisualStyleBackColor = true;
             this.btnStartPDF.Click += new System.EventHandler(this.btnStartPDF_Click);
             // 
-            // textBox2
+            // RichLabel5
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox2.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox2.Location = new System.Drawing.Point(0, 171);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(482, 51);
-            this.textBox2.TabIndex = 127;
-            this.textBox2.Text = "    ① 在<启动治疗> 前，请确认各泵的速度设定值，可在 <泵速显示单元> 上进行修改泵速；\r\n    ② 在<启动治疗> 前，可点击脱水速度的 <速度值标签" +
-    "> 进行修改脱水速度；\r\n";
+            this.RichLabel5.BackColor = System.Drawing.Color.White;
+            this.RichLabel5.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.RichLabel5.BorderBottom = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderLeft = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderRight = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderTop = System.Drawing.Color.Transparent;
+            this.RichLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RichLabel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RichLabel5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.RichLabel5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.RichLabel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.RichLabel5.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.RichLabel5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RichLabel5.Location = new System.Drawing.Point(0, 142);
+            this.RichLabel5.Name = "RichLabel5";
+            this.RichLabel5.Shadow = true;
+            this.RichLabel5.Size = new System.Drawing.Size(491, 80);
+            this.RichLabel5.TabIndex = 130;
+            this.RichLabel5.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
+    "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
+            this.RichLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel1
+            // 
+            this.richLabel1.BackColor = System.Drawing.Color.White;
+            this.richLabel1.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel1.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel1.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel1.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel1.Location = new System.Drawing.Point(0, 142);
+            this.richLabel1.Name = "richLabel1";
+            this.richLabel1.Shadow = true;
+            this.richLabel1.Size = new System.Drawing.Size(491, 80);
+            this.richLabel1.TabIndex = 131;
+            this.richLabel1.Text = "    ① 在<启动治疗> 前,请确认各泵的速度设定值,可在 <泵速显示框> 上进行修改泵速；\r\n    ② 在<启动治疗> 前,可点击脱水速度的 <速度值标签>" +
+    " 进行修改脱水速度；\r\n";
+            this.richLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // step_PDF
             // 
@@ -249,7 +265,6 @@
             this.wizardPage1.ResumeLayout(false);
             this.wizardPage1.PerformLayout();
             this.wizardPage2.ResumeLayout(false);
-            this.wizardPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -266,10 +281,10 @@
         public AeroWizard.WizardPage wizardPage1;
         public AeroWizard.WizardPage wizardPage2;
         public AeroWizard.StepWizardControl wizardControl1;
-        private System.Windows.Forms.TextBox textBox1;
         public PulseButton.PulseButton btnPausePDF;
         public PulseButton.PulseButton btnStartPDF;
-        private System.Windows.Forms.TextBox textBox2;
+        internal RichLabel.RichLabel RichLabel5;
+        internal RichLabel.RichLabel richLabel1;
 
 
 

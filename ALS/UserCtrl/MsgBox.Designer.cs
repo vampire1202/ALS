@@ -31,10 +31,10 @@
             this.picIcon = new System.Windows.Forms.PictureBox();
             this.btnOk = new PulseButton.PulseButton();
             this.btnCancel = new PulseButton.PulseButton();
-            this.lblContent = new System.Windows.Forms.TextBox();
             this.picTip = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.lblContent = new RichLabel.RichLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTip)).BeginInit();
             this.panel1.SuspendLayout();
@@ -93,27 +93,12 @@
             this.btnCancel.Text = "取  消";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // lblContent
-            // 
-            this.lblContent.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContent.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblContent.ForeColor = System.Drawing.Color.Black;
-            this.lblContent.Location = new System.Drawing.Point(2, 2);
-            this.lblContent.Multiline = true;
-            this.lblContent.Name = "lblContent";
-            this.lblContent.ReadOnly = true;
-            this.lblContent.Size = new System.Drawing.Size(514, 63);
-            this.lblContent.TabIndex = 126;
-            this.lblContent.Text = "    ① 在<启动治疗> 前，请确认各泵的速度设定值，可在 <泵速显示单元> 上进行修改泵速；\r\n    ② 在<启动治疗> 前，可点击脱水速度的 <速度值标签" +
-    "> 进行修改脱水速度；\r\n";
-            this.lblContent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // picTip
             // 
             this.picTip.Location = new System.Drawing.Point(3, 3);
             this.picTip.Name = "picTip";
             this.picTip.Size = new System.Drawing.Size(400, 240);
+            this.picTip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picTip.TabIndex = 127;
             this.picTip.TabStop = false;
             // 
@@ -135,6 +120,31 @@
             this.splitter1.TabIndex = 128;
             this.splitter1.TabStop = false;
             // 
+            // lblContent
+            // 
+            this.lblContent.BackColor = System.Drawing.Color.DarkOrange;
+            this.lblContent.BackColor2 = System.Drawing.Color.Gold;
+            this.lblContent.BorderBottom = System.Drawing.Color.LightCoral;
+            this.lblContent.BorderLeft = System.Drawing.Color.LightCoral;
+            this.lblContent.BorderRight = System.Drawing.Color.LightCoral;
+            this.lblContent.BorderTop = System.Drawing.Color.LightCoral;
+            this.lblContent.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblContent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblContent.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblContent.ForeColor = System.Drawing.Color.White;
+            this.lblContent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.lblContent.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lblContent.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblContent.Location = new System.Drawing.Point(2, 2);
+            this.lblContent.Name = "lblContent";
+            this.lblContent.Size = new System.Drawing.Size(514, 63);
+            this.lblContent.TabIndex = 130;
+            this.lblContent.Text = "    ① 在<启动治疗> 前，请确认各泵的速度设定值，可在 <泵速显示单元> 上进行修改泵速；\r\n    ② 在<启动治疗> 前，可点击脱水速度的 <速度值标签" +
+    "> 进行修改脱水速度；";
+            this.lblContent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblContent.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblContent_MouseDown);
+            this.lblContent.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblContent_MouseMove);
+            // 
             // MsgBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -142,8 +152,8 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(518, 318);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblContent);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.picIcon);
@@ -156,7 +166,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picTip)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -165,9 +174,9 @@
         private System.Windows.Forms.PictureBox picIcon;
         public PulseButton.PulseButton btnOk;
         public PulseButton.PulseButton btnCancel;
-        private System.Windows.Forms.TextBox lblContent;
         private System.Windows.Forms.PictureBox picTip;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Splitter splitter1;
+        internal RichLabel.RichLabel lblContent;
     }
 }

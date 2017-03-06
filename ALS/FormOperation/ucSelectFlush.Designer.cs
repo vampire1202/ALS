@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.palSelect = new System.Windows.Forms.Panel();
-            this.grouper1 = new CodeVendor.Controls.Grouper();
-            this.btnAuto = new PulseButton.PulseButton();
             this.btnManual = new PulseButton.PulseButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAuto = new PulseButton.PulseButton();
+            this.grouper1 = new CodeVendor.Controls.Grouper();
+            this.RichLabel5 = new RichLabel.RichLabel();
             this.palSelect.SuspendLayout();
             this.grouper1.SuspendLayout();
             this.SuspendLayout();
             // 
             // palSelect
             // 
-            this.palSelect.Controls.Add(this.textBox1);
+            this.palSelect.Controls.Add(this.RichLabel5);
             this.palSelect.Controls.Add(this.btnManual);
             this.palSelect.Controls.Add(this.btnAuto);
             this.palSelect.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -47,6 +47,48 @@
             this.palSelect.Name = "palSelect";
             this.palSelect.Size = new System.Drawing.Size(885, 589);
             this.palSelect.TabIndex = 10;
+            // 
+            // btnManual
+            // 
+            this.btnManual.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnManual.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnManual.CornerRadius = 2;
+            this.btnManual.FocusColor = System.Drawing.Color.Black;
+            this.btnManual.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnManual.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnManual.Location = new System.Drawing.Point(518, 178);
+            this.btnManual.Name = "btnManual";
+            this.btnManual.NumberOfPulses = 2;
+            this.btnManual.PulseColor = System.Drawing.Color.DimGray;
+            this.btnManual.PulseSpeed = 0.3F;
+            this.btnManual.PulseWidth = 6;
+            this.btnManual.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnManual.Size = new System.Drawing.Size(196, 127);
+            this.btnManual.TabIndex = 122;
+            this.btnManual.Text = "手     动";
+            this.btnManual.UseVisualStyleBackColor = true;
+            this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
+            // 
+            // btnAuto
+            // 
+            this.btnAuto.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
+            this.btnAuto.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnAuto.CornerRadius = 2;
+            this.btnAuto.FocusColor = System.Drawing.Color.Black;
+            this.btnAuto.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAuto.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAuto.Location = new System.Drawing.Point(184, 178);
+            this.btnAuto.Name = "btnAuto";
+            this.btnAuto.NumberOfPulses = 2;
+            this.btnAuto.PulseColor = System.Drawing.Color.DimGray;
+            this.btnAuto.PulseSpeed = 0.3F;
+            this.btnAuto.PulseWidth = 6;
+            this.btnAuto.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
+            this.btnAuto.Size = new System.Drawing.Size(196, 127);
+            this.btnAuto.TabIndex = 122;
+            this.btnAuto.Text = "自     动";
+            this.btnAuto.UseVisualStyleBackColor = true;
+            this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
             // 
             // grouper1
             // 
@@ -73,62 +115,27 @@
             this.grouper1.Size = new System.Drawing.Size(893, 604);
             this.grouper1.TabIndex = 120;
             // 
-            // btnAuto
+            // RichLabel5
             // 
-            this.btnAuto.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnAuto.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnAuto.CornerRadius = 2;
-            this.btnAuto.FocusColor = System.Drawing.Color.Black;
-            this.btnAuto.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAuto.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAuto.Location = new System.Drawing.Point(184, 178);
-            this.btnAuto.Name = "btnAuto";
-            this.btnAuto.NumberOfPulses = 2;
-            this.btnAuto.PulseColor = System.Drawing.Color.DimGray;
-            this.btnAuto.PulseSpeed = 0.3F;
-            this.btnAuto.PulseWidth = 6;
-            this.btnAuto.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnAuto.Size = new System.Drawing.Size(196, 127);
-            this.btnAuto.TabIndex = 122;
-            this.btnAuto.Text = "自     动";
-            this.btnAuto.UseVisualStyleBackColor = true;
-            this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
-            // 
-            // btnManual
-            // 
-            this.btnManual.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnManual.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnManual.CornerRadius = 2;
-            this.btnManual.FocusColor = System.Drawing.Color.Black;
-            this.btnManual.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnManual.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnManual.Location = new System.Drawing.Point(518, 178);
-            this.btnManual.Name = "btnManual";
-            this.btnManual.NumberOfPulses = 2;
-            this.btnManual.PulseColor = System.Drawing.Color.DimGray;
-            this.btnManual.PulseSpeed = 0.3F;
-            this.btnManual.PulseWidth = 6;
-            this.btnManual.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnManual.Size = new System.Drawing.Size(196, 127);
-            this.btnManual.TabIndex = 122;
-            this.btnManual.Text = "手     动";
-            this.btnManual.UseVisualStyleBackColor = true;
-            this.btnManual.Click += new System.EventHandler(this.btnManual_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(184, 311);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(539, 78);
-            this.textBox1.TabIndex = 123;
-            this.textBox1.Text = "      注意 : 预冲过程中注意不要让所用的血液净化器管路中有气泡残留,若管壁上有气泡,请在清洗过程中用手指轻弹管路,清洗完成后需再次确认,保证对治疗无影响。" +
+            this.RichLabel5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.RichLabel5.BackColor2 = System.Drawing.SystemColors.ButtonFace;
+            this.RichLabel5.BorderBottom = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderLeft = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderRight = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderTop = System.Drawing.Color.Transparent;
+            this.RichLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RichLabel5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.RichLabel5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.RichLabel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.RichLabel5.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.RichLabel5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RichLabel5.Location = new System.Drawing.Point(184, 311);
+            this.RichLabel5.Name = "RichLabel5";
+            this.RichLabel5.Size = new System.Drawing.Size(547, 80);
+            this.RichLabel5.TabIndex = 130;
+            this.RichLabel5.Text = "      注意 : 预冲过程中注意不要让所用的血液净化器管路中有气泡残留,若管壁上有气泡,请在清洗过程中用手指轻弹管路,清洗完成后需再次确认,保证对治疗无影响。" +
     "";
+            this.RichLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ucSelectFlush
             // 
@@ -140,7 +147,6 @@
             this.Size = new System.Drawing.Size(893, 604);
             this.SizeChanged += new System.EventHandler(this.ucSelectFlush_SizeChanged);
             this.palSelect.ResumeLayout(false);
-            this.palSelect.PerformLayout();
             this.grouper1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -152,6 +158,6 @@
         private CodeVendor.Controls.Grouper grouper1;
         public PulseButton.PulseButton btnManual;
         public PulseButton.PulseButton btnAuto;
-        private System.Windows.Forms.TextBox textBox1;
+        internal RichLabel.RichLabel RichLabel5;
     }
 }

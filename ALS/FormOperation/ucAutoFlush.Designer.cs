@@ -42,9 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.grouper1 = new CodeVendor.Controls.Grouper();
+            this.RichLabel5 = new RichLabel.RichLabel();
             this.btnReturn = new PulseButton.PulseButton();
             this.btnAddFlush = new PulseButton.PulseButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnFinish = new PulseButton.PulseButton();
             this.btnContinue = new PulseButton.PulseButton();
             this.btnStart = new PulseButton.PulseButton();
@@ -92,7 +92,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.label5.Location = new System.Drawing.Point(534, 28);
+            this.label5.Location = new System.Drawing.Point(534, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 20);
             this.label5.TabIndex = 11;
@@ -103,7 +103,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.label8.Location = new System.Drawing.Point(390, 28);
+            this.label8.Location = new System.Drawing.Point(390, 19);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 20);
             this.label8.TabIndex = 11;
@@ -114,7 +114,7 @@
             this.lblCurrent.AutoSize = true;
             this.lblCurrent.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblCurrent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblCurrent.Location = new System.Drawing.Point(614, 28);
+            this.lblCurrent.Location = new System.Drawing.Point(614, 19);
             this.lblCurrent.Name = "lblCurrent";
             this.lblCurrent.Size = new System.Drawing.Size(17, 20);
             this.lblCurrent.TabIndex = 12;
@@ -136,7 +136,7 @@
             this.lblRequire.AutoSize = true;
             this.lblRequire.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblRequire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblRequire.Location = new System.Drawing.Point(480, 28);
+            this.lblRequire.Location = new System.Drawing.Point(480, 19);
             this.lblRequire.Name = "lblRequire";
             this.lblRequire.Size = new System.Drawing.Size(41, 20);
             this.lblRequire.TabIndex = 12;
@@ -174,7 +174,7 @@
             this.dgvStep.RowTemplate.Height = 25;
             this.dgvStep.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvStep.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStep.Size = new System.Drawing.Size(665, 199);
+            this.dgvStep.Size = new System.Drawing.Size(665, 207);
             this.dgvStep.TabIndex = 19;
             this.dgvStep.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStep_CellClick);
             this.dgvStep.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStep_CellContentClick);
@@ -183,7 +183,7 @@
             // 
             this.pboxFlush.BackColor = System.Drawing.Color.Transparent;
             this.pboxFlush.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pboxFlush.Location = new System.Drawing.Point(2, 224);
+            this.pboxFlush.Location = new System.Drawing.Point(2, 232);
             this.pboxFlush.Name = "pboxFlush";
             this.pboxFlush.Size = new System.Drawing.Size(665, 322);
             this.pboxFlush.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,7 +195,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.label2.Location = new System.Drawing.Point(204, 28);
+            this.label2.Location = new System.Drawing.Point(204, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 20);
             this.label2.TabIndex = 11;
@@ -214,7 +214,7 @@
             this.grouper2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grouper2.GroupImage = null;
             this.grouper2.GroupTitle = "预冲步骤";
-            this.grouper2.Location = new System.Drawing.Point(117, 54);
+            this.grouper2.Location = new System.Drawing.Point(117, 46);
             this.grouper2.Name = "grouper2";
             this.grouper2.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.grouper2.PaintGroupBox = true;
@@ -222,7 +222,7 @@
             this.grouper2.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper2.ShadowControl = false;
             this.grouper2.ShadowThickness = 3;
-            this.grouper2.Size = new System.Drawing.Size(670, 549);
+            this.grouper2.Size = new System.Drawing.Size(670, 557);
             this.grouper2.TabIndex = 65;
             // 
             // grouper1
@@ -232,9 +232,9 @@
             this.grouper1.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.grouper1.BorderColor = System.Drawing.Color.Silver;
             this.grouper1.BorderThickness = 1F;
+            this.grouper1.Controls.Add(this.RichLabel5);
             this.grouper1.Controls.Add(this.btnReturn);
             this.grouper1.Controls.Add(this.btnAddFlush);
-            this.grouper1.Controls.Add(this.textBox1);
             this.grouper1.Controls.Add(this.btnFinish);
             this.grouper1.Controls.Add(this.grouper2);
             this.grouper1.Controls.Add(this.btnContinue);
@@ -265,6 +265,27 @@
             this.grouper1.Size = new System.Drawing.Size(790, 604);
             this.grouper1.TabIndex = 66;
             // 
+            // RichLabel5
+            // 
+            this.RichLabel5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.RichLabel5.BackColor2 = System.Drawing.SystemColors.ButtonFace;
+            this.RichLabel5.BorderBottom = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderLeft = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderRight = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderTop = System.Drawing.Color.Transparent;
+            this.RichLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RichLabel5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.RichLabel5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.RichLabel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.RichLabel5.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.RichLabel5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RichLabel5.Location = new System.Drawing.Point(10, 433);
+            this.RichLabel5.Name = "RichLabel5";
+            this.RichLabel5.Size = new System.Drawing.Size(100, 158);
+            this.RichLabel5.TabIndex = 130;
+            this.RichLabel5.Text = "追加预冲说明:\r\n    ① 只有在自动预冲完成后才能使用;\r\n    ② 追加预冲功能只能选择单个步骤进行 , 持续时间为该步骤自动预冲时的时间；";
+            this.RichLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnReturn
             // 
             this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
@@ -273,13 +294,13 @@
             this.btnReturn.FocusColor = System.Drawing.Color.Black;
             this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReturn.ForeColor = System.Drawing.Color.Snow;
-            this.btnReturn.Location = new System.Drawing.Point(677, 12);
+            this.btnReturn.Location = new System.Drawing.Point(686, 12);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
             this.btnReturn.PulseSpeed = 0.3F;
-            this.btnReturn.PulseWidth = 6;
+            this.btnReturn.PulseWidth = 1;
             this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnReturn.Size = new System.Drawing.Size(112, 52);
+            this.btnReturn.Size = new System.Drawing.Size(103, 42);
             this.btnReturn.TabIndex = 67;
             this.btnReturn.Text = "返回选择";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -305,20 +326,6 @@
             this.btnAddFlush.Text = "追加预冲";
             this.btnAddFlush.UseVisualStyleBackColor = true;
             this.btnAddFlush.Click += new System.EventHandler(this.btnAddFlush_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.textBox1.Location = new System.Drawing.Point(4, 431);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(110, 171);
-            this.textBox1.TabIndex = 39;
-            this.textBox1.Text = "追加预冲说明:\r\n    ① 只有在自动预冲完成后才能使用;\r\n    ② 追加预冲功能只能选择单个步骤进行 , 持续时间为该步骤自动预冲时的时间；";
             // 
             // btnFinish
             // 
@@ -414,11 +421,11 @@
         private System.Windows.Forms.Label label2;
         private CodeVendor.Controls.Grouper grouper2;
         private CodeVendor.Controls.Grouper grouper1;
-        private System.Windows.Forms.TextBox textBox1;
         public PulseButton.PulseButton btnReturn;
         public PulseButton.PulseButton btnAddFlush;
         public PulseButton.PulseButton btnFinish;
         public PulseButton.PulseButton btnContinue;
         public PulseButton.PulseButton btnStart;
+        internal RichLabel.RichLabel RichLabel5;
     }
 }

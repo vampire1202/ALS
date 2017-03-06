@@ -42,6 +42,14 @@ namespace ALS.UserCtrl
                 get { return titleBg; }
                 set { titleBg = value; }
             }
+
+            Color titleBg2 = Color.Gold;
+
+            public Color TitleBg2
+            {
+                get { return titleBg2; }
+                set { titleBg2 = value; }
+            }
         }
 
         public static clsBoxStyle GetStyleFromName(MSBoxIcon _iconname)
@@ -51,51 +59,63 @@ namespace ALS.UserCtrl
             {
                 case MSBoxIcon.Done:
                     msgStyle.Icon = ALS.Properties.Resources.icon_done;
-                    msgStyle.TitleBg = Color.SkyBlue;
+                    msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Edit:
                     msgStyle.Icon = ALS.Properties.Resources.icon_editting;
-                    msgStyle.TitleBg = Color.SkyBlue;
+                    msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Error:
                     msgStyle.Icon = ALS.Properties.Resources.icon_error;
-                    msgStyle.TitleBg = Color.SkyBlue;
+                     msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Infomation:
                     msgStyle.Icon = ALS.Properties.Resources.icon_infomation;
-                    msgStyle.TitleBg = Color.DeepSkyBlue;
+                    msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Like:
                     msgStyle.Icon = ALS.Properties.Resources.icon_like;
-                    msgStyle.TitleBg = Color.SkyBlue;
+                 msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Add:
                     msgStyle.Icon = ALS.Properties.Resources.icon_new;
-                    msgStyle.TitleBg = Color.SkyBlue;
+                    msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Password:
                     msgStyle.Icon = ALS.Properties.Resources.icon_password;
-                    msgStyle.TitleBg = Color.SkyBlue;
+                     msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Question:
                     msgStyle.Icon = ALS.Properties.Resources.icon_question;
-                    msgStyle.TitleBg = Color.DeepSkyBlue;
+                     msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Setting:
                     msgStyle.Icon = ALS.Properties.Resources.icon_setting;
-                    msgStyle.TitleBg = Color.SkyBlue;
+                    msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Update:
                     msgStyle.Icon = ALS.Properties.Resources.icon_updating;
-                    msgStyle.TitleBg = Color.SkyBlue;
+                    msgStyle.TitleBg = Color.FromArgb(17, 96, 152);
+                    msgStyle.TitleBg2 = Color.FromArgb(9, 140, 188);
                     break;
                 case MSBoxIcon.Warning:
                     msgStyle.Icon = ALS.Properties.Resources.iconwarning;
                     msgStyle.TitleBg = Color.DarkOrange;
+                    msgStyle.TitleBg2 = Color.Orange;
                     break;
                 default:
                     msgStyle.Icon = ALS.Properties.Resources.iconwarning;
                     msgStyle.TitleBg = Color.DarkOrange;
+                    msgStyle.TitleBg2 = Color.Orange;
                     break;
             }
             return msgStyle;
@@ -116,6 +136,7 @@ namespace ALS.UserCtrl
             clsBoxStyle clsStyle = GetStyleFromName(_style);
             this.picIcon.Image = clsStyle.Icon;
             this.lblContent.BackColor = clsStyle.TitleBg;
+            this.lblContent.BackColor2 = clsStyle.TitleBg2;
             this.btnCancel.Enabled = _enableCancel;
         }
 

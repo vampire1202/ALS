@@ -31,7 +31,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.wizardControl1 = new AeroWizard.StepWizardControl();
             this.wizardPage1 = new AeroWizard.WizardPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.lblTargetBPSpeed = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +43,7 @@
             this.wizardPage3 = new AeroWizard.WizardPage();
             this.btnStopRecycle = new PulseButton.PulseButton();
             this.btnStartRecycle = new PulseButton.PulseButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.wizardPage4 = new AeroWizard.WizardPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.lblXuelvBpTarget = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -56,8 +53,11 @@
             this.wizardPage5 = new AeroWizard.WizardPage();
             this.btnPauseCHDF = new PulseButton.PulseButton();
             this.btnStartCHDF = new PulseButton.PulseButton();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.RichLabel5 = new RichLabel.RichLabel();
+            this.richLabel1 = new RichLabel.RichLabel();
+            this.richLabel2 = new RichLabel.RichLabel();
+            this.richLabel3 = new RichLabel.RichLabel();
+            this.richLabel4 = new RichLabel.RichLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardPage1.SuspendLayout();
@@ -96,7 +96,7 @@
             // 
             // wizardPage1
             // 
-            this.wizardPage1.Controls.Add(this.textBox1);
+            this.wizardPage1.Controls.Add(this.RichLabel5);
             this.wizardPage1.Controls.Add(this.label24);
             this.wizardPage1.Controls.Add(this.lblTargetBPSpeed);
             this.wizardPage1.Controls.Add(this.label1);
@@ -105,25 +105,9 @@
             this.wizardPage1.Controls.Add(this.label2);
             this.wizardPage1.Name = "wizardPage1";
             this.wizardPage1.NextPage = this.wizardPage2;
-            this.wizardPage1.Size = new System.Drawing.Size(462, 222);
+            this.wizardPage1.Size = new System.Drawing.Size(471, 222);
             this.wizardPage1.TabIndex = 0;
             this.wizardPage1.Text = "1. 血浆置换引血";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox1.Location = new System.Drawing.Point(0, 162);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(462, 60);
-            this.textBox1.TabIndex = 126;
-            this.textBox1.Text = "    ① 请保证旋塞三通T1、T2、T3旋转至只连接 <血浆分离器> 的位置；\r\n    ② <开始> 前，请在 <流量设置> 界面确认各泵的速度; \r\n   " +
-    " ③ 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ④ 可用设备RP泵右上侧的 <血泵速度旋钮> 控制引血速度； ";
             // 
             // label24
             // 
@@ -187,13 +171,13 @@
             // 
             // wizardPage2
             // 
-            this.wizardPage2.Controls.Add(this.textBox4);
+            this.wizardPage2.Controls.Add(this.richLabel1);
             this.wizardPage2.Controls.Add(this.btnPausePE);
             this.wizardPage2.Controls.Add(this.btnStartPE);
             this.wizardPage2.Name = "wizardPage2";
             this.wizardPage2.NextPage = this.wizardPage3;
             this.wizardPage2.ShowCancel = false;
-            this.wizardPage2.Size = new System.Drawing.Size(462, 222);
+            this.wizardPage2.Size = new System.Drawing.Size(471, 222);
             this.wizardPage2.TabIndex = 1;
             this.wizardPage2.Text = "2. 血浆置换治疗";
             // 
@@ -244,13 +228,13 @@
             // 
             // wizardPage3
             // 
+            this.wizardPage3.Controls.Add(this.richLabel2);
             this.wizardPage3.Controls.Add(this.btnStopRecycle);
             this.wizardPage3.Controls.Add(this.btnStartRecycle);
-            this.wizardPage3.Controls.Add(this.textBox2);
             this.wizardPage3.Name = "wizardPage3";
             this.wizardPage3.NextPage = this.wizardPage4;
             this.wizardPage3.ShowCancel = false;
-            this.wizardPage3.Size = new System.Drawing.Size(462, 222);
+            this.wizardPage3.Size = new System.Drawing.Size(471, 222);
             this.wizardPage3.TabIndex = 2;
             this.wizardPage3.Text = "3. 血浆置换回收";
             // 
@@ -299,26 +283,10 @@
             this.btnStartRecycle.UseVisualStyleBackColor = true;
             this.btnStartRecycle.Click += new System.EventHandler(this.btnStartRecycle_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox2.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox2.Location = new System.Drawing.Point(0, 147);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(462, 75);
-            this.textBox2.TabIndex = 126;
-            this.textBox2.Text = "    ① 用<管夹>夹住动脉端，将生理盐水连接至前稀释接口，然后点 <开始回收>;\r\n    ② 可用<血泵旋钮>控制BP的速度，将<血浆分离器>中的血液完全回" +
-    "收;\r\n    ③ 结束时，点<停止回收>，然后将 <旋塞三通T1、T2、T3> 旋转至只选择 <血液滤过器> 的位置；";
-            // 
             // wizardPage4
             // 
             this.wizardPage4.AllowBack = false;
-            this.wizardPage4.Controls.Add(this.textBox3);
+            this.wizardPage4.Controls.Add(this.richLabel3);
             this.wizardPage4.Controls.Add(this.label21);
             this.wizardPage4.Controls.Add(this.lblXuelvBpTarget);
             this.wizardPage4.Controls.Add(this.label20);
@@ -328,24 +296,9 @@
             this.wizardPage4.Name = "wizardPage4";
             this.wizardPage4.NextPage = this.wizardPage5;
             this.wizardPage4.ShowCancel = false;
-            this.wizardPage4.Size = new System.Drawing.Size(462, 222);
+            this.wizardPage4.Size = new System.Drawing.Size(471, 222);
             this.wizardPage4.TabIndex = 3;
             this.wizardPage4.Text = "4. 血液滤过引血";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox3.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox3.Location = new System.Drawing.Point(0, 171);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(462, 51);
-            this.textBox3.TabIndex = 126;
-            this.textBox3.Text = "    ① 用设备上的 <血泵调速旋钮> 控制血泵BP的引血速度；\r\n";
             // 
             // label21
             // 
@@ -409,13 +362,13 @@
             // 
             // wizardPage5
             // 
-            this.wizardPage5.Controls.Add(this.textBox5);
+            this.wizardPage5.Controls.Add(this.richLabel4);
             this.wizardPage5.Controls.Add(this.btnPauseCHDF);
             this.wizardPage5.Controls.Add(this.btnStartCHDF);
             this.wizardPage5.IsFinishPage = true;
             this.wizardPage5.Name = "wizardPage5";
             this.wizardPage5.ShowCancel = false;
-            this.wizardPage5.Size = new System.Drawing.Size(462, 222);
+            this.wizardPage5.Size = new System.Drawing.Size(471, 222);
             this.wizardPage5.TabIndex = 4;
             this.wizardPage5.Text = "5. 血滤滤过治疗";
             // 
@@ -464,36 +417,123 @@
             this.btnStartCHDF.UseVisualStyleBackColor = true;
             this.btnStartCHDF.Click += new System.EventHandler(this.btnStartCHDF_Click);
             // 
-            // textBox4
+            // RichLabel5
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox4.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox4.Location = new System.Drawing.Point(0, 171);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(462, 51);
-            this.textBox4.TabIndex = 131;
-            this.textBox4.Text = "    ① 在<开始置换> 前，请确认各泵的速度设定值，可点击 <泵速显示标签> 进行修改泵速；\r\n    ② 点 <开始置换> 进行治疗；";
+            this.RichLabel5.BackColor = System.Drawing.Color.White;
+            this.RichLabel5.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.RichLabel5.BorderBottom = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderLeft = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderRight = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderTop = System.Drawing.Color.Transparent;
+            this.RichLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RichLabel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RichLabel5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.RichLabel5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.RichLabel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.RichLabel5.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.RichLabel5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RichLabel5.Location = new System.Drawing.Point(0, 142);
+            this.RichLabel5.Name = "RichLabel5";
+            this.RichLabel5.Shadow = true;
+            this.RichLabel5.Size = new System.Drawing.Size(471, 80);
+            this.RichLabel5.TabIndex = 130;
+            this.RichLabel5.Text = "    ① 请保证旋塞三通T1、T2、T3旋转至只连接 <血浆分离器> 的位置；\r\n    ② <开始> 前，请在 <流量设置> 界面确认各泵的速度; \r\n   " +
+    " ③ 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ④ 可用设备RP泵右上侧的 <血泵速度旋钮> 控制引血速度； ";
+            this.RichLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox5
+            // richLabel1
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox5.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox5.Location = new System.Drawing.Point(0, 161);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(462, 61);
-            this.textBox5.TabIndex = 127;
-            this.textBox5.Text = "    ① 若需要脱水平衡，需要点击右侧 <泵秤平衡> 按钮，此时按钮呈选中状态；\r\n    ② 若需要更换液袋，请先点 <泵秤平衡> 取消联动，然后更换液袋，待" +
-    "秤平稳后再点<泵秤平衡>；";
+            this.richLabel1.BackColor = System.Drawing.Color.White;
+            this.richLabel1.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel1.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel1.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel1.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel1.Location = new System.Drawing.Point(0, 142);
+            this.richLabel1.Name = "richLabel1";
+            this.richLabel1.Shadow = true;
+            this.richLabel1.Size = new System.Drawing.Size(471, 80);
+            this.richLabel1.TabIndex = 132;
+            this.richLabel1.Text = "    ① 在 <开始置换> 前，请确认各泵的速度设定值，可点击 <泵速显示标签> 进行修改泵速；\r\n    ② 点 <开始置换> 进行治疗；";
+            this.richLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel2
+            // 
+            this.richLabel2.BackColor = System.Drawing.Color.White;
+            this.richLabel2.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel2.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel2.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel2.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel2.Location = new System.Drawing.Point(0, 142);
+            this.richLabel2.Name = "richLabel2";
+            this.richLabel2.Shadow = true;
+            this.richLabel2.Size = new System.Drawing.Size(471, 80);
+            this.richLabel2.TabIndex = 131;
+            this.richLabel2.Text = "    ① 用<管夹>夹住动脉端，将生理盐水连接至前稀释接口，然后点 <开始回收>;\r\n    ② 可用<血泵旋钮>控制BP的速度，将<血浆分离器>中的血液完全回" +
+    "收;\r\n    ③ 结束时，点<停止回收>，然后将 <旋塞三通T1、T2、T3> 旋转至只选择 <血液滤过器> 的位置；";
+            this.richLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel3
+            // 
+            this.richLabel3.BackColor = System.Drawing.Color.White;
+            this.richLabel3.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel3.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel3.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel3.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel3.Location = new System.Drawing.Point(0, 142);
+            this.richLabel3.Name = "richLabel3";
+            this.richLabel3.Shadow = true;
+            this.richLabel3.Size = new System.Drawing.Size(471, 80);
+            this.richLabel3.TabIndex = 131;
+            this.richLabel3.Text = "    ① 用设备上的 <血泵调速旋钮> 控制血泵BP的引血速度；";
+            this.richLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel4
+            // 
+            this.richLabel4.BackColor = System.Drawing.Color.White;
+            this.richLabel4.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel4.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel4.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel4.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel4.Location = new System.Drawing.Point(0, 142);
+            this.richLabel4.Name = "richLabel4";
+            this.richLabel4.Shadow = true;
+            this.richLabel4.Size = new System.Drawing.Size(471, 80);
+            this.richLabel4.TabIndex = 131;
+            this.richLabel4.Text = "    ① 若需要脱水平衡，需要点击 <泵秤平衡> 按钮，此时按钮呈选中状态；\r\n    ② 若需要更换液袋，请先点 <泵秤平衡> 取消联动，然后更换液袋，待秤平" +
+    "稳后再点<泵秤平衡>；";
+            this.richLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // step_PERT
             // 
@@ -508,13 +548,10 @@
             this.wizardPage1.ResumeLayout(false);
             this.wizardPage1.PerformLayout();
             this.wizardPage2.ResumeLayout(false);
-            this.wizardPage2.PerformLayout();
             this.wizardPage3.ResumeLayout(false);
-            this.wizardPage3.PerformLayout();
             this.wizardPage4.ResumeLayout(false);
             this.wizardPage4.PerformLayout();
             this.wizardPage5.ResumeLayout(false);
-            this.wizardPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -540,17 +577,17 @@
         public AeroWizard.WizardPage wizardPage4;
         public AeroWizard.WizardPage wizardPage5;
         public AeroWizard.StepWizardControl wizardControl1;
-        private System.Windows.Forms.TextBox textBox1;
         public PulseButton.PulseButton btnPausePE;
         public PulseButton.PulseButton btnStartPE;
-        private System.Windows.Forms.TextBox textBox2;
         public PulseButton.PulseButton btnStopRecycle;
         public PulseButton.PulseButton btnStartRecycle;
-        private System.Windows.Forms.TextBox textBox3;
         public PulseButton.PulseButton btnPauseCHDF;
         public PulseButton.PulseButton btnStartCHDF;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        internal RichLabel.RichLabel RichLabel5;
+        internal RichLabel.RichLabel richLabel1;
+        internal RichLabel.RichLabel richLabel2;
+        internal RichLabel.RichLabel richLabel3;
+        internal RichLabel.RichLabel richLabel4;
 
 
 

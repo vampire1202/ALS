@@ -463,8 +463,8 @@
             // 
             // sgBox
             // 
-            this.sgBox.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.sgBox.BackgroundGradientColor = System.Drawing.SystemColors.ButtonFace;
+            this.sgBox.BackgroundColor = System.Drawing.Color.Transparent;
+            this.sgBox.BackgroundGradientColor = System.Drawing.Color.Transparent;
             this.sgBox.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.sgBox.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.sgBox.BorderThickness = 1F;
@@ -496,6 +496,7 @@
             this.customTabControl1.DisplayStyle = System.Windows.Forms.TabStyle.Chrome;
             this.customTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customTabControl1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.customTabControl1.ItemSize = new System.Drawing.Size(100, 30);
             this.customTabControl1.Location = new System.Drawing.Point(0, 10);
             this.customTabControl1.Name = "customTabControl1";
             this.customTabControl1.Overlap = 16;
@@ -503,6 +504,7 @@
             this.customTabControl1.Radius = 10;
             this.customTabControl1.SelectedIndex = 0;
             this.customTabControl1.Size = new System.Drawing.Size(603, 362);
+            this.customTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.customTabControl1.TabIndex = 3;
             // 
             // tabPage1

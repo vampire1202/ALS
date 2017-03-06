@@ -31,7 +31,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.wizardControl1 = new AeroWizard.StepWizardControl();
             this.wizardPage1 = new AeroWizard.WizardPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.lblTargetBPSpeed = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +40,8 @@
             this.wizardPage2 = new AeroWizard.WizardPage();
             this.btnPausePP = new PulseButton.PulseButton();
             this.btnStartPP = new PulseButton.PulseButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.richLabel4 = new RichLabel.RichLabel();
+            this.richLabel1 = new RichLabel.RichLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardPage1.SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             // wizardPage1
             // 
-            this.wizardPage1.Controls.Add(this.textBox1);
+            this.wizardPage1.Controls.Add(this.richLabel4);
             this.wizardPage1.Controls.Add(this.label24);
             this.wizardPage1.Controls.Add(this.lblTargetBPSpeed);
             this.wizardPage1.Controls.Add(this.label1);
@@ -83,25 +83,9 @@
             this.wizardPage1.Controls.Add(this.label2);
             this.wizardPage1.Name = "wizardPage1";
             this.wizardPage1.NextPage = this.wizardPage2;
-            this.wizardPage1.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage1.Size = new System.Drawing.Size(491, 222);
             this.wizardPage1.TabIndex = 0;
             this.wizardPage1.Text = "1. 引血";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox1.Location = new System.Drawing.Point(0, 171);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(482, 51);
-            this.textBox1.TabIndex = 126;
-            this.textBox1.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
-    "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
             // 
             // label24
             // 
@@ -165,13 +149,13 @@
             // 
             // wizardPage2
             // 
-            this.wizardPage2.Controls.Add(this.textBox2);
+            this.wizardPage2.Controls.Add(this.richLabel1);
             this.wizardPage2.Controls.Add(this.btnPausePP);
             this.wizardPage2.Controls.Add(this.btnStartPP);
             this.wizardPage2.IsFinishPage = true;
             this.wizardPage2.Name = "wizardPage2";
             this.wizardPage2.ShowCancel = false;
-            this.wizardPage2.Size = new System.Drawing.Size(482, 222);
+            this.wizardPage2.Size = new System.Drawing.Size(491, 222);
             this.wizardPage2.TabIndex = 1;
             this.wizardPage2.Text = "2. 吸附治疗";
             // 
@@ -220,20 +204,52 @@
             this.btnStartPP.UseVisualStyleBackColor = true;
             this.btnStartPP.Click += new System.EventHandler(this.btnStartPP_Click);
             // 
-            // textBox2
+            // richLabel4
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox2.Font = new System.Drawing.Font("宋体", 10F);
-            this.textBox2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox2.Location = new System.Drawing.Point(0, 171);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(482, 51);
-            this.textBox2.TabIndex = 127;
-            this.textBox2.Text = "    ① 建议 <分离泵FP> 速度设置为血泵BP速度的1/5；\r\n    ② 点 <启动治疗>；";
+            this.richLabel4.BackColor = System.Drawing.Color.White;
+            this.richLabel4.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel4.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel4.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel4.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel4.Location = new System.Drawing.Point(0, 142);
+            this.richLabel4.Name = "richLabel4";
+            this.richLabel4.Shadow = true;
+            this.richLabel4.Size = new System.Drawing.Size(491, 80);
+            this.richLabel4.TabIndex = 132;
+            this.richLabel4.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
+    "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
+            this.richLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel1
+            // 
+            this.richLabel1.BackColor = System.Drawing.Color.White;
+            this.richLabel1.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel1.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel1.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel1.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel1.Location = new System.Drawing.Point(0, 142);
+            this.richLabel1.Name = "richLabel1";
+            this.richLabel1.Shadow = true;
+            this.richLabel1.Size = new System.Drawing.Size(491, 80);
+            this.richLabel1.TabIndex = 132;
+            this.richLabel1.Text = "    ① 建议 <分离泵FP> 速度设置为血泵BP速度的1/5；\r\n    ② 点 <启动治疗>；";
+            this.richLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // step_PP
             // 
@@ -248,7 +264,6 @@
             this.wizardPage1.ResumeLayout(false);
             this.wizardPage1.PerformLayout();
             this.wizardPage2.ResumeLayout(false);
-            this.wizardPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -265,10 +280,10 @@
         public AeroWizard.StepWizardControl wizardControl1;
         public AeroWizard.WizardPage wizardPage1;
         public AeroWizard.WizardPage wizardPage2;
-        private System.Windows.Forms.TextBox textBox1;
         public PulseButton.PulseButton btnPausePP;
         public PulseButton.PulseButton btnStartPP;
-        private System.Windows.Forms.TextBox textBox2;
+        internal RichLabel.RichLabel richLabel4;
+        internal RichLabel.RichLabel richLabel1;
 
 
 

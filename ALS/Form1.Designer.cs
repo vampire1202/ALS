@@ -34,6 +34,8 @@
             this.pulseButton1 = new PulseButton.PulseButton();
             this.pulseButton2 = new PulseButton.PulseButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RichLabel5 = new RichLabel.RichLabel();
+            this.richLabel1 = new RichLabel.RichLabel();
             this.SuspendLayout();
             // 
             // grouper1
@@ -56,7 +58,7 @@
             this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper1.ShadowControl = false;
             this.grouper1.ShadowThickness = 3;
-            this.grouper1.Size = new System.Drawing.Size(365, 238);
+            this.grouper1.Size = new System.Drawing.Size(204, 98);
             this.grouper1.TabIndex = 119;
             // 
             // gboxRecycle
@@ -71,7 +73,7 @@
             this.gboxRecycle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.gboxRecycle.GroupImage = null;
             this.gboxRecycle.GroupTitle = "夹管阀控制";
-            this.gboxRecycle.Location = new System.Drawing.Point(398, 21);
+            this.gboxRecycle.Location = new System.Drawing.Point(238, 11);
             this.gboxRecycle.Name = "gboxRecycle";
             this.gboxRecycle.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.gboxRecycle.PaintGroupBox = true;
@@ -79,7 +81,7 @@
             this.gboxRecycle.ShadowColor = System.Drawing.Color.DarkGray;
             this.gboxRecycle.ShadowControl = false;
             this.gboxRecycle.ShadowThickness = 3;
-            this.gboxRecycle.Size = new System.Drawing.Size(196, 162);
+            this.gboxRecycle.Size = new System.Drawing.Size(138, 99);
             this.gboxRecycle.TabIndex = 120;
             // 
             // btnReturn
@@ -147,6 +149,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("宋体", 10F);
             this.textBox1.ForeColor = System.Drawing.Color.OrangeRed;
             this.textBox1.Location = new System.Drawing.Point(398, 216);
@@ -158,11 +161,51 @@
             this.textBox1.Text = "    ① 若需要脱水平衡，需要点击右侧 <泵秤平衡> 按钮，此时按钮呈选中状态；\r\n    ② 若需要更换液袋，请先点 <泵秤平衡> 取消联动，然后更换液袋，待" +
     "秤平稳后再点<泵秤平衡>；";
             // 
+            // RichLabel5
+            // 
+            this.RichLabel5.BackColor = System.Drawing.Color.White;
+            this.RichLabel5.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.RichLabel5.BorderBottom = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderLeft = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderRight = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderTop = System.Drawing.Color.Transparent;
+            this.RichLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RichLabel5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.RichLabel5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.RichLabel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.RichLabel5.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.RichLabel5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RichLabel5.Location = new System.Drawing.Point(12, 140);
+            this.RichLabel5.Name = "RichLabel5";
+            this.RichLabel5.Size = new System.Drawing.Size(491, 80);
+            this.RichLabel5.TabIndex = 129;
+            this.RichLabel5.Text = "      注意 : 预冲过程中注意不要让所用的血液净化器管路中有气泡残留,若管壁上有气泡,请在清洗过程中用手指轻弹管路,清洗完成后需再次确认,保证对治疗无影响。" +
+    "";
+            this.RichLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richLabel1
+            // 
+            this.richLabel1.AutoSize = true;
+            this.richLabel1.BackColor2 = System.Drawing.SystemColors.Control;
+            this.richLabel1.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel1.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel1.Location = new System.Drawing.Point(53, 140);
+            this.richLabel1.Name = "richLabel1";
+            this.richLabel1.Size = new System.Drawing.Size(65, 12);
+            this.richLabel1.TabIndex = 126;
+            this.richLabel1.Text = "richLabel1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 262);
+            this.Controls.Add(this.RichLabel5);
+            this.Controls.Add(this.richLabel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pulseButton2);
             this.Controls.Add(this.pulseButton1);
@@ -184,5 +227,7 @@
         public PulseButton.PulseButton pulseButton1;
         public PulseButton.PulseButton pulseButton2;
         private System.Windows.Forms.TextBox textBox1;
+        private RichLabel.RichLabel richLabel1;
+        internal RichLabel.RichLabel RichLabel5;
     }
 }
