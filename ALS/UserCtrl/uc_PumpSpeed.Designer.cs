@@ -42,7 +42,7 @@
             this.picPump.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picPump.BackColor = System.Drawing.Color.Transparent;
             this.picPump.Image = global::ALS.Properties.Resources.home;
-            this.picPump.Location = new System.Drawing.Point(263, 22);
+            this.picPump.Location = new System.Drawing.Point(179, 16);
             this.picPump.Name = "picPump";
             this.picPump.Size = new System.Drawing.Size(32, 32);
             this.picPump.TabIndex = 0;
@@ -101,9 +101,9 @@
             this.gbox.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.gbox.BorderColor = System.Drawing.Color.Silver;
             this.gbox.BorderThickness = 1F;
+            this.gbox.Controls.Add(this.picPump);
             this.gbox.Controls.Add(this.lblSpeed);
             this.gbox.Controls.Add(this.lblUnit);
-            this.gbox.Controls.Add(this.picPump);
             this.gbox.Controls.Add(this.lblOtherInfo);
             this.gbox.CustomGroupBoxColor = System.Drawing.Color.White;
             this.gbox.Dock = System.Windows.Forms.DockStyle.Fill;

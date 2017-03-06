@@ -31,6 +31,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.wizardControl1 = new AeroWizard.StepWizardControl();
             this.wizardPage1 = new AeroWizard.WizardPage();
+            this.RichLabel5 = new RichLabel.RichLabel();
             this.label24 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -38,24 +39,23 @@
             this.lblBPSpeed = new System.Windows.Forms.Label();
             this.lblLeadBloodSpeed = new System.Windows.Forms.Label();
             this.wizardPage2 = new AeroWizard.WizardPage();
+            this.richLabel1 = new RichLabel.RichLabel();
             this.btnPausePE = new PulseButton.PulseButton();
             this.btnStartPE = new PulseButton.PulseButton();
             this.wizardPage3 = new AeroWizard.WizardPage();
+            this.richLabel2 = new RichLabel.RichLabel();
             this.btnStopShouji = new PulseButton.PulseButton();
             this.btnStartShouji = new PulseButton.PulseButton();
             this.wizardPage4 = new AeroWizard.WizardPage();
+            this.richLabel3 = new RichLabel.RichLabel();
             this.btnPauseTreat = new PulseButton.PulseButton();
             this.btnStartTreat = new PulseButton.PulseButton();
             this.btnPreCircle = new PulseButton.PulseButton();
             this.lblPreCircleTime = new System.Windows.Forms.Label();
             this.wizardPage5 = new AeroWizard.WizardPage();
+            this.richLabel4 = new RichLabel.RichLabel();
             this.btnStopReady = new PulseButton.PulseButton();
             this.btnReadRecycle = new PulseButton.PulseButton();
-            this.RichLabel5 = new RichLabel.RichLabel();
-            this.richLabel1 = new RichLabel.RichLabel();
-            this.richLabel2 = new RichLabel.RichLabel();
-            this.richLabel3 = new RichLabel.RichLabel();
-            this.richLabel4 = new RichLabel.RichLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardPage1.SuspendLayout();
@@ -106,6 +106,29 @@
             this.wizardPage1.Size = new System.Drawing.Size(491, 222);
             this.wizardPage1.TabIndex = 0;
             this.wizardPage1.Text = "1. 引血";
+            // 
+            // RichLabel5
+            // 
+            this.RichLabel5.BackColor = System.Drawing.Color.White;
+            this.RichLabel5.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.RichLabel5.BorderBottom = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderLeft = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderRight = System.Drawing.Color.Transparent;
+            this.RichLabel5.BorderTop = System.Drawing.Color.Transparent;
+            this.RichLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RichLabel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RichLabel5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.RichLabel5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.RichLabel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.RichLabel5.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.RichLabel5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RichLabel5.Location = new System.Drawing.Point(0, 142);
+            this.RichLabel5.Name = "RichLabel5";
+            this.RichLabel5.Size = new System.Drawing.Size(491, 80);
+            this.RichLabel5.TabIndex = 130;
+            this.RichLabel5.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
+    "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
+            this.RichLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label24
             // 
@@ -180,6 +203,29 @@
             this.wizardPage2.TabIndex = 1;
             this.wizardPage2.Text = "2. 血浆置换";
             // 
+            // richLabel1
+            // 
+            this.richLabel1.BackColor = System.Drawing.Color.White;
+            this.richLabel1.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel1.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel1.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel1.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel1.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel1.Location = new System.Drawing.Point(0, 142);
+            this.richLabel1.Name = "richLabel1";
+            this.richLabel1.Size = new System.Drawing.Size(491, 80);
+            this.richLabel1.TabIndex = 130;
+            this.richLabel1.Text = "    ① 确认 <双腔储液袋> 下方的 <管夹C1>  松开;\r\n    ② 确认<分离泵FP> 和 <透析液泵DP> 的设定速度，可点击泵速显示标签进行修改；" +
+    "\r\n    ③ 点 <血浆置换> 开始治疗;";
+            this.richLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnPausePE
             // 
             this.btnPausePE.ButtonColorBottom = System.Drawing.Color.DarkGoldenrod;
@@ -237,6 +283,29 @@
             this.wizardPage3.Size = new System.Drawing.Size(491, 222);
             this.wizardPage3.TabIndex = 2;
             this.wizardPage3.Text = "3. 收集血浆";
+            // 
+            // richLabel2
+            // 
+            this.richLabel2.BackColor = System.Drawing.Color.White;
+            this.richLabel2.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel2.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel2.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel2.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel2.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel2.Location = new System.Drawing.Point(0, 142);
+            this.richLabel2.Name = "richLabel2";
+            this.richLabel2.Size = new System.Drawing.Size(491, 80);
+            this.richLabel2.TabIndex = 130;
+            this.richLabel2.Text = "    ① 确认 <双腔储液袋> 下方<管夹C1> 闭合；\r\n    ② 点 <开始收集> 将血浆收集至 <双腔储液袋>的外袋 , 请时刻查看 <双腔储液袋> 中" +
+    "的外袋腔内液位高度! \r\n    ③ <双腔储液袋> 中的血浆量达到 500-800 mL时，请 <停止收集>,再进行 <下一步> 操作；";
+            this.richLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnStopShouji
             // 
@@ -297,6 +366,28 @@
             this.wizardPage4.Size = new System.Drawing.Size(491, 222);
             this.wizardPage4.TabIndex = 3;
             this.wizardPage4.Text = "4. 整体治疗";
+            // 
+            // richLabel3
+            // 
+            this.richLabel3.BackColor = System.Drawing.Color.White;
+            this.richLabel3.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel3.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel3.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel3.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel3.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel3.Location = new System.Drawing.Point(0, 142);
+            this.richLabel3.Name = "richLabel3";
+            this.richLabel3.Size = new System.Drawing.Size(491, 80);
+            this.richLabel3.TabIndex = 130;
+            this.richLabel3.Text = "    ① 确认循环泵CP的速度，点 <预循环> ，运行30秒左右自动停止；\r\n    ② 确认各泵的运行速度，然后点 <启动治疗> ；";
+            this.richLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnPauseTreat
             // 
@@ -388,6 +479,30 @@
             this.wizardPage5.TabIndex = 4;
             this.wizardPage5.Text = "5. 准备回收";
             // 
+            // richLabel4
+            // 
+            this.richLabel4.BackColor = System.Drawing.Color.White;
+            this.richLabel4.BackColor2 = System.Drawing.Color.PowderBlue;
+            this.richLabel4.BorderBottom = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderLeft = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderRight = System.Drawing.Color.Transparent;
+            this.richLabel4.BorderTop = System.Drawing.Color.Transparent;
+            this.richLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richLabel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richLabel4.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.richLabel4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.richLabel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.richLabel4.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.richLabel4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.richLabel4.Location = new System.Drawing.Point(0, 142);
+            this.richLabel4.Name = "richLabel4";
+            this.richLabel4.Size = new System.Drawing.Size(491, 80);
+            this.richLabel4.TabIndex = 130;
+            this.richLabel4.Text = "    ① 将 <AD2> 放置于 <夹管阀V6>  与 <双腔储液袋> 之间的管路上;\r\n    ② <准备回收> 是将 <滤过泵FP2> 的速度在原速度上增加" +
+    "5mL/min,请手动调节 <滤过泵FP2> 的速度；\r\n    ③ 注意 <双腔储液袋> 的液位高度，可手动 <暂停>，也可以等待补液空 <AD2> 报警； " +
+    "";
+            this.richLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnStopReady
             // 
             this.btnStopReady.ButtonColorBottom = System.Drawing.Color.DarkGoldenrod;
@@ -432,126 +547,6 @@
             this.btnReadRecycle.Text = "准备回收";
             this.btnReadRecycle.UseVisualStyleBackColor = true;
             this.btnReadRecycle.Click += new System.EventHandler(this.btnReadRecycle_Click);
-            // 
-            // RichLabel5
-            // 
-            this.RichLabel5.BackColor = System.Drawing.Color.White;
-            this.RichLabel5.BackColor2 = System.Drawing.Color.PowderBlue;
-            this.RichLabel5.BorderBottom = System.Drawing.Color.Transparent;
-            this.RichLabel5.BorderLeft = System.Drawing.Color.Transparent;
-            this.RichLabel5.BorderRight = System.Drawing.Color.Transparent;
-            this.RichLabel5.BorderTop = System.Drawing.Color.Transparent;
-            this.RichLabel5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.RichLabel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RichLabel5.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.RichLabel5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.RichLabel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.RichLabel5.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.RichLabel5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.RichLabel5.Location = new System.Drawing.Point(0, 142);
-            this.RichLabel5.Name = "RichLabel5";
-            this.RichLabel5.Shadow = true;
-            this.RichLabel5.Size = new System.Drawing.Size(491, 80);
-            this.RichLabel5.TabIndex = 130;
-            this.RichLabel5.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
-    "RP泵右上侧的 <血泵速度旋钮> 控制引血速度；";
-            this.RichLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // richLabel1
-            // 
-            this.richLabel1.BackColor = System.Drawing.Color.White;
-            this.richLabel1.BackColor2 = System.Drawing.Color.PowderBlue;
-            this.richLabel1.BorderBottom = System.Drawing.Color.Transparent;
-            this.richLabel1.BorderLeft = System.Drawing.Color.Transparent;
-            this.richLabel1.BorderRight = System.Drawing.Color.Transparent;
-            this.richLabel1.BorderTop = System.Drawing.Color.Transparent;
-            this.richLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richLabel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.richLabel1.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.richLabel1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.richLabel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.richLabel1.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.richLabel1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.richLabel1.Location = new System.Drawing.Point(0, 142);
-            this.richLabel1.Name = "richLabel1";
-            this.richLabel1.Shadow = true;
-            this.richLabel1.Size = new System.Drawing.Size(491, 80);
-            this.richLabel1.TabIndex = 130;
-            this.richLabel1.Text = "    ① 确认 <双腔储液袋> 下方的 <管夹C1>  松开;\r\n    ② 确认<分离泵FP> 和 <透析液泵DP> 的设定速度，可点击泵速显示标签进行修改；" +
-    "\r\n    ③ 点 <血浆置换> 开始治疗;";
-            this.richLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // richLabel2
-            // 
-            this.richLabel2.BackColor = System.Drawing.Color.White;
-            this.richLabel2.BackColor2 = System.Drawing.Color.PowderBlue;
-            this.richLabel2.BorderBottom = System.Drawing.Color.Transparent;
-            this.richLabel2.BorderLeft = System.Drawing.Color.Transparent;
-            this.richLabel2.BorderRight = System.Drawing.Color.Transparent;
-            this.richLabel2.BorderTop = System.Drawing.Color.Transparent;
-            this.richLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richLabel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.richLabel2.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.richLabel2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.richLabel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.richLabel2.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.richLabel2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.richLabel2.Location = new System.Drawing.Point(0, 142);
-            this.richLabel2.Name = "richLabel2";
-            this.richLabel2.Shadow = true;
-            this.richLabel2.Size = new System.Drawing.Size(491, 80);
-            this.richLabel2.TabIndex = 130;
-            this.richLabel2.Text = "    ① 确认 <双腔储液袋> 下方<管夹C1> 闭合；\r\n    ② 点 <开始收集> 将血浆收集至 <双腔储液袋>的外袋 , 请时刻查看 <双腔储液袋> 中" +
-    "的外袋腔内液位高度! \r\n    ③ <双腔储液袋> 中的血浆量达到 500-800 mL时，请 <停止收集>,再进行 <下一步> 操作；";
-            this.richLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // richLabel3
-            // 
-            this.richLabel3.BackColor = System.Drawing.Color.White;
-            this.richLabel3.BackColor2 = System.Drawing.Color.PowderBlue;
-            this.richLabel3.BorderBottom = System.Drawing.Color.Transparent;
-            this.richLabel3.BorderLeft = System.Drawing.Color.Transparent;
-            this.richLabel3.BorderRight = System.Drawing.Color.Transparent;
-            this.richLabel3.BorderTop = System.Drawing.Color.Transparent;
-            this.richLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richLabel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.richLabel3.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.richLabel3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.richLabel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.richLabel3.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.richLabel3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.richLabel3.Location = new System.Drawing.Point(0, 142);
-            this.richLabel3.Name = "richLabel3";
-            this.richLabel3.Shadow = true;
-            this.richLabel3.Size = new System.Drawing.Size(491, 80);
-            this.richLabel3.TabIndex = 130;
-            this.richLabel3.Text = "    ① 确认循环泵CP的速度，点 <预循环> ，运行30秒左右自动停止；\r\n    ② 确认各泵的运行速度，然后点 <启动治疗> ；";
-            this.richLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // richLabel4
-            // 
-            this.richLabel4.BackColor = System.Drawing.Color.White;
-            this.richLabel4.BackColor2 = System.Drawing.Color.PowderBlue;
-            this.richLabel4.BorderBottom = System.Drawing.Color.Transparent;
-            this.richLabel4.BorderLeft = System.Drawing.Color.Transparent;
-            this.richLabel4.BorderRight = System.Drawing.Color.Transparent;
-            this.richLabel4.BorderTop = System.Drawing.Color.Transparent;
-            this.richLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.richLabel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.richLabel4.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.richLabel4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.richLabel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.richLabel4.GradientModeHover = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.richLabel4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.richLabel4.Location = new System.Drawing.Point(0, 142);
-            this.richLabel4.Name = "richLabel4";
-            this.richLabel4.Shadow = true;
-            this.richLabel4.Size = new System.Drawing.Size(491, 80);
-            this.richLabel4.TabIndex = 130;
-            this.richLabel4.Text = "    ① 将 <AD2> 放置于 <夹管阀V6>  与 <双腔储液袋> 之间的管路上;\r\n    ② <准备回收> 是将 <滤过泵FP2> 的速度在原速度上增加" +
-    "5mL/min,请手动调节 <滤过泵FP2> 的速度；\r\n    ③ 注意 <双腔储液袋> 的液位高度，可手动 <暂停>，也可以等待补液空 <AD2> 报警； " +
-    "";
-            this.richLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // step_LiAlS
             // 

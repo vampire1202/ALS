@@ -205,7 +205,7 @@ namespace ALS
             }
             await Task.Delay(200);
             //初始化蠕动泵串口 COM3 波特率19200 数据位8位 停止位1位 偶校验
-            if (await InitComm(this.port_ppump, "COM3", 1200, 8, StopBits.One, Parity.Even, ct) == Cls.utils.M_SendType.porttrue)
+            if (await InitComm(this.port_ppump, "COM3", 19200, 8, StopBits.One, Parity.Even, ct) == Cls.utils.M_SendType.porttrue)
                 progress.Report(new Cls.StatusProgress() { Tipinfo = "·", Current = 15, Total = total, Success = true, _sendType = Cls.utils.M_SendType.porttrue });
             else
             {

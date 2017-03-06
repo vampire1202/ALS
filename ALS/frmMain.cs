@@ -20,7 +20,7 @@
 //#define LOG_TREAT
 #undef LOG_TREAT                          //治疗log
 
-//define RunT
+//#define RunT
 #undef RunT
 
 using System;
@@ -3536,12 +3536,12 @@ namespace ALS
                     this.BeginInvoke(new Action(() =>
                     {
                         #region 治疗界面
-                        if (M_uc_Treat != null && this.palContent.Controls.IndexOf(M_uc_Treat) == 0)
+                        if (M_uc_Treat != null && this.palContent.Controls.Contains(M_uc_Treat))
                             ShowTreatFormInfo();
                         #endregion
 
                         #region 其他设置界面
-                        if (M_uc_OtherSet != null && this.palContent.Controls.IndexOf(M_uc_OtherSet) == 0)
+                        if (M_uc_OtherSet != null && this.palContent.Controls.Contains(M_uc_OtherSet))
                         {
                             ShowOtherFormInfo();
                         }
@@ -3562,14 +3562,14 @@ namespace ALS
                         #endregion
 
                         #region 自动预冲界面
-                        if (M_uc_AutoFlush != null && this.palContent.Controls.IndexOf(M_uc_AutoFlush) == 0)
+                        if (M_uc_AutoFlush != null && this.palContent.Controls.Contains(M_uc_AutoFlush))
                         {
                             //M_uc_AutoFlush.lblCurrent.Text = (M_ModelValue.M_flt_Weigh2 - startWeigh2).ToString("f0");
                         }
                         #endregion
 
                         #region 流量界面
-                        if (M_uc_SetFlow != null && this.palContent.Controls.IndexOf(M_uc_SetFlow) == 0)
+                        if (M_uc_SetFlow != null && this.palContent.Controls.Contains(M_uc_SetFlow))
                         {
                             M_uc_SetFlow.txtBP.Text = M_ModelTreat.BPSpeed.ToString();
                         }
@@ -3971,17 +3971,17 @@ namespace ALS
             M_uc_OtherSet.lblWeigh3.Text = M_ModelValue.M_flt_Weigh3.ToString("f0");
             M_uc_OtherSet.lblWeigh4.Text = M_ModelValue.M_flt_Weigh4.ToString("f0");
             M_uc_OtherSet.lblRealBloodLeak.Text = M_ModelValue.M_flt_BloodLeak.ToString();
-            //漏血传感器状态判定：若漏血值不变化，表示传感器故障，设置敏感度背景红色。
-            M_lstBloodLeak.Add(M_ModelValue.M_flt_BloodLeak);
-            if (M_lstBloodLeak.Count > 3)
-                M_lstBloodLeak.RemoveAt(0);
-            if (M_lstBloodLeak.Count == 3)
-            {
-                if (M_lstBloodLeak[0] == M_lstBloodLeak[1] && M_lstBloodLeak[0] == M_lstBloodLeak[2])
-                    M_uc_OtherSet.lblBloodLeak.BackColor = Color.Red;
-                else
-                    M_uc_OtherSet.lblBloodLeak.BackColor = Color.Green;
-            }
+            ////漏血传感器状态判定：若漏血值不变化，表示传感器故障，设置敏感度背景红色。
+            //M_lstBloodLeak.Add(M_ModelValue.M_flt_BloodLeak);
+            //if (M_lstBloodLeak.Count > 3)
+            //    M_lstBloodLeak.RemoveAt(0);
+            //if (M_lstBloodLeak.Count == 3)
+            //{
+            //    if (M_lstBloodLeak[0] == M_lstBloodLeak[1] && M_lstBloodLeak[0] == M_lstBloodLeak[2])
+            //        M_uc_OtherSet.lblBloodLeak.BackColor = Color.Red;
+            //    else
+            //        M_uc_OtherSet.lblBloodLeak.BackColor = Color.Green;
+            //}
         }
 
         void ShowAdminFormInfo()
@@ -5449,6 +5449,21 @@ namespace ALS
                             //漏血
                             string strbloodleak = M_buffer_data[36].ToString("x2") + M_buffer_data[35].ToString("x2") + M_buffer_data[34].ToString("x2");
                             M_ModelValue.M_flt_BloodLeak = Convert.ToInt32(strbloodleak, 16);
+                            //漏血传感器状态判定：若漏血值不变化，表示传感器故障，设置敏感度背景红色。
+                            M_lstBloodLeak.Add(M_ModelValue.M_flt_BloodLeak);
+                            if (M_lstBloodLeak.Count > 3)
+                                M_lstBloodLeak.RemoveAt(0);
+                            if (M_lstBloodLeak.Count == 3)
+                            {
+                                this.BeginInvoke(new Action(() =>
+                                {
+                                    if (M_lstBloodLeak[0] == M_lstBloodLeak[1] && M_lstBloodLeak[0] == M_lstBloodLeak[2])
+                                        M_uc_OtherSet.lblBloodLeak.BackColor = Color.Red;
+                                    else
+                                        M_uc_OtherSet.lblBloodLeak.BackColor = Color.Green;
+                                }));
+                            }
+                            
                             if (M_ModelValue.M_flt_BloodLeak < M_ModelTreat.BloodLeak)
                                 M_exsitsWarn = true;
 
@@ -6321,6 +6336,13 @@ namespace ALS
                 MessageBox.Show(this, "请确认治疗模式!", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            //if (!this.palContent.Controls.Contains(M_uc_SetFlow))
+            //    this.palContent.Controls.Add(M_uc_SetFlow);
+            this.palContent.Controls.Clear();
+            this.M_uc_SetFlow.Parent = this.palContent;
+            //this.palContent.Controls.SetChildIndex(M_uc_SetFlow, 0);
+            M_uc_SetFlow.BringToFront();
+            M_uc_SetFlow.Dock = DockStyle.Fill;
             ShowP(_style.w180);
             layoutPump.Visible = false;
             M_ModelTreat = GetTreatmentModel(M_modeName);
@@ -6344,11 +6366,7 @@ namespace ALS
             M_uc_SetFlow.ReadVState(M_PumpState);
             SetOtherfrmBtnState(M_PumpState);
             M_uc_SetFlow.groupSet.Text = "流量设置";
-            if (!this.palContent.Controls.Contains(M_uc_SetFlow))
-                this.palContent.Controls.Add(M_uc_SetFlow);
-            this.palContent.Controls.SetChildIndex(M_uc_SetFlow, 0);
-            M_uc_SetFlow.BringToFront();
-            M_uc_SetFlow.Dock = DockStyle.Fill;
+          
         }
 
         void M_uc_SetFlow_btnReadset(object sender, EventArgs e)
@@ -6911,15 +6929,18 @@ namespace ALS
 
         private void ShowPipeLine()
         {
+            //if (!this.palContent.Controls.Contains(pipeLine))
+            //    this.palContent.Controls.Add(pipeLine);
+            this.palContent.Controls.Clear();
+            pipeLine.Parent = this.palContent;
+            //this.palContent.Controls.SetChildIndex(pipeLine, 0);
+            //pipeLine.BringToFront();
+            pipeLine.Dock = DockStyle.Fill;
             pipeLine.M_int_CurrentIndex = 0;
             pipeLine.InitItems(M_modeName);
             pipeLine.btnNext.Text = "下一步";
             pipeLine.SetBackColor(0);
-            if (!this.palContent.Controls.Contains(pipeLine))
-                this.palContent.Controls.Add(pipeLine);
-            this.palContent.Controls.SetChildIndex(pipeLine, 0);
-            pipeLine.BringToFront();
-            pipeLine.Dock = DockStyle.Fill;
+          
             ShowP(_style.hide);
             layoutPump.Visible = false;     
         }
@@ -6984,8 +7005,10 @@ namespace ALS
             switch (M_SelFlushType)
             {
                 case 0://未选择，出现选择预冲方式界面                 
-                    if (!this.palContent.Controls.Contains(M_uc_selFlush))
-                        this.palContent.Controls.Add(M_uc_selFlush);
+                    //if (!this.palContent.Controls.Contains(M_uc_selFlush))
+                    //    this.palContent.Controls.Add(M_uc_selFlush);
+                    this.palContent.Controls.Clear();
+                    M_uc_selFlush.Parent = this.palContent;
                     //M_uc_AutoFlush._ModelSet = M_ModelTreat;
                     M_uc_selFlush.Dock = DockStyle.Fill;
                     M_uc_selFlush.BringToFront();
@@ -7022,8 +7045,13 @@ namespace ALS
 
         void M_uc_selFlush__btnSelManualFlush(object sender, EventArgs e)
         {
-            layoutPump.Visible = false;
-            ShowP(_style.w180);
+            //if (!this.palContent.Controls.Contains(M_uc_SetFlow))
+            //    this.palContent.Controls.Add(M_uc_SetFlow);
+            //this.palContent.Controls.SetChildIndex(M_uc_SetFlow, 0);
+            this.palContent.Controls.Clear();
+            M_uc_SetFlow.Parent = this.palContent;
+            M_uc_SetFlow.BringToFront();
+            M_uc_SetFlow.Dock = DockStyle.Fill;
             M_SelFlushType = 2;
             M_uc_SetFlow._ModelPumpState = M_PumpState;
             M_uc_SetFlow._Port_main = port_main;
@@ -7046,12 +7074,6 @@ namespace ALS
             this.btnStart.Enabled = false;
             M_isFlush = false;
             M_bl_isFinishFlush = false;
-
-            if (!this.palContent.Controls.Contains(M_uc_SetFlow))
-                this.palContent.Controls.Add(M_uc_SetFlow);
-            this.palContent.Controls.SetChildIndex(M_uc_SetFlow, 0);
-            M_uc_SetFlow.BringToFront();
-            M_uc_SetFlow.Dock = DockStyle.Fill;
         }
 
         void M_uc_SetFlow_btnClickFinish(object sender, EventArgs e)
@@ -7083,9 +7105,11 @@ namespace ALS
 
         void M_uc_selFlush__btnSelAutoFlush(object sender, EventArgs e)
         {
-            
-            layoutPump.Visible = false;
-            ShowP(_style.w180);
+            if (!this.palContent.Controls.Contains(M_uc_AutoFlush))
+                this.palContent.Controls.Add(M_uc_AutoFlush);
+            M_uc_AutoFlush.Dock = DockStyle.Fill;
+            M_uc_AutoFlush.BringToFront();
+            this.palContent.Controls.SetChildIndex(M_uc_AutoFlush, 0);
             M_SelFlushType = 1;
             //只要进入自动预冲，模式选择、治疗、回收、管路安装、流量设置界面都置灰。
             //预冲标志量改变
@@ -7136,11 +7160,8 @@ namespace ALS
             }
             //M_uc_AutoFlush._Port_Main = port_main;
             //M_uc_AutoFlush._Port_Pump = port_ppump; 
-            M_uc_AutoFlush.Dock = DockStyle.Fill;           
-            if (!this.palContent.Controls.Contains(M_uc_AutoFlush))
-                this.palContent.Controls.Add(M_uc_AutoFlush);
-            M_uc_AutoFlush.BringToFront();
-            this.palContent.Controls.SetChildIndex(M_uc_AutoFlush, 0);
+                     
+         
         }
 
 
@@ -7674,7 +7695,16 @@ namespace ALS
                 M_BackCheckedInterface();
                 return;
             }
-      
+            //if (!this.palContent.Controls.Contains(M_uc_Treat))
+            //    this.palContent.Controls.Add(M_uc_Treat);
+            this.palContent.Controls.Clear();
+            this.M_uc_Treat.Parent = this.palContent;
+            //this.palContent.Controls.SetChildIndex(M_uc_Treat, 0);
+            this.btnStart.Enabled = true;
+            //M_uc_Treat.tabP.SelectedIndex = 0;
+            //MessageBox.Show(this.palContent.Controls.GetChildIndex(M_uc_Treat).ToString() + this.palContent.Controls.GetChildIndex(M_uc_Method).ToString());
+            M_uc_Treat.BringToFront();
+            M_uc_Treat.Dock = DockStyle.Fill;
             M_uc_Treat._ModelTreat = M_ModelTreat;
             M_uc_Treat.ReadSet(M_ModelTreat);
             //M_uc_Treat.ReadTreatPic(M_modeName);
@@ -7783,14 +7813,7 @@ namespace ALS
                     ChangeShowPControlEnabled("pp");
                     break;
             }
-            if (!this.palContent.Controls.Contains(M_uc_Treat))
-                this.palContent.Controls.Add(M_uc_Treat);
-            this.palContent.Controls.SetChildIndex(M_uc_Treat, 0);
-            this.btnStart.Enabled = true;
-            //M_uc_Treat.tabP.SelectedIndex = 0;
-            //MessageBox.Show(this.palContent.Controls.GetChildIndex(M_uc_Treat).ToString() + this.palContent.Controls.GetChildIndex(M_uc_Method).ToString());
-            M_uc_Treat.BringToFront();
-            M_uc_Treat.Dock = DockStyle.Fill;
+         
             layoutPump.Visible = true;
             ShowP(_style.w300);
         }
@@ -7963,7 +7986,14 @@ namespace ALS
             //    MessageBox.Show("未完成治疗!", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //    return;
             //}
-          
+            //if (!this.palContent.Controls.Contains(M_uc_Recycle))
+            //    this.palContent.Controls.Add(M_uc_Recycle);
+            //this.palContent.Controls.SetChildIndex(M_uc_Recycle, 0);
+            this.palContent.Controls.Clear();
+            M_uc_Recycle.Parent = this.palContent;
+            M_uc_Recycle.BringToFront();
+            M_uc_Recycle.Dock = DockStyle.Fill;
+
             this.tsbtnPipeline.Enabled = false;
             this.tsbtnPreFlush.Enabled = false;
             this.tsbtnTherapy.Enabled = false;
@@ -7992,11 +8022,7 @@ namespace ALS
                 M_uc_Recycle.gboxRecycle.Text = "PEF 回收方法,请参照以下步骤回收";
             else
                 M_uc_Recycle.gboxRecycle.Text = M_modeName + " 回收方法,请参照以下步骤回收";
-            if (!this.palContent.Controls.Contains(M_uc_Recycle))
-                this.palContent.Controls.Add(M_uc_Recycle);
-            this.palContent.Controls.SetChildIndex(M_uc_Recycle, 0);
-            M_uc_Recycle.BringToFront();
-            M_uc_Recycle.Dock = DockStyle.Fill;
+        
             toolStripControl_ItemClicked(toolStripControl, new ToolStripItemClickedEventArgs(tsbtnRecycle));
             //完成治疗,进入回收状态true；
             M_bl_isFinishTreat = true;
@@ -8056,20 +8082,22 @@ namespace ALS
                 MessageBox.Show(this, "请确认治疗模式!", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            //if (!this.palContent.Controls.Contains(M_uc_OtherSet))
+            //    this.palContent.Controls.Add(M_uc_OtherSet);
+            //this.palContent.Controls.SetChildIndex(M_uc_OtherSet, 0);
+            this.palContent.Controls.Clear();
+            M_uc_OtherSet.Parent = this.palContent;
+            if (M_isTreat)
+                M_uc_OtherSet.SetSPButton(true);
+            M_uc_OtherSet.BringToFront();
+            M_uc_OtherSet.Dock = DockStyle.Fill;
             ShowP(_style.w180);
             layoutPump.Visible = false;
             M_uc_OtherSet._ModelTreat = M_ModelTreat;
             M_uc_OtherSet.ReadLevel(M_ModelTreat);
             M_uc_OtherSet.ReadFlush();
             M_uc_OtherSet.ReadVState(M_PumpState);
-            M_uc_OtherSet.ReadHPumpSet();
-            if (!this.palContent.Controls.Contains(M_uc_OtherSet))
-                this.palContent.Controls.Add(M_uc_OtherSet);
-            this.palContent.Controls.SetChildIndex(M_uc_OtherSet, 0);
-            if (M_isTreat)
-                M_uc_OtherSet.SetSPButton(true);
-            M_uc_OtherSet.BringToFront();
-            M_uc_OtherSet.Dock = DockStyle.Fill;
+            M_uc_OtherSet.ReadHPumpSet(); 
         }
 
         void M_uc_OtherSet_btnZeroWs(object sender, EventArgs e)
@@ -8151,6 +8179,13 @@ namespace ALS
                 MessageBox.Show(this, "请确认治疗模式!", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            //if (!this.palContent.Controls.Contains(M_uc_Sum))
+            //    this.palContent.Controls.Add(M_uc_Sum);
+            //this.palContent.Controls.SetChildIndex(M_uc_Sum, 0);
+            this.palContent.Controls.Clear();
+            M_uc_Sum.Parent = this.palContent;
+            M_uc_Sum.BringToFront();
+            M_uc_Sum.Dock = DockStyle.Fill;
             ShowP(_style.w180);
             layoutPump.Visible = false;
             M_uc_Sum._ModelTreat = this.M_ModelTreat;
@@ -8158,11 +8193,7 @@ namespace ALS
             M_uc_Sum._ModelTotal = this.M_ModelTotal;
             M_uc_Sum._ModelTotalPE = this.m_TotalPE;
             M_uc_Sum.ReadTotal();
-            if (!this.palContent.Controls.Contains(M_uc_Sum))
-                this.palContent.Controls.Add(M_uc_Sum);
-            this.palContent.Controls.SetChildIndex(M_uc_Sum, 0);
-            M_uc_Sum.BringToFront();
-            M_uc_Sum.Dock = DockStyle.Fill;
+           
         }
 
         /// <summary>
@@ -8254,9 +8285,11 @@ namespace ALS
             layoutPump.Visible = false;
             M_uc_SetLiquidSurface._TreatMode = M_ModelTreat;
             M_uc_SetLiquidSurface._Port_main = port_main;
-            if (!this.palContent.Controls.Contains(M_uc_SetLiquidSurface))
-                this.palContent.Controls.Add(M_uc_SetLiquidSurface);
-            this.palContent.Controls.SetChildIndex(M_uc_SetLiquidSurface, 0);
+            //if (!this.palContent.Controls.Contains(M_uc_SetLiquidSurface))
+            //    this.palContent.Controls.Add(M_uc_SetLiquidSurface);
+            this.palContent.Controls.Clear();
+            this.M_uc_SetLiquidSurface.Parent = this.palContent;
+            //this.palContent.Controls.SetChildIndex(M_uc_SetLiquidSurface, 0);
             M_uc_SetLiquidSurface.BringToFront();
             M_uc_SetLiquidSurface.Dock = DockStyle.Fill;
         }

@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSetOther));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnChangeSP = new PulseButton.PulseButton();
             this.btnSetSyringe = new PulseButton.PulseButton();
-            this.sp_ACC_current = new System.Windows.Forms.Label();
             this.Syringe_state = new System.Windows.Forms.Label();
             this.palSyringe = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.btnFastStopSP = new PulseButton.PulseButton();
+            this.sp_ACC_current = new System.Windows.Forms.Label();
             this.Sy_ClearWarning = new PulseButton.PulseButton();
             this.btnZeroSPSum = new PulseButton.PulseButton();
             this.btnFastRunSP = new PulseButton.PulseButton();
@@ -189,18 +189,18 @@
             this.btnSetFlush = new PulseButton.PulseButton();
             this.tpWarnLog = new System.Windows.Forms.TabPage();
             this.dgvLog = new System.Windows.Forms.DataGridView();
-            this.grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.content = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grouper5 = new CodeVendor.Controls.Grouper();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.content = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.grouper5 = new CodeVendor.Controls.Grouper();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.palSyringe.SuspendLayout();
@@ -274,7 +274,7 @@
             this.btnChangeSP.FocusColor = System.Drawing.Color.Black;
             this.btnChangeSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnChangeSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnChangeSP.Location = new System.Drawing.Point(578, 85);
+            this.btnChangeSP.Location = new System.Drawing.Point(578, 23);
             this.btnChangeSP.Name = "btnChangeSP";
             this.btnChangeSP.NumberOfPulses = 2;
             this.btnChangeSP.PulseColor = System.Drawing.Color.DimGray;
@@ -285,6 +285,7 @@
             this.btnChangeSP.TabIndex = 123;
             this.btnChangeSP.Text = "更换注射器";
             this.btnChangeSP.UseVisualStyleBackColor = true;
+            this.btnChangeSP.Visible = false;
             this.btnChangeSP.Click += new System.EventHandler(this.btnChangeSyringe_Click);
             // 
             // btnSetSyringe
@@ -295,7 +296,7 @@
             this.btnSetSyringe.FocusColor = System.Drawing.Color.Black;
             this.btnSetSyringe.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetSyringe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSetSyringe.Location = new System.Drawing.Point(434, 85);
+            this.btnSetSyringe.Location = new System.Drawing.Point(434, 23);
             this.btnSetSyringe.Name = "btnSetSyringe";
             this.btnSetSyringe.NumberOfPulses = 2;
             this.btnSetSyringe.PulseColor = System.Drawing.Color.DimGray;
@@ -306,21 +307,8 @@
             this.btnSetSyringe.TabIndex = 122;
             this.btnSetSyringe.Text = "选择品牌";
             this.btnSetSyringe.UseVisualStyleBackColor = true;
+            this.btnSetSyringe.Visible = false;
             this.btnSetSyringe.Click += new System.EventHandler(this.btnSetSyringe_Click);
-            // 
-            // sp_ACC_current
-            // 
-            this.sp_ACC_current.BackColor = System.Drawing.Color.Transparent;
-            this.sp_ACC_current.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sp_ACC_current.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sp_ACC_current.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.sp_ACC_current.Location = new System.Drawing.Point(-19, -15);
-            this.sp_ACC_current.Name = "sp_ACC_current";
-            this.sp_ACC_current.Size = new System.Drawing.Size(108, 58);
-            this.sp_ACC_current.TabIndex = 31;
-            this.sp_ACC_current.Text = "0.0";
-            this.sp_ACC_current.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.sp_ACC_current.Visible = false;
             // 
             // Syringe_state
             // 
@@ -391,6 +379,20 @@
             this.btnFastStopSP.UseVisualStyleBackColor = true;
             this.btnFastStopSP.Click += new System.EventHandler(this.btnFastStop_Click);
             // 
+            // sp_ACC_current
+            // 
+            this.sp_ACC_current.BackColor = System.Drawing.Color.Transparent;
+            this.sp_ACC_current.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sp_ACC_current.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sp_ACC_current.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.sp_ACC_current.Location = new System.Drawing.Point(-19, -15);
+            this.sp_ACC_current.Name = "sp_ACC_current";
+            this.sp_ACC_current.Size = new System.Drawing.Size(108, 58);
+            this.sp_ACC_current.TabIndex = 31;
+            this.sp_ACC_current.Text = "0.0";
+            this.sp_ACC_current.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sp_ACC_current.Visible = false;
+            // 
             // Sy_ClearWarning
             // 
             this.Sy_ClearWarning.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
@@ -451,17 +453,17 @@
             this.btnFastRunSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnFastRunSP.Size = new System.Drawing.Size(112, 62);
             this.btnFastRunSP.TabIndex = 122;
-            this.btnFastRunSP.Text = "快送";
+            this.btnFastRunSP.Text = "快  送";
             this.btnFastRunSP.UseVisualStyleBackColor = true;
             this.btnFastRunSP.Click += new System.EventHandler(this.btnFastRun_Click);
             // 
             // btnStopSP
             // 
-            this.btnStopSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnStopSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnStopSP.ButtonColorBottom = System.Drawing.Color.Red;
+            this.btnStopSP.ButtonColorTop = System.Drawing.Color.Salmon;
             this.btnStopSP.CornerRadius = 25;
             this.btnStopSP.Enabled = false;
-            this.btnStopSP.FocusColor = System.Drawing.Color.Black;
+            this.btnStopSP.FocusColor = System.Drawing.Color.Red;
             this.btnStopSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnStopSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnStopSP.Image = global::ALS.Properties.Resources.spstop;
@@ -474,7 +476,7 @@
             this.btnStopSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnStopSP.Size = new System.Drawing.Size(112, 62);
             this.btnStopSP.TabIndex = 122;
-            this.btnStopSP.Text = "运行";
+            this.btnStopSP.Text = "停  止";
             this.btnStopSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStopSP.UseVisualStyleBackColor = true;
             this.btnStopSP.Click += new System.EventHandler(this.btnStop_Click);
@@ -497,7 +499,7 @@
             this.btnRunSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnRunSP.Size = new System.Drawing.Size(112, 62);
             this.btnRunSP.TabIndex = 122;
-            this.btnRunSP.Text = "运行";
+            this.btnRunSP.Text = "运  行";
             this.btnRunSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRunSP.UseVisualStyleBackColor = true;
             this.btnRunSP.Click += new System.EventHandler(this.btnRun_Click);
@@ -1192,7 +1194,7 @@
             this.trackBar1.Location = new System.Drawing.Point(59, 25);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(188, 44);
+            this.trackBar1.Size = new System.Drawing.Size(188, 45);
             this.trackBar1.SmallChange = 10;
             this.trackBar1.TabIndex = 127;
             this.trackBar1.TickFrequency = 10;
@@ -2590,84 +2592,57 @@
             this.logtime,
             this.code,
             this.content});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLog.Location = new System.Drawing.Point(3, 3);
             this.dgvLog.MultiSelect = false;
             this.dgvLog.Name = "dgvLog";
             this.dgvLog.ReadOnly = true;
             this.dgvLog.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dgvLog.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dgvLog.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvLog.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgvLog.RowTemplate.Height = 30;
             this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLog.Size = new System.Drawing.Size(768, 512);
             this.dgvLog.TabIndex = 1;
             // 
-            // grade
+            // grouper5
             // 
-            this.grade.Frozen = true;
-            this.grade.HeaderText = "等级";
-            this.grade.MinimumWidth = 50;
-            this.grade.Name = "grade";
-            this.grade.ReadOnly = true;
-            this.grade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.grade.Width = 50;
-            // 
-            // no
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.no.DefaultCellStyle = dataGridViewCellStyle1;
-            this.no.HeaderText = "序号";
-            this.no.MinimumWidth = 50;
-            this.no.Name = "no";
-            this.no.ReadOnly = true;
-            this.no.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.no.Width = 50;
-            // 
-            // logtime
-            // 
-            this.logtime.HeaderText = "时间";
-            this.logtime.MinimumWidth = 200;
-            this.logtime.Name = "logtime";
-            this.logtime.ReadOnly = true;
-            this.logtime.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.logtime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.logtime.Width = 200;
-            // 
-            // code
-            // 
-            this.code.HeaderText = "代码";
-            this.code.MinimumWidth = 80;
-            this.code.Name = "code";
-            this.code.ReadOnly = true;
-            this.code.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.code.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.code.Width = 80;
-            // 
-            // content
-            // 
-            this.content.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.content.HeaderText = "内容";
-            this.content.Name = "content";
-            this.content.ReadOnly = true;
-            this.content.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.content.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.grouper5.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grouper5.BackgroundGradientColor = System.Drawing.Color.White;
+            this.grouper5.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.grouper5.BorderColor = System.Drawing.Color.Silver;
+            this.grouper5.BorderThickness = 1F;
+            this.grouper5.Controls.Add(this.tabControl1);
+            this.grouper5.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.grouper5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grouper5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grouper5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.grouper5.GroupImage = null;
+            this.grouper5.GroupTitle = "其他设置";
+            this.grouper5.Location = new System.Drawing.Point(0, 0);
+            this.grouper5.Name = "grouper5";
+            this.grouper5.Padding = new System.Windows.Forms.Padding(5, 30, 3, 3);
+            this.grouper5.PaintGroupBox = true;
+            this.grouper5.RoundCorners = 10;
+            this.grouper5.ShadowColor = System.Drawing.Color.DarkGray;
+            this.grouper5.ShadowControl = false;
+            this.grouper5.ShadowThickness = 3;
+            this.grouper5.Size = new System.Drawing.Size(790, 604);
+            this.grouper5.TabIndex = 120;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "序号";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 30;
@@ -2679,8 +2654,8 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn2.HeaderText = "时间";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 200;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -2718,6 +2693,58 @@
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // grade
+            // 
+            this.grade.Frozen = true;
+            this.grade.HeaderText = "等级";
+            this.grade.MinimumWidth = 50;
+            this.grade.Name = "grade";
+            this.grade.ReadOnly = true;
+            this.grade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.grade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.grade.Width = 50;
+            // 
+            // no
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.no.DefaultCellStyle = dataGridViewCellStyle6;
+            this.no.HeaderText = "序号";
+            this.no.MinimumWidth = 50;
+            this.no.Name = "no";
+            this.no.ReadOnly = true;
+            this.no.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.no.Width = 50;
+            // 
+            // logtime
+            // 
+            this.logtime.HeaderText = "时间";
+            this.logtime.MinimumWidth = 200;
+            this.logtime.Name = "logtime";
+            this.logtime.ReadOnly = true;
+            this.logtime.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.logtime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.logtime.Width = 200;
+            // 
+            // code
+            // 
+            this.code.HeaderText = "代码";
+            this.code.MinimumWidth = 80;
+            this.code.Name = "code";
+            this.code.ReadOnly = true;
+            this.code.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.code.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.code.Width = 80;
+            // 
+            // content
+            // 
+            this.content.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.content.HeaderText = "内容";
+            this.content.Name = "content";
+            this.content.ReadOnly = true;
+            this.content.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.content.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.Frozen = true;
@@ -2727,31 +2754,6 @@
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewImageColumn1.Width = 60;
-            // 
-            // grouper5
-            // 
-            this.grouper5.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grouper5.BackgroundGradientColor = System.Drawing.Color.White;
-            this.grouper5.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
-            this.grouper5.BorderColor = System.Drawing.Color.Silver;
-            this.grouper5.BorderThickness = 1F;
-            this.grouper5.Controls.Add(this.tabControl1);
-            this.grouper5.CustomGroupBoxColor = System.Drawing.Color.White;
-            this.grouper5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grouper5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grouper5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.grouper5.GroupImage = null;
-            this.grouper5.GroupTitle = "其他设置";
-            this.grouper5.Location = new System.Drawing.Point(0, 0);
-            this.grouper5.Name = "grouper5";
-            this.grouper5.Padding = new System.Windows.Forms.Padding(5, 30, 3, 3);
-            this.grouper5.PaintGroupBox = true;
-            this.grouper5.RoundCorners = 10;
-            this.grouper5.ShadowColor = System.Drawing.Color.DarkGray;
-            this.grouper5.ShadowControl = false;
-            this.grouper5.ShadowThickness = 3;
-            this.grouper5.Size = new System.Drawing.Size(790, 604);
-            this.grouper5.TabIndex = 120;
             // 
             // ucSetOther
             // 

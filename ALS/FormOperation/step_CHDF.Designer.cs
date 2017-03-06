@@ -104,7 +104,6 @@
             this.RichLabel5.Location = new System.Drawing.Point(0, 142);
             this.RichLabel5.Name = "RichLabel5";
             this.RichLabel5.Padding = new System.Windows.Forms.Padding(5);
-            this.RichLabel5.Shadow = true;
             this.RichLabel5.Size = new System.Drawing.Size(491, 80);
             this.RichLabel5.TabIndex = 128;
             this.RichLabel5.Text = "    ① <开始> 前，请在 <流量设置> 界面确认各泵的速度;\r\n    ② 引血时，请快速注入肝素 , 点 <抗凝剂泵> 进入设置;\r\n    ③ 可用设备" +
@@ -201,7 +200,6 @@
             this.richLabel1.Location = new System.Drawing.Point(0, 142);
             this.richLabel1.Name = "richLabel1";
             this.richLabel1.Padding = new System.Windows.Forms.Padding(5);
-            this.richLabel1.Shadow = true;
             this.richLabel1.Size = new System.Drawing.Size(491, 80);
             this.richLabel1.TabIndex = 129;
             this.richLabel1.Text = "    ① 在 <启动治疗> 前，请确认各泵的速度；\r\n    ② 可点击 <脱水速度> 的速度值进行修改速度大小；";
