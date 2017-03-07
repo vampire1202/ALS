@@ -10,7 +10,7 @@
     <RootNamespace>RichLabel</RootNamespace>
     <AssemblyName>RichLabel</AssemblyName>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
