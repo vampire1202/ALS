@@ -42,7 +42,7 @@
             this.picPump.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picPump.BackColor = System.Drawing.Color.Transparent;
             this.picPump.Image = global::ALS.Properties.Resources.home;
-            this.picPump.Location = new System.Drawing.Point(179, 16);
+            this.picPump.Location = new System.Drawing.Point(178, 16);
             this.picPump.Name = "picPump";
             this.picPump.Size = new System.Drawing.Size(32, 32);
             this.picPump.TabIndex = 0;
@@ -58,7 +58,7 @@
             this.lblSpeed.Location = new System.Drawing.Point(2, 30);
             this.lblSpeed.Margin = new System.Windows.Forms.Padding(0);
             this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(212, 60);
+            this.lblSpeed.Size = new System.Drawing.Size(211, 60);
             this.lblSpeed.TabIndex = 2;
             this.lblSpeed.Text = "120";
             this.lblSpeed.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -72,7 +72,7 @@
             this.lblUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.lblUnit.Location = new System.Drawing.Point(2, 90);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(212, 22);
+            this.lblUnit.Size = new System.Drawing.Size(211, 22);
             this.lblUnit.TabIndex = 3;
             this.lblUnit.Text = "mL/min";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -88,7 +88,7 @@
             this.lblOtherInfo.Margin = new System.Windows.Forms.Padding(0);
             this.lblOtherInfo.Name = "lblOtherInfo";
             this.lblOtherInfo.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.lblOtherInfo.Size = new System.Drawing.Size(212, 16);
+            this.lblOtherInfo.Size = new System.Drawing.Size(211, 16);
             this.lblOtherInfo.TabIndex = 4;
             this.lblOtherInfo.Text = "∑: 0.000 L";
             this.lblOtherInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,11 +115,11 @@
             this.gbox.Name = "gbox";
             this.gbox.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.gbox.PaintGroupBox = true;
-            this.gbox.RoundCorners = 10;
+            this.gbox.RoundCorners = 5;
             this.gbox.ShadowColor = System.Drawing.Color.DarkGray;
             this.gbox.ShadowControl = false;
             this.gbox.ShadowThickness = 3;
-            this.gbox.Size = new System.Drawing.Size(217, 131);
+            this.gbox.Size = new System.Drawing.Size(216, 131);
             this.gbox.TabIndex = 121;
             // 
             // uc_PumpSpeed
@@ -129,6 +129,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.gbox);
             this.Name = "uc_PumpSpeed";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.Size = new System.Drawing.Size(217, 131);
             ((System.ComponentModel.ISupportInitialize)(this.picPump)).EndInit();
             this.gbox.ResumeLayout(false);

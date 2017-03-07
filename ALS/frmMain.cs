@@ -1,4 +1,8 @@
-﻿//#define LOG_WARNING
+﻿
+#define RunT
+//#undef RunT
+
+//#define LOG_WARNING
 #undef LOG_WARNING                        //报警log
 
 
@@ -20,8 +24,6 @@
 //#define LOG_TREAT
 #undef LOG_TREAT                          //治疗log
 
-//#define RunT
-#undef RunT
 
 using System;
 using System.Collections.Generic;

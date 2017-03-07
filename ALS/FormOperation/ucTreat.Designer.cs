@@ -57,32 +57,32 @@
             this.btnZero = new PulseButton.PulseButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.splitter3 = new System.Windows.Forms.Splitter();
-            this.splitter4 = new System.Windows.Forms.Splitter();
             this.splitter5 = new System.Windows.Forms.Splitter();
+            this.splitter4 = new System.Windows.Forms.Splitter();
+            this.splitter3 = new System.Windows.Forms.Splitter();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.customTabControl1 = new System.Windows.Forms.CustomTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.palWizard = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.picTreat = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.palDry.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.customTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTreat)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnChange
             // 
             this.btnChange.Font = new System.Drawing.Font("微软雅黑", 10.5F);
             this.btnChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.btnChange.Location = new System.Drawing.Point(508, 42);
+            this.btnChange.Location = new System.Drawing.Point(515, 47);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(79, 32);
             this.btnChange.TabIndex = 65;
@@ -234,7 +234,7 @@
             this.chkBalance.Enabled = false;
             this.chkBalance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.chkBalance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.chkBalance.Location = new System.Drawing.Point(508, 6);
+            this.chkBalance.Location = new System.Drawing.Point(515, 9);
             this.chkBalance.Name = "chkBalance";
             this.chkBalance.Size = new System.Drawing.Size(79, 32);
             this.chkBalance.TabIndex = 60;
@@ -400,18 +400,15 @@
             // 
             // btnZero
             // 
-            this.btnZero.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZero.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnZero.CornerRadius = 16;
             this.btnZero.FocusColor = System.Drawing.Color.Black;
             this.btnZero.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnZero.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnZero.Location = new System.Drawing.Point(128, 19);
             this.btnZero.Name = "btnZero";
-            this.btnZero.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZero.NumberOfPulses = 3;
             this.btnZero.PulseSpeed = 0.3F;
             this.btnZero.PulseWidth = 4;
-            this.btnZero.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnZero.Size = new System.Drawing.Size(90, 42);
             this.btnZero.TabIndex = 122;
             this.btnZero.Text = "脱水清零";
@@ -458,35 +455,14 @@
             this.panel2.Size = new System.Drawing.Size(603, 87);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
+            // splitter5
             // 
-            this.panel3.Controls.Add(this.customTabControl1);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(603, 488);
-            this.panel3.TabIndex = 122;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 372);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(603, 116);
-            this.panel4.TabIndex = 123;
-            // 
-            // splitter3
-            // 
-            this.splitter3.BackColor = System.Drawing.Color.Silver;
-            this.splitter3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter3.Location = new System.Drawing.Point(3, 86);
-            this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(597, 1);
-            this.splitter3.TabIndex = 69;
-            this.splitter3.TabStop = false;
+            this.splitter5.BackColor = System.Drawing.Color.Silver;
+            this.splitter5.Location = new System.Drawing.Point(3, 0);
+            this.splitter5.Name = "splitter5";
+            this.splitter5.Size = new System.Drawing.Size(1, 86);
+            this.splitter5.TabIndex = 71;
+            this.splitter5.TabStop = false;
             // 
             // splitter4
             // 
@@ -498,14 +474,25 @@
             this.splitter4.TabIndex = 70;
             this.splitter4.TabStop = false;
             // 
-            // splitter5
+            // splitter3
             // 
-            this.splitter5.BackColor = System.Drawing.Color.Silver;
-            this.splitter5.Location = new System.Drawing.Point(3, 0);
-            this.splitter5.Name = "splitter5";
-            this.splitter5.Size = new System.Drawing.Size(1, 86);
-            this.splitter5.TabIndex = 71;
-            this.splitter5.TabStop = false;
+            this.splitter3.BackColor = System.Drawing.Color.Silver;
+            this.splitter3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.splitter3.Location = new System.Drawing.Point(3, 86);
+            this.splitter3.Name = "splitter3";
+            this.splitter3.Size = new System.Drawing.Size(597, 1);
+            this.splitter3.TabIndex = 69;
+            this.splitter3.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.customTabControl1);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(603, 488);
+            this.panel3.TabIndex = 122;
             // 
             // customTabControl1
             // 
@@ -572,6 +559,16 @@
             this.picTreat.TabIndex = 0;
             this.picTreat.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 372);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(603, 116);
+            this.panel4.TabIndex = 123;
+            // 
             // ucTreat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -590,11 +587,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.customTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picTreat)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

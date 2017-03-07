@@ -1,5 +1,11 @@
-﻿//#define RunStartTest
-#undef RunStartTest
+﻿#define RunStartTest
+//#undef RunStartTest
+
+//#define com3_19200
+#undef com3_19200
+
+#define com3_1200
+//#undef com3_1200
 
 using System;
 using System.Collections.Generic;
@@ -205,13 +211,28 @@ namespace ALS
             }
             await Task.Delay(200);
             //初始化蠕动泵串口 COM3 波特率19200 数据位8位 停止位1位 偶校验
+#if com3_19200
             if (await InitComm(this.port_ppump, "COM3", 19200, 8, StopBits.One, Parity.Even, ct) == Cls.utils.M_SendType.porttrue)
-                progress.Report(new Cls.StatusProgress() { Tipinfo = "·", Current = 15, Total = total, Success = true, _sendType = Cls.utils.M_SendType.porttrue });
+
+            progress.Report(new Cls.StatusProgress() { Tipinfo = "·", Current = 15, Total = total, Success = true, _sendType = Cls.utils.M_SendType.porttrue });
             else
             {
                 progress.Report(new Cls.StatusProgress() { Tipinfo = "蠕动泵失败", Current = 15, Total = total, Success = false, _sendType = Cls.utils.M_SendType.portfalse });
                 m_ctsCancelLoad.Cancel();
             }
+#endif
+
+#if com3_1200
+             if (await InitComm(this.port_ppump, "COM3", 1200, 8, StopBits.One, Parity.Even, ct) == Cls.utils.M_SendType.porttrue)
+
+            progress.Report(new Cls.StatusProgress() { Tipinfo = "·", Current = 15, Total = total, Success = true, _sendType = Cls.utils.M_SendType.porttrue });
+            else
+            {
+                progress.Report(new Cls.StatusProgress() { Tipinfo = "蠕动泵失败", Current = 15, Total = total, Success = false, _sendType = Cls.utils.M_SendType.portfalse });
+                m_ctsCancelLoad.Cancel();
+            }
+#endif
+
             //port_ppump.DataReceived += new SerialDataReceivedEventHandler(port_ppump_DataReceived);
 
             if (await InitComm(this.port_data, "COM4", 19200, 8, StopBits.One, Parity.Even, ct) == Cls.utils.M_SendType.porttrue)

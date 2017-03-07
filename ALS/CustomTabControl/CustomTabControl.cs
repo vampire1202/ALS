@@ -25,7 +25,7 @@ namespace System.Windows.Forms
 
 		public CustomTabControl(){
 			this.SetStyle(ControlStyles.ResizeRedraw, true);
-			
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
 			this._BackBuffer = new Bitmap(this.Width, this.Height);
 			this._BufferGraphics = Graphics.FromImage(this._BackBuffer);
 			
