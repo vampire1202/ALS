@@ -169,6 +169,7 @@ namespace PulseButton
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.ResizeRedraw, true);
             SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true); 
             InitializeComponent();
             // Layout & initialization
             SuspendLayout();         
@@ -184,7 +185,7 @@ namespace PulseButton
             pulseWidth = 6;
             PulseSpeed = .3f;
             // Timer
-            pulseTimer = new Timer { Interval = 200 };
+            pulseTimer = new Timer { Interval = 100 };
             pulseTimer.Tick += PulseTimerTick;
             pulses = new RectangleF[3];
             pulseColors = new Color[3];
