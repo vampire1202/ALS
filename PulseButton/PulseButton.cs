@@ -36,7 +36,7 @@ namespace PulseButton
         /// Gets or sets the top button color.
         /// </summary>
         /// <value>The top button color.</value>
-        [Browsable(true), DefaultValue(typeof(Color), "CornflowerBlue")]
+        [Browsable(true), DefaultValue(typeof(Color), "9, 140, 188")]
         [Category("Appearance")]
         public Color ButtonColorTop { get; set; }
 
@@ -44,7 +44,7 @@ namespace PulseButton
         /// Gets or sets the bottom button color.
         /// </summary>
         /// <value>The bottom button color.</value>
-        [Browsable(true), DefaultValue(typeof(Color), "DodgerBlue")]
+        [Browsable(true), DefaultValue(typeof(Color), "17, 96, 152")]
         [Category("Appearance")]
         public Color ButtonColorBottom { get; set; }
 
@@ -52,7 +52,7 @@ namespace PulseButton
         /// Gets or sets the color of the pulse.
         /// </summary>
         /// <value>The color of the pulse.</value>
-        [Browsable(true), DefaultValue(typeof(Color), "Black")]
+        [Browsable(true), DefaultValue(typeof(Color), "DimGray")]
         [Category("Appearance")]
         public Color PulseColor { get; set; }
 
@@ -60,7 +60,7 @@ namespace PulseButton
         /// Gets or sets the type of the shape.
         /// </summary>
         /// <value>The type of the shape.</value>
-        [Browsable(true), DefaultValue(typeof(Shape), "Round")]
+        [Browsable(true), DefaultValue(typeof(Shape), "Rectangle")]
         [Category("Appearance")]
         public Shape ShapeType { get; set; }
 
@@ -102,7 +102,7 @@ namespace PulseButton
         /// Gets or sets the number of pulses.
         /// </summary>
         /// <value>The number of pulses.</value>
-        [Browsable(true), DefaultValue(3)]
+        [Browsable(true), DefaultValue(2)]
         [Category("Appearance")]
         public int NumberOfPulses
         {
@@ -120,7 +120,7 @@ namespace PulseButton
         /// Gets or sets the width of the pulse.
         /// </summary>
         /// <value>The width of the pulse.</value>
-        [Browsable(true), DefaultValue(10)]
+        [Browsable(true), DefaultValue(6)]
         [Category("Appearance")]
         public int PulseWidth
         {
@@ -148,7 +148,7 @@ namespace PulseButton
         /// Gets or sets the interval.
         /// </summary>
         /// <value>The interval.</value>
-        [Browsable(false), DefaultValue(50)]
+        [Browsable(false), DefaultValue(100)]
         public int Interval
         {
             get { return pulseTimer.Interval; }
@@ -171,20 +171,20 @@ namespace PulseButton
             SetStyle(ControlStyles.UserPaint, true);
             InitializeComponent();
             // Layout & initialization
-            SuspendLayout();
-            pulseWidth = 10;
-            PulseSpeed = .3f;
-            ButtonColorTop = Color.CornflowerBlue;
-            ButtonColorBottom = Color.DodgerBlue;
-            FocusColor = Color.Orange;
-            PulseColor = Color.Black;
-            ShapeType = Shape.Round;
-            CornerRadius = 10;
+            SuspendLayout();         
+            ButtonColorTop = Color.FromArgb(9, 140, 188);
+            ButtonColorBottom = Color.FromArgb(17, 96, 152);
+            FocusColor = Color.Black;
+            PulseColor = Color.DimGray;
+            ShapeType = Shape.Rectangle;
             Image = null;  
             base.TextAlign = ContentAlignment.MiddleCenter;
-            Size = new Size(40, 40);
+            Size = new Size(112, 62);     
+            CornerRadius = 25;
+            pulseWidth = 6;
+            PulseSpeed = .3f;
             // Timer
-            pulseTimer = new Timer { Interval = 50 };
+            pulseTimer = new Timer { Interval = 200 };
             pulseTimer.Tick += PulseTimerTick;
             pulses = new RectangleF[3];
             pulseColors = new Color[3];

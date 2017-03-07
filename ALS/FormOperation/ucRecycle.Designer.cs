@@ -54,15 +54,15 @@
             this.gboxRecycle = new CodeVendor.Controls.Grouper();
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.gboxPump = new CodeVendor.Controls.Grouper();
-            this.grouper3 = new CodeVendor.Controls.Grouper();
-            this.grouper2 = new CodeVendor.Controls.Grouper();
             this.btnRunCP = new PulseButton.PulseButton();
             this.btnRunFP2 = new PulseButton.PulseButton();
             this.btnRunRP = new PulseButton.PulseButton();
             this.btnRunDP = new PulseButton.PulseButton();
             this.btnRunBP = new PulseButton.PulseButton();
             this.btnRunFP = new PulseButton.PulseButton();
+            this.grouper3 = new CodeVendor.Controls.Grouper();
             this.btnReturn = new PulseButton.PulseButton();
+            this.grouper2 = new CodeVendor.Controls.Grouper();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecycle)).BeginInit();
             this.palCtrlV.SuspendLayout();
             this.gboxRecycle.SuspendLayout();
@@ -475,6 +475,123 @@
             this.gboxPump.Size = new System.Drawing.Size(318, 419);
             this.gboxPump.TabIndex = 123;
             // 
+            // btnRunCP
+            // 
+            this.btnRunCP.CornerRadius = 20;
+            this.btnRunCP.FocusColor = System.Drawing.Color.Black;
+            this.btnRunCP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRunCP.ForeColor = System.Drawing.Color.Snow;
+            this.btnRunCP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunCP.Image")));
+            this.btnRunCP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRunCP.Location = new System.Drawing.Point(203, 353);
+            this.btnRunCP.Name = "btnRunCP";
+            this.btnRunCP.PulseSpeed = 0.3F;
+            this.btnRunCP.Size = new System.Drawing.Size(97, 52);
+            this.btnRunCP.TabIndex = 69;
+            this.btnRunCP.Tag = "cp";
+            this.btnRunCP.Text = "运转";
+            this.btnRunCP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRunCP.UseVisualStyleBackColor = true;
+            this.btnRunCP.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRunFP2
+            // 
+            this.btnRunFP2.CornerRadius = 20;
+            this.btnRunFP2.FocusColor = System.Drawing.Color.Black;
+            this.btnRunFP2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRunFP2.ForeColor = System.Drawing.Color.Snow;
+            this.btnRunFP2.Image = ((System.Drawing.Image)(resources.GetObject("btnRunFP2.Image")));
+            this.btnRunFP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRunFP2.Location = new System.Drawing.Point(203, 290);
+            this.btnRunFP2.Name = "btnRunFP2";
+            this.btnRunFP2.PulseSpeed = 0.3F;
+            this.btnRunFP2.Size = new System.Drawing.Size(97, 52);
+            this.btnRunFP2.TabIndex = 69;
+            this.btnRunFP2.Tag = "fp2";
+            this.btnRunFP2.Text = "运转";
+            this.btnRunFP2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRunFP2.UseVisualStyleBackColor = true;
+            this.btnRunFP2.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRunRP
+            // 
+            this.btnRunRP.CornerRadius = 20;
+            this.btnRunRP.FocusColor = System.Drawing.Color.Black;
+            this.btnRunRP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRunRP.ForeColor = System.Drawing.Color.Snow;
+            this.btnRunRP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunRP.Image")));
+            this.btnRunRP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRunRP.Location = new System.Drawing.Point(203, 227);
+            this.btnRunRP.Name = "btnRunRP";
+            this.btnRunRP.PulseSpeed = 0.3F;
+            this.btnRunRP.Size = new System.Drawing.Size(97, 52);
+            this.btnRunRP.TabIndex = 69;
+            this.btnRunRP.Tag = "rp";
+            this.btnRunRP.Text = "运转";
+            this.btnRunRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRunRP.UseVisualStyleBackColor = true;
+            this.btnRunRP.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRunDP
+            // 
+            this.btnRunDP.CornerRadius = 20;
+            this.btnRunDP.FocusColor = System.Drawing.Color.Black;
+            this.btnRunDP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRunDP.ForeColor = System.Drawing.Color.Snow;
+            this.btnRunDP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunDP.Image")));
+            this.btnRunDP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRunDP.Location = new System.Drawing.Point(203, 164);
+            this.btnRunDP.Name = "btnRunDP";
+            this.btnRunDP.PulseSpeed = 0.3F;
+            this.btnRunDP.Size = new System.Drawing.Size(97, 52);
+            this.btnRunDP.TabIndex = 69;
+            this.btnRunDP.Tag = "dp";
+            this.btnRunDP.Text = "运转";
+            this.btnRunDP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRunDP.UseVisualStyleBackColor = true;
+            this.btnRunDP.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRunBP
+            // 
+            this.btnRunBP.AutoEllipsis = true;
+            this.btnRunBP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRunBP.CornerRadius = 20;
+            this.btnRunBP.FocusColor = System.Drawing.Color.Black;
+            this.btnRunBP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRunBP.ForeColor = System.Drawing.Color.Snow;
+            this.btnRunBP.Image = global::ALS.Properties.Resources.spstart;
+            this.btnRunBP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRunBP.Location = new System.Drawing.Point(203, 38);
+            this.btnRunBP.Name = "btnRunBP";
+            this.btnRunBP.PulseSpeed = 0.3F;
+            this.btnRunBP.Size = new System.Drawing.Size(97, 52);
+            this.btnRunBP.TabIndex = 69;
+            this.btnRunBP.Tag = "bp";
+            this.btnRunBP.Text = "运转";
+            this.btnRunBP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRunBP.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRunBP.UseVisualStyleBackColor = true;
+            this.btnRunBP.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRunFP
+            // 
+            this.btnRunFP.CornerRadius = 20;
+            this.btnRunFP.FocusColor = System.Drawing.Color.Black;
+            this.btnRunFP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRunFP.ForeColor = System.Drawing.Color.Snow;
+            this.btnRunFP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunFP.Image")));
+            this.btnRunFP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRunFP.Location = new System.Drawing.Point(203, 101);
+            this.btnRunFP.Name = "btnRunFP";
+            this.btnRunFP.PulseSpeed = 0.3F;
+            this.btnRunFP.Size = new System.Drawing.Size(97, 52);
+            this.btnRunFP.TabIndex = 69;
+            this.btnRunFP.Tag = "fp";
+            this.btnRunFP.Text = "运转";
+            this.btnRunFP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRunFP.UseVisualStyleBackColor = true;
+            this.btnRunFP.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
             // grouper3
             // 
             this.grouper3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -500,6 +617,25 @@
             this.grouper3.Size = new System.Drawing.Size(318, 129);
             this.grouper3.TabIndex = 122;
             // 
+            // btnReturn
+            // 
+            this.btnReturn.CornerRadius = 20;
+            this.btnReturn.FocusColor = System.Drawing.Color.Black;
+            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnReturn.ForeColor = System.Drawing.Color.Snow;
+            this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReturn.Location = new System.Drawing.Point(82, 21);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.NumberOfPulses = 3;
+            this.btnReturn.PulseSpeed = 0.3F;
+            this.btnReturn.Size = new System.Drawing.Size(157, 52);
+            this.btnReturn.TabIndex = 68;
+            this.btnReturn.Text = "所有阀松开";
+            this.btnReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Visible = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnCloseAll_Click);
+            // 
             // grouper2
             // 
             this.grouper2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -522,182 +658,6 @@
             this.grouper2.ShadowThickness = 3;
             this.grouper2.Size = new System.Drawing.Size(438, 215);
             this.grouper2.TabIndex = 121;
-            // 
-            // btnRunCP
-            // 
-            this.btnRunCP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRunCP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnRunCP.CornerRadius = 20;
-            this.btnRunCP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunCP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunCP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunCP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunCP.Image")));
-            this.btnRunCP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunCP.Location = new System.Drawing.Point(203, 353);
-            this.btnRunCP.Name = "btnRunCP";
-            this.btnRunCP.NumberOfPulses = 2;
-            this.btnRunCP.PulseColor = System.Drawing.Color.DimGray;
-            this.btnRunCP.PulseSpeed = 0.3F;
-            this.btnRunCP.PulseWidth = 6;
-            this.btnRunCP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnRunCP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunCP.TabIndex = 69;
-            this.btnRunCP.Tag = "cp";
-            this.btnRunCP.Text = "运转";
-            this.btnRunCP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunCP.UseVisualStyleBackColor = true;
-            this.btnRunCP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunFP2
-            // 
-            this.btnRunFP2.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRunFP2.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnRunFP2.CornerRadius = 20;
-            this.btnRunFP2.FocusColor = System.Drawing.Color.Black;
-            this.btnRunFP2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunFP2.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunFP2.Image = ((System.Drawing.Image)(resources.GetObject("btnRunFP2.Image")));
-            this.btnRunFP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunFP2.Location = new System.Drawing.Point(203, 290);
-            this.btnRunFP2.Name = "btnRunFP2";
-            this.btnRunFP2.NumberOfPulses = 2;
-            this.btnRunFP2.PulseColor = System.Drawing.Color.DimGray;
-            this.btnRunFP2.PulseSpeed = 0.3F;
-            this.btnRunFP2.PulseWidth = 6;
-            this.btnRunFP2.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnRunFP2.Size = new System.Drawing.Size(97, 52);
-            this.btnRunFP2.TabIndex = 69;
-            this.btnRunFP2.Tag = "fp2";
-            this.btnRunFP2.Text = "运转";
-            this.btnRunFP2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunFP2.UseVisualStyleBackColor = true;
-            this.btnRunFP2.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunRP
-            // 
-            this.btnRunRP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRunRP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnRunRP.CornerRadius = 20;
-            this.btnRunRP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunRP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunRP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunRP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunRP.Image")));
-            this.btnRunRP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunRP.Location = new System.Drawing.Point(203, 227);
-            this.btnRunRP.Name = "btnRunRP";
-            this.btnRunRP.NumberOfPulses = 2;
-            this.btnRunRP.PulseColor = System.Drawing.Color.DimGray;
-            this.btnRunRP.PulseSpeed = 0.3F;
-            this.btnRunRP.PulseWidth = 6;
-            this.btnRunRP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnRunRP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunRP.TabIndex = 69;
-            this.btnRunRP.Tag = "rp";
-            this.btnRunRP.Text = "运转";
-            this.btnRunRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunRP.UseVisualStyleBackColor = true;
-            this.btnRunRP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunDP
-            // 
-            this.btnRunDP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRunDP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnRunDP.CornerRadius = 20;
-            this.btnRunDP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunDP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunDP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunDP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunDP.Image")));
-            this.btnRunDP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunDP.Location = new System.Drawing.Point(203, 164);
-            this.btnRunDP.Name = "btnRunDP";
-            this.btnRunDP.NumberOfPulses = 2;
-            this.btnRunDP.PulseColor = System.Drawing.Color.DimGray;
-            this.btnRunDP.PulseSpeed = 0.3F;
-            this.btnRunDP.PulseWidth = 6;
-            this.btnRunDP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnRunDP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunDP.TabIndex = 69;
-            this.btnRunDP.Tag = "dp";
-            this.btnRunDP.Text = "运转";
-            this.btnRunDP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunDP.UseVisualStyleBackColor = true;
-            this.btnRunDP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunBP
-            // 
-            this.btnRunBP.AutoEllipsis = true;
-            this.btnRunBP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRunBP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRunBP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnRunBP.CornerRadius = 20;
-            this.btnRunBP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunBP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunBP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunBP.Image = global::ALS.Properties.Resources.spstart;
-            this.btnRunBP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunBP.Location = new System.Drawing.Point(203, 38);
-            this.btnRunBP.Name = "btnRunBP";
-            this.btnRunBP.NumberOfPulses = 2;
-            this.btnRunBP.PulseColor = System.Drawing.Color.DimGray;
-            this.btnRunBP.PulseSpeed = 0.3F;
-            this.btnRunBP.PulseWidth = 6;
-            this.btnRunBP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnRunBP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunBP.TabIndex = 69;
-            this.btnRunBP.Tag = "bp";
-            this.btnRunBP.Text = "运转";
-            this.btnRunBP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunBP.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRunBP.UseVisualStyleBackColor = true;
-            this.btnRunBP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunFP
-            // 
-            this.btnRunFP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRunFP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnRunFP.CornerRadius = 20;
-            this.btnRunFP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunFP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunFP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunFP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunFP.Image")));
-            this.btnRunFP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunFP.Location = new System.Drawing.Point(203, 101);
-            this.btnRunFP.Name = "btnRunFP";
-            this.btnRunFP.NumberOfPulses = 2;
-            this.btnRunFP.PulseColor = System.Drawing.Color.DimGray;
-            this.btnRunFP.PulseSpeed = 0.3F;
-            this.btnRunFP.PulseWidth = 6;
-            this.btnRunFP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnRunFP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunFP.TabIndex = 69;
-            this.btnRunFP.Tag = "fp";
-            this.btnRunFP.Text = "运转";
-            this.btnRunFP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunFP.UseVisualStyleBackColor = true;
-            this.btnRunFP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
-            this.btnReturn.CornerRadius = 20;
-            this.btnReturn.FocusColor = System.Drawing.Color.Black;
-            this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnReturn.ForeColor = System.Drawing.Color.Snow;
-            this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReturn.Location = new System.Drawing.Point(82, 21);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
-            this.btnReturn.PulseSpeed = 0.3F;
-            this.btnReturn.PulseWidth = 6;
-            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnReturn.Size = new System.Drawing.Size(157, 52);
-            this.btnReturn.TabIndex = 68;
-            this.btnReturn.Text = "所有阀松开";
-            this.btnReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Visible = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnCloseAll_Click);
             // 
             // ucRecycle
             // 

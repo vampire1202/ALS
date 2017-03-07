@@ -64,20 +64,16 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnReturn.CornerRadius = 50;
             this.btnReturn.FocusColor = System.Drawing.Color.DimGray;
             this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReturn.Location = new System.Drawing.Point(53, 36);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.NumberOfPulses = 2;
             this.btnReturn.PulseColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.PulseSpeed = 0.3F;
             this.btnReturn.PulseWidth = 8;
-            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
-            this.btnReturn.Size = new System.Drawing.Size(406, 124);
+            this.btnReturn.Size = new System.Drawing.Size(406, 116);
             this.btnReturn.TabIndex = 122;
             this.btnReturn.Text = "李 氏 人 工 肝";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -187,8 +183,6 @@
             this.btnRun1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRun1.AutoEllipsis = true;
             this.btnRun1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRun1.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRun1.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnRun1.CornerRadius = 20;
             this.btnRun1.FocusColor = System.Drawing.Color.Black;
             this.btnRun1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -197,11 +191,7 @@
             this.btnRun1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRun1.Location = new System.Drawing.Point(669, 559);
             this.btnRun1.Name = "btnRun1";
-            this.btnRun1.NumberOfPulses = 2;
-            this.btnRun1.PulseColor = System.Drawing.Color.DimGray;
             this.btnRun1.PulseSpeed = 0.3F;
-            this.btnRun1.PulseWidth = 6;
-            this.btnRun1.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnRun1.Size = new System.Drawing.Size(118, 64);
             this.btnRun1.TabIndex = 121;
             this.btnRun1.Tag = "1";
@@ -216,8 +206,6 @@
             this.pulseButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pulseButton1.AutoEllipsis = true;
             this.pulseButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pulseButton1.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.pulseButton1.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.pulseButton1.CornerRadius = 20;
             this.pulseButton1.FocusColor = System.Drawing.Color.Black;
             this.pulseButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -226,11 +214,7 @@
             this.pulseButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.pulseButton1.Location = new System.Drawing.Point(830, 559);
             this.pulseButton1.Name = "pulseButton1";
-            this.pulseButton1.NumberOfPulses = 2;
-            this.pulseButton1.PulseColor = System.Drawing.Color.DimGray;
             this.pulseButton1.PulseSpeed = 0.3F;
-            this.pulseButton1.PulseWidth = 6;
-            this.pulseButton1.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.pulseButton1.Size = new System.Drawing.Size(118, 64);
             this.pulseButton1.TabIndex = 121;
             this.pulseButton1.Tag = "1";

@@ -3559,14 +3559,7 @@ namespace ALS
                             M_uc_Sum.lblTotalDP.Text = M_ModelTotal.TotalDP.ToString("f3");
                             M_uc_Sum.lblTotalSP.Text = M_ModelTotal.TotalSP.ToString("f1");
                         }
-                        #endregion
-
-                        #region 自动预冲界面
-                        if (M_uc_AutoFlush != null && this.palContent.Controls.Contains(M_uc_AutoFlush))
-                        {
-                            //M_uc_AutoFlush.lblCurrent.Text = (M_ModelValue.M_flt_Weigh2 - startWeigh2).ToString("f0");
-                        }
-                        #endregion
+                        #endregion                    
 
                         #region 流量界面
                         if (M_uc_SetFlow != null && this.palContent.Controls.Contains(M_uc_SetFlow))

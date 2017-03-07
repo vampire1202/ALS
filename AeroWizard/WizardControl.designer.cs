@@ -80,10 +80,10 @@
             // contentArea
             // 
             this.contentArea.BackColor = System.Drawing.SystemColors.Window;
-            this.contentArea.ColumnCount = 3;
+            this.contentArea.ColumnCount = 2;
             this.contentArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.contentArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.contentArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.contentArea.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.contentArea.Controls.Add(this.pageContainer, 1, 0);
             this.contentArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentArea.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -106,7 +106,7 @@
             this.pageContainer.Margin = new System.Windows.Forms.Padding(0);
             this.pageContainer.Name = "pageContainer";
             this.pageContainer.NextButton = this.nextButton;
-            this.pageContainer.Size = new System.Drawing.Size(593, 312);
+            this.pageContainer.Size = new System.Drawing.Size(603, 312);
             this.pageContainer.TabIndex = 0;
             this.pageContainer.Cancelling += new System.ComponentModel.CancelEventHandler(this.pageContainer_Cancelling);
             this.pageContainer.Finished += new System.EventHandler(this.pageContainer_Finished);
