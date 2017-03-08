@@ -24,8 +24,7 @@ using System.Windows.Forms;
 namespace CodeVendor.Controls
 {
 	/// <summary>A special custom rounding GroupBox with many painting features.</summary>
-	[ToolboxBitmap(typeof(Grouper), "CodeVendor.Controls.Grouper.bmp")]
-	[Designer("System.Windows.Forms.Design.ParentControlDesigner, System.Design", typeof(IDesigner))]
+	
 	public class Grouper : System.Windows.Forms.UserControl
 	{
 		#region Enumerations

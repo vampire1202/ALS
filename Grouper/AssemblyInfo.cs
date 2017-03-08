@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CodeVendor")]
 [assembly: AssemblyProduct("CodeVendor.Controls")]
-[assembly: AssemblyCopyright("Copyright © 2005 CodeVendor, All Rights Reserved.")]
+[assembly: AssemblyCopyright("Copyright ?2005 CodeVendor, All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 [assembly: AssemblyVersion("1.0")]
