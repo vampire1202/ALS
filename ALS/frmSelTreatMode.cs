@@ -1,11 +1,13 @@
 ﻿//#define RunStartTest
 #undef RunStartTest
 
+//蠕动泵波特率 19200
 //#define com3_19200
-#undef com3_19200
-
-#define com3_1200
 //#undef com3_1200
+
+//蠕动泵波特率 1200
+#undef com3_19200
+#define com3_1200
 
 using System;
 using System.Collections.Generic;

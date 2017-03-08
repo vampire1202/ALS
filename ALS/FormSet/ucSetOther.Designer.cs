@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSetOther));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnChangeSP = new PulseButton.PulseButton();
-            this.btnSetSyringe = new PulseButton.PulseButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.grouper5 = new CodeVendor.Controls.Grouper();
+            this.tabControl1 = new System.Windows.Forms.CustomTabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.Syringe_state = new System.Windows.Forms.Label();
+            this.btnChangeSP = new PulseButton.PulseButton();
+            this.label44 = new System.Windows.Forms.Label();
+            this.btnSetSyringe = new PulseButton.PulseButton();
+            this.btnSaveSP = new System.Windows.Forms.Button();
+            this.lblSPStandard = new System.Windows.Forms.Label();
             this.palSyringe = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.btnFastStopSP = new PulseButton.PulseButton();
@@ -57,11 +61,8 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.lblSpeed = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.lblSPStandard = new System.Windows.Forms.Label();
-            this.btnSaveSP = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.gboxRecycle = new CodeVendor.Controls.Grouper();
             this.btnZeroWS4 = new PulseButton.PulseButton();
             this.label39 = new System.Windows.Forms.Label();
@@ -89,35 +90,10 @@
             this.lblTargetT = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTemperature = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.grouper4 = new CodeVendor.Controls.Grouper();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.lblBloodLeak = new System.Windows.Forms.Label();
-            this.grouper3 = new CodeVendor.Controls.Grouper();
-            this.gboxPrePven = new System.Windows.Forms.GroupBox();
-            this.rbtnPrePven5 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePven4 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePven3 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePven2 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePven1 = new System.Windows.Forms.RadioButton();
-            this.gboxPrePart = new System.Windows.Forms.GroupBox();
-            this.rbtnPrePart5 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePart4 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePart3 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePart2 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePart1 = new System.Windows.Forms.RadioButton();
-            this.gboxPrePacc = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.rbtnPrePacc5 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePacc4 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePacc3 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePacc2 = new System.Windows.Forms.RadioButton();
-            this.rbtnPrePacc1 = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.label38 = new System.Windows.Forms.Label();
-            this.lblPaccDecWarn = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.grouper2 = new CodeVendor.Controls.Grouper();
             this.label1 = new System.Windows.Forms.Label();
             this.lblConcentration = new System.Windows.Forms.Label();
@@ -149,138 +125,196 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblPaccLower = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.grouper3 = new CodeVendor.Controls.Grouper();
+            this.gboxPrePven = new System.Windows.Forms.GroupBox();
+            this.rbtnPrePven5 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePven4 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePven3 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePven2 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePven1 = new System.Windows.Forms.RadioButton();
+            this.gboxPrePart = new System.Windows.Forms.GroupBox();
+            this.rbtnPrePart5 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePart4 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePart3 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePart2 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePart1 = new System.Windows.Forms.RadioButton();
+            this.gboxPrePacc = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.rbtnPrePacc5 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePacc4 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePacc3 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePacc2 = new System.Windows.Forms.RadioButton();
+            this.rbtnPrePacc1 = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.label38 = new System.Windows.Forms.Label();
+            this.lblPaccDecWarn = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnDefault = new PulseButton.PulseButton();
+            this.lblRealBloodLeak = new System.Windows.Forms.Label();
             this.btnSaveDefault = new PulseButton.PulseButton();
             this.btnSaveWarnSet = new PulseButton.PulseButton();
-            this.lblRealBloodLeak = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.gboxPDF = new CodeVendor.Controls.Grouper();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.lblPDFFlush2 = new System.Windows.Forms.Label();
             this.lblPDFFlush1 = new System.Windows.Forms.Label();
-            this.gboxPEF = new CodeVendor.Controls.Grouper();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.lblPEFFlush2 = new System.Windows.Forms.Label();
-            this.lblPEFFlush1 = new System.Windows.Forms.Label();
-            this.gboxLiALS = new CodeVendor.Controls.Grouper();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.lblLiALSFLush2 = new System.Windows.Forms.Label();
-            this.lblLiALSFLush1 = new System.Windows.Forms.Label();
-            this.gboxCHDF = new CodeVendor.Controls.Grouper();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.lblCHDFFlush2 = new System.Windows.Forms.Label();
-            this.lblCHDFFlush1 = new System.Windows.Forms.Label();
-            this.gboxPP = new CodeVendor.Controls.Grouper();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lblPPFlush2 = new System.Windows.Forms.Label();
-            this.lblPPFlush1 = new System.Windows.Forms.Label();
             this.gboxPE = new CodeVendor.Controls.Grouper();
             this.label19 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.lblPEFlush2 = new System.Windows.Forms.Label();
             this.lblPEFlush1 = new System.Windows.Forms.Label();
+            this.gboxPEF = new CodeVendor.Controls.Grouper();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.lblPEFFlush2 = new System.Windows.Forms.Label();
+            this.lblPEFFlush1 = new System.Windows.Forms.Label();
             this.btnSetFlush = new PulseButton.PulseButton();
-            this.tpWarnLog = new System.Windows.Forms.TabPage();
+            this.gboxLiALS = new CodeVendor.Controls.Grouper();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.lblLiALSFLush2 = new System.Windows.Forms.Label();
+            this.lblLiALSFLush1 = new System.Windows.Forms.Label();
+            this.gboxPP = new CodeVendor.Controls.Grouper();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lblPPFlush2 = new System.Windows.Forms.Label();
+            this.lblPPFlush1 = new System.Windows.Forms.Label();
+            this.gboxCHDF = new CodeVendor.Controls.Grouper();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.lblCHDFFlush2 = new System.Windows.Forms.Label();
+            this.lblCHDFFlush1 = new System.Windows.Forms.Label();
+            this.tpwarnlog = new System.Windows.Forms.TabPage();
             this.dgvLog = new System.Windows.Forms.DataGridView();
-            this.grouper5 = new CodeVendor.Controls.Grouper();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.content = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.grouper5.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.palSyringe.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.gboxRecycle.SuspendLayout();
             this.gboxV.SuspendLayout();
             this.grouper1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.grouper4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.grouper2.SuspendLayout();
             this.grouper3.SuspendLayout();
             this.gboxPrePven.SuspendLayout();
             this.gboxPrePart.SuspendLayout();
             this.gboxPrePacc.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.grouper2.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.gboxPDF.SuspendLayout();
+            this.gboxPE.SuspendLayout();
             this.gboxPEF.SuspendLayout();
             this.gboxLiALS.SuspendLayout();
-            this.gboxCHDF.SuspendLayout();
             this.gboxPP.SuspendLayout();
-            this.gboxPE.SuspendLayout();
-            this.tpWarnLog.SuspendLayout();
+            this.gboxCHDF.SuspendLayout();
+            this.tpwarnlog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
-            this.grouper5.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // grouper5
+            // 
+            this.grouper5.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grouper5.BackgroundGradientColor = System.Drawing.Color.White;
+            this.grouper5.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.grouper5.BorderColor = System.Drawing.Color.Silver;
+            this.grouper5.BorderThickness = 1F;
+            this.grouper5.Controls.Add(this.tabControl1);
+            this.grouper5.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.grouper5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grouper5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grouper5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.grouper5.GroupImage = null;
+            this.grouper5.GroupTitle = "其他设置";
+            this.grouper5.Location = new System.Drawing.Point(0, 0);
+            this.grouper5.Name = "grouper5";
+            this.grouper5.Padding = new System.Windows.Forms.Padding(5, 30, 3, 3);
+            this.grouper5.PaintGroupBox = true;
+            this.grouper5.RoundCorners = 10;
+            this.grouper5.ShadowColor = System.Drawing.Color.DarkGray;
+            this.grouper5.ShadowControl = false;
+            this.grouper5.ShadowThickness = 3;
+            this.grouper5.Size = new System.Drawing.Size(790, 604);
+            this.grouper5.TabIndex = 120;
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tpWarnLog);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tpwarnlog);
+            this.tabControl1.DisplayStyle = System.Windows.Forms.TabStyle.Chrome;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(158, 45);
+            this.tabControl1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tabControl1.ItemSize = new System.Drawing.Size(150, 40);
             this.tabControl1.Location = new System.Drawing.Point(5, 30);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Overlap = 20;
+            this.tabControl1.Padding = new System.Drawing.Point(13, 10);
+            this.tabControl1.Radius = 5;
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(782, 571);
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl1.TabIndex = 1;
             // 
-            // tabPage1
+            // tabPage5
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.btnChangeSP);
-            this.tabPage1.Controls.Add(this.btnSetSyringe);
-            this.tabPage1.Controls.Add(this.Syringe_state);
-            this.tabPage1.Controls.Add(this.palSyringe);
-            this.tabPage1.Controls.Add(this.label44);
-            this.tabPage1.Controls.Add(this.label46);
-            this.tabPage1.Controls.Add(this.lblSPStandard);
-            this.tabPage1.Controls.Add(this.btnSaveSP);
-            this.tabPage1.Location = new System.Drawing.Point(4, 49);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(774, 518);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "  注射器  ";
+            this.tabPage5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage5.Controls.Add(this.Syringe_state);
+            this.tabPage5.Controls.Add(this.btnChangeSP);
+            this.tabPage5.Controls.Add(this.label44);
+            this.tabPage5.Controls.Add(this.btnSetSyringe);
+            this.tabPage5.Controls.Add(this.btnSaveSP);
+            this.tabPage5.Controls.Add(this.lblSPStandard);
+            this.tabPage5.Controls.Add(this.palSyringe);
+            this.tabPage5.Controls.Add(this.label46);
+            this.tabPage5.Location = new System.Drawing.Point(4, 45);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(774, 522);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "注射器  ";
+            // 
+            // Syringe_state
+            // 
+            this.Syringe_state.AutoSize = true;
+            this.Syringe_state.Location = new System.Drawing.Point(57, 37);
+            this.Syringe_state.Name = "Syringe_state";
+            this.Syringe_state.Size = new System.Drawing.Size(64, 21);
+            this.Syringe_state.TabIndex = 124;
+            this.Syringe_state.Text = "label40";
             // 
             // btnChangeSP
             // 
-            this.btnChangeSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnChangeSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnChangeSP.CornerRadius = 25;
             this.btnChangeSP.FocusColor = System.Drawing.Color.Black;
             this.btnChangeSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnChangeSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnChangeSP.Location = new System.Drawing.Point(578, 23);
+            this.btnChangeSP.Location = new System.Drawing.Point(573, 73);
             this.btnChangeSP.Name = "btnChangeSP";
-            this.btnChangeSP.NumberOfPulses = 2;
-            this.btnChangeSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnChangeSP.NumberOfPulses = 3;
             this.btnChangeSP.PulseSpeed = 0.3F;
-            this.btnChangeSP.PulseWidth = 6;
-            this.btnChangeSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnChangeSP.Size = new System.Drawing.Size(112, 62);
             this.btnChangeSP.TabIndex = 123;
             this.btnChangeSP.Text = "更换注射器";
@@ -288,21 +322,27 @@
             this.btnChangeSP.Visible = false;
             this.btnChangeSP.Click += new System.EventHandler(this.btnChangeSyringe_Click);
             // 
+            // label44
+            // 
+            this.label44.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.label44.Location = new System.Drawing.Point(66, 106);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(139, 35);
+            this.label44.TabIndex = 24;
+            this.label44.Text = "注射器规格:";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // btnSetSyringe
             // 
-            this.btnSetSyringe.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSetSyringe.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnSetSyringe.CornerRadius = 25;
             this.btnSetSyringe.FocusColor = System.Drawing.Color.Black;
             this.btnSetSyringe.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetSyringe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSetSyringe.Location = new System.Drawing.Point(434, 23);
+            this.btnSetSyringe.Location = new System.Drawing.Point(429, 73);
             this.btnSetSyringe.Name = "btnSetSyringe";
-            this.btnSetSyringe.NumberOfPulses = 2;
-            this.btnSetSyringe.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSetSyringe.NumberOfPulses = 3;
             this.btnSetSyringe.PulseSpeed = 0.3F;
-            this.btnSetSyringe.PulseWidth = 6;
-            this.btnSetSyringe.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnSetSyringe.Size = new System.Drawing.Size(112, 62);
             this.btnSetSyringe.TabIndex = 122;
             this.btnSetSyringe.Text = "选择品牌";
@@ -310,16 +350,34 @@
             this.btnSetSyringe.Visible = false;
             this.btnSetSyringe.Click += new System.EventHandler(this.btnSetSyringe_Click);
             // 
-            // Syringe_state
+            // btnSaveSP
             // 
-            this.Syringe_state.AutoSize = true;
-            this.Syringe_state.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Syringe_state.ForeColor = System.Drawing.Color.Lime;
-            this.Syringe_state.Location = new System.Drawing.Point(17, 60);
-            this.Syringe_state.Name = "Syringe_state";
-            this.Syringe_state.Size = new System.Drawing.Size(88, 25);
-            this.Syringe_state.TabIndex = 28;
-            this.Syringe_state.Text = "状态正常";
+            this.btnSaveSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSaveSP.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveSP.Image")));
+            this.btnSaveSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveSP.Location = new System.Drawing.Point(524, 420);
+            this.btnSaveSP.Name = "btnSaveSP";
+            this.btnSaveSP.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.btnSaveSP.Size = new System.Drawing.Size(106, 47);
+            this.btnSaveSP.TabIndex = 23;
+            this.btnSaveSP.Text = "保存设置";
+            this.btnSaveSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveSP.UseVisualStyleBackColor = true;
+            this.btnSaveSP.Visible = false;
+            this.btnSaveSP.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblSPStandard
+            // 
+            this.lblSPStandard.BackColor = System.Drawing.Color.Transparent;
+            this.lblSPStandard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSPStandard.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSPStandard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblSPStandard.Location = new System.Drawing.Point(218, 100);
+            this.lblSPStandard.Name = "lblSPStandard";
+            this.lblSPStandard.Size = new System.Drawing.Size(100, 50);
+            this.lblSPStandard.TabIndex = 21;
+            this.lblSPStandard.Text = "--";
+            this.lblSPStandard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // palSyringe
             // 
@@ -341,7 +399,7 @@
             this.palSyringe.Controls.Add(this.label35);
             this.palSyringe.Controls.Add(this.lblSpeed);
             this.palSyringe.Enabled = false;
-            this.palSyringe.Location = new System.Drawing.Point(41, 155);
+            this.palSyringe.Location = new System.Drawing.Point(36, 156);
             this.palSyringe.Name = "palSyringe";
             this.palSyringe.Size = new System.Drawing.Size(667, 307);
             this.palSyringe.TabIndex = 27;
@@ -359,8 +417,6 @@
             // 
             // btnFastStopSP
             // 
-            this.btnFastStopSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnFastStopSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnFastStopSP.CornerRadius = 25;
             this.btnFastStopSP.Enabled = false;
             this.btnFastStopSP.FocusColor = System.Drawing.Color.Black;
@@ -368,11 +424,8 @@
             this.btnFastStopSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnFastStopSP.Location = new System.Drawing.Point(537, 120);
             this.btnFastStopSP.Name = "btnFastStopSP";
-            this.btnFastStopSP.NumberOfPulses = 2;
-            this.btnFastStopSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnFastStopSP.NumberOfPulses = 3;
             this.btnFastStopSP.PulseSpeed = 0.3F;
-            this.btnFastStopSP.PulseWidth = 6;
-            this.btnFastStopSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnFastStopSP.Size = new System.Drawing.Size(112, 62);
             this.btnFastStopSP.TabIndex = 122;
             this.btnFastStopSP.Text = "快送停止";
@@ -385,7 +438,7 @@
             this.sp_ACC_current.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sp_ACC_current.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sp_ACC_current.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.sp_ACC_current.Location = new System.Drawing.Point(-19, -15);
+            this.sp_ACC_current.Location = new System.Drawing.Point(3, 0);
             this.sp_ACC_current.Name = "sp_ACC_current";
             this.sp_ACC_current.Size = new System.Drawing.Size(108, 58);
             this.sp_ACC_current.TabIndex = 31;
@@ -395,19 +448,14 @@
             // 
             // Sy_ClearWarning
             // 
-            this.Sy_ClearWarning.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.Sy_ClearWarning.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.Sy_ClearWarning.CornerRadius = 25;
             this.Sy_ClearWarning.FocusColor = System.Drawing.Color.Black;
             this.Sy_ClearWarning.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Sy_ClearWarning.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Sy_ClearWarning.Location = new System.Drawing.Point(537, 211);
             this.Sy_ClearWarning.Name = "Sy_ClearWarning";
-            this.Sy_ClearWarning.NumberOfPulses = 2;
-            this.Sy_ClearWarning.PulseColor = System.Drawing.Color.DimGray;
+            this.Sy_ClearWarning.NumberOfPulses = 3;
             this.Sy_ClearWarning.PulseSpeed = 0.3F;
-            this.Sy_ClearWarning.PulseWidth = 6;
-            this.Sy_ClearWarning.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.Sy_ClearWarning.Size = new System.Drawing.Size(112, 62);
             this.Sy_ClearWarning.TabIndex = 122;
             this.Sy_ClearWarning.Text = "清除警报";
@@ -416,19 +464,14 @@
             // 
             // btnZeroSPSum
             // 
-            this.btnZeroSPSum.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroSPSum.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnZeroSPSum.CornerRadius = 25;
             this.btnZeroSPSum.FocusColor = System.Drawing.Color.Black;
             this.btnZeroSPSum.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnZeroSPSum.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnZeroSPSum.Location = new System.Drawing.Point(393, 211);
             this.btnZeroSPSum.Name = "btnZeroSPSum";
-            this.btnZeroSPSum.NumberOfPulses = 2;
-            this.btnZeroSPSum.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroSPSum.NumberOfPulses = 3;
             this.btnZeroSPSum.PulseSpeed = 0.3F;
-            this.btnZeroSPSum.PulseWidth = 6;
-            this.btnZeroSPSum.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnZeroSPSum.Size = new System.Drawing.Size(112, 62);
             this.btnZeroSPSum.TabIndex = 122;
             this.btnZeroSPSum.Text = "清除累计量";
@@ -437,8 +480,6 @@
             // 
             // btnFastRunSP
             // 
-            this.btnFastRunSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnFastRunSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnFastRunSP.CornerRadius = 25;
             this.btnFastRunSP.Enabled = false;
             this.btnFastRunSP.FocusColor = System.Drawing.Color.Black;
@@ -446,11 +487,8 @@
             this.btnFastRunSP.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnFastRunSP.Location = new System.Drawing.Point(393, 120);
             this.btnFastRunSP.Name = "btnFastRunSP";
-            this.btnFastRunSP.NumberOfPulses = 2;
-            this.btnFastRunSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnFastRunSP.NumberOfPulses = 3;
             this.btnFastRunSP.PulseSpeed = 0.3F;
-            this.btnFastRunSP.PulseWidth = 6;
-            this.btnFastRunSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnFastRunSP.Size = new System.Drawing.Size(112, 62);
             this.btnFastRunSP.TabIndex = 122;
             this.btnFastRunSP.Text = "快  送";
@@ -469,11 +507,8 @@
             this.btnStopSP.Image = global::ALS.Properties.Resources.spstop;
             this.btnStopSP.Location = new System.Drawing.Point(537, 24);
             this.btnStopSP.Name = "btnStopSP";
-            this.btnStopSP.NumberOfPulses = 2;
-            this.btnStopSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnStopSP.NumberOfPulses = 3;
             this.btnStopSP.PulseSpeed = 0.3F;
-            this.btnStopSP.PulseWidth = 6;
-            this.btnStopSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnStopSP.Size = new System.Drawing.Size(112, 62);
             this.btnStopSP.TabIndex = 122;
             this.btnStopSP.Text = "停  止";
@@ -483,8 +518,6 @@
             // 
             // btnRunSP
             // 
-            this.btnRunSP.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnRunSP.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnRunSP.CornerRadius = 25;
             this.btnRunSP.FocusColor = System.Drawing.Color.Black;
             this.btnRunSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -492,11 +525,8 @@
             this.btnRunSP.Image = global::ALS.Properties.Resources.spstart;
             this.btnRunSP.Location = new System.Drawing.Point(393, 24);
             this.btnRunSP.Name = "btnRunSP";
-            this.btnRunSP.NumberOfPulses = 2;
-            this.btnRunSP.PulseColor = System.Drawing.Color.DimGray;
+            this.btnRunSP.NumberOfPulses = 3;
             this.btnRunSP.PulseSpeed = 0.3F;
-            this.btnRunSP.PulseWidth = 6;
-            this.btnRunSP.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnRunSP.Size = new System.Drawing.Size(112, 62);
             this.btnRunSP.TabIndex = 122;
             this.btnRunSP.Text = "运  行";
@@ -607,68 +637,28 @@
             this.lblSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSpeed.Click += new System.EventHandler(this.lblSpeed_Click);
             // 
-            // label44
-            // 
-            this.label44.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.label44.Location = new System.Drawing.Point(71, 105);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(139, 35);
-            this.label44.TabIndex = 24;
-            this.label44.Text = "注射器规格:";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label46
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(341, 111);
+            this.label46.Location = new System.Drawing.Point(336, 112);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(52, 23);
             this.label46.TabIndex = 20;
             this.label46.Text = "[mL]";
             // 
-            // lblSPStandard
+            // tabPage6
             // 
-            this.lblSPStandard.BackColor = System.Drawing.Color.Transparent;
-            this.lblSPStandard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSPStandard.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSPStandard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblSPStandard.Location = new System.Drawing.Point(223, 99);
-            this.lblSPStandard.Name = "lblSPStandard";
-            this.lblSPStandard.Size = new System.Drawing.Size(100, 50);
-            this.lblSPStandard.TabIndex = 21;
-            this.lblSPStandard.Text = "--";
-            this.lblSPStandard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSaveSP
-            // 
-            this.btnSaveSP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSaveSP.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveSP.Image")));
-            this.btnSaveSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveSP.Location = new System.Drawing.Point(529, 419);
-            this.btnSaveSP.Name = "btnSaveSP";
-            this.btnSaveSP.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.btnSaveSP.Size = new System.Drawing.Size(106, 47);
-            this.btnSaveSP.TabIndex = 23;
-            this.btnSaveSP.Text = "保存设置";
-            this.btnSaveSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveSP.UseVisualStyleBackColor = true;
-            this.btnSaveSP.Visible = false;
-            this.btnSaveSP.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.Controls.Add(this.gboxRecycle);
-            this.tabPage2.Controls.Add(this.gboxV);
-            this.tabPage2.Controls.Add(this.grouper1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 49);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(774, 518);
-            this.tabPage2.TabIndex = 4;
-            this.tabPage2.Text = "加温器/夹管阀/称重";
+            this.tabPage6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage6.Controls.Add(this.gboxRecycle);
+            this.tabPage6.Controls.Add(this.gboxV);
+            this.tabPage6.Controls.Add(this.grouper1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 45);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(774, 522);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "加温器/夹管阀/称重";
             // 
             // gboxRecycle
             // 
@@ -694,7 +684,7 @@
             this.gboxRecycle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.gboxRecycle.GroupImage = null;
             this.gboxRecycle.GroupTitle = "称重系统(单位:g)";
-            this.gboxRecycle.Location = new System.Drawing.Point(2, 240);
+            this.gboxRecycle.Location = new System.Drawing.Point(5, 241);
             this.gboxRecycle.Name = "gboxRecycle";
             this.gboxRecycle.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.gboxRecycle.PaintGroupBox = true;
@@ -702,24 +692,19 @@
             this.gboxRecycle.ShadowColor = System.Drawing.Color.DarkGray;
             this.gboxRecycle.ShadowControl = false;
             this.gboxRecycle.ShadowThickness = 3;
-            this.gboxRecycle.Size = new System.Drawing.Size(394, 275);
+            this.gboxRecycle.Size = new System.Drawing.Size(390, 288);
             this.gboxRecycle.TabIndex = 122;
             // 
             // btnZeroWS4
             // 
-            this.btnZeroWS4.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroWS4.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnZeroWS4.CornerRadius = 25;
             this.btnZeroWS4.FocusColor = System.Drawing.Color.Black;
             this.btnZeroWS4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnZeroWS4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnZeroWS4.Location = new System.Drawing.Point(239, 209);
             this.btnZeroWS4.Name = "btnZeroWS4";
-            this.btnZeroWS4.NumberOfPulses = 2;
-            this.btnZeroWS4.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroWS4.NumberOfPulses = 3;
             this.btnZeroWS4.PulseSpeed = 0.3F;
-            this.btnZeroWS4.PulseWidth = 6;
-            this.btnZeroWS4.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnZeroWS4.Size = new System.Drawing.Size(112, 62);
             this.btnZeroWS4.TabIndex = 122;
             this.btnZeroWS4.Tag = "zerows4";
@@ -739,19 +724,14 @@
             // 
             // btnZeroWS3
             // 
-            this.btnZeroWS3.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroWS3.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnZeroWS3.CornerRadius = 25;
             this.btnZeroWS3.FocusColor = System.Drawing.Color.Black;
             this.btnZeroWS3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnZeroWS3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnZeroWS3.Location = new System.Drawing.Point(37, 209);
             this.btnZeroWS3.Name = "btnZeroWS3";
-            this.btnZeroWS3.NumberOfPulses = 2;
-            this.btnZeroWS3.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroWS3.NumberOfPulses = 3;
             this.btnZeroWS3.PulseSpeed = 0.3F;
-            this.btnZeroWS3.PulseWidth = 6;
-            this.btnZeroWS3.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnZeroWS3.Size = new System.Drawing.Size(112, 62);
             this.btnZeroWS3.TabIndex = 122;
             this.btnZeroWS3.Tag = "zerows3";
@@ -771,19 +751,14 @@
             // 
             // btnZeroWS2
             // 
-            this.btnZeroWS2.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroWS2.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnZeroWS2.CornerRadius = 25;
             this.btnZeroWS2.FocusColor = System.Drawing.Color.Black;
             this.btnZeroWS2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnZeroWS2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnZeroWS2.Location = new System.Drawing.Point(239, 84);
             this.btnZeroWS2.Name = "btnZeroWS2";
-            this.btnZeroWS2.NumberOfPulses = 2;
-            this.btnZeroWS2.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroWS2.NumberOfPulses = 3;
             this.btnZeroWS2.PulseSpeed = 0.3F;
-            this.btnZeroWS2.PulseWidth = 6;
-            this.btnZeroWS2.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnZeroWS2.Size = new System.Drawing.Size(112, 62);
             this.btnZeroWS2.TabIndex = 122;
             this.btnZeroWS2.Tag = "zerows2";
@@ -804,19 +779,14 @@
             // 
             // btnZeroWS1
             // 
-            this.btnZeroWS1.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnZeroWS1.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnZeroWS1.CornerRadius = 25;
             this.btnZeroWS1.FocusColor = System.Drawing.Color.Black;
             this.btnZeroWS1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnZeroWS1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnZeroWS1.Location = new System.Drawing.Point(37, 84);
             this.btnZeroWS1.Name = "btnZeroWS1";
-            this.btnZeroWS1.NumberOfPulses = 2;
-            this.btnZeroWS1.PulseColor = System.Drawing.Color.DimGray;
+            this.btnZeroWS1.NumberOfPulses = 3;
             this.btnZeroWS1.PulseSpeed = 0.3F;
-            this.btnZeroWS1.PulseWidth = 6;
-            this.btnZeroWS1.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnZeroWS1.Size = new System.Drawing.Size(112, 62);
             this.btnZeroWS1.TabIndex = 122;
             this.btnZeroWS1.Tag = "zerows1";
@@ -895,7 +865,7 @@
             this.gboxV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.gboxV.GroupImage = null;
             this.gboxV.GroupTitle = "夹管阀控制";
-            this.gboxV.Location = new System.Drawing.Point(3, 3);
+            this.gboxV.Location = new System.Drawing.Point(6, 2);
             this.gboxV.Name = "gboxV";
             this.gboxV.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.gboxV.PaintGroupBox = true;
@@ -903,7 +873,7 @@
             this.gboxV.ShadowColor = System.Drawing.Color.DarkGray;
             this.gboxV.ShadowControl = false;
             this.gboxV.ShadowThickness = 3;
-            this.gboxV.Size = new System.Drawing.Size(394, 232);
+            this.gboxV.Size = new System.Drawing.Size(389, 232);
             this.gboxV.TabIndex = 121;
             // 
             // chkV6
@@ -1048,7 +1018,7 @@
             this.grouper1.ShadowColor = System.Drawing.Color.DarkGray;
             this.grouper1.ShadowControl = false;
             this.grouper1.ShadowThickness = 3;
-            this.grouper1.Size = new System.Drawing.Size(370, 512);
+            this.grouper1.Size = new System.Drawing.Size(370, 516);
             this.grouper1.TabIndex = 123;
             // 
             // btnCloseHot
@@ -1061,11 +1031,8 @@
             this.btnCloseHot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCloseHot.Location = new System.Drawing.Point(201, 122);
             this.btnCloseHot.Name = "btnCloseHot";
-            this.btnCloseHot.NumberOfPulses = 2;
-            this.btnCloseHot.PulseColor = System.Drawing.Color.DimGray;
+            this.btnCloseHot.NumberOfPulses = 3;
             this.btnCloseHot.PulseSpeed = 0.3F;
-            this.btnCloseHot.PulseWidth = 6;
-            this.btnCloseHot.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnCloseHot.Size = new System.Drawing.Size(112, 62);
             this.btnCloseHot.TabIndex = 123;
             this.btnCloseHot.Tag = "zerows2";
@@ -1085,19 +1052,14 @@
             // 
             // btnSetTemperature
             // 
-            this.btnSetTemperature.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSetTemperature.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnSetTemperature.CornerRadius = 25;
             this.btnSetTemperature.FocusColor = System.Drawing.Color.Black;
             this.btnSetTemperature.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetTemperature.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSetTemperature.Location = new System.Drawing.Point(67, 122);
             this.btnSetTemperature.Name = "btnSetTemperature";
-            this.btnSetTemperature.NumberOfPulses = 2;
-            this.btnSetTemperature.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSetTemperature.NumberOfPulses = 3;
             this.btnSetTemperature.PulseSpeed = 0.3F;
-            this.btnSetTemperature.PulseWidth = 6;
-            this.btnSetTemperature.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnSetTemperature.Size = new System.Drawing.Size(112, 62);
             this.btnSetTemperature.TabIndex = 123;
             this.btnSetTemperature.Tag = "zerows2";
@@ -1124,7 +1086,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 193);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 197);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(365, 316);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1142,25 +1104,23 @@
             this.lblTemperature.TabIndex = 16;
             this.lblTemperature.Text = "38.5";
             // 
-            // tabPage3
+            // tabPage7
             // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.grouper4);
-            this.tabPage3.Controls.Add(this.grouper3);
-            this.tabPage3.Controls.Add(this.grouper2);
-            this.tabPage3.Controls.Add(this.btnDefault);
-            this.tabPage3.Controls.Add(this.btnSaveDefault);
-            this.tabPage3.Controls.Add(this.btnSaveWarnSet);
-            this.tabPage3.Controls.Add(this.lblRealBloodLeak);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.label29);
-            this.tabPage3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 49);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(774, 518);
-            this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = " 报警设置 ";
+            this.tabPage7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage7.Controls.Add(this.grouper4);
+            this.tabPage7.Controls.Add(this.grouper2);
+            this.tabPage7.Controls.Add(this.grouper3);
+            this.tabPage7.Controls.Add(this.label29);
+            this.tabPage7.Controls.Add(this.label12);
+            this.tabPage7.Controls.Add(this.btnDefault);
+            this.tabPage7.Controls.Add(this.lblRealBloodLeak);
+            this.tabPage7.Controls.Add(this.btnSaveDefault);
+            this.tabPage7.Controls.Add(this.btnSaveWarnSet);
+            this.tabPage7.Location = new System.Drawing.Point(4, 45);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(774, 522);
+            this.tabPage7.TabIndex = 2;
+            this.tabPage7.Text = "报警设置";
             // 
             // grouper4
             // 
@@ -1176,7 +1136,7 @@
             this.grouper4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.grouper4.GroupImage = null;
             this.grouper4.GroupTitle = "漏血值警报灵敏度(%)";
-            this.grouper4.Location = new System.Drawing.Point(520, 368);
+            this.grouper4.Location = new System.Drawing.Point(517, 365);
             this.grouper4.Name = "grouper4";
             this.grouper4.Padding = new System.Windows.Forms.Padding(5, 25, 3, 3);
             this.grouper4.PaintGroupBox = true;
@@ -1194,7 +1154,7 @@
             this.trackBar1.Location = new System.Drawing.Point(59, 25);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(188, 45);
+            this.trackBar1.Size = new System.Drawing.Size(188, 44);
             this.trackBar1.SmallChange = 10;
             this.trackBar1.TabIndex = 127;
             this.trackBar1.TickFrequency = 10;
@@ -1219,333 +1179,6 @@
             this.lblBloodLeak.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblBloodLeak.TextChanged += new System.EventHandler(this.lblBloodLeak_TextChanged);
             this.lblBloodLeak.Click += new System.EventHandler(this.lblPaccUpper_Click);
-            // 
-            // grouper3
-            // 
-            this.grouper3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grouper3.BackgroundGradientColor = System.Drawing.Color.White;
-            this.grouper3.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
-            this.grouper3.BorderColor = System.Drawing.Color.Silver;
-            this.grouper3.BorderThickness = 1F;
-            this.grouper3.Controls.Add(this.gboxPrePven);
-            this.grouper3.Controls.Add(this.gboxPrePart);
-            this.grouper3.Controls.Add(this.gboxPrePacc);
-            this.grouper3.CustomGroupBoxColor = System.Drawing.Color.White;
-            this.grouper3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grouper3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.grouper3.GroupImage = null;
-            this.grouper3.GroupTitle = "压力预报警设置(mmHg)";
-            this.grouper3.Location = new System.Drawing.Point(520, 6);
-            this.grouper3.Name = "grouper3";
-            this.grouper3.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
-            this.grouper3.PaintGroupBox = true;
-            this.grouper3.RoundCorners = 10;
-            this.grouper3.ShadowColor = System.Drawing.Color.DarkGray;
-            this.grouper3.ShadowControl = false;
-            this.grouper3.ShadowThickness = 3;
-            this.grouper3.Size = new System.Drawing.Size(250, 351);
-            this.grouper3.TabIndex = 125;
-            // 
-            // gboxPrePven
-            // 
-            this.gboxPrePven.Controls.Add(this.rbtnPrePven5);
-            this.gboxPrePven.Controls.Add(this.rbtnPrePven4);
-            this.gboxPrePven.Controls.Add(this.rbtnPrePven3);
-            this.gboxPrePven.Controls.Add(this.rbtnPrePven2);
-            this.gboxPrePven.Controls.Add(this.rbtnPrePven1);
-            this.gboxPrePven.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboxPrePven.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.gboxPrePven.Location = new System.Drawing.Point(5, 270);
-            this.gboxPrePven.Name = "gboxPrePven";
-            this.gboxPrePven.Size = new System.Drawing.Size(229, 76);
-            this.gboxPrePven.TabIndex = 25;
-            this.gboxPrePven.TabStop = false;
-            this.gboxPrePven.Text = "静脉压上限预报警";
-            // 
-            // rbtnPrePven5
-            // 
-            this.rbtnPrePven5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePven5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePven5.Location = new System.Drawing.Point(188, 25);
-            this.rbtnPrePven5.Name = "rbtnPrePven5";
-            this.rbtnPrePven5.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePven5.TabIndex = 0;
-            this.rbtnPrePven5.Text = "40";
-            this.rbtnPrePven5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePven5.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePven4
-            // 
-            this.rbtnPrePven4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePven4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePven4.Location = new System.Drawing.Point(144, 25);
-            this.rbtnPrePven4.Name = "rbtnPrePven4";
-            this.rbtnPrePven4.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePven4.TabIndex = 0;
-            this.rbtnPrePven4.Text = "30";
-            this.rbtnPrePven4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePven4.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePven3
-            // 
-            this.rbtnPrePven3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePven3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePven3.Location = new System.Drawing.Point(100, 25);
-            this.rbtnPrePven3.Name = "rbtnPrePven3";
-            this.rbtnPrePven3.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePven3.TabIndex = 0;
-            this.rbtnPrePven3.Text = "20";
-            this.rbtnPrePven3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePven3.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePven2
-            // 
-            this.rbtnPrePven2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePven2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePven2.Location = new System.Drawing.Point(56, 25);
-            this.rbtnPrePven2.Name = "rbtnPrePven2";
-            this.rbtnPrePven2.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePven2.TabIndex = 0;
-            this.rbtnPrePven2.Text = "10";
-            this.rbtnPrePven2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePven2.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePven1
-            // 
-            this.rbtnPrePven1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePven1.Checked = true;
-            this.rbtnPrePven1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePven1.Location = new System.Drawing.Point(10, 25);
-            this.rbtnPrePven1.Name = "rbtnPrePven1";
-            this.rbtnPrePven1.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePven1.TabIndex = 0;
-            this.rbtnPrePven1.TabStop = true;
-            this.rbtnPrePven1.Text = "0";
-            this.rbtnPrePven1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePven1.UseVisualStyleBackColor = true;
-            // 
-            // gboxPrePart
-            // 
-            this.gboxPrePart.Controls.Add(this.rbtnPrePart5);
-            this.gboxPrePart.Controls.Add(this.rbtnPrePart4);
-            this.gboxPrePart.Controls.Add(this.rbtnPrePart3);
-            this.gboxPrePart.Controls.Add(this.rbtnPrePart2);
-            this.gboxPrePart.Controls.Add(this.rbtnPrePart1);
-            this.gboxPrePart.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.gboxPrePart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.gboxPrePart.Location = new System.Drawing.Point(5, 28);
-            this.gboxPrePart.Name = "gboxPrePart";
-            this.gboxPrePart.Size = new System.Drawing.Size(229, 76);
-            this.gboxPrePart.TabIndex = 25;
-            this.gboxPrePart.TabStop = false;
-            this.gboxPrePart.Text = "动脉压上限预报警";
-            // 
-            // rbtnPrePart5
-            // 
-            this.rbtnPrePart5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePart5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePart5.Location = new System.Drawing.Point(186, 28);
-            this.rbtnPrePart5.Name = "rbtnPrePart5";
-            this.rbtnPrePart5.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePart5.TabIndex = 0;
-            this.rbtnPrePart5.Text = "40";
-            this.rbtnPrePart5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePart5.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePart4
-            // 
-            this.rbtnPrePart4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePart4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePart4.Location = new System.Drawing.Point(142, 28);
-            this.rbtnPrePart4.Name = "rbtnPrePart4";
-            this.rbtnPrePart4.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePart4.TabIndex = 0;
-            this.rbtnPrePart4.Text = "30";
-            this.rbtnPrePart4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePart4.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePart3
-            // 
-            this.rbtnPrePart3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePart3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePart3.Location = new System.Drawing.Point(98, 28);
-            this.rbtnPrePart3.Name = "rbtnPrePart3";
-            this.rbtnPrePart3.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePart3.TabIndex = 0;
-            this.rbtnPrePart3.Text = "20";
-            this.rbtnPrePart3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePart3.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePart2
-            // 
-            this.rbtnPrePart2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePart2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePart2.Location = new System.Drawing.Point(54, 28);
-            this.rbtnPrePart2.Name = "rbtnPrePart2";
-            this.rbtnPrePart2.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePart2.TabIndex = 0;
-            this.rbtnPrePart2.Text = "10";
-            this.rbtnPrePart2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePart2.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePart1
-            // 
-            this.rbtnPrePart1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePart1.Checked = true;
-            this.rbtnPrePart1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePart1.Location = new System.Drawing.Point(10, 28);
-            this.rbtnPrePart1.Name = "rbtnPrePart1";
-            this.rbtnPrePart1.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePart1.TabIndex = 0;
-            this.rbtnPrePart1.TabStop = true;
-            this.rbtnPrePart1.Text = "0";
-            this.rbtnPrePart1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePart1.UseVisualStyleBackColor = true;
-            // 
-            // gboxPrePacc
-            // 
-            this.gboxPrePacc.Controls.Add(this.label17);
-            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc5);
-            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc4);
-            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc3);
-            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc2);
-            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc1);
-            this.gboxPrePacc.Controls.Add(this.panel1);
-            this.gboxPrePacc.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.gboxPrePacc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.gboxPrePacc.Location = new System.Drawing.Point(5, 108);
-            this.gboxPrePacc.Name = "gboxPrePacc";
-            this.gboxPrePacc.Size = new System.Drawing.Size(229, 158);
-            this.gboxPrePacc.TabIndex = 25;
-            this.gboxPrePacc.TabStop = false;
-            this.gboxPrePacc.Text = "采血压预报警";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(4, 27);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(87, 20);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "◆下限预警值";
-            // 
-            // rbtnPrePacc5
-            // 
-            this.rbtnPrePacc5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePacc5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePacc5.Location = new System.Drawing.Point(186, 49);
-            this.rbtnPrePacc5.Name = "rbtnPrePacc5";
-            this.rbtnPrePacc5.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePacc5.TabIndex = 0;
-            this.rbtnPrePacc5.Text = "40";
-            this.rbtnPrePacc5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePacc5.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePacc4
-            // 
-            this.rbtnPrePacc4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePacc4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePacc4.Location = new System.Drawing.Point(142, 49);
-            this.rbtnPrePacc4.Name = "rbtnPrePacc4";
-            this.rbtnPrePacc4.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePacc4.TabIndex = 0;
-            this.rbtnPrePacc4.Text = "30";
-            this.rbtnPrePacc4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePacc4.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePacc3
-            // 
-            this.rbtnPrePacc3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePacc3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePacc3.Location = new System.Drawing.Point(98, 49);
-            this.rbtnPrePacc3.Name = "rbtnPrePacc3";
-            this.rbtnPrePacc3.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePacc3.TabIndex = 0;
-            this.rbtnPrePacc3.Text = "20";
-            this.rbtnPrePacc3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePacc3.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePacc2
-            // 
-            this.rbtnPrePacc2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePacc2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePacc2.Location = new System.Drawing.Point(54, 49);
-            this.rbtnPrePacc2.Name = "rbtnPrePacc2";
-            this.rbtnPrePacc2.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePacc2.TabIndex = 0;
-            this.rbtnPrePacc2.Text = "10";
-            this.rbtnPrePacc2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePacc2.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPrePacc1
-            // 
-            this.rbtnPrePacc1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbtnPrePacc1.Checked = true;
-            this.rbtnPrePacc1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbtnPrePacc1.Location = new System.Drawing.Point(10, 49);
-            this.rbtnPrePacc1.Name = "rbtnPrePacc1";
-            this.rbtnPrePacc1.Size = new System.Drawing.Size(35, 36);
-            this.rbtnPrePacc1.TabIndex = 0;
-            this.rbtnPrePacc1.TabStop = true;
-            this.rbtnPrePacc1.Text = "0";
-            this.rbtnPrePacc1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbtnPrePacc1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.splitter1);
-            this.panel1.Controls.Add(this.label38);
-            this.panel1.Controls.Add(this.lblPaccDecWarn);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Location = new System.Drawing.Point(5, 92);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 65);
-            this.panel1.TabIndex = 22;
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.Silver;
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(218, 1);
-            this.splitter1.TabIndex = 22;
-            this.splitter1.TabStop = false;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.ForeColor = System.Drawing.Color.Red;
-            this.label38.Location = new System.Drawing.Point(15, 39);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(106, 20);
-            this.label38.TabIndex = 21;
-            this.label38.Text = "注: \"0\"表示无效";
-            // 
-            // lblPaccDecWarn
-            // 
-            this.lblPaccDecWarn.BackColor = System.Drawing.Color.Transparent;
-            this.lblPaccDecWarn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPaccDecWarn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblPaccDecWarn.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.lblPaccDecWarn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPaccDecWarn.Location = new System.Drawing.Point(133, 14);
-            this.lblPaccDecWarn.Name = "lblPaccDecWarn";
-            this.lblPaccDecWarn.Size = new System.Drawing.Size(80, 40);
-            this.lblPaccDecWarn.TabIndex = 20;
-            this.lblPaccDecWarn.Tag = "paccDecrement";
-            this.lblPaccDecWarn.Text = "0.0";
-            this.lblPaccDecWarn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPaccDecWarn.Click += new System.EventHandler(this.lblPaccUpper_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(129, 20);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "◆压力变化量预警值";
             // 
             // grouper2
             // 
@@ -1589,7 +1222,7 @@
             this.grouper2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.grouper2.GroupImage = null;
             this.grouper2.GroupTitle = "压力报警范围设置(mmHg)";
-            this.grouper2.Location = new System.Drawing.Point(6, 6);
+            this.grouper2.Location = new System.Drawing.Point(3, 3);
             this.grouper2.Name = "grouper2";
             this.grouper2.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.grouper2.PaintGroupBox = true;
@@ -1983,42 +1616,388 @@
             this.label13.TabIndex = 23;
             this.label13.Text = "～";
             // 
+            // grouper3
+            // 
+            this.grouper3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grouper3.BackgroundGradientColor = System.Drawing.Color.White;
+            this.grouper3.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.grouper3.BorderColor = System.Drawing.Color.Silver;
+            this.grouper3.BorderThickness = 1F;
+            this.grouper3.Controls.Add(this.gboxPrePven);
+            this.grouper3.Controls.Add(this.gboxPrePart);
+            this.grouper3.Controls.Add(this.gboxPrePacc);
+            this.grouper3.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.grouper3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grouper3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.grouper3.GroupImage = null;
+            this.grouper3.GroupTitle = "压力预报警设置(mmHg)";
+            this.grouper3.Location = new System.Drawing.Point(517, 3);
+            this.grouper3.Name = "grouper3";
+            this.grouper3.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.grouper3.PaintGroupBox = true;
+            this.grouper3.RoundCorners = 10;
+            this.grouper3.ShadowColor = System.Drawing.Color.DarkGray;
+            this.grouper3.ShadowControl = false;
+            this.grouper3.ShadowThickness = 3;
+            this.grouper3.Size = new System.Drawing.Size(250, 351);
+            this.grouper3.TabIndex = 125;
+            // 
+            // gboxPrePven
+            // 
+            this.gboxPrePven.Controls.Add(this.rbtnPrePven5);
+            this.gboxPrePven.Controls.Add(this.rbtnPrePven4);
+            this.gboxPrePven.Controls.Add(this.rbtnPrePven3);
+            this.gboxPrePven.Controls.Add(this.rbtnPrePven2);
+            this.gboxPrePven.Controls.Add(this.rbtnPrePven1);
+            this.gboxPrePven.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboxPrePven.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxPrePven.Location = new System.Drawing.Point(5, 270);
+            this.gboxPrePven.Name = "gboxPrePven";
+            this.gboxPrePven.Size = new System.Drawing.Size(229, 76);
+            this.gboxPrePven.TabIndex = 25;
+            this.gboxPrePven.TabStop = false;
+            this.gboxPrePven.Text = "静脉压上限预报警";
+            // 
+            // rbtnPrePven5
+            // 
+            this.rbtnPrePven5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePven5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePven5.Location = new System.Drawing.Point(188, 25);
+            this.rbtnPrePven5.Name = "rbtnPrePven5";
+            this.rbtnPrePven5.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePven5.TabIndex = 0;
+            this.rbtnPrePven5.Text = "40";
+            this.rbtnPrePven5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePven5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePven4
+            // 
+            this.rbtnPrePven4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePven4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePven4.Location = new System.Drawing.Point(144, 25);
+            this.rbtnPrePven4.Name = "rbtnPrePven4";
+            this.rbtnPrePven4.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePven4.TabIndex = 0;
+            this.rbtnPrePven4.Text = "30";
+            this.rbtnPrePven4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePven4.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePven3
+            // 
+            this.rbtnPrePven3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePven3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePven3.Location = new System.Drawing.Point(100, 25);
+            this.rbtnPrePven3.Name = "rbtnPrePven3";
+            this.rbtnPrePven3.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePven3.TabIndex = 0;
+            this.rbtnPrePven3.Text = "20";
+            this.rbtnPrePven3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePven3.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePven2
+            // 
+            this.rbtnPrePven2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePven2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePven2.Location = new System.Drawing.Point(56, 25);
+            this.rbtnPrePven2.Name = "rbtnPrePven2";
+            this.rbtnPrePven2.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePven2.TabIndex = 0;
+            this.rbtnPrePven2.Text = "10";
+            this.rbtnPrePven2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePven2.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePven1
+            // 
+            this.rbtnPrePven1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePven1.Checked = true;
+            this.rbtnPrePven1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePven1.Location = new System.Drawing.Point(10, 25);
+            this.rbtnPrePven1.Name = "rbtnPrePven1";
+            this.rbtnPrePven1.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePven1.TabIndex = 0;
+            this.rbtnPrePven1.TabStop = true;
+            this.rbtnPrePven1.Text = "0";
+            this.rbtnPrePven1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePven1.UseVisualStyleBackColor = true;
+            // 
+            // gboxPrePart
+            // 
+            this.gboxPrePart.Controls.Add(this.rbtnPrePart5);
+            this.gboxPrePart.Controls.Add(this.rbtnPrePart4);
+            this.gboxPrePart.Controls.Add(this.rbtnPrePart3);
+            this.gboxPrePart.Controls.Add(this.rbtnPrePart2);
+            this.gboxPrePart.Controls.Add(this.rbtnPrePart1);
+            this.gboxPrePart.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.gboxPrePart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxPrePart.Location = new System.Drawing.Point(5, 28);
+            this.gboxPrePart.Name = "gboxPrePart";
+            this.gboxPrePart.Size = new System.Drawing.Size(229, 76);
+            this.gboxPrePart.TabIndex = 25;
+            this.gboxPrePart.TabStop = false;
+            this.gboxPrePart.Text = "动脉压上限预报警";
+            // 
+            // rbtnPrePart5
+            // 
+            this.rbtnPrePart5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePart5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePart5.Location = new System.Drawing.Point(186, 28);
+            this.rbtnPrePart5.Name = "rbtnPrePart5";
+            this.rbtnPrePart5.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePart5.TabIndex = 0;
+            this.rbtnPrePart5.Text = "40";
+            this.rbtnPrePart5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePart5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePart4
+            // 
+            this.rbtnPrePart4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePart4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePart4.Location = new System.Drawing.Point(142, 28);
+            this.rbtnPrePart4.Name = "rbtnPrePart4";
+            this.rbtnPrePart4.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePart4.TabIndex = 0;
+            this.rbtnPrePart4.Text = "30";
+            this.rbtnPrePart4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePart4.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePart3
+            // 
+            this.rbtnPrePart3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePart3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePart3.Location = new System.Drawing.Point(98, 28);
+            this.rbtnPrePart3.Name = "rbtnPrePart3";
+            this.rbtnPrePart3.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePart3.TabIndex = 0;
+            this.rbtnPrePart3.Text = "20";
+            this.rbtnPrePart3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePart3.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePart2
+            // 
+            this.rbtnPrePart2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePart2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePart2.Location = new System.Drawing.Point(54, 28);
+            this.rbtnPrePart2.Name = "rbtnPrePart2";
+            this.rbtnPrePart2.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePart2.TabIndex = 0;
+            this.rbtnPrePart2.Text = "10";
+            this.rbtnPrePart2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePart2.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePart1
+            // 
+            this.rbtnPrePart1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePart1.Checked = true;
+            this.rbtnPrePart1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePart1.Location = new System.Drawing.Point(10, 28);
+            this.rbtnPrePart1.Name = "rbtnPrePart1";
+            this.rbtnPrePart1.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePart1.TabIndex = 0;
+            this.rbtnPrePart1.TabStop = true;
+            this.rbtnPrePart1.Text = "0";
+            this.rbtnPrePart1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePart1.UseVisualStyleBackColor = true;
+            // 
+            // gboxPrePacc
+            // 
+            this.gboxPrePacc.Controls.Add(this.label17);
+            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc5);
+            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc4);
+            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc3);
+            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc2);
+            this.gboxPrePacc.Controls.Add(this.rbtnPrePacc1);
+            this.gboxPrePacc.Controls.Add(this.panel1);
+            this.gboxPrePacc.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.gboxPrePacc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxPrePacc.Location = new System.Drawing.Point(5, 108);
+            this.gboxPrePacc.Name = "gboxPrePacc";
+            this.gboxPrePacc.Size = new System.Drawing.Size(229, 158);
+            this.gboxPrePacc.TabIndex = 25;
+            this.gboxPrePacc.TabStop = false;
+            this.gboxPrePacc.Text = "采血压预报警";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(4, 27);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 20);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "◆下限预警值";
+            // 
+            // rbtnPrePacc5
+            // 
+            this.rbtnPrePacc5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePacc5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePacc5.Location = new System.Drawing.Point(186, 49);
+            this.rbtnPrePacc5.Name = "rbtnPrePacc5";
+            this.rbtnPrePacc5.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePacc5.TabIndex = 0;
+            this.rbtnPrePacc5.Text = "40";
+            this.rbtnPrePacc5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePacc5.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePacc4
+            // 
+            this.rbtnPrePacc4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePacc4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePacc4.Location = new System.Drawing.Point(142, 49);
+            this.rbtnPrePacc4.Name = "rbtnPrePacc4";
+            this.rbtnPrePacc4.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePacc4.TabIndex = 0;
+            this.rbtnPrePacc4.Text = "30";
+            this.rbtnPrePacc4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePacc4.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePacc3
+            // 
+            this.rbtnPrePacc3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePacc3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePacc3.Location = new System.Drawing.Point(98, 49);
+            this.rbtnPrePacc3.Name = "rbtnPrePacc3";
+            this.rbtnPrePacc3.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePacc3.TabIndex = 0;
+            this.rbtnPrePacc3.Text = "20";
+            this.rbtnPrePacc3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePacc3.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePacc2
+            // 
+            this.rbtnPrePacc2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePacc2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePacc2.Location = new System.Drawing.Point(54, 49);
+            this.rbtnPrePacc2.Name = "rbtnPrePacc2";
+            this.rbtnPrePacc2.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePacc2.TabIndex = 0;
+            this.rbtnPrePacc2.Text = "10";
+            this.rbtnPrePacc2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePacc2.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPrePacc1
+            // 
+            this.rbtnPrePacc1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbtnPrePacc1.Checked = true;
+            this.rbtnPrePacc1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbtnPrePacc1.Location = new System.Drawing.Point(10, 49);
+            this.rbtnPrePacc1.Name = "rbtnPrePacc1";
+            this.rbtnPrePacc1.Size = new System.Drawing.Size(35, 36);
+            this.rbtnPrePacc1.TabIndex = 0;
+            this.rbtnPrePacc1.TabStop = true;
+            this.rbtnPrePacc1.Text = "0";
+            this.rbtnPrePacc1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnPrePacc1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.splitter1);
+            this.panel1.Controls.Add(this.label38);
+            this.panel1.Controls.Add(this.lblPaccDecWarn);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Location = new System.Drawing.Point(5, 92);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(218, 65);
+            this.panel1.TabIndex = 22;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.Silver;
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(218, 1);
+            this.splitter1.TabIndex = 22;
+            this.splitter1.TabStop = false;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.ForeColor = System.Drawing.Color.Red;
+            this.label38.Location = new System.Drawing.Point(15, 39);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(106, 20);
+            this.label38.TabIndex = 21;
+            this.label38.Text = "注: \"0\"表示无效";
+            // 
+            // lblPaccDecWarn
+            // 
+            this.lblPaccDecWarn.BackColor = System.Drawing.Color.Transparent;
+            this.lblPaccDecWarn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPaccDecWarn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblPaccDecWarn.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
+            this.lblPaccDecWarn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblPaccDecWarn.Location = new System.Drawing.Point(133, 14);
+            this.lblPaccDecWarn.Name = "lblPaccDecWarn";
+            this.lblPaccDecWarn.Size = new System.Drawing.Size(80, 40);
+            this.lblPaccDecWarn.TabIndex = 20;
+            this.lblPaccDecWarn.Tag = "paccDecrement";
+            this.lblPaccDecWarn.Text = "0.0";
+            this.lblPaccDecWarn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPaccDecWarn.Click += new System.EventHandler(this.lblPaccUpper_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1, 19);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(129, 20);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "◆压力变化量预警值";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.Color.Red;
+            this.label29.Location = new System.Drawing.Point(8, 476);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(326, 21);
+            this.label29.TabIndex = 30;
+            this.label29.Text = "注:恢复默认值后需要点击 [保存] 以确认修改;";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(426, 394);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(51, 20);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "实时值";
+            // 
             // btnDefault
             // 
-            this.btnDefault.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnDefault.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnDefault.CornerRadius = 25;
             this.btnDefault.FocusColor = System.Drawing.Color.Black;
             this.btnDefault.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDefault.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDefault.Location = new System.Drawing.Point(243, 411);
+            this.btnDefault.Location = new System.Drawing.Point(240, 408);
             this.btnDefault.Name = "btnDefault";
-            this.btnDefault.NumberOfPulses = 2;
-            this.btnDefault.PulseColor = System.Drawing.Color.DimGray;
+            this.btnDefault.NumberOfPulses = 3;
             this.btnDefault.PulseSpeed = 0.3F;
-            this.btnDefault.PulseWidth = 6;
-            this.btnDefault.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnDefault.Size = new System.Drawing.Size(112, 62);
             this.btnDefault.TabIndex = 123;
             this.btnDefault.Text = "恢复默认值";
             this.btnDefault.UseVisualStyleBackColor = true;
             this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
             // 
+            // lblRealBloodLeak
+            // 
+            this.lblRealBloodLeak.Location = new System.Drawing.Point(396, 414);
+            this.lblRealBloodLeak.Name = "lblRealBloodLeak";
+            this.lblRealBloodLeak.Size = new System.Drawing.Size(118, 23);
+            this.lblRealBloodLeak.TabIndex = 23;
+            this.lblRealBloodLeak.Text = "0.0";
+            this.lblRealBloodLeak.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnSaveDefault
             // 
-            this.btnSaveDefault.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSaveDefault.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnSaveDefault.CornerRadius = 25;
             this.btnSaveDefault.FocusColor = System.Drawing.Color.Black;
             this.btnSaveDefault.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSaveDefault.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSaveDefault.Location = new System.Drawing.Point(125, 411);
+            this.btnSaveDefault.Location = new System.Drawing.Point(122, 408);
             this.btnSaveDefault.Name = "btnSaveDefault";
-            this.btnSaveDefault.NumberOfPulses = 2;
-            this.btnSaveDefault.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSaveDefault.NumberOfPulses = 3;
             this.btnSaveDefault.PulseSpeed = 0.3F;
-            this.btnSaveDefault.PulseWidth = 6;
-            this.btnSaveDefault.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnSaveDefault.Size = new System.Drawing.Size(112, 62);
             this.btnSaveDefault.TabIndex = 123;
             this.btnSaveDefault.Text = "保存为默认";
@@ -2027,71 +2006,35 @@
             // 
             // btnSaveWarnSet
             // 
-            this.btnSaveWarnSet.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSaveWarnSet.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnSaveWarnSet.CornerRadius = 25;
             this.btnSaveWarnSet.FocusColor = System.Drawing.Color.Black;
             this.btnSaveWarnSet.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSaveWarnSet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSaveWarnSet.Location = new System.Drawing.Point(7, 411);
+            this.btnSaveWarnSet.Location = new System.Drawing.Point(4, 408);
             this.btnSaveWarnSet.Name = "btnSaveWarnSet";
-            this.btnSaveWarnSet.NumberOfPulses = 2;
-            this.btnSaveWarnSet.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSaveWarnSet.NumberOfPulses = 3;
             this.btnSaveWarnSet.PulseSpeed = 0.3F;
-            this.btnSaveWarnSet.PulseWidth = 6;
-            this.btnSaveWarnSet.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnSaveWarnSet.Size = new System.Drawing.Size(112, 62);
             this.btnSaveWarnSet.TabIndex = 122;
             this.btnSaveWarnSet.Text = "保存设置";
             this.btnSaveWarnSet.UseVisualStyleBackColor = true;
             this.btnSaveWarnSet.Click += new System.EventHandler(this.btnSetLevel_Click);
             // 
-            // lblRealBloodLeak
+            // tabPage8
             // 
-            this.lblRealBloodLeak.Location = new System.Drawing.Point(399, 417);
-            this.lblRealBloodLeak.Name = "lblRealBloodLeak";
-            this.lblRealBloodLeak.Size = new System.Drawing.Size(118, 23);
-            this.lblRealBloodLeak.TabIndex = 23;
-            this.lblRealBloodLeak.Text = "0.0";
-            this.lblRealBloodLeak.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(429, 397);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 20);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "实时值";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(11, 479);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(326, 21);
-            this.label29.TabIndex = 30;
-            this.label29.Text = "注:恢复默认值后需要点击 [保存] 以确认修改;";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage4.Controls.Add(this.gboxPDF);
-            this.tabPage4.Controls.Add(this.gboxPEF);
-            this.tabPage4.Controls.Add(this.gboxLiALS);
-            this.tabPage4.Controls.Add(this.gboxCHDF);
-            this.tabPage4.Controls.Add(this.gboxPP);
-            this.tabPage4.Controls.Add(this.gboxPE);
-            this.tabPage4.Controls.Add(this.btnSetFlush);
-            this.tabPage4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 49);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(774, 518);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "清洗量设置";
+            this.tabPage8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage8.Controls.Add(this.gboxPDF);
+            this.tabPage8.Controls.Add(this.gboxPE);
+            this.tabPage8.Controls.Add(this.gboxPEF);
+            this.tabPage8.Controls.Add(this.btnSetFlush);
+            this.tabPage8.Controls.Add(this.gboxLiALS);
+            this.tabPage8.Controls.Add(this.gboxPP);
+            this.tabPage8.Controls.Add(this.gboxCHDF);
+            this.tabPage8.Location = new System.Drawing.Point(4, 45);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(774, 522);
+            this.tabPage8.TabIndex = 3;
+            this.tabPage8.Text = "清洗量设置";
             // 
             // gboxPDF
             // 
@@ -2109,7 +2052,7 @@
             this.gboxPDF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.gboxPDF.GroupImage = null;
             this.gboxPDF.GroupTitle = "PDF清洗量(单位:mL)";
-            this.gboxPDF.Location = new System.Drawing.Point(526, 214);
+            this.gboxPDF.Location = new System.Drawing.Point(525, 204);
             this.gboxPDF.Name = "gboxPDF";
             this.gboxPDF.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.gboxPDF.PaintGroupBox = true;
@@ -2168,306 +2111,6 @@
             this.lblPDFFlush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblPDFFlush1.Click += new System.EventHandler(this.lblSetFlush);
             // 
-            // gboxPEF
-            // 
-            this.gboxPEF.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.gboxPEF.BackgroundGradientColor = System.Drawing.Color.White;
-            this.gboxPEF.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
-            this.gboxPEF.BorderColor = System.Drawing.Color.Silver;
-            this.gboxPEF.BorderThickness = 1F;
-            this.gboxPEF.Controls.Add(this.label42);
-            this.gboxPEF.Controls.Add(this.label43);
-            this.gboxPEF.Controls.Add(this.lblPEFFlush2);
-            this.gboxPEF.Controls.Add(this.lblPEFFlush1);
-            this.gboxPEF.CustomGroupBoxColor = System.Drawing.Color.White;
-            this.gboxPEF.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gboxPEF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.gboxPEF.GroupImage = null;
-            this.gboxPEF.GroupTitle = "PEF清洗量(单位:mL)";
-            this.gboxPEF.Location = new System.Drawing.Point(266, 214);
-            this.gboxPEF.Name = "gboxPEF";
-            this.gboxPEF.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
-            this.gboxPEF.PaintGroupBox = true;
-            this.gboxPEF.RoundCorners = 10;
-            this.gboxPEF.ShadowColor = System.Drawing.Color.DarkGray;
-            this.gboxPEF.ShadowControl = false;
-            this.gboxPEF.ShadowThickness = 3;
-            this.gboxPEF.Size = new System.Drawing.Size(243, 175);
-            this.gboxPEF.TabIndex = 127;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(28, 119);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(78, 21);
-            this.label42.TabIndex = 3;
-            this.label42.Text = "血液滤过:";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(28, 56);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(78, 21);
-            this.label43.TabIndex = 2;
-            this.label43.Text = "血浆置换:";
-            // 
-            // lblPEFFlush2
-            // 
-            this.lblPEFFlush2.BackColor = System.Drawing.Color.Transparent;
-            this.lblPEFFlush2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPEFFlush2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPEFFlush2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPEFFlush2.Location = new System.Drawing.Point(112, 104);
-            this.lblPEFFlush2.Name = "lblPEFFlush2";
-            this.lblPEFFlush2.Size = new System.Drawing.Size(100, 50);
-            this.lblPEFFlush2.TabIndex = 1;
-            this.lblPEFFlush2.Tag = "1500";
-            this.lblPEFFlush2.Text = "1500";
-            this.lblPEFFlush2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPEFFlush2.Click += new System.EventHandler(this.lblSetFlush);
-            // 
-            // lblPEFFlush1
-            // 
-            this.lblPEFFlush1.BackColor = System.Drawing.Color.Transparent;
-            this.lblPEFFlush1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPEFFlush1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPEFFlush1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPEFFlush1.Location = new System.Drawing.Point(112, 41);
-            this.lblPEFFlush1.Name = "lblPEFFlush1";
-            this.lblPEFFlush1.Size = new System.Drawing.Size(100, 50);
-            this.lblPEFFlush1.TabIndex = 0;
-            this.lblPEFFlush1.Tag = "1500";
-            this.lblPEFFlush1.Text = "1500";
-            this.lblPEFFlush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPEFFlush1.Click += new System.EventHandler(this.lblSetFlush);
-            // 
-            // gboxLiALS
-            // 
-            this.gboxLiALS.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.gboxLiALS.BackgroundGradientColor = System.Drawing.Color.White;
-            this.gboxLiALS.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
-            this.gboxLiALS.BorderColor = System.Drawing.Color.Silver;
-            this.gboxLiALS.BorderThickness = 1F;
-            this.gboxLiALS.Controls.Add(this.label30);
-            this.gboxLiALS.Controls.Add(this.label31);
-            this.gboxLiALS.Controls.Add(this.lblLiALSFLush2);
-            this.gboxLiALS.Controls.Add(this.lblLiALSFLush1);
-            this.gboxLiALS.CustomGroupBoxColor = System.Drawing.Color.White;
-            this.gboxLiALS.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gboxLiALS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.gboxLiALS.GroupImage = null;
-            this.gboxLiALS.GroupTitle = "Li-ALS清洗量(单位:mL)";
-            this.gboxLiALS.Location = new System.Drawing.Point(7, 214);
-            this.gboxLiALS.Name = "gboxLiALS";
-            this.gboxLiALS.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
-            this.gboxLiALS.PaintGroupBox = true;
-            this.gboxLiALS.RoundCorners = 10;
-            this.gboxLiALS.ShadowColor = System.Drawing.Color.DarkGray;
-            this.gboxLiALS.ShadowControl = false;
-            this.gboxLiALS.ShadowThickness = 3;
-            this.gboxLiALS.Size = new System.Drawing.Size(243, 175);
-            this.gboxLiALS.TabIndex = 128;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(39, 121);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(78, 21);
-            this.label30.TabIndex = 3;
-            this.label30.Text = "第二部分:";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(39, 58);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(78, 21);
-            this.label31.TabIndex = 2;
-            this.label31.Text = "第一部分:";
-            // 
-            // lblLiALSFLush2
-            // 
-            this.lblLiALSFLush2.BackColor = System.Drawing.Color.Transparent;
-            this.lblLiALSFLush2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLiALSFLush2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLiALSFLush2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblLiALSFLush2.Location = new System.Drawing.Point(123, 103);
-            this.lblLiALSFLush2.Name = "lblLiALSFLush2";
-            this.lblLiALSFLush2.Size = new System.Drawing.Size(100, 50);
-            this.lblLiALSFLush2.TabIndex = 1;
-            this.lblLiALSFLush2.Tag = "2000";
-            this.lblLiALSFLush2.Text = "2000";
-            this.lblLiALSFLush2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLiALSFLush2.Click += new System.EventHandler(this.lblSetFlush);
-            // 
-            // lblLiALSFLush1
-            // 
-            this.lblLiALSFLush1.BackColor = System.Drawing.Color.Transparent;
-            this.lblLiALSFLush1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLiALSFLush1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLiALSFLush1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblLiALSFLush1.Location = new System.Drawing.Point(123, 40);
-            this.lblLiALSFLush1.Name = "lblLiALSFLush1";
-            this.lblLiALSFLush1.Size = new System.Drawing.Size(100, 50);
-            this.lblLiALSFLush1.TabIndex = 0;
-            this.lblLiALSFLush1.Tag = "1500";
-            this.lblLiALSFLush1.Text = "1500";
-            this.lblLiALSFLush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLiALSFLush1.Click += new System.EventHandler(this.lblSetFlush);
-            // 
-            // gboxCHDF
-            // 
-            this.gboxCHDF.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.gboxCHDF.BackgroundGradientColor = System.Drawing.Color.White;
-            this.gboxCHDF.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
-            this.gboxCHDF.BorderColor = System.Drawing.Color.Silver;
-            this.gboxCHDF.BorderThickness = 1F;
-            this.gboxCHDF.Controls.Add(this.label23);
-            this.gboxCHDF.Controls.Add(this.label32);
-            this.gboxCHDF.Controls.Add(this.lblCHDFFlush2);
-            this.gboxCHDF.Controls.Add(this.lblCHDFFlush1);
-            this.gboxCHDF.CustomGroupBoxColor = System.Drawing.Color.White;
-            this.gboxCHDF.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gboxCHDF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.gboxCHDF.GroupImage = null;
-            this.gboxCHDF.GroupTitle = "CHDF清洗量(单位:mL)";
-            this.gboxCHDF.Location = new System.Drawing.Point(526, 19);
-            this.gboxCHDF.Name = "gboxCHDF";
-            this.gboxCHDF.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
-            this.gboxCHDF.PaintGroupBox = true;
-            this.gboxCHDF.RoundCorners = 10;
-            this.gboxCHDF.ShadowColor = System.Drawing.Color.DarkGray;
-            this.gboxCHDF.ShadowControl = false;
-            this.gboxCHDF.ShadowThickness = 3;
-            this.gboxCHDF.Size = new System.Drawing.Size(243, 175);
-            this.gboxCHDF.TabIndex = 126;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(22, 120);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(94, 21);
-            this.label23.TabIndex = 3;
-            this.label23.Text = "一次膜外侧:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(22, 57);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(94, 21);
-            this.label32.TabIndex = 2;
-            this.label32.Text = "一次膜内侧:";
-            // 
-            // lblCHDFFlush2
-            // 
-            this.lblCHDFFlush2.BackColor = System.Drawing.Color.Transparent;
-            this.lblCHDFFlush2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCHDFFlush2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCHDFFlush2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblCHDFFlush2.Location = new System.Drawing.Point(122, 105);
-            this.lblCHDFFlush2.Name = "lblCHDFFlush2";
-            this.lblCHDFFlush2.Size = new System.Drawing.Size(100, 50);
-            this.lblCHDFFlush2.TabIndex = 1;
-            this.lblCHDFFlush2.Tag = "500";
-            this.lblCHDFFlush2.Text = "500";
-            this.lblCHDFFlush2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblCHDFFlush2.Click += new System.EventHandler(this.lblSetFlush);
-            // 
-            // lblCHDFFlush1
-            // 
-            this.lblCHDFFlush1.BackColor = System.Drawing.Color.Transparent;
-            this.lblCHDFFlush1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCHDFFlush1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCHDFFlush1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblCHDFFlush1.Location = new System.Drawing.Point(122, 42);
-            this.lblCHDFFlush1.Name = "lblCHDFFlush1";
-            this.lblCHDFFlush1.Size = new System.Drawing.Size(100, 50);
-            this.lblCHDFFlush1.TabIndex = 0;
-            this.lblCHDFFlush1.Tag = "1000";
-            this.lblCHDFFlush1.Text = "1000";
-            this.lblCHDFFlush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblCHDFFlush1.Click += new System.EventHandler(this.lblSetFlush);
-            // 
-            // gboxPP
-            // 
-            this.gboxPP.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.gboxPP.BackgroundGradientColor = System.Drawing.Color.White;
-            this.gboxPP.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
-            this.gboxPP.BorderColor = System.Drawing.Color.Silver;
-            this.gboxPP.BorderThickness = 1F;
-            this.gboxPP.Controls.Add(this.label18);
-            this.gboxPP.Controls.Add(this.label22);
-            this.gboxPP.Controls.Add(this.lblPPFlush2);
-            this.gboxPP.Controls.Add(this.lblPPFlush1);
-            this.gboxPP.CustomGroupBoxColor = System.Drawing.Color.White;
-            this.gboxPP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gboxPP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.gboxPP.GroupImage = null;
-            this.gboxPP.GroupTitle = "PP清洗量(单位:mL)";
-            this.gboxPP.Location = new System.Drawing.Point(266, 19);
-            this.gboxPP.Name = "gboxPP";
-            this.gboxPP.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
-            this.gboxPP.PaintGroupBox = true;
-            this.gboxPP.RoundCorners = 10;
-            this.gboxPP.ShadowColor = System.Drawing.Color.DarkGray;
-            this.gboxPP.ShadowControl = false;
-            this.gboxPP.ShadowThickness = 3;
-            this.gboxPP.Size = new System.Drawing.Size(243, 175);
-            this.gboxPP.TabIndex = 125;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(46, 118);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 21);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "二次膜:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(14, 55);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 21);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "一次膜内侧:";
-            // 
-            // lblPPFlush2
-            // 
-            this.lblPPFlush2.BackColor = System.Drawing.Color.Transparent;
-            this.lblPPFlush2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPPFlush2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPPFlush2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPPFlush2.Location = new System.Drawing.Point(114, 103);
-            this.lblPPFlush2.Name = "lblPPFlush2";
-            this.lblPPFlush2.Size = new System.Drawing.Size(100, 50);
-            this.lblPPFlush2.TabIndex = 1;
-            this.lblPPFlush2.Tag = "500";
-            this.lblPPFlush2.Text = "500";
-            this.lblPPFlush2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPPFlush2.Click += new System.EventHandler(this.lblSetFlush);
-            // 
-            // lblPPFlush1
-            // 
-            this.lblPPFlush1.BackColor = System.Drawing.Color.Transparent;
-            this.lblPPFlush1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPPFlush1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPPFlush1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.lblPPFlush1.Location = new System.Drawing.Point(114, 40);
-            this.lblPPFlush1.Name = "lblPPFlush1";
-            this.lblPPFlush1.Size = new System.Drawing.Size(100, 50);
-            this.lblPPFlush1.TabIndex = 0;
-            this.lblPPFlush1.Tag = "1000";
-            this.lblPPFlush1.Text = "1000";
-            this.lblPPFlush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblPPFlush1.Click += new System.EventHandler(this.lblSetFlush);
-            // 
             // gboxPE
             // 
             this.gboxPE.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -2484,7 +2127,7 @@
             this.gboxPE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.gboxPE.GroupImage = null;
             this.gboxPE.GroupTitle = "PE清洗量(单位:mL)";
-            this.gboxPE.Location = new System.Drawing.Point(7, 19);
+            this.gboxPE.Location = new System.Drawing.Point(6, 9);
             this.gboxPE.Name = "gboxPE";
             this.gboxPE.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.gboxPE.PaintGroupBox = true;
@@ -2543,37 +2186,332 @@
             this.lblPEFlush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblPEFlush1.Click += new System.EventHandler(this.lblSetFlush);
             // 
+            // gboxPEF
+            // 
+            this.gboxPEF.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.gboxPEF.BackgroundGradientColor = System.Drawing.Color.White;
+            this.gboxPEF.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.gboxPEF.BorderColor = System.Drawing.Color.Silver;
+            this.gboxPEF.BorderThickness = 1F;
+            this.gboxPEF.Controls.Add(this.label42);
+            this.gboxPEF.Controls.Add(this.label43);
+            this.gboxPEF.Controls.Add(this.lblPEFFlush2);
+            this.gboxPEF.Controls.Add(this.lblPEFFlush1);
+            this.gboxPEF.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.gboxPEF.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gboxPEF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxPEF.GroupImage = null;
+            this.gboxPEF.GroupTitle = "PEF清洗量(单位:mL)";
+            this.gboxPEF.Location = new System.Drawing.Point(265, 204);
+            this.gboxPEF.Name = "gboxPEF";
+            this.gboxPEF.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.gboxPEF.PaintGroupBox = true;
+            this.gboxPEF.RoundCorners = 10;
+            this.gboxPEF.ShadowColor = System.Drawing.Color.DarkGray;
+            this.gboxPEF.ShadowControl = false;
+            this.gboxPEF.ShadowThickness = 3;
+            this.gboxPEF.Size = new System.Drawing.Size(243, 175);
+            this.gboxPEF.TabIndex = 127;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(28, 119);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(78, 21);
+            this.label42.TabIndex = 3;
+            this.label42.Text = "血液滤过:";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(28, 56);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(78, 21);
+            this.label43.TabIndex = 2;
+            this.label43.Text = "血浆置换:";
+            // 
+            // lblPEFFlush2
+            // 
+            this.lblPEFFlush2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPEFFlush2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPEFFlush2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPEFFlush2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblPEFFlush2.Location = new System.Drawing.Point(112, 104);
+            this.lblPEFFlush2.Name = "lblPEFFlush2";
+            this.lblPEFFlush2.Size = new System.Drawing.Size(100, 50);
+            this.lblPEFFlush2.TabIndex = 1;
+            this.lblPEFFlush2.Tag = "1500";
+            this.lblPEFFlush2.Text = "1500";
+            this.lblPEFFlush2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPEFFlush2.Click += new System.EventHandler(this.lblSetFlush);
+            // 
+            // lblPEFFlush1
+            // 
+            this.lblPEFFlush1.BackColor = System.Drawing.Color.Transparent;
+            this.lblPEFFlush1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPEFFlush1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPEFFlush1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblPEFFlush1.Location = new System.Drawing.Point(112, 41);
+            this.lblPEFFlush1.Name = "lblPEFFlush1";
+            this.lblPEFFlush1.Size = new System.Drawing.Size(100, 50);
+            this.lblPEFFlush1.TabIndex = 0;
+            this.lblPEFFlush1.Tag = "1500";
+            this.lblPEFFlush1.Text = "1500";
+            this.lblPEFFlush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPEFFlush1.Click += new System.EventHandler(this.lblSetFlush);
+            // 
             // btnSetFlush
             // 
-            this.btnSetFlush.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnSetFlush.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
             this.btnSetFlush.CornerRadius = 25;
             this.btnSetFlush.FocusColor = System.Drawing.Color.Black;
             this.btnSetFlush.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetFlush.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSetFlush.Location = new System.Drawing.Point(7, 411);
+            this.btnSetFlush.Location = new System.Drawing.Point(4, 408);
             this.btnSetFlush.Name = "btnSetFlush";
-            this.btnSetFlush.NumberOfPulses = 2;
-            this.btnSetFlush.PulseColor = System.Drawing.Color.DimGray;
+            this.btnSetFlush.NumberOfPulses = 3;
             this.btnSetFlush.PulseSpeed = 0.3F;
-            this.btnSetFlush.PulseWidth = 6;
-            this.btnSetFlush.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnSetFlush.Size = new System.Drawing.Size(112, 62);
             this.btnSetFlush.TabIndex = 123;
             this.btnSetFlush.Text = "保存设置";
             this.btnSetFlush.UseVisualStyleBackColor = true;
             this.btnSetFlush.Click += new System.EventHandler(this.btnSetFlush_Click);
             // 
-            // tpWarnLog
+            // gboxLiALS
             // 
-            this.tpWarnLog.Controls.Add(this.dgvLog);
-            this.tpWarnLog.Location = new System.Drawing.Point(4, 49);
-            this.tpWarnLog.Name = "tpWarnLog";
-            this.tpWarnLog.Padding = new System.Windows.Forms.Padding(3);
-            this.tpWarnLog.Size = new System.Drawing.Size(774, 518);
-            this.tpWarnLog.TabIndex = 6;
-            this.tpWarnLog.Text = "报警记录";
-            this.tpWarnLog.UseVisualStyleBackColor = true;
+            this.gboxLiALS.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.gboxLiALS.BackgroundGradientColor = System.Drawing.Color.White;
+            this.gboxLiALS.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.gboxLiALS.BorderColor = System.Drawing.Color.Silver;
+            this.gboxLiALS.BorderThickness = 1F;
+            this.gboxLiALS.Controls.Add(this.label30);
+            this.gboxLiALS.Controls.Add(this.label31);
+            this.gboxLiALS.Controls.Add(this.lblLiALSFLush2);
+            this.gboxLiALS.Controls.Add(this.lblLiALSFLush1);
+            this.gboxLiALS.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.gboxLiALS.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gboxLiALS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxLiALS.GroupImage = null;
+            this.gboxLiALS.GroupTitle = "Li-ALS清洗量(单位:mL)";
+            this.gboxLiALS.Location = new System.Drawing.Point(6, 204);
+            this.gboxLiALS.Name = "gboxLiALS";
+            this.gboxLiALS.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.gboxLiALS.PaintGroupBox = true;
+            this.gboxLiALS.RoundCorners = 10;
+            this.gboxLiALS.ShadowColor = System.Drawing.Color.DarkGray;
+            this.gboxLiALS.ShadowControl = false;
+            this.gboxLiALS.ShadowThickness = 3;
+            this.gboxLiALS.Size = new System.Drawing.Size(243, 175);
+            this.gboxLiALS.TabIndex = 128;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(39, 121);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(78, 21);
+            this.label30.TabIndex = 3;
+            this.label30.Text = "第二部分:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(39, 58);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(78, 21);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "第一部分:";
+            // 
+            // lblLiALSFLush2
+            // 
+            this.lblLiALSFLush2.BackColor = System.Drawing.Color.Transparent;
+            this.lblLiALSFLush2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLiALSFLush2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiALSFLush2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblLiALSFLush2.Location = new System.Drawing.Point(123, 103);
+            this.lblLiALSFLush2.Name = "lblLiALSFLush2";
+            this.lblLiALSFLush2.Size = new System.Drawing.Size(100, 50);
+            this.lblLiALSFLush2.TabIndex = 1;
+            this.lblLiALSFLush2.Tag = "2000";
+            this.lblLiALSFLush2.Text = "2000";
+            this.lblLiALSFLush2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLiALSFLush2.Click += new System.EventHandler(this.lblSetFlush);
+            // 
+            // lblLiALSFLush1
+            // 
+            this.lblLiALSFLush1.BackColor = System.Drawing.Color.Transparent;
+            this.lblLiALSFLush1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLiALSFLush1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiALSFLush1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblLiALSFLush1.Location = new System.Drawing.Point(123, 40);
+            this.lblLiALSFLush1.Name = "lblLiALSFLush1";
+            this.lblLiALSFLush1.Size = new System.Drawing.Size(100, 50);
+            this.lblLiALSFLush1.TabIndex = 0;
+            this.lblLiALSFLush1.Tag = "1500";
+            this.lblLiALSFLush1.Text = "1500";
+            this.lblLiALSFLush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLiALSFLush1.Click += new System.EventHandler(this.lblSetFlush);
+            // 
+            // gboxPP
+            // 
+            this.gboxPP.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.gboxPP.BackgroundGradientColor = System.Drawing.Color.White;
+            this.gboxPP.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.gboxPP.BorderColor = System.Drawing.Color.Silver;
+            this.gboxPP.BorderThickness = 1F;
+            this.gboxPP.Controls.Add(this.label18);
+            this.gboxPP.Controls.Add(this.label22);
+            this.gboxPP.Controls.Add(this.lblPPFlush2);
+            this.gboxPP.Controls.Add(this.lblPPFlush1);
+            this.gboxPP.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.gboxPP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gboxPP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxPP.GroupImage = null;
+            this.gboxPP.GroupTitle = "PP清洗量(单位:mL)";
+            this.gboxPP.Location = new System.Drawing.Point(265, 9);
+            this.gboxPP.Name = "gboxPP";
+            this.gboxPP.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.gboxPP.PaintGroupBox = true;
+            this.gboxPP.RoundCorners = 10;
+            this.gboxPP.ShadowColor = System.Drawing.Color.DarkGray;
+            this.gboxPP.ShadowControl = false;
+            this.gboxPP.ShadowThickness = 3;
+            this.gboxPP.Size = new System.Drawing.Size(243, 175);
+            this.gboxPP.TabIndex = 125;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(46, 118);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 21);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "二次膜:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(14, 55);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(94, 21);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "一次膜内侧:";
+            // 
+            // lblPPFlush2
+            // 
+            this.lblPPFlush2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPPFlush2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPPFlush2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPPFlush2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblPPFlush2.Location = new System.Drawing.Point(114, 103);
+            this.lblPPFlush2.Name = "lblPPFlush2";
+            this.lblPPFlush2.Size = new System.Drawing.Size(100, 50);
+            this.lblPPFlush2.TabIndex = 1;
+            this.lblPPFlush2.Tag = "500";
+            this.lblPPFlush2.Text = "500";
+            this.lblPPFlush2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPPFlush2.Click += new System.EventHandler(this.lblSetFlush);
+            // 
+            // lblPPFlush1
+            // 
+            this.lblPPFlush1.BackColor = System.Drawing.Color.Transparent;
+            this.lblPPFlush1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPPFlush1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPPFlush1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblPPFlush1.Location = new System.Drawing.Point(114, 40);
+            this.lblPPFlush1.Name = "lblPPFlush1";
+            this.lblPPFlush1.Size = new System.Drawing.Size(100, 50);
+            this.lblPPFlush1.TabIndex = 0;
+            this.lblPPFlush1.Tag = "1000";
+            this.lblPPFlush1.Text = "1000";
+            this.lblPPFlush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPPFlush1.Click += new System.EventHandler(this.lblSetFlush);
+            // 
+            // gboxCHDF
+            // 
+            this.gboxCHDF.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.gboxCHDF.BackgroundGradientColor = System.Drawing.Color.White;
+            this.gboxCHDF.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
+            this.gboxCHDF.BorderColor = System.Drawing.Color.Silver;
+            this.gboxCHDF.BorderThickness = 1F;
+            this.gboxCHDF.Controls.Add(this.label23);
+            this.gboxCHDF.Controls.Add(this.label32);
+            this.gboxCHDF.Controls.Add(this.lblCHDFFlush2);
+            this.gboxCHDF.Controls.Add(this.lblCHDFFlush1);
+            this.gboxCHDF.CustomGroupBoxColor = System.Drawing.Color.White;
+            this.gboxCHDF.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gboxCHDF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.gboxCHDF.GroupImage = null;
+            this.gboxCHDF.GroupTitle = "CHDF清洗量(单位:mL)";
+            this.gboxCHDF.Location = new System.Drawing.Point(525, 9);
+            this.gboxCHDF.Name = "gboxCHDF";
+            this.gboxCHDF.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
+            this.gboxCHDF.PaintGroupBox = true;
+            this.gboxCHDF.RoundCorners = 10;
+            this.gboxCHDF.ShadowColor = System.Drawing.Color.DarkGray;
+            this.gboxCHDF.ShadowControl = false;
+            this.gboxCHDF.ShadowThickness = 3;
+            this.gboxCHDF.Size = new System.Drawing.Size(243, 175);
+            this.gboxCHDF.TabIndex = 126;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(22, 120);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(94, 21);
+            this.label23.TabIndex = 3;
+            this.label23.Text = "一次膜外侧:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(22, 57);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(94, 21);
+            this.label32.TabIndex = 2;
+            this.label32.Text = "一次膜内侧:";
+            // 
+            // lblCHDFFlush2
+            // 
+            this.lblCHDFFlush2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCHDFFlush2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCHDFFlush2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCHDFFlush2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblCHDFFlush2.Location = new System.Drawing.Point(122, 105);
+            this.lblCHDFFlush2.Name = "lblCHDFFlush2";
+            this.lblCHDFFlush2.Size = new System.Drawing.Size(100, 50);
+            this.lblCHDFFlush2.TabIndex = 1;
+            this.lblCHDFFlush2.Tag = "500";
+            this.lblCHDFFlush2.Text = "500";
+            this.lblCHDFFlush2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCHDFFlush2.Click += new System.EventHandler(this.lblSetFlush);
+            // 
+            // lblCHDFFlush1
+            // 
+            this.lblCHDFFlush1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCHDFFlush1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCHDFFlush1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCHDFFlush1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.lblCHDFFlush1.Location = new System.Drawing.Point(122, 42);
+            this.lblCHDFFlush1.Name = "lblCHDFFlush1";
+            this.lblCHDFFlush1.Size = new System.Drawing.Size(100, 50);
+            this.lblCHDFFlush1.TabIndex = 0;
+            this.lblCHDFFlush1.Tag = "1000";
+            this.lblCHDFFlush1.Text = "1000";
+            this.lblCHDFFlush1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCHDFFlush1.Click += new System.EventHandler(this.lblSetFlush);
+            // 
+            // tpwarnlog
+            // 
+            this.tpwarnlog.Controls.Add(this.dgvLog);
+            this.tpwarnlog.Location = new System.Drawing.Point(4, 45);
+            this.tpwarnlog.Name = "tpwarnlog";
+            this.tpwarnlog.Size = new System.Drawing.Size(774, 522);
+            this.tpwarnlog.TabIndex = 4;
+            this.tpwarnlog.Tag = "tpwarnlog";
+            this.tpwarnlog.Text = "报警记录";
+            this.tpwarnlog.UseVisualStyleBackColor = true;
             // 
             // dgvLog
             // 
@@ -2592,106 +2530,27 @@
             this.logtime,
             this.code,
             this.content});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLog.Location = new System.Drawing.Point(3, 3);
+            this.dgvLog.Location = new System.Drawing.Point(0, 0);
             this.dgvLog.MultiSelect = false;
             this.dgvLog.Name = "dgvLog";
             this.dgvLog.ReadOnly = true;
             this.dgvLog.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dgvLog.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dgvLog.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvLog.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgvLog.RowTemplate.Height = 30;
             this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLog.Size = new System.Drawing.Size(768, 512);
+            this.dgvLog.Size = new System.Drawing.Size(774, 522);
             this.dgvLog.TabIndex = 1;
-            // 
-            // grouper5
-            // 
-            this.grouper5.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grouper5.BackgroundGradientColor = System.Drawing.Color.White;
-            this.grouper5.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
-            this.grouper5.BorderColor = System.Drawing.Color.Silver;
-            this.grouper5.BorderThickness = 1F;
-            this.grouper5.Controls.Add(this.tabControl1);
-            this.grouper5.CustomGroupBoxColor = System.Drawing.Color.White;
-            this.grouper5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grouper5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grouper5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.grouper5.GroupImage = null;
-            this.grouper5.GroupTitle = "其他设置";
-            this.grouper5.Location = new System.Drawing.Point(0, 0);
-            this.grouper5.Name = "grouper5";
-            this.grouper5.Padding = new System.Windows.Forms.Padding(5, 30, 3, 3);
-            this.grouper5.PaintGroupBox = true;
-            this.grouper5.RoundCorners = 10;
-            this.grouper5.ShadowColor = System.Drawing.Color.DarkGray;
-            this.grouper5.ShadowControl = false;
-            this.grouper5.ShadowThickness = 3;
-            this.grouper5.Size = new System.Drawing.Size(790, 604);
-            this.grouper5.TabIndex = 120;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "序号";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 30;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn1.Width = 35;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridViewTextBoxColumn2.HeaderText = "时间";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 200;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "代码";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 100;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn3.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.HeaderText = "内容";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 80;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.HeaderText = "内容";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // grade
             // 
@@ -2706,8 +2565,8 @@
             // 
             // no
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.no.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.no.DefaultCellStyle = dataGridViewCellStyle11;
             this.no.HeaderText = "序号";
             this.no.MinimumWidth = 50;
             this.no.Name = "no";
@@ -2745,6 +2604,60 @@
             this.content.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.content.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "序号";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 30;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.Width = 35;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridViewTextBoxColumn2.HeaderText = "时间";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 200;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "代码";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.HeaderText = "内容";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 80;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.HeaderText = "内容";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.Frozen = true;
@@ -2765,23 +2678,26 @@
             this.Size = new System.Drawing.Size(790, 604);
             this.Load += new System.EventHandler(this.ucOtherSet_Load);
             this.SizeChanged += new System.EventHandler(this.ucOtherSet_SizeChanged);
+            this.grouper5.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.palSyringe.ResumeLayout(false);
             this.palSyringe.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.gboxRecycle.ResumeLayout(false);
             this.gboxRecycle.PerformLayout();
             this.gboxV.ResumeLayout(false);
             this.grouper1.ResumeLayout(false);
             this.grouper1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.grouper4.ResumeLayout(false);
             this.grouper4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.grouper2.ResumeLayout(false);
+            this.grouper2.PerformLayout();
             this.grouper3.ResumeLayout(false);
             this.gboxPrePven.ResumeLayout(false);
             this.gboxPrePart.ResumeLayout(false);
@@ -2789,33 +2705,28 @@
             this.gboxPrePacc.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.grouper2.ResumeLayout(false);
-            this.grouper2.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
             this.gboxPDF.ResumeLayout(false);
             this.gboxPDF.PerformLayout();
+            this.gboxPE.ResumeLayout(false);
+            this.gboxPE.PerformLayout();
             this.gboxPEF.ResumeLayout(false);
             this.gboxPEF.PerformLayout();
             this.gboxLiALS.ResumeLayout(false);
             this.gboxLiALS.PerformLayout();
-            this.gboxCHDF.ResumeLayout(false);
-            this.gboxCHDF.PerformLayout();
             this.gboxPP.ResumeLayout(false);
             this.gboxPP.PerformLayout();
-            this.gboxPE.ResumeLayout(false);
-            this.gboxPE.PerformLayout();
-            this.tpWarnLog.ResumeLayout(false);
+            this.gboxCHDF.ResumeLayout(false);
+            this.gboxCHDF.PerformLayout();
+            this.tpwarnlog.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
-            this.grouper5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabPage tabPage1;
         public System.Windows.Forms.Label sp_ACC_current;
-        public System.Windows.Forms.Label Syringe_state;
         private System.Windows.Forms.Panel palSyringe;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
@@ -2843,7 +2754,6 @@
         public System.Windows.Forms.Label lblTemperature;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label lblTargetT;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RadioButton rbtnPrePart5;
         private System.Windows.Forms.RadioButton rbtnPrePart4;
         private System.Windows.Forms.RadioButton rbtnPrePart3;
@@ -2893,7 +2803,6 @@
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label lblRealBloodLeak;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label lblCHDFFlush1;
         private System.Windows.Forms.Label lblCHDFFlush2;
@@ -2906,11 +2815,9 @@
         private System.Windows.Forms.Label lblPEFlush1;
         private System.Windows.Forms.Label lblPEFlush2;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TabPage tpWarnLog;
         private System.Windows.Forms.DataGridView dgvLog;
         private System.Windows.Forms.GroupBox gboxPrePart;
         private System.Windows.Forms.Label label29;
-        public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -2922,7 +2829,6 @@
         public System.Windows.Forms.CheckBox chkV2;
         public System.Windows.Forms.CheckBox chkV4;
         public System.Windows.Forms.CheckBox chkV3;
-        public System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lblPaccDecWarn;
@@ -2979,6 +2885,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label38;
-        public CodeVendor.Controls.Grouper grouper5; 
+        public CodeVendor.Controls.Grouper grouper5;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tpwarnlog;
+        public System.Windows.Forms.Label Syringe_state;
+        public System.Windows.Forms.CustomTabControl tabControl1; 
     }
 }

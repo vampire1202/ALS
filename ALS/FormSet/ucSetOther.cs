@@ -800,7 +800,7 @@ namespace ALS.FormSet
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab.Name.ToLower() == "tpwarnlog")
+            if (this.tabControl1.SelectedTab.Name.ToLower() == "tpwarnlog")
             {
                 if (this.dgvLog.Rows.Count > 0)
                     this.dgvLog.Rows.Clear();

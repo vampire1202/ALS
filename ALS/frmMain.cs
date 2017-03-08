@@ -36,7 +36,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.Ports;
 using System.Threading;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Diagnostics;
@@ -53,7 +53,7 @@ namespace ALS
         //------------------------------------------
         //             各子窗体定义                |
         //------------------------------------------  
-        
+
         FormOperation.ucPipeLine pipeLine = new FormOperation.ucPipeLine();
         FormOperation.ucAutoFlush M_uc_AutoFlush = new FormOperation.ucAutoFlush();
         FormOperation.ucSelectFlush M_uc_selFlush = new FormOperation.ucSelectFlush();
@@ -166,6 +166,7 @@ namespace ALS
         List<byte> M_buffer_hpump = new List<byte>();
         StringBuilder M_strb_main = new StringBuilder();
         List<byte> M_buffer_main = new List<byte>();
+        StringBuilder M_strb_data = new StringBuilder();
         List<byte> M_buffer_data = new List<byte>();
 
         List<byte> M_buffer_pumpstatus = new List<byte>();
@@ -365,7 +366,7 @@ namespace ALS
         {
             //更新UI
             if (e.Success == false)
-            { 
+            {
                 m_fp.lblTip.Visible = true;
                 Application.Exit();
                 Application.ExitThread();
@@ -394,7 +395,7 @@ namespace ALS
                 SurgeryNo = DateTime.Now.ToString("yyMMddHHmmss"),
                 StartTime = (epoch * 1000 + DateTime.Now.Millisecond).ToString()
             };
-            
+
             //序列化            
             m_strStartEnd = SJson(m_PatientInfo);
             Cls.utils.AddText("START:" + m_strStartEnd);
@@ -3561,7 +3562,7 @@ namespace ALS
                             M_uc_Sum.lblTotalDP.Text = M_ModelTotal.TotalDP.ToString("f3");
                             M_uc_Sum.lblTotalSP.Text = M_ModelTotal.TotalSP.ToString("f1");
                         }
-                        #endregion                    
+                        #endregion
 
                         #region 流量界面
                         if (M_uc_SetFlow != null && this.palContent.Controls.Contains(M_uc_SetFlow))
@@ -3573,7 +3574,7 @@ namespace ALS
                         #region 本主界面
                         //血泵累计值
                         if (M_isTreat)
-                            this.lblTotalBP.Text = "∑: " + M_ModelTotal.TotalBP.ToString("f2") + " L"; 
+                            this.lblTotalBP.Text = "∑: " + M_ModelTotal.TotalBP.ToString("f2") + " L";
                         this.lblTime.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");// +" CPU:" + GetCPUTemperature().ToString("f1") + " ℃";
                         this.tsbtnHT.Text = M_ModelValue.M_flt_Temperature.ToString("f1") + " ℃";
                         //this.lblpaccdec.Text = M_ModelValue.M_flt_PaccDecrement.ToString("f1");
@@ -5172,6 +5173,24 @@ namespace ALS
                                     //#if LOG_MAINPORT_DATARECEIVE
                                     //                                    getLog.WriteLogFile("clockwise:1 count:" + m_lstCircleDirection.Count.ToString());
                                     //#endif
+
+                                    this.BeginInvoke((EventHandler)(delegate
+                                    {
+                                        M_strb_main.Append("顺时针:");
+                                        foreach (byte b in buf)
+                                        {
+                                            M_strb_main.Append(b.ToString("X2") + " ");
+                                        }
+                                        M_strb_main.Append(" \r\n");
+                                        //追加的形式添加到文本框末端，并滚动到最后。  
+                                        if (m_frmAdmin != null && !m_frmAdmin.IsDisposed)
+                                        {
+                                            m_frmAdmin.rtBoxData.AppendText(M_strb_main.ToString());
+                                            m_frmAdmin.rtBoxData.Focus();
+                                            m_frmAdmin.rtBoxData.Select(m_frmAdmin.rtBoxData.Text.Length, 0);
+                                            M_strb_main.Clear();
+                                        }
+                                    }));
                                     break;
                                 case 0x1A://逆时针存储0
                                     if (m_lstCircleDirection.Count == 0)
@@ -5179,6 +5198,25 @@ namespace ALS
                                     //#if LOG_MAINPORT_DATARECEIVE
                                     //                                    getLog.WriteLogFile("counterclockwise:0 count" + m_lstCircleDirection.Count.ToString());
                                     //#endif
+
+                                    this.BeginInvoke((EventHandler)(delegate
+                                    {
+                                        M_strb_main.Append("逆时针:");
+                                        foreach (byte b in buf)
+                                        {
+                                            M_strb_main.Append(b.ToString("X2") + " ");
+                                        }
+                                        M_strb_main.Append(" \r\n");
+                                        //追加的形式添加到文本框末端，并滚动到最后。  
+                                        if (m_frmAdmin != null && !m_frmAdmin.IsDisposed)
+                                        {
+                                            m_frmAdmin.rtBoxData.AppendText(M_strb_main.ToString());
+                                            m_frmAdmin.rtBoxData.Focus();
+                                            m_frmAdmin.rtBoxData.Select(m_frmAdmin.rtBoxData.Text.Length, 0);
+                                            M_strb_main.Clear();
+                                        }
+                                    }));
+
                                     break;
                                 #endregion
                                 #region 液位检测 1静脉 2动脉 3M1
@@ -5458,7 +5496,7 @@ namespace ALS
                             //            M_uc_OtherSet.lblBloodLeak.BackColor = Color.Green;
                             //    }));
                             //}
-                            
+
                             if (M_ModelValue.M_flt_BloodLeak < M_ModelTreat.BloodLeak)
                                 M_exsitsWarn = true;
 
@@ -5531,18 +5569,18 @@ namespace ALS
                 }
                 #region 接收数据
                 //依次的拼接出16进制字符串  
-                M_strb_main.Append(DateTime.Now.ToString("yyMMdd_HH:mm:ss") + "." + DateTime.Now.Millisecond.ToString("000"));
+                M_strb_data.Append(DateTime.Now.ToString("yyMMdd_HH:mm:ss") + "." + DateTime.Now.Millisecond.ToString("000"));
                 //显示当前血泵速度、采血压大小
-                M_strb_main.Append(" BP:" + M_PumpState.BPState.Speed.ToString());
-                M_strb_main.Append(" Pacc:" + M_ModelValue.M_flt_PofPacc.ToString("f1") + " ");
+                M_strb_data.Append(" BP:" + M_PumpState.BPState.Speed.ToString());
+                M_strb_data.Append(" Pacc:" + M_ModelValue.M_flt_PofPacc.ToString("f1") + " ");
 
                 foreach (byte b in buf)
                 {
-                    M_strb_main.Append(b.ToString("X2") + " ");
+                    M_strb_data.Append(b.ToString("X2") + " ");
                 }
-                M_strb_main.Append(" \r\n");
-                lst_com4data.Add(M_strb_main.ToString());
-                M_strb_main.Clear();
+                M_strb_data.Append(" \r\n");
+                lst_com4data.Add(M_strb_data.ToString());
+                M_strb_data.Clear();
                 //每5个字符串写一次文件
                 if (lst_com4data.Count >= 5)
                     WriteCom4Log();
@@ -6361,7 +6399,7 @@ namespace ALS
             M_uc_SetFlow.ReadVState(M_PumpState);
             SetOtherfrmBtnState(M_PumpState);
             M_uc_SetFlow.groupSet.Text = "流量设置";
-          
+
         }
 
         void M_uc_SetFlow_btnReadset(object sender, EventArgs e)
@@ -6918,7 +6956,7 @@ namespace ALS
             {
                 MessageBox.Show(this, "请确认治疗模式!", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }                
+            }
             ShowPipeLine();
         }
 
@@ -6935,9 +6973,9 @@ namespace ALS
             pipeLine.InitItems(M_modeName);
             pipeLine.btnNext.Text = "下一步";
             pipeLine.SetBackColor(0);
-          
+
             ShowP(_style.hide);
-            layoutPump.Visible = false;     
+            layoutPump.Visible = false;
         }
 
         void M_uc_Pipeline_btnNextClicked(object sender, EventArgs e)
@@ -7016,16 +7054,16 @@ namespace ALS
                     this.tsbtnPipeline.Enabled = false;
                     this.tsbtnSetFlow.Enabled = false;
                     this.btnStart.Enabled = false;
-                       layoutPump.Visible = false;
+                    layoutPump.Visible = false;
                     ShowP(_style.hide);
                     break;
                 case 1://自动                   
-                    M_uc_selFlush__btnSelAutoFlush(sender, e); 
+                    M_uc_selFlush__btnSelAutoFlush(sender, e);
                     layoutPump.Visible = false;
                     ShowP(_style.w180);
                     break;
                 case 2://手动                   
-                    M_uc_selFlush__btnSelManualFlush(sender, e); 
+                    M_uc_selFlush__btnSelManualFlush(sender, e);
                     layoutPump.Visible = false;
                     ShowP(_style.w180);
                     break;
@@ -7127,7 +7165,7 @@ namespace ALS
                     M_uc_AutoFlush.pboxFlush.Image = global::ALS.Properties.Resources.LiALSFlush;
                     break;
                 case "CHDF":
-                     m_AutoFlushName = "CHDF_Flush";
+                    m_AutoFlushName = "CHDF_Flush";
                     M_uc_AutoFlush.pboxFlush.Image = global::ALS.Properties.Resources.CHDF;
                     break;
                 case "PDF":
@@ -7156,8 +7194,8 @@ namespace ALS
             }
             //M_uc_AutoFlush._Port_Main = port_main;
             //M_uc_AutoFlush._Port_Pump = port_ppump; 
-                     
-         
+
+
         }
 
 
@@ -7809,7 +7847,7 @@ namespace ALS
                     ChangeShowPControlEnabled("pp");
                     break;
             }
-         
+
             layoutPump.Visible = true;
             ShowP(_style.w300);
         }
@@ -8018,7 +8056,7 @@ namespace ALS
                 M_uc_Recycle.gboxRecycle.Text = "PEF 回收方法,请参照以下步骤回收";
             else
                 M_uc_Recycle.gboxRecycle.Text = M_modeName + " 回收方法,请参照以下步骤回收";
-        
+
             toolStripControl_ItemClicked(toolStripControl, new ToolStripItemClickedEventArgs(tsbtnRecycle));
             //完成治疗,进入回收状态true；
             M_bl_isFinishTreat = true;
@@ -8093,7 +8131,7 @@ namespace ALS
             M_uc_OtherSet.ReadLevel(M_ModelTreat);
             M_uc_OtherSet.ReadFlush();
             M_uc_OtherSet.ReadVState(M_PumpState);
-            M_uc_OtherSet.ReadHPumpSet(); 
+            M_uc_OtherSet.ReadHPumpSet();
         }
 
         void M_uc_OtherSet_btnZeroWs(object sender, EventArgs e)
@@ -8189,7 +8227,7 @@ namespace ALS
             M_uc_Sum._ModelTotal = this.M_ModelTotal;
             M_uc_Sum._ModelTotalPE = this.m_TotalPE;
             M_uc_Sum.ReadTotal();
-           
+
         }
 
         /// <summary>
@@ -8411,45 +8449,44 @@ namespace ALS
             }
 #endif
 
-            if (M_modeName == "PERT")
-            {
-                string tip = "操作提示";
-                Image imgtip = null;
-                if (m_stepPERT.wizardControl1.SelectedPage.TabIndex < 3)
-                    imgtip = ALS.Properties.Resources.tipPert1;
-                else
-                    imgtip = ALS.Properties.Resources.tipPert2;
-                //如果是PERT模式，弹出确认框
-                UserCtrl.MsgBox m = new UserCtrl.MsgBox(tip, UserCtrl.MsgBox.MSBoxIcon.Warning, imgtip, true);
-                if (DialogResult.OK != m.ShowDialog())
-                {
-                    M_isTreat = false;
-                    return;
-                }
-            }
-            else
-            {
-                string tip = "操作提示";
-                Image imgtip = global::ALS.Properties.Resources.tip1;
-
-                //如果是PERT模式，弹出确认框
-                UserCtrl.MsgBox m = new UserCtrl.MsgBox(tip, UserCtrl.MsgBox.MSBoxIcon.Warning, imgtip, true);
-                if (DialogResult.OK != m.ShowDialog())
-                {
-                    M_isTreat = false;
-                    return;
-                }
-            }
-
             //是否治疗标记
             M_isTreat = !M_isTreat;
             if (M_isTreat)
-            {//开始
+            {
                 if (M_bl_isFinishTreat)
                 {
                     MessageBox.Show(this, "已经完成治疗,请退出!");
                     M_isTreat = false;
                     return;
+                }
+
+                if (M_modeName == "PERT")
+                {
+                    string tip = "操作提示";
+                    Image imgtip = null;
+                    if (m_stepPERT.wizardControl1.SelectedPage.TabIndex < 3)
+                        imgtip = ALS.Properties.Resources.tipPert1;
+                    else
+                        imgtip = ALS.Properties.Resources.tipPert2;
+                    //如果是PERT模式，弹出确认框
+                    UserCtrl.MsgBox m = new UserCtrl.MsgBox(tip, UserCtrl.MsgBox.MSBoxIcon.Warning, imgtip, true);
+                    if (DialogResult.OK != m.ShowDialog())
+                    {
+                        M_isTreat = false;
+                        return;
+                    }
+                }
+                else
+                {
+                    string tip = "操作提示";
+                    Image imgtip = global::ALS.Properties.Resources.tip1;
+                    //如果是PERT模式，弹出确认框
+                    UserCtrl.MsgBox m = new UserCtrl.MsgBox(tip, UserCtrl.MsgBox.MSBoxIcon.Warning, imgtip, true);
+                    if (DialogResult.OK != m.ShowDialog())
+                    {
+                        M_isTreat = false;
+                        return;
+                    }
                 }
 
                 //回到治疗界面
@@ -8509,9 +8546,6 @@ namespace ALS
             {//停止
 #if LOG_TREAT
                 getLog.WriteLogFile("T1");
-#endif
-
-#if LOG_TREAT
                 getLog.WriteLogFile("T2");
 #endif
                 this.btnStart.Enabled = false;
@@ -8531,30 +8565,24 @@ namespace ALS
                 switch (M_modeName.ToLower())
                 {
                     case "pert":
-                        //M_stop_ChangePERT();
                         m_stepPERT.Enabled = false;
                         break;
                     case "li-als":
                         //创新模式向导根据当前显示的page调用停止函数
-                        //M_stop_ChangeLiALS();
                         m_stepLiALS.Enabled = false;
                         break;
                     case "pe":
-                        //m_stepPE.btnPausePE_Click(m_stepPE.btnPausePE, e);
                         m_stepPE.Enabled = false;
                         break;
                     //添加PP模式下 按右下角停止按键后，向导界面状态变化
                     //wss 2016年2月19日
                     case "pp":
-                        //m_stepPP.btnPausePP_Click(m_stepPP.btnPausePP, e);
                         m_stepPP.Enabled = false;
                         break;
                     case "pdf":
-                        //m_stepPDF.btnPausePDF_Click(m_stepPDF.btnPausePDF, e);
                         m_stepPDF.Enabled = false;
                         break;
                     case "chdf":
-                        //m_stepCHDF.btnPauseCHDF_Click(m_stepCHDF.btnPauseCHDF, e);
                         m_stepCHDF.Enabled = false;
                         break;
                 }
