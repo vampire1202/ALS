@@ -110,7 +110,7 @@ namespace ALS
                 m_ctsCancelLoad.Cancel();
                 return;
             }
-#endif
+
 
             if (M_lstSendType.Contains(Cls.utils.M_SendType.portfalse))
             {
@@ -132,7 +132,7 @@ namespace ALS
                 m_ctsCancelLoad.Cancel();
                 return;
             }
-
+#endif
             if (e.Current == 100)
             {
 #if RunStartTest
