@@ -111,7 +111,7 @@
             this.gbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
             this.gbox.GroupImage = null;
             this.gbox.GroupTitle = "夹管阀控制";
-            this.gbox.Location = new System.Drawing.Point(0, 0);
+            this.gbox.Location = new System.Drawing.Point(1, 0);
             this.gbox.Name = "gbox";
             this.gbox.Padding = new System.Windows.Forms.Padding(2, 25, 3, 3);
             this.gbox.PaintGroupBox = true;
@@ -129,7 +129,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.gbox);
             this.Name = "uc_PumpSpeed";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
+            this.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.Size = new System.Drawing.Size(217, 131);
             ((System.ComponentModel.ISupportInitialize)(this.picPump)).EndInit();
             this.gbox.ResumeLayout(false);

@@ -87,7 +87,7 @@
             this.paltop.Name = "paltop";
             this.paltop.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.paltop.ShadowOffSet = 0;
-            this.paltop.Size = new System.Drawing.Size(650, 58);
+            this.paltop.Size = new System.Drawing.Size(650, 78);
             this.paltop.TabIndex = 29;
             // 
             // label1
@@ -104,12 +104,12 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("楷体", 24F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(645, 58);
+            this.label2.Size = new System.Drawing.Size(645, 78);
             this.label2.TabIndex = 8;
             this.label2.Text = "李 氏 人 工 肝 治 疗 系 统";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,9 +121,9 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::ALS.Properties.Resources.homepage1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 78);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(650, 324);
+            this.pictureBox1.Size = new System.Drawing.Size(650, 304);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;

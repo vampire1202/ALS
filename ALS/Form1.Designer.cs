@@ -86,26 +86,22 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.ButtonColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(96)))), ((int)(((byte)(152)))));
-            this.btnReturn.ButtonColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(140)))), ((int)(((byte)(188)))));
+            this.btnReturn.BackColor = System.Drawing.Color.Transparent;
             this.btnReturn.CornerRadius = 25;
             this.btnReturn.FocusColor = System.Drawing.Color.Black;
             this.btnReturn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReturn.Location = new System.Drawing.Point(663, 12);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.NumberOfPulses = 2;
-            this.btnReturn.PulseColor = System.Drawing.Color.DimGray;
             this.btnReturn.PulseSpeed = 0.3F;
-            this.btnReturn.PulseWidth = 6;
-            this.btnReturn.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.btnReturn.Size = new System.Drawing.Size(112, 62);
             this.btnReturn.TabIndex = 121;
             this.btnReturn.Text = "上一步";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             // 
             // pulseButton1
             // 
+            this.pulseButton1.BackColor = System.Drawing.Color.Transparent;
             this.pulseButton1.ButtonColorBottom = System.Drawing.Color.DarkGreen;
             this.pulseButton1.ButtonColorTop = System.Drawing.Color.LimeGreen;
             this.pulseButton1.CornerRadius = 25;
@@ -114,18 +110,15 @@
             this.pulseButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pulseButton1.Location = new System.Drawing.Point(600, 90);
             this.pulseButton1.Name = "pulseButton1";
-            this.pulseButton1.NumberOfPulses = 2;
-            this.pulseButton1.PulseColor = System.Drawing.Color.DimGray;
             this.pulseButton1.PulseSpeed = 0.3F;
-            this.pulseButton1.PulseWidth = 6;
-            this.pulseButton1.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.pulseButton1.Size = new System.Drawing.Size(112, 62);
             this.pulseButton1.TabIndex = 123;
             this.pulseButton1.Text = "启动治疗";
-            this.pulseButton1.UseVisualStyleBackColor = true;
+            this.pulseButton1.UseVisualStyleBackColor = false;
             // 
             // pulseButton2
             // 
+            this.pulseButton2.BackColor = System.Drawing.Color.Transparent;
             this.pulseButton2.ButtonColorBottom = System.Drawing.Color.DarkGoldenrod;
             this.pulseButton2.ButtonColorTop = System.Drawing.Color.Orange;
             this.pulseButton2.CornerRadius = 25;
@@ -135,15 +128,11 @@
             this.pulseButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pulseButton2.Location = new System.Drawing.Point(745, 90);
             this.pulseButton2.Name = "pulseButton2";
-            this.pulseButton2.NumberOfPulses = 2;
-            this.pulseButton2.PulseColor = System.Drawing.Color.DimGray;
             this.pulseButton2.PulseSpeed = 0.3F;
-            this.pulseButton2.PulseWidth = 6;
-            this.pulseButton2.ShapeType = PulseButton.PulseButton.Shape.Rectangle;
             this.pulseButton2.Size = new System.Drawing.Size(112, 62);
             this.pulseButton2.TabIndex = 124;
             this.pulseButton2.Text = "暂停";
-            this.pulseButton2.UseVisualStyleBackColor = true;
+            this.pulseButton2.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 

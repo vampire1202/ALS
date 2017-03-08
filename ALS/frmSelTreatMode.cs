@@ -1,5 +1,5 @@
-﻿#define RunStartTest
-//#undef RunStartTest
+﻿//#define RunStartTest
+#undef RunStartTest
 
 //#define com3_19200
 #undef com3_19200

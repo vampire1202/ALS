@@ -520,6 +520,7 @@
             this.uc_SpeedFP.Location = new System.Drawing.Point(1, 0);
             this.uc_SpeedFP.Margin = new System.Windows.Forms.Padding(0);
             this.uc_SpeedFP.Name = "uc_SpeedFP";
+            this.uc_SpeedFP.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.uc_SpeedFP.Size = new System.Drawing.Size(180, 113);
             this.uc_SpeedFP.TabIndex = 36;
             this.uc_SpeedFP.Tag = "fp";
@@ -544,6 +545,7 @@
             this.uc_SpeedDP.Location = new System.Drawing.Point(181, 0);
             this.uc_SpeedDP.Margin = new System.Windows.Forms.Padding(0);
             this.uc_SpeedDP.Name = "uc_SpeedDP";
+            this.uc_SpeedDP.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.uc_SpeedDP.Size = new System.Drawing.Size(180, 113);
             this.uc_SpeedDP.TabIndex = 36;
             this.uc_SpeedDP.Tag = "dp";
@@ -568,6 +570,7 @@
             this.uc_SpeedRP.Location = new System.Drawing.Point(361, 0);
             this.uc_SpeedRP.Margin = new System.Windows.Forms.Padding(0);
             this.uc_SpeedRP.Name = "uc_SpeedRP";
+            this.uc_SpeedRP.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.uc_SpeedRP.Size = new System.Drawing.Size(180, 113);
             this.uc_SpeedRP.TabIndex = 36;
             this.uc_SpeedRP.Tag = "rp";
@@ -592,6 +595,7 @@
             this.uc_SpeedFP2.Location = new System.Drawing.Point(541, 0);
             this.uc_SpeedFP2.Margin = new System.Windows.Forms.Padding(0);
             this.uc_SpeedFP2.Name = "uc_SpeedFP2";
+            this.uc_SpeedFP2.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.uc_SpeedFP2.Size = new System.Drawing.Size(180, 113);
             this.uc_SpeedFP2.TabIndex = 36;
             this.uc_SpeedFP2.Tag = "fp2";
@@ -615,6 +619,7 @@
             this.uc_SpeedCP.Location = new System.Drawing.Point(721, 0);
             this.uc_SpeedCP.Margin = new System.Windows.Forms.Padding(0);
             this.uc_SpeedCP.Name = "uc_SpeedCP";
+            this.uc_SpeedCP.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.uc_SpeedCP.Size = new System.Drawing.Size(180, 113);
             this.uc_SpeedCP.TabIndex = 36;
             this.uc_SpeedCP.Tag = "cp";

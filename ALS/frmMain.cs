@@ -1,6 +1,6 @@
 ﻿
-#define RunT
-//#undef RunT
+//#define RunT
+#undef RunT
 
 //#define LOG_WARNING
 #undef LOG_WARNING                        //报警log
@@ -178,7 +178,7 @@ namespace ALS
         uint crc;
 
         //是否启动
-        bool M_isStart = false;
+        bool M_isStart = true;
 
 
         //Model.treatmentmode M_ModelTreatDefault;
@@ -3488,7 +3488,7 @@ namespace ALS
                     break;
                 else
                 {
-                    await Task.Delay(TimeSpan.FromMilliseconds(500)).ConfigureAwait(false);
+                    await Task.Delay(500);
                     SendCmd();
                 }
             }
@@ -3519,7 +3519,7 @@ namespace ALS
                     break;
                 else
                 {
-                    await Task.Delay(TimeSpan.FromMilliseconds(200)).ConfigureAwait(false);
+                    await Task.Delay(200);
                     m_circleNum++;
                     //保存采集数据，治疗时,大概隔5秒保存一次数据
                     if (M_isTreat && m_circleNum >= 25)
@@ -3970,13 +3970,13 @@ namespace ALS
             //M_lstBloodLeak.Add(M_ModelValue.M_flt_BloodLeak);
             //if (M_lstBloodLeak.Count > 3)
             //    M_lstBloodLeak.RemoveAt(0);
-            //if (M_lstBloodLeak.Count == 3)
-            //{
-            //    if (M_lstBloodLeak[0] == M_lstBloodLeak[1] && M_lstBloodLeak[0] == M_lstBloodLeak[2])
-            //        M_uc_OtherSet.lblBloodLeak.BackColor = Color.Red;
-            //    else
-            //        M_uc_OtherSet.lblBloodLeak.BackColor = Color.Green;
-            //}
+            if (M_lstBloodLeak.Count == 3)
+            {
+                if (M_lstBloodLeak[0] == M_lstBloodLeak[1] && M_lstBloodLeak[0] == M_lstBloodLeak[2])
+                    M_uc_OtherSet.lblBloodLeak.BackColor = Color.Red;
+                else
+                    M_uc_OtherSet.lblBloodLeak.BackColor = Color.Green;
+            }
         }
 
         void ShowAdminFormInfo()
@@ -5448,16 +5448,16 @@ namespace ALS
                             M_lstBloodLeak.Add(M_ModelValue.M_flt_BloodLeak);
                             if (M_lstBloodLeak.Count > 3)
                                 M_lstBloodLeak.RemoveAt(0);
-                            if (M_lstBloodLeak.Count == 3)
-                            {
-                                this.BeginInvoke(new Action(() =>
-                                {
-                                    if (M_lstBloodLeak[0] == M_lstBloodLeak[1] && M_lstBloodLeak[0] == M_lstBloodLeak[2])
-                                        M_uc_OtherSet.lblBloodLeak.BackColor = Color.Red;
-                                    else
-                                        M_uc_OtherSet.lblBloodLeak.BackColor = Color.Green;
-                                }));
-                            }
+                            //if (M_lstBloodLeak.Count == 3)
+                            //{
+                            //    this.BeginInvoke(new Action(() =>
+                            //    {
+                            //        if (M_lstBloodLeak[0] == M_lstBloodLeak[1] && M_lstBloodLeak[0] == M_lstBloodLeak[2])
+                            //            M_uc_OtherSet.lblBloodLeak.BackColor = Color.Red;
+                            //        else
+                            //            M_uc_OtherSet.lblBloodLeak.BackColor = Color.Green;
+                            //    }));
+                            //}
                             
                             if (M_ModelValue.M_flt_BloodLeak < M_ModelTreat.BloodLeak)
                                 M_exsitsWarn = true;
@@ -6982,6 +6982,7 @@ namespace ALS
                     gBoxP.Visible = false;
                     break;
             }
+            gBoxP.Refresh();
         }
         private void tsbtnPreflush_Click(object sender, EventArgs e)
         {
@@ -8392,7 +8393,7 @@ namespace ALS
         private void btnStart_Click(object sender, EventArgs e)
         {
             //清空旋钮数据
-            m_lstCircleDirection.Clear();
+            //m_lstCircleDirection.Clear();
             //如果未安装管路
             if (!M_bl_isFinishPipeline)
                 return;
@@ -8410,6 +8411,36 @@ namespace ALS
             }
 #endif
 
+            if (M_modeName == "PERT")
+            {
+                string tip = "操作提示";
+                Image imgtip = null;
+                if (m_stepPERT.wizardControl1.SelectedPage.TabIndex < 3)
+                    imgtip = ALS.Properties.Resources.tipPert1;
+                else
+                    imgtip = ALS.Properties.Resources.tipPert2;
+                //如果是PERT模式，弹出确认框
+                UserCtrl.MsgBox m = new UserCtrl.MsgBox(tip, UserCtrl.MsgBox.MSBoxIcon.Warning, imgtip, true);
+                if (DialogResult.OK != m.ShowDialog())
+                {
+                    M_isTreat = false;
+                    return;
+                }
+            }
+            else
+            {
+                string tip = "操作提示";
+                Image imgtip = global::ALS.Properties.Resources.tip1;
+
+                //如果是PERT模式，弹出确认框
+                UserCtrl.MsgBox m = new UserCtrl.MsgBox(tip, UserCtrl.MsgBox.MSBoxIcon.Warning, imgtip, true);
+                if (DialogResult.OK != m.ShowDialog())
+                {
+                    M_isTreat = false;
+                    return;
+                }
+            }
+
             //是否治疗标记
             M_isTreat = !M_isTreat;
             if (M_isTreat)
@@ -8419,36 +8450,6 @@ namespace ALS
                     MessageBox.Show(this, "已经完成治疗,请退出!");
                     M_isTreat = false;
                     return;
-                }
-
-                if (M_modeName == "PERT")
-                {
-                    string tip = "操作提示";
-                    Image imgtip = null;
-                    if (m_stepPERT.wizardControl1.SelectedPage.TabIndex < 3)
-                        imgtip = ALS.Properties.Resources.tipPert1;
-                    else
-                        imgtip = ALS.Properties.Resources.tipPert2;
-                    //如果是PERT模式，弹出确认框
-                    UserCtrl.MsgBox m = new UserCtrl.MsgBox(tip, UserCtrl.MsgBox.MSBoxIcon.Warning, imgtip, true);
-                    if (DialogResult.OK != m.ShowDialog())
-                    {
-                        M_isTreat = false;
-                        return;
-                    }
-                }
-                else
-                {
-                    string tip = "操作提示";
-                    Image imgtip = global::ALS.Properties.Resources.tip1;
-
-                    //如果是PERT模式，弹出确认框
-                    UserCtrl.MsgBox m = new UserCtrl.MsgBox(tip, UserCtrl.MsgBox.MSBoxIcon.Warning, imgtip, true);
-                    if (DialogResult.OK != m.ShowDialog())
-                    {
-                        M_isTreat = false;
-                        return;
-                    }
                 }
 
                 //回到治疗界面
@@ -8663,7 +8664,7 @@ namespace ALS
             {
                 //执行一次该过程时间计时
                 int startTime = System.Environment.TickCount;
-                await Task.Delay(TimeSpan.FromMilliseconds(500)).ConfigureAwait(false);
+                await Task.Delay(500);
                 if (ct.IsCancellationRequested)
                     break;
                 else
@@ -8797,7 +8798,7 @@ namespace ALS
                             ShowWarn("W1-19");
                         #endregion
 
-                        #region 漏血值超出范围 150W至250W 为 0% - 100% ，0表示关闭
+                        #region 漏血值超出范围 150 至250  为 0% - 100% ，0表示关闭
                         int bloodleak = (150 + (int)M_ModelTreat.BloodLeak) * 10000;
                         if (M_ModelValue.M_flt_BloodLeak < bloodleak && M_ModelTreat.BloodLeak != 0)
                             ShowWarn("W1-23");
