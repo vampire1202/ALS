@@ -23,6 +23,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulseButton", "PulseButton\
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RichLabel", "RichLabel\RichLabel.vbproj", "{F159FD81-D1A5-4E03-BB2F-ECE764F5437D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C33D91CF-BA61-4293-BC19-B4D4CB413964}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\COM.Excel.dll = Lib\COM.Excel.dll
+		Lib\CSkin.dll = Lib\CSkin.dll
+		Lib\Excel.dll = Lib\Excel.dll
+		Lib\IBatisNet.Common.dll = Lib\IBatisNet.Common.dll
+		Lib\IBatisNet.DataMapper.dll = Lib\IBatisNet.DataMapper.dll
+		Lib\LTP.Accounts.dll = Lib\LTP.Accounts.dll
+		Lib\LTP.Accounts.txt = Lib\LTP.Accounts.txt
+		Lib\LtpPageControl.dll = Lib\LtpPageControl.dll
+		Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll = Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll = Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		Lib\Microsoft.Web.UI.WebControls.dll = Lib\Microsoft.Web.UI.WebControls.dll
+		Lib\MySql.Data.dll = Lib\MySql.Data.dll
+		Lib\OpenSmtp.dll = Lib\OpenSmtp.dll
+		Lib\OWC10Chart.dll = Lib\OWC10Chart.dll
+		Lib\RichLabel.dll = Lib\RichLabel.dll
+		Lib\RichLabel.pdb = Lib\RichLabel.pdb
+		Lib\RichLabel.xml = Lib\RichLabel.xml
+		Lib\System.Data.SQLite.DLL = Lib\System.Data.SQLite.DLL
+		Lib\System.Data.SQLite.lib = Lib\System.Data.SQLite.lib
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
