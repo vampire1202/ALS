@@ -226,6 +226,13 @@
             this.btnSavecode1_5 = new System.Windows.Forms.Button();
             this.btnSavecode1_0 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.lblBloodLeak = new System.Windows.Forms.Label();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.lblTJC = new System.Windows.Forms.Label();
+            this.lblTKZ = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsBtnAD1 = new System.Windows.Forms.ToolStripButton();
@@ -233,7 +240,14 @@
             this.tsBtnAD3 = new System.Windows.Forms.ToolStripButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.lblPaccDec = new System.Windows.Forms.Label();
+            this.uc_p3rd = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_p2nd = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_tmp = new ALS.UserCtrl.uc_ShowTreatP();
             this.label56 = new System.Windows.Forms.Label();
+            this.uc_p1st = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_pven = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_part = new ALS.UserCtrl.uc_ShowTreatP();
+            this.uc_pacc = new ALS.UserCtrl.uc_ShowTreatP();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.button32 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
@@ -325,18 +339,6 @@
             this.c3_heat = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.c2_acc = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnExit = new System.Windows.Forms.Button();
-            this.uc_p3rd = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_p2nd = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_tmp = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_p1st = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_pven = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_part = new ALS.UserCtrl.uc_ShowTreatP();
-            this.uc_pacc = new ALS.UserCtrl.uc_ShowTreatP();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.lblTKZ = new System.Windows.Forms.Label();
-            this.lblTJC = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.palCtrlV.SuspendLayout();
@@ -360,6 +362,8 @@
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -383,7 +387,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.c1_pre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3_heat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2_acc)).BeginInit();
-            this.groupBox15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -444,7 +447,6 @@
             this.palCtrlV.Name = "palCtrlV";
             this.palCtrlV.Size = new System.Drawing.Size(89, 434);
             this.palCtrlV.TabIndex = 124;
-            this.palCtrlV.Visible = false;
             // 
             // chV5
             // 
@@ -2509,6 +2511,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox16);
             this.tabPage4.Controls.Add(this.groupBox15);
             this.tabPage4.Controls.Add(this.groupBox13);
             this.tabPage4.Controls.Add(this.groupBox14);
@@ -2520,6 +2523,84 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "声光/气泡/温控/压力";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.lblBloodLeak);
+            this.groupBox16.Location = new System.Drawing.Point(157, 428);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(130, 66);
+            this.groupBox16.TabIndex = 2;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "漏血码值";
+            // 
+            // lblBloodLeak
+            // 
+            this.lblBloodLeak.Font = new System.Drawing.Font("宋体", 18F);
+            this.lblBloodLeak.ForeColor = System.Drawing.Color.Red;
+            this.lblBloodLeak.Location = new System.Drawing.Point(6, 24);
+            this.lblBloodLeak.Name = "lblBloodLeak";
+            this.lblBloodLeak.Size = new System.Drawing.Size(118, 29);
+            this.lblBloodLeak.TabIndex = 1;
+            this.lblBloodLeak.Text = "35";
+            this.lblBloodLeak.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.lblTJC);
+            this.groupBox15.Controls.Add(this.lblTKZ);
+            this.groupBox15.Controls.Add(this.label66);
+            this.groupBox15.Controls.Add(this.label65);
+            this.groupBox15.Location = new System.Drawing.Point(157, 247);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(130, 161);
+            this.groupBox15.TabIndex = 2;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "温控℃";
+            // 
+            // lblTJC
+            // 
+            this.lblTJC.Font = new System.Drawing.Font("宋体", 18F);
+            this.lblTJC.ForeColor = System.Drawing.Color.Red;
+            this.lblTJC.Location = new System.Drawing.Point(6, 115);
+            this.lblTJC.Name = "lblTJC";
+            this.lblTJC.Size = new System.Drawing.Size(118, 29);
+            this.lblTJC.TabIndex = 1;
+            this.lblTJC.Text = "35";
+            this.lblTJC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTKZ
+            // 
+            this.lblTKZ.Font = new System.Drawing.Font("宋体", 18F);
+            this.lblTKZ.ForeColor = System.Drawing.Color.Red;
+            this.lblTKZ.Location = new System.Drawing.Point(6, 56);
+            this.lblTKZ.Name = "lblTKZ";
+            this.lblTKZ.Size = new System.Drawing.Size(118, 29);
+            this.lblTKZ.TabIndex = 1;
+            this.lblTKZ.Text = "35";
+            this.lblTKZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("宋体", 10F);
+            this.label66.Location = new System.Drawing.Point(40, 101);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(49, 14);
+            this.label66.TabIndex = 0;
+            this.label66.Text = "监测端";
+            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("宋体", 10F);
+            this.label65.Location = new System.Drawing.Point(40, 42);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(49, 14);
+            this.label65.TabIndex = 0;
+            this.label65.Text = "控制端";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox13
             // 
@@ -2595,7 +2676,7 @@
             this.groupBox14.Font = new System.Drawing.Font("宋体", 12F);
             this.groupBox14.Location = new System.Drawing.Point(311, 16);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(133, 553);
+            this.groupBox14.Size = new System.Drawing.Size(143, 553);
             this.groupBox14.TabIndex = 1;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "压力";
@@ -2609,6 +2690,57 @@
             this.lblPaccDec.TabIndex = 2;
             this.lblPaccDec.Text = "0.0";
             // 
+            // uc_p3rd
+            // 
+            this.uc_p3rd._ColorLine = System.Drawing.Color.DeepSkyBlue;
+            this.uc_p3rd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_p3rd._ColorValue = System.Drawing.Color.Black;
+            this.uc_p3rd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_p3rd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_p3rd._Title = "入口压2";
+            this.uc_p3rd._TitleEn = "P3rd";
+            this.uc_p3rd._Value = "-000";
+            this.uc_p3rd._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_p3rd.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_p3rd.Location = new System.Drawing.Point(6, 428);
+            this.uc_p3rd.Name = "uc_p3rd";
+            this.uc_p3rd.Size = new System.Drawing.Size(128, 60);
+            this.uc_p3rd.TabIndex = 0;
+            // 
+            // uc_p2nd
+            // 
+            this.uc_p2nd._ColorLine = System.Drawing.Color.DarkKhaki;
+            this.uc_p2nd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_p2nd._ColorValue = System.Drawing.Color.Black;
+            this.uc_p2nd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_p2nd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_p2nd._Title = "入口压1";
+            this.uc_p2nd._TitleEn = "P2nd";
+            this.uc_p2nd._Value = "-000";
+            this.uc_p2nd._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_p2nd.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_p2nd.Location = new System.Drawing.Point(6, 360);
+            this.uc_p2nd.Name = "uc_p2nd";
+            this.uc_p2nd.Size = new System.Drawing.Size(128, 60);
+            this.uc_p2nd.TabIndex = 0;
+            // 
+            // uc_tmp
+            // 
+            this.uc_tmp._ColorLine = System.Drawing.Color.MediumAquamarine;
+            this.uc_tmp._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_tmp._ColorValue = System.Drawing.Color.Black;
+            this.uc_tmp._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_tmp._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_tmp._Title = "跨膜压";
+            this.uc_tmp._TitleEn = "TMP";
+            this.uc_tmp._Value = "-000";
+            this.uc_tmp._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_tmp.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_tmp.Location = new System.Drawing.Point(6, 292);
+            this.uc_tmp.Name = "uc_tmp";
+            this.uc_tmp.Size = new System.Drawing.Size(128, 60);
+            this.uc_tmp.TabIndex = 0;
+            // 
             // label56
             // 
             this.label56.AutoSize = true;
@@ -2618,6 +2750,74 @@
             this.label56.Size = new System.Drawing.Size(83, 12);
             this.label56.TabIndex = 1;
             this.label56.Text = "采血压变化量:";
+            // 
+            // uc_p1st
+            // 
+            this.uc_p1st._ColorLine = System.Drawing.Color.DarkGoldenrod;
+            this.uc_p1st._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_p1st._ColorValue = System.Drawing.Color.Black;
+            this.uc_p1st._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_p1st._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_p1st._Title = "血浆压";
+            this.uc_p1st._TitleEn = "P1st";
+            this.uc_p1st._Value = "-000";
+            this.uc_p1st._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_p1st.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_p1st.Location = new System.Drawing.Point(6, 224);
+            this.uc_p1st.Name = "uc_p1st";
+            this.uc_p1st.Size = new System.Drawing.Size(128, 60);
+            this.uc_p1st.TabIndex = 0;
+            // 
+            // uc_pven
+            // 
+            this.uc_pven._ColorLine = System.Drawing.Color.SpringGreen;
+            this.uc_pven._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_pven._ColorValue = System.Drawing.Color.Black;
+            this.uc_pven._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_pven._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_pven._Title = "静脉压";
+            this.uc_pven._TitleEn = "Pven";
+            this.uc_pven._Value = "-000";
+            this.uc_pven._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_pven.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_pven.Location = new System.Drawing.Point(6, 156);
+            this.uc_pven.Name = "uc_pven";
+            this.uc_pven.Size = new System.Drawing.Size(128, 60);
+            this.uc_pven.TabIndex = 0;
+            // 
+            // uc_part
+            // 
+            this.uc_part._ColorLine = System.Drawing.Color.Red;
+            this.uc_part._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_part._ColorValue = System.Drawing.Color.Black;
+            this.uc_part._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_part._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_part._Title = "动脉压";
+            this.uc_part._TitleEn = "Part";
+            this.uc_part._Value = "-000";
+            this.uc_part._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_part.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_part.Location = new System.Drawing.Point(6, 88);
+            this.uc_part.Name = "uc_part";
+            this.uc_part.Size = new System.Drawing.Size(128, 60);
+            this.uc_part.TabIndex = 0;
+            // 
+            // uc_pacc
+            // 
+            this.uc_pacc._ColorLine = System.Drawing.Color.DarkRed;
+            this.uc_pacc._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
+            this.uc_pacc._ColorValue = System.Drawing.Color.Black;
+            this.uc_pacc._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uc_pacc._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uc_pacc._Title = "采血压";
+            this.uc_pacc._TitleEn = "Pacc";
+            this.uc_pacc._Value = "-000";
+            this.uc_pacc._ValueSize = new System.Drawing.Size(55, 50);
+            this.uc_pacc.Font = new System.Drawing.Font("宋体", 9F);
+            this.uc_pacc.Location = new System.Drawing.Point(6, 20);
+            this.uc_pacc.Name = "uc_pacc";
+            this.uc_pacc.Size = new System.Drawing.Size(128, 60);
+            this.uc_pacc.TabIndex = 0;
             // 
             // groupBox12
             // 
@@ -3886,180 +4086,6 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
-            // uc_p3rd
-            // 
-            this.uc_p3rd._ColorLine = System.Drawing.Color.DeepSkyBlue;
-            this.uc_p3rd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_p3rd._ColorValue = System.Drawing.Color.Black;
-            this.uc_p3rd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_p3rd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_p3rd._Title = "入口压2";
-            this.uc_p3rd._TitleEn = "P3rd";
-            this.uc_p3rd._Value = "-000";
-            this.uc_p3rd._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_p3rd.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_p3rd.Location = new System.Drawing.Point(6, 428);
-            this.uc_p3rd.Name = "uc_p3rd";
-            this.uc_p3rd.Size = new System.Drawing.Size(128, 60);
-            this.uc_p3rd.TabIndex = 0;
-            // 
-            // uc_p2nd
-            // 
-            this.uc_p2nd._ColorLine = System.Drawing.Color.DarkKhaki;
-            this.uc_p2nd._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_p2nd._ColorValue = System.Drawing.Color.Black;
-            this.uc_p2nd._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_p2nd._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_p2nd._Title = "入口压1";
-            this.uc_p2nd._TitleEn = "P2nd";
-            this.uc_p2nd._Value = "-000";
-            this.uc_p2nd._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_p2nd.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_p2nd.Location = new System.Drawing.Point(6, 360);
-            this.uc_p2nd.Name = "uc_p2nd";
-            this.uc_p2nd.Size = new System.Drawing.Size(128, 60);
-            this.uc_p2nd.TabIndex = 0;
-            // 
-            // uc_tmp
-            // 
-            this.uc_tmp._ColorLine = System.Drawing.Color.MediumAquamarine;
-            this.uc_tmp._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_tmp._ColorValue = System.Drawing.Color.Black;
-            this.uc_tmp._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_tmp._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_tmp._Title = "跨膜压";
-            this.uc_tmp._TitleEn = "TMP";
-            this.uc_tmp._Value = "-000";
-            this.uc_tmp._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_tmp.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_tmp.Location = new System.Drawing.Point(6, 292);
-            this.uc_tmp.Name = "uc_tmp";
-            this.uc_tmp.Size = new System.Drawing.Size(128, 60);
-            this.uc_tmp.TabIndex = 0;
-            // 
-            // uc_p1st
-            // 
-            this.uc_p1st._ColorLine = System.Drawing.Color.DarkGoldenrod;
-            this.uc_p1st._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_p1st._ColorValue = System.Drawing.Color.Black;
-            this.uc_p1st._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_p1st._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_p1st._Title = "血浆压";
-            this.uc_p1st._TitleEn = "P1st";
-            this.uc_p1st._Value = "-000";
-            this.uc_p1st._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_p1st.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_p1st.Location = new System.Drawing.Point(6, 224);
-            this.uc_p1st.Name = "uc_p1st";
-            this.uc_p1st.Size = new System.Drawing.Size(128, 60);
-            this.uc_p1st.TabIndex = 0;
-            // 
-            // uc_pven
-            // 
-            this.uc_pven._ColorLine = System.Drawing.Color.SpringGreen;
-            this.uc_pven._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_pven._ColorValue = System.Drawing.Color.Black;
-            this.uc_pven._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_pven._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_pven._Title = "静脉压";
-            this.uc_pven._TitleEn = "Pven";
-            this.uc_pven._Value = "-000";
-            this.uc_pven._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_pven.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_pven.Location = new System.Drawing.Point(6, 156);
-            this.uc_pven.Name = "uc_pven";
-            this.uc_pven.Size = new System.Drawing.Size(128, 60);
-            this.uc_pven.TabIndex = 0;
-            // 
-            // uc_part
-            // 
-            this.uc_part._ColorLine = System.Drawing.Color.Red;
-            this.uc_part._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_part._ColorValue = System.Drawing.Color.Black;
-            this.uc_part._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_part._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_part._Title = "动脉压";
-            this.uc_part._TitleEn = "Part";
-            this.uc_part._Value = "-000";
-            this.uc_part._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_part.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_part.Location = new System.Drawing.Point(6, 88);
-            this.uc_part.Name = "uc_part";
-            this.uc_part.Size = new System.Drawing.Size(128, 60);
-            this.uc_part.TabIndex = 0;
-            // 
-            // uc_pacc
-            // 
-            this.uc_pacc._ColorLine = System.Drawing.Color.DarkRed;
-            this.uc_pacc._ColorTitle = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
-            this.uc_pacc._ColorValue = System.Drawing.Color.Black;
-            this.uc_pacc._FontTitle = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uc_pacc._FontValue = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uc_pacc._Title = "采血压";
-            this.uc_pacc._TitleEn = "Pacc";
-            this.uc_pacc._Value = "-000";
-            this.uc_pacc._ValueSize = new System.Drawing.Size(55, 50);
-            this.uc_pacc.Font = new System.Drawing.Font("宋体", 9F);
-            this.uc_pacc.Location = new System.Drawing.Point(6, 20);
-            this.uc_pacc.Name = "uc_pacc";
-            this.uc_pacc.Size = new System.Drawing.Size(128, 60);
-            this.uc_pacc.TabIndex = 0;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.lblTJC);
-            this.groupBox15.Controls.Add(this.lblTKZ);
-            this.groupBox15.Controls.Add(this.label66);
-            this.groupBox15.Controls.Add(this.label65);
-            this.groupBox15.Location = new System.Drawing.Point(157, 247);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(130, 146);
-            this.groupBox15.TabIndex = 2;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "温控℃";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(37, 29);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(56, 16);
-            this.label65.TabIndex = 0;
-            this.label65.Text = "控制端";
-            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(37, 86);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(56, 16);
-            this.label66.TabIndex = 0;
-            this.label66.Text = "监测端";
-            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTKZ
-            // 
-            this.lblTKZ.Font = new System.Drawing.Font("宋体", 18F);
-            this.lblTKZ.ForeColor = System.Drawing.Color.Red;
-            this.lblTKZ.Location = new System.Drawing.Point(6, 51);
-            this.lblTKZ.Name = "lblTKZ";
-            this.lblTKZ.Size = new System.Drawing.Size(118, 29);
-            this.lblTKZ.TabIndex = 1;
-            this.lblTKZ.Text = "35";
-            this.lblTKZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTJC
-            // 
-            this.lblTJC.Font = new System.Drawing.Font("宋体", 18F);
-            this.lblTJC.ForeColor = System.Drawing.Color.Red;
-            this.lblTJC.Location = new System.Drawing.Point(6, 108);
-            this.lblTJC.Name = "lblTJC";
-            this.lblTJC.Size = new System.Drawing.Size(118, 29);
-            this.lblTJC.TabIndex = 1;
-            this.lblTJC.Text = "35";
-            this.lblTJC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4114,6 +4140,9 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -4143,8 +4172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.c1_pre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3_heat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2_acc)).EndInit();
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4193,32 +4220,26 @@
         private System.Windows.Forms.Panel palDehydration;
         public System.Windows.Forms.TextBox txtDehydrationSpeed;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel palCP;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.TextBox txtCP;
         public System.Windows.Forms.Button btnRun6;
-        private System.Windows.Forms.Panel palFP2;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label21;
         public System.Windows.Forms.TextBox txtFP2;
         public System.Windows.Forms.Button btnRun5;
-        private System.Windows.Forms.Panel palRP;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.TextBox txtRP;
         public System.Windows.Forms.Button btnRun4;
-        private System.Windows.Forms.Panel palDP;
         private System.Windows.Forms.Label label35;
         public System.Windows.Forms.TextBox txtDP;
         public System.Windows.Forms.Button btnRun3;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel palFP;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox txtFP;
         public System.Windows.Forms.Button btnRun2;
-        private System.Windows.Forms.Panel palBP;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.Button btnRun1;
         public System.Windows.Forms.TextBox txtBP;
@@ -4437,5 +4458,13 @@
         private System.Windows.Forms.Label label65;
         public System.Windows.Forms.Label lblTJC;
         public System.Windows.Forms.Label lblTKZ;
+        private System.Windows.Forms.GroupBox groupBox16;
+        public System.Windows.Forms.Label lblBloodLeak;
+        public System.Windows.Forms.Panel palCP;
+        public System.Windows.Forms.Panel palFP2;
+        public System.Windows.Forms.Panel palRP;
+        public System.Windows.Forms.Panel palDP;
+        public System.Windows.Forms.Panel palFP;
+        public System.Windows.Forms.Panel palBP;
     }
 }

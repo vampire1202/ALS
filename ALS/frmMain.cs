@@ -1412,7 +1412,7 @@ namespace ALS
                                 MessageBox.Show(this, msg, "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
-                            speed = Convert.ToDouble(M_uc_Recycle.lblBP.Text);
+                            speed = Convert.ToDouble(M_uc_Recycle.txtBP.Text);
                             if (speed == 0)
                             {
                                 MessageBox.Show("泵速不能为0,请重新设置!"); return;
@@ -1468,7 +1468,7 @@ namespace ALS
                                     return;
                                 }
                             }
-                            speed = Convert.ToDouble(M_uc_Recycle.lblFP.Text);
+                            speed = Convert.ToDouble(M_uc_Recycle.txtFP.Text);
                             if (speed == 0)
                             {
                                 MessageBox.Show("泵速不能为0,请重新设置!"); return;
@@ -1518,7 +1518,7 @@ namespace ALS
                                     return;
                                 }
                             }
-                            speed = Convert.ToDouble(M_uc_Recycle.lblDP.Text);
+                            speed = Convert.ToDouble(M_uc_Recycle.txtDP.Text);
                             if (speed == 0)
                             {
                                 MessageBox.Show("泵速不能为0,请重新设置!"); return;
@@ -1548,7 +1548,7 @@ namespace ALS
                                 MessageBox.Show(this, msg, "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
-                            speed = Convert.ToDouble(M_uc_Recycle.lblRP.Text);
+                            speed = Convert.ToDouble(M_uc_Recycle.txtRP.Text);
                             if (speed == 0)
                             {
                                 MessageBox.Show("泵速不能为0,请重新设置!"); return;
@@ -1564,7 +1564,7 @@ namespace ALS
                     case "fp2":
                         if (btn.Text == "运转")
                         {
-                            speed = Convert.ToDouble(M_uc_Recycle.lblFP2.Text);
+                            speed = Convert.ToDouble(M_uc_Recycle.txtFP2.Text);
                             if (speed == 0)
                             {
                                 MessageBox.Show("泵速不能为0,请重新设置!"); return;
@@ -1579,7 +1579,7 @@ namespace ALS
                     case "cp":
                         if (btn.Text == "运转")
                         {
-                            speed = Convert.ToDouble(M_uc_Recycle.lblCP.Text);
+                            speed = Convert.ToDouble(M_uc_Recycle.txtCP.Text);
                             if (speed == 0)
                             {
                                 MessageBox.Show("泵速不能为0,请重新设置!"); return;
@@ -2673,129 +2673,228 @@ namespace ALS
 
         private void SetOtherfrmBtnState(Cls.Model_State pumpState)
         {
-            if (M_ModelTreat.BPValid)
-            {
-                //流量界面
-                M_uc_SetFlow.palBP.Enabled = true;
-                M_uc_SetFlow.btnRun1.Text = (pumpState.BPState.Runing ? "停止" : "运转");
-                M_uc_SetFlow.chkV2.Enabled = M_uc_SetFlow.chkV1.Enabled = (pumpState.BPState.Runing ? false : true);
-                M_uc_SetFlow.btnRun1.Image = (pumpState.BPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_SetFlow.btnRun1.ForeColor = (pumpState.BPState.Runing ? Color.Red : Color.White);
-                M_uc_SetFlow.txtBP.Enabled = (pumpState.BPState.Runing ? false : true);
-                //回收界面  
-                M_uc_Recycle.btnRunBP.Enabled = true;
-                M_uc_Recycle.btnRunBP.Text = (pumpState.BPState.Runing ? "停止" : "运转");
-                M_uc_Recycle.chkV2.Enabled = M_uc_Recycle.chkV1.Enabled = (pumpState.BPState.Runing ? false : true);
-                M_uc_Recycle.btnRunBP.Image = (pumpState.BPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_Recycle.btnRunBP.ForeColor = (pumpState.BPState.Runing ? Color.Red : Color.White);
-                M_uc_Recycle.lblBP.Enabled = (pumpState.BPState.Runing ? false : true);
-            }
-            else
-            {
-                M_uc_SetFlow.palBP.Enabled = false;
-                M_uc_Recycle.btnRunBP.Enabled = false;
-            }
+            #region 流量设置界面泵运转标志
 
-            if (M_ModelTreat.FPValid)
+            if (this.palContent.Controls.Contains(M_uc_SetFlow))
             {
-                M_uc_SetFlow.palFP.Enabled = true;
-                M_uc_SetFlow.btnRun2.Text = (pumpState.FPState.Runing ? "停止" : "运转");
-                M_uc_SetFlow.btnRun2.Image = (pumpState.FPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_SetFlow.btnRun2.ForeColor = (pumpState.FPState.Runing ? Color.Red : Color.White);
-                M_uc_SetFlow.txtFP.Enabled = (pumpState.FPState.Runing ? false : true);
-                //回收界面
-                M_uc_Recycle.btnRunFP.Enabled = true;
-                M_uc_Recycle.btnRunFP.Text = (pumpState.FPState.Runing ? "停止" : "运转");
-                M_uc_Recycle.btnRunFP.Image = (pumpState.FPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_Recycle.btnRunFP.ForeColor = (pumpState.FPState.Runing ? Color.Red : Color.White);
-                M_uc_Recycle.lblFP.Enabled = (pumpState.FPState.Runing ? false : true);
-            }
-            else
-            {
-                M_uc_SetFlow.palFP.Enabled = false;
-                M_uc_Recycle.btnRunFP.Enabled = false;
-            }
+                if (M_ModelTreat.BPValid)
+                {
+                    M_uc_SetFlow.palBP.Enabled = true;
+                    M_uc_SetFlow.btnRun1.Text = (pumpState.BPState.Runing ? "停止" : "运转");
+                    M_uc_SetFlow.chkV2.Enabled = M_uc_SetFlow.chkV1.Enabled = (pumpState.BPState.Runing ? false : true);
+                    M_uc_SetFlow.btnRun1.Image = (pumpState.BPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_SetFlow.btnRun1.ForeColor = (pumpState.BPState.Runing ? Color.Red : Color.White);
+                    M_uc_SetFlow.txtBP.Enabled = (pumpState.BPState.Runing ? false : true);
+                }
+                else
+                    M_uc_SetFlow.palBP.Enabled = false;
 
-            if (M_ModelTreat.DPValid)
-            {
-                M_uc_SetFlow.palDP.Enabled = true;
-                M_uc_SetFlow.btnRun3.Text = (pumpState.DPState.Runing ? "停止" : "运转");
-                M_uc_SetFlow.btnRun3.Image = (pumpState.DPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_SetFlow.btnRun3.ForeColor = (pumpState.DPState.Runing ? Color.Red : Color.White);
-                M_uc_SetFlow.txtDP.Enabled = (pumpState.DPState.Runing ? false : true);
-                //回收界面
-                M_uc_Recycle.btnRunDP.Enabled = true;
-                M_uc_Recycle.btnRunDP.Text = (pumpState.DPState.Runing ? "停止" : "运转");
-                M_uc_Recycle.btnRunDP.Image = (pumpState.DPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_Recycle.btnRunDP.ForeColor = (pumpState.DPState.Runing ? Color.Red : Color.White);
-                M_uc_Recycle.lblDP.Enabled = (pumpState.DPState.Runing ? false : true);
-            }
-            else
-            {
-                M_uc_SetFlow.palDP.Enabled = false;
-                M_uc_Recycle.btnRunDP.Enabled = false;
-            }
+                if (M_ModelTreat.FPValid)
+                {
+                    M_uc_SetFlow.palFP.Enabled = true;
+                    M_uc_SetFlow.btnRun2.Text = (pumpState.FPState.Runing ? "停止" : "运转");
+                    M_uc_SetFlow.btnRun2.Image = (pumpState.FPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_SetFlow.btnRun2.ForeColor = (pumpState.FPState.Runing ? Color.Red : Color.White);
+                    M_uc_SetFlow.txtFP.Enabled = (pumpState.FPState.Runing ? false : true);
+                }
+                else
+                    M_uc_SetFlow.palFP.Enabled = false;
 
-            if (M_ModelTreat.RPValid)
+                if (M_ModelTreat.DPValid)
+                {
+                    M_uc_SetFlow.palDP.Enabled = true;
+                    M_uc_SetFlow.btnRun3.Text = (pumpState.DPState.Runing ? "停止" : "运转");
+                    M_uc_SetFlow.btnRun3.Image = (pumpState.DPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_SetFlow.btnRun3.ForeColor = (pumpState.DPState.Runing ? Color.Red : Color.White);
+                    M_uc_SetFlow.txtDP.Enabled = (pumpState.DPState.Runing ? false : true);
+                }
+                else
+                    M_uc_SetFlow.palDP.Enabled = false;
+
+                if (M_ModelTreat.RPValid)
+                {
+                    M_uc_SetFlow.palRP.Enabled = true;
+                    M_uc_SetFlow.btnRun4.Text = (pumpState.RPState.Runing ? "停止" : "运转");
+                    M_uc_SetFlow.btnRun4.Image = (pumpState.RPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_SetFlow.btnRun4.ForeColor = (pumpState.RPState.Runing ? Color.Red : Color.White);
+                    M_uc_SetFlow.txtRP.Enabled = (pumpState.RPState.Runing ? false : true);
+                }
+                else
+                    M_uc_SetFlow.palRP.Enabled = false;
+
+                if (M_ModelTreat.FP2Valid)
+                {
+                    M_uc_SetFlow.palFP2.Enabled = true;
+                    M_uc_SetFlow.btnRun5.Text = (pumpState.FP2State.Runing ? "停止" : "运转");
+                    M_uc_SetFlow.btnRun5.Image = (pumpState.FP2State.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_SetFlow.btnRun5.ForeColor = (pumpState.FP2State.Runing ? Color.Red : Color.White);
+                    M_uc_SetFlow.txtFP2.Enabled = (pumpState.FP2State.Runing ? false : true);
+                }
+                else
+                    M_uc_SetFlow.palFP2.Enabled = false;
+
+                if (M_ModelTreat.CPValid)
+                {
+                    M_uc_SetFlow.palCP.Enabled = true;
+                    M_uc_SetFlow.btnRun6.Text = (pumpState.CPState.Runing ? "停止" : "运转");
+                    M_uc_SetFlow.btnRun6.Image = (pumpState.CPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_SetFlow.btnRun6.ForeColor = (pumpState.CPState.Runing ? Color.Red : Color.White);
+                    M_uc_SetFlow.txtCP.Enabled = (pumpState.CPState.Runing ? false : true);
+                }
+                else
+                    M_uc_SetFlow.palCP.Enabled = false;
+
+            } 
+#endregion
+
+            #region 回收设置界面泵运转标志
+
+            if (this.palContent.Controls.Contains(M_uc_Recycle))
             {
-                M_uc_SetFlow.palRP.Enabled = true;
-                M_uc_SetFlow.btnRun4.Text = (pumpState.RPState.Runing ? "停止" : "运转");
-                M_uc_SetFlow.btnRun4.Image = (pumpState.RPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_SetFlow.btnRun4.ForeColor = (pumpState.RPState.Runing ? Color.Red : Color.White);
-                M_uc_SetFlow.txtRP.Enabled = (pumpState.RPState.Runing ? false : true);
-                //回收界面
-                M_uc_Recycle.btnRunRP.Enabled = true;
-                M_uc_Recycle.btnRunRP.Text = (pumpState.RPState.Runing ? "停止" : "运转");
-                M_uc_Recycle.btnRunRP.Image = (pumpState.RPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_Recycle.btnRunRP.ForeColor = (pumpState.RPState.Runing ? Color.Red : Color.White);
-                M_uc_Recycle.lblRP.Enabled = (pumpState.RPState.Runing ? false : true);
+                if (M_ModelTreat.BPValid)
+                {
+                    M_uc_Recycle.palBP.Enabled = true;
+                    M_uc_Recycle.btnRun1.Text = (pumpState.BPState.Runing ? "停止" : "运转");
+                    M_uc_Recycle.chkV2.Enabled = M_uc_Recycle.chkV1.Enabled = (pumpState.BPState.Runing ? false : true);
+                    M_uc_Recycle.btnRun1.Image = (pumpState.BPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_Recycle.btnRun1.ForeColor = (pumpState.BPState.Runing ? Color.Red : Color.White);
+                    M_uc_Recycle.txtBP.Enabled = (pumpState.BPState.Runing ? false : true);
+                }
+                else
+                    M_uc_Recycle.palBP.Enabled = false;
+
+                if (M_ModelTreat.FPValid)
+                {
+                    M_uc_Recycle.palFP.Enabled = true;
+                    M_uc_Recycle.btnRun2.Text = (pumpState.FPState.Runing ? "停止" : "运转");
+                    M_uc_Recycle.btnRun2.Image = (pumpState.FPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_Recycle.btnRun2.ForeColor = (pumpState.FPState.Runing ? Color.Red : Color.White);
+                    M_uc_Recycle.txtFP.Enabled = (pumpState.FPState.Runing ? false : true);
+                }
+                else
+                    M_uc_Recycle.palFP.Enabled = false;
+
+                if (M_ModelTreat.DPValid)
+                {
+                    M_uc_Recycle.palDP.Enabled = true;
+                    M_uc_Recycle.btnRun3.Text = (pumpState.DPState.Runing ? "停止" : "运转");
+                    M_uc_Recycle.btnRun3.Image = (pumpState.DPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_Recycle.btnRun3.ForeColor = (pumpState.DPState.Runing ? Color.Red : Color.White);
+                    M_uc_Recycle.txtDP.Enabled = (pumpState.DPState.Runing ? false : true);
+                }
+                else
+                    M_uc_Recycle.palDP.Enabled = false;
+
+                if (M_ModelTreat.RPValid)
+                {
+                    M_uc_Recycle.palRP.Enabled = true;
+                    M_uc_Recycle.btnRun4.Text = (pumpState.RPState.Runing ? "停止" : "运转");
+                    M_uc_Recycle.btnRun4.Image = (pumpState.RPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_Recycle.btnRun4.ForeColor = (pumpState.RPState.Runing ? Color.Red : Color.White);
+                    M_uc_Recycle.txtRP.Enabled = (pumpState.RPState.Runing ? false : true);
+                }
+                else
+                    M_uc_Recycle.palRP.Enabled = false;
+
+                if (M_ModelTreat.FP2Valid)
+                {
+                    M_uc_Recycle.palFP2.Enabled = true;
+                    M_uc_Recycle.btnRun5.Text = (pumpState.FP2State.Runing ? "停止" : "运转");
+                    M_uc_Recycle.btnRun5.Image = (pumpState.FP2State.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_Recycle.btnRun5.ForeColor = (pumpState.FP2State.Runing ? Color.Red : Color.White);
+                    M_uc_Recycle.txtFP2.Enabled = (pumpState.FP2State.Runing ? false : true);
+                }
+                else
+                    M_uc_SetFlow.palFP2.Enabled = false;
+
+                if (M_ModelTreat.CPValid)
+                {
+                    M_uc_Recycle.palCP.Enabled = true;
+                    M_uc_Recycle.btnRun6.Text = (pumpState.CPState.Runing ? "停止" : "运转");
+                    M_uc_Recycle.btnRun6.Image = (pumpState.CPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    M_uc_Recycle.btnRun6.ForeColor = (pumpState.CPState.Runing ? Color.Red : Color.White);
+                    M_uc_Recycle.txtCP.Enabled = (pumpState.CPState.Runing ? false : true);
+                }
+                else
+                    M_uc_Recycle.palCP.Enabled = false;
+
+            } 
+#endregion
+
+            #region 管理界面泵运转标志
+
+            if (m_frmAdmin!=null)
+            {
+                if (M_ModelTreat.BPValid)
+                {
+                    m_frmAdmin.palBP.Enabled = true;
+                    m_frmAdmin.btnRun1.Text = (pumpState.BPState.Runing ? "停止" : "运转");
+                    m_frmAdmin.chV2.Enabled = m_frmAdmin.chV1.Enabled = (pumpState.BPState.Runing ? false : true);
+                    m_frmAdmin.btnRun1.Image = (pumpState.BPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    m_frmAdmin.btnRun1.ForeColor = (pumpState.BPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.txtBP.Enabled = (pumpState.BPState.Runing ? false : true);
+                }
+                else
+                    m_frmAdmin.palBP.Enabled = false;
+
+                if (M_ModelTreat.FPValid)
+                {
+                    m_frmAdmin.palFP.Enabled = true;
+                    m_frmAdmin.btnRun2.Text = (pumpState.FPState.Runing ? "停止" : "运转");
+                    m_frmAdmin.btnRun2.Image = (pumpState.FPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    m_frmAdmin.btnRun2.ForeColor = (pumpState.FPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.txtFP.Enabled = (pumpState.FPState.Runing ? false : true);
+                }
+                else
+                    m_frmAdmin.palFP.Enabled = false;
+
+                if (M_ModelTreat.DPValid)
+                {
+                    m_frmAdmin.palDP.Enabled = true;
+                    m_frmAdmin.btnRun3.Text = (pumpState.DPState.Runing ? "停止" : "运转");
+                    m_frmAdmin.btnRun3.Image = (pumpState.DPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    m_frmAdmin.btnRun3.ForeColor = (pumpState.DPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.txtDP.Enabled = (pumpState.DPState.Runing ? false : true);
+                }
+                else
+                    m_frmAdmin.palDP.Enabled = false;
+
+                if (M_ModelTreat.RPValid)
+                {
+                    m_frmAdmin.palRP.Enabled = true;
+                    m_frmAdmin.btnRun4.Text = (pumpState.RPState.Runing ? "停止" : "运转");
+                    m_frmAdmin.btnRun4.Image = (pumpState.RPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    m_frmAdmin.btnRun4.ForeColor = (pumpState.RPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.txtRP.Enabled = (pumpState.RPState.Runing ? false : true);
+                }
+                else
+                    m_frmAdmin.palRP.Enabled = false;
+
+                if (M_ModelTreat.FP2Valid)
+                {
+                    m_frmAdmin.palFP2.Enabled = true;
+                    m_frmAdmin.btnRun5.Text = (pumpState.FP2State.Runing ? "停止" : "运转");
+                    m_frmAdmin.btnRun5.Image = (pumpState.FP2State.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    m_frmAdmin.btnRun5.ForeColor = (pumpState.FP2State.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.txtFP2.Enabled = (pumpState.FP2State.Runing ? false : true);
+                }
+                else
+                    m_frmAdmin.palFP2.Enabled = false;
+
+                if (M_ModelTreat.CPValid)
+                {
+                    m_frmAdmin.palCP.Enabled = true;
+                    m_frmAdmin.btnRun6.Text = (pumpState.CPState.Runing ? "停止" : "运转");
+                    m_frmAdmin.btnRun6.Image = (pumpState.CPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
+                    m_frmAdmin.btnRun6.ForeColor = (pumpState.CPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.txtCP.Enabled = (pumpState.CPState.Runing ? false : true);
+                }
+                else
+                    m_frmAdmin.palCP.Enabled = false;
 
             }
-            else
-            {
-                M_uc_SetFlow.palRP.Enabled = false;
-                M_uc_Recycle.btnRunRP.Enabled = false;
-            }
+            #endregion
 
-            if (M_ModelTreat.FP2Valid)
-            {
-                M_uc_SetFlow.palFP2.Enabled = true;
-                M_uc_SetFlow.btnRun5.Text = (pumpState.FP2State.Runing ? "停止" : "运转");
-                M_uc_SetFlow.btnRun5.Image = (pumpState.FP2State.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_SetFlow.btnRun5.ForeColor = (pumpState.FP2State.Runing ? Color.Red : Color.White);
-                M_uc_SetFlow.txtFP2.Enabled = (pumpState.FP2State.Runing ? false : true);
-                //回收界面
-                M_uc_Recycle.btnRunFP2.Enabled = true;
-                M_uc_Recycle.btnRunFP2.Text = (pumpState.FP2State.Runing ? "停止" : "运转");
-                M_uc_Recycle.btnRunFP2.Image = (pumpState.FP2State.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_Recycle.btnRunFP2.ForeColor = (pumpState.FP2State.Runing ? Color.Red : Color.White);
-                M_uc_Recycle.lblFP2.Enabled = (pumpState.FP2State.Runing ? false : true);
-            }
-            else
-            {
-                M_uc_SetFlow.palFP2.Enabled = false;
-                M_uc_Recycle.btnRunFP2.Enabled = false;
-            }
-
-            if (M_ModelTreat.CPValid)
-            {
-                M_uc_SetFlow.palCP.Enabled = true;
-                M_uc_SetFlow.btnRun6.Text = (pumpState.CPState.Runing ? "停止" : "运转");
-                M_uc_SetFlow.btnRun6.Image = (pumpState.CPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_SetFlow.btnRun6.ForeColor = (pumpState.CPState.Runing ? Color.Red : Color.White);
-                M_uc_SetFlow.txtCP.Enabled = (pumpState.CPState.Runing ? false : true);
-                //回收界面
-                M_uc_Recycle.btnRunCP.Enabled = true;
-                M_uc_Recycle.btnRunCP.Text = (pumpState.CPState.Runing ? "停止" : "运转");
-                M_uc_Recycle.btnRunCP.Image = (pumpState.CPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                M_uc_Recycle.btnRunCP.ForeColor = (pumpState.CPState.Runing ? Color.Red : Color.White);
-                M_uc_Recycle.lblCP.Enabled = (pumpState.CPState.Runing ? false : true);
-            }
-            else
-            {
-                M_uc_SetFlow.palCP.Enabled = false;
-                M_uc_Recycle.btnRunCP.Enabled = false;
-            }
             //手动预冲&两按键显示状态为true时，[返回选择]和[预冲完成]按键显示状态
             //wss 2016年2月19日
             if (M_SelFlushType == 2 && M_uc_SetFlow.btnReturn.Visible && M_uc_SetFlow.btnConfirmM.Visible)
@@ -3880,14 +3979,12 @@ namespace ALS
                     #endregion
 
                     #region 超温报警
+#if CheckT
                     if (M_ModelValue.Flt_TemperatureJC >= 40.8 || M_ModelValue.Flt_TemperatureKZ >= 40.8)
-                    {
-                        //if (m_isReleaseWarn)
-                        ShowWarn("W2-07");
-#if LOG_WARNING
-                WriteLogWarnData(M_buffer_data_copy, "超温:W2-07");
-#endif
+                    { 
+                        ShowWarn("W2-07"); 
                     }
+#endif
                     #endregion
 
                     #region 断电警报 只报一次
@@ -4026,6 +4123,8 @@ namespace ALS
             //温度监测值
             m_frmAdmin.lblTKZ.Text = M_ModelValue.Flt_TemperatureKZ.ToString("f1");
             m_frmAdmin.lblTJC.Text = M_ModelValue.Flt_TemperatureJC.ToString("f1");
+            //漏血值
+            m_frmAdmin.lblBloodLeak.Text = M_ModelValue.M_flt_BloodLeak.ToString();
         }
 
         void SaveData()
@@ -4295,7 +4394,7 @@ namespace ALS
                 case 0x01:
                     if (M_PumpState.BPState.Runing)
                     {
-                        this.M_uc_Recycle.lblBP.Text = this.lblBloodSpeed.Text = M_PumpState.BPState.Speed.ToString("f0");
+                        this.M_uc_Recycle.txtBP.Text = this.lblBloodSpeed.Text = M_PumpState.BPState.Speed.ToString("f0");
                         this.picBP.Image = global::ALS.Properties.Resources.BPRun;
                     }
                     else
@@ -6765,7 +6864,7 @@ namespace ALS
                     {
                         case 1:
                             if (btn.Text == "运转")
-                            {
+                            { 
                                 if (M_PumpState.VState[0] == 0x00 && M_PumpState.VState[1] == 0x00)
                                 {
                                     SendOrder(port_ppump, Cls.Comm_PeristalticPump.Command(0x01, M_ModelTreat.BPSpeed.Value, true, true));
@@ -6818,14 +6917,7 @@ namespace ALS
                                 SendOrder(port_ppump, Cls.Comm_PeristalticPump.Command(0x06, M_ModelTreat.CPSpeed.Value, true, true));
                             else
                                 SendOrder(port_ppump, Cls.Comm_PeristalticPump.Command(0x06, 0, false, true));
-                            break;
-                        //case 31:  
-                        //    RunStartPumpTreatTask();
-                        //    //点击全运转后，[全运转]置灰 
-                        //    break;
-                        //case 32:
-                        //    StopPump();
-                        //break;
+                            break; 
                     }
                 }
                 //SetOtherfrmBtnState(M_PumpState);

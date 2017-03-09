@@ -30,17 +30,17 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucRecycle));
-            this.lblRP = new System.Windows.Forms.Label();
-            this.lblDP = new System.Windows.Forms.Label();
-            this.lblFP = new System.Windows.Forms.Label();
-            this.lblBP = new System.Windows.Forms.Label();
+            this.txtRP = new System.Windows.Forms.Label();
+            this.txtDP = new System.Windows.Forms.Label();
+            this.txtFP = new System.Windows.Forms.Label();
+            this.txtBP = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblCP = new System.Windows.Forms.Label();
+            this.txtCP = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.lblFP2 = new System.Windows.Forms.Label();
+            this.txtFP2 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dgvRecycle = new System.Windows.Forms.DataGridView();
             this.lblRecycle = new System.Windows.Forms.Label();
@@ -54,81 +54,92 @@
             this.gboxRecycle = new CodeVendor.Controls.Grouper();
             this.grouper1 = new CodeVendor.Controls.Grouper();
             this.gboxPump = new CodeVendor.Controls.Grouper();
-            this.btnRunCP = new PulseButton.PulseButton();
-            this.btnRunFP2 = new PulseButton.PulseButton();
-            this.btnRunRP = new PulseButton.PulseButton();
-            this.btnRunDP = new PulseButton.PulseButton();
-            this.btnRunBP = new PulseButton.PulseButton();
-            this.btnRunFP = new PulseButton.PulseButton();
             this.grouper3 = new CodeVendor.Controls.Grouper();
             this.btnReturn = new PulseButton.PulseButton();
             this.grouper2 = new CodeVendor.Controls.Grouper();
+            this.btnRun6 = new PulseButton.PulseButton();
+            this.btnRun5 = new PulseButton.PulseButton();
+            this.btnRun4 = new PulseButton.PulseButton();
+            this.btnRun3 = new PulseButton.PulseButton();
+            this.btnRun1 = new PulseButton.PulseButton();
+            this.btnRun2 = new PulseButton.PulseButton();
+            this.palBP = new System.Windows.Forms.Panel();
+            this.palFP = new System.Windows.Forms.Panel();
+            this.palDP = new System.Windows.Forms.Panel();
+            this.palCP = new System.Windows.Forms.Panel();
+            this.palRP = new System.Windows.Forms.Panel();
+            this.palFP2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecycle)).BeginInit();
             this.palCtrlV.SuspendLayout();
             this.gboxRecycle.SuspendLayout();
             this.grouper1.SuspendLayout();
-            this.gboxPump.SuspendLayout();
             this.grouper3.SuspendLayout();
             this.grouper2.SuspendLayout();
+            this.palBP.SuspendLayout();
+            this.palFP.SuspendLayout();
+            this.palDP.SuspendLayout();
+            this.palCP.SuspendLayout();
+            this.palRP.SuspendLayout();
+            this.palFP2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblRP
+            // txtRP
             // 
-            this.lblRP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRP.Location = new System.Drawing.Point(109, 234);
-            this.lblRP.Name = "lblRP";
-            this.lblRP.Size = new System.Drawing.Size(90, 38);
-            this.lblRP.TabIndex = 31;
-            this.lblRP.Tag = "RP";
-            this.lblRP.Text = "0";
-            this.lblRP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblRP.Click += new System.EventHandler(this.lblBP_Click);
+            this.txtRP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtRP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRP.Location = new System.Drawing.Point(92, 11);
+            this.txtRP.Name = "txtRP";
+            this.txtRP.Size = new System.Drawing.Size(90, 38);
+            this.txtRP.TabIndex = 31;
+            this.txtRP.Tag = "RP";
+            this.txtRP.Text = "0";
+            this.txtRP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtRP.Click += new System.EventHandler(this.lblBP_Click);
             // 
-            // lblDP
+            // txtDP
             // 
-            this.lblDP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDP.Location = new System.Drawing.Point(109, 171);
-            this.lblDP.Name = "lblDP";
-            this.lblDP.Size = new System.Drawing.Size(90, 38);
-            this.lblDP.TabIndex = 31;
-            this.lblDP.Tag = "DP";
-            this.lblDP.Text = "0";
-            this.lblDP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDP.Click += new System.EventHandler(this.lblBP_Click);
+            this.txtDP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtDP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDP.Location = new System.Drawing.Point(92, 12);
+            this.txtDP.Name = "txtDP";
+            this.txtDP.Size = new System.Drawing.Size(90, 38);
+            this.txtDP.TabIndex = 31;
+            this.txtDP.Tag = "DP";
+            this.txtDP.Text = "0";
+            this.txtDP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtDP.Click += new System.EventHandler(this.lblBP_Click);
             // 
-            // lblFP
+            // txtFP
             // 
-            this.lblFP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFP.Location = new System.Drawing.Point(109, 108);
-            this.lblFP.Name = "lblFP";
-            this.lblFP.Size = new System.Drawing.Size(90, 38);
-            this.lblFP.TabIndex = 31;
-            this.lblFP.Tag = "FP";
-            this.lblFP.Text = "0";
-            this.lblFP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblFP.Click += new System.EventHandler(this.lblBP_Click);
+            this.txtFP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtFP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFP.Location = new System.Drawing.Point(93, 12);
+            this.txtFP.Name = "txtFP";
+            this.txtFP.Size = new System.Drawing.Size(90, 38);
+            this.txtFP.TabIndex = 31;
+            this.txtFP.Tag = "FP";
+            this.txtFP.Text = "0";
+            this.txtFP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtFP.Click += new System.EventHandler(this.lblBP_Click);
             // 
-            // lblBP
+            // txtBP
             // 
-            this.lblBP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBP.Location = new System.Drawing.Point(107, 45);
-            this.lblBP.Name = "lblBP";
-            this.lblBP.Size = new System.Drawing.Size(90, 38);
-            this.lblBP.TabIndex = 31;
-            this.lblBP.Tag = "BP";
-            this.lblBP.Text = "0";
-            this.lblBP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBP.Click += new System.EventHandler(this.lblBP_Click);
+            this.txtBP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtBP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBP.Location = new System.Drawing.Point(92, 12);
+            this.txtBP.Name = "txtBP";
+            this.txtBP.Size = new System.Drawing.Size(90, 38);
+            this.txtBP.TabIndex = 31;
+            this.txtBP.Tag = "BP";
+            this.txtBP.Text = "0";
+            this.txtBP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtBP.Click += new System.EventHandler(this.lblBP_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(18, 243);
+            this.label15.Location = new System.Drawing.Point(6, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(82, 21);
             this.label15.TabIndex = 26;
@@ -139,18 +150,18 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(0, 180);
+            this.label14.Location = new System.Drawing.Point(4, 21);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 21);
+            this.label14.Size = new System.Drawing.Size(84, 21);
             this.label14.TabIndex = 26;
-            this.label14.Text = "透析液泵DP:";
+            this.label14.Text = "透析泵DP:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(19, 117);
+            this.label7.Location = new System.Drawing.Point(8, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 21);
             this.label7.TabIndex = 26;
@@ -161,55 +172,55 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(18, 54);
+            this.label5.Location = new System.Drawing.Point(7, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 21);
             this.label5.TabIndex = 26;
             this.label5.Text = "血液泵BP:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblCP
+            // txtCP
             // 
-            this.lblCP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCP.Location = new System.Drawing.Point(109, 360);
-            this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(90, 38);
-            this.lblCP.TabIndex = 31;
-            this.lblCP.Tag = "CP";
-            this.lblCP.Text = "0";
-            this.lblCP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblCP.Click += new System.EventHandler(this.lblBP_Click);
+            this.txtCP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtCP.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCP.Location = new System.Drawing.Point(92, 11);
+            this.txtCP.Name = "txtCP";
+            this.txtCP.Size = new System.Drawing.Size(90, 38);
+            this.txtCP.TabIndex = 31;
+            this.txtCP.Tag = "CP";
+            this.txtCP.Text = "0";
+            this.txtCP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtCP.Click += new System.EventHandler(this.lblBP_Click);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(10, 306);
+            this.label18.Location = new System.Drawing.Point(1, 19);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(90, 21);
             this.label18.TabIndex = 26;
             this.label18.Text = "滤过泵FP2:";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblFP2
+            // txtFP2
             // 
-            this.lblFP2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFP2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFP2.Location = new System.Drawing.Point(109, 297);
-            this.lblFP2.Name = "lblFP2";
-            this.lblFP2.Size = new System.Drawing.Size(90, 38);
-            this.lblFP2.TabIndex = 31;
-            this.lblFP2.Tag = "FP2";
-            this.lblFP2.Text = "0";
-            this.lblFP2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblFP2.Click += new System.EventHandler(this.lblBP_Click);
+            this.txtFP2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtFP2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFP2.Location = new System.Drawing.Point(92, 12);
+            this.txtFP2.Name = "txtFP2";
+            this.txtFP2.Size = new System.Drawing.Size(90, 38);
+            this.txtFP2.TabIndex = 31;
+            this.txtFP2.Tag = "FP2";
+            this.txtFP2.Text = "0";
+            this.txtFP2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtFP2.Click += new System.EventHandler(this.lblBP_Click);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label19.Location = new System.Drawing.Point(17, 369);
+            this.label19.Location = new System.Drawing.Point(7, 19);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(83, 21);
             this.label19.TabIndex = 26;
@@ -441,24 +452,6 @@
             this.gboxPump.BackgroundGradientMode = CodeVendor.Controls.Grouper.GroupBoxGradientMode.None;
             this.gboxPump.BorderColor = System.Drawing.Color.Silver;
             this.gboxPump.BorderThickness = 1F;
-            this.gboxPump.Controls.Add(this.label5);
-            this.gboxPump.Controls.Add(this.btnRunCP);
-            this.gboxPump.Controls.Add(this.label19);
-            this.gboxPump.Controls.Add(this.lblCP);
-            this.gboxPump.Controls.Add(this.lblDP);
-            this.gboxPump.Controls.Add(this.btnRunFP2);
-            this.gboxPump.Controls.Add(this.lblFP);
-            this.gboxPump.Controls.Add(this.label7);
-            this.gboxPump.Controls.Add(this.btnRunRP);
-            this.gboxPump.Controls.Add(this.lblFP2);
-            this.gboxPump.Controls.Add(this.lblRP);
-            this.gboxPump.Controls.Add(this.label14);
-            this.gboxPump.Controls.Add(this.btnRunDP);
-            this.gboxPump.Controls.Add(this.label18);
-            this.gboxPump.Controls.Add(this.label15);
-            this.gboxPump.Controls.Add(this.btnRunBP);
-            this.gboxPump.Controls.Add(this.btnRunFP);
-            this.gboxPump.Controls.Add(this.lblBP);
             this.gboxPump.CustomGroupBoxColor = System.Drawing.Color.White;
             this.gboxPump.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gboxPump.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(8)))), ((int)(((byte)(100)))));
@@ -474,123 +467,6 @@
             this.gboxPump.ShadowThickness = 3;
             this.gboxPump.Size = new System.Drawing.Size(318, 419);
             this.gboxPump.TabIndex = 123;
-            // 
-            // btnRunCP
-            // 
-            this.btnRunCP.CornerRadius = 20;
-            this.btnRunCP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunCP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunCP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunCP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunCP.Image")));
-            this.btnRunCP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunCP.Location = new System.Drawing.Point(203, 353);
-            this.btnRunCP.Name = "btnRunCP";
-            this.btnRunCP.PulseSpeed = 0.3F;
-            this.btnRunCP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunCP.TabIndex = 69;
-            this.btnRunCP.Tag = "cp";
-            this.btnRunCP.Text = "运转";
-            this.btnRunCP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunCP.UseVisualStyleBackColor = true;
-            this.btnRunCP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunFP2
-            // 
-            this.btnRunFP2.CornerRadius = 20;
-            this.btnRunFP2.FocusColor = System.Drawing.Color.Black;
-            this.btnRunFP2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunFP2.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunFP2.Image = ((System.Drawing.Image)(resources.GetObject("btnRunFP2.Image")));
-            this.btnRunFP2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunFP2.Location = new System.Drawing.Point(203, 290);
-            this.btnRunFP2.Name = "btnRunFP2";
-            this.btnRunFP2.PulseSpeed = 0.3F;
-            this.btnRunFP2.Size = new System.Drawing.Size(97, 52);
-            this.btnRunFP2.TabIndex = 69;
-            this.btnRunFP2.Tag = "fp2";
-            this.btnRunFP2.Text = "运转";
-            this.btnRunFP2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunFP2.UseVisualStyleBackColor = true;
-            this.btnRunFP2.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunRP
-            // 
-            this.btnRunRP.CornerRadius = 20;
-            this.btnRunRP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunRP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunRP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunRP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunRP.Image")));
-            this.btnRunRP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunRP.Location = new System.Drawing.Point(203, 227);
-            this.btnRunRP.Name = "btnRunRP";
-            this.btnRunRP.PulseSpeed = 0.3F;
-            this.btnRunRP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunRP.TabIndex = 69;
-            this.btnRunRP.Tag = "rp";
-            this.btnRunRP.Text = "运转";
-            this.btnRunRP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunRP.UseVisualStyleBackColor = true;
-            this.btnRunRP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunDP
-            // 
-            this.btnRunDP.CornerRadius = 20;
-            this.btnRunDP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunDP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunDP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunDP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunDP.Image")));
-            this.btnRunDP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunDP.Location = new System.Drawing.Point(203, 164);
-            this.btnRunDP.Name = "btnRunDP";
-            this.btnRunDP.PulseSpeed = 0.3F;
-            this.btnRunDP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunDP.TabIndex = 69;
-            this.btnRunDP.Tag = "dp";
-            this.btnRunDP.Text = "运转";
-            this.btnRunDP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunDP.UseVisualStyleBackColor = true;
-            this.btnRunDP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunBP
-            // 
-            this.btnRunBP.AutoEllipsis = true;
-            this.btnRunBP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRunBP.CornerRadius = 20;
-            this.btnRunBP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunBP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunBP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunBP.Image = global::ALS.Properties.Resources.spstart;
-            this.btnRunBP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunBP.Location = new System.Drawing.Point(203, 38);
-            this.btnRunBP.Name = "btnRunBP";
-            this.btnRunBP.PulseSpeed = 0.3F;
-            this.btnRunBP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunBP.TabIndex = 69;
-            this.btnRunBP.Tag = "bp";
-            this.btnRunBP.Text = "运转";
-            this.btnRunBP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunBP.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRunBP.UseVisualStyleBackColor = true;
-            this.btnRunBP.Click += new System.EventHandler(this.btnRunBP_Click);
-            // 
-            // btnRunFP
-            // 
-            this.btnRunFP.CornerRadius = 20;
-            this.btnRunFP.FocusColor = System.Drawing.Color.Black;
-            this.btnRunFP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRunFP.ForeColor = System.Drawing.Color.Snow;
-            this.btnRunFP.Image = ((System.Drawing.Image)(resources.GetObject("btnRunFP.Image")));
-            this.btnRunFP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRunFP.Location = new System.Drawing.Point(203, 101);
-            this.btnRunFP.Name = "btnRunFP";
-            this.btnRunFP.PulseSpeed = 0.3F;
-            this.btnRunFP.Size = new System.Drawing.Size(97, 52);
-            this.btnRunFP.TabIndex = 69;
-            this.btnRunFP.Tag = "fp";
-            this.btnRunFP.Text = "运转";
-            this.btnRunFP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRunFP.UseVisualStyleBackColor = true;
-            this.btnRunFP.Click += new System.EventHandler(this.btnRunBP_Click);
             // 
             // grouper3
             // 
@@ -659,11 +535,200 @@
             this.grouper2.Size = new System.Drawing.Size(438, 215);
             this.grouper2.TabIndex = 121;
             // 
+            // btnRun6
+            // 
+            this.btnRun6.CornerRadius = 20;
+            this.btnRun6.FocusColor = System.Drawing.Color.Black;
+            this.btnRun6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRun6.ForeColor = System.Drawing.Color.Snow;
+            this.btnRun6.Image = ((System.Drawing.Image)(resources.GetObject("btnRun6.Image")));
+            this.btnRun6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRun6.Location = new System.Drawing.Point(186, 4);
+            this.btnRun6.Name = "btnRun6";
+            this.btnRun6.NumberOfPulses = 3;
+            this.btnRun6.PulseSpeed = 0.3F;
+            this.btnRun6.Size = new System.Drawing.Size(97, 52);
+            this.btnRun6.TabIndex = 69;
+            this.btnRun6.Tag = "cp";
+            this.btnRun6.Text = "运转";
+            this.btnRun6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRun6.UseVisualStyleBackColor = true;
+            this.btnRun6.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRun5
+            // 
+            this.btnRun5.CornerRadius = 20;
+            this.btnRun5.FocusColor = System.Drawing.Color.Black;
+            this.btnRun5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRun5.ForeColor = System.Drawing.Color.Snow;
+            this.btnRun5.Image = ((System.Drawing.Image)(resources.GetObject("btnRun5.Image")));
+            this.btnRun5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRun5.Location = new System.Drawing.Point(186, 5);
+            this.btnRun5.Name = "btnRun5";
+            this.btnRun5.NumberOfPulses = 3;
+            this.btnRun5.PulseSpeed = 0.3F;
+            this.btnRun5.Size = new System.Drawing.Size(97, 52);
+            this.btnRun5.TabIndex = 69;
+            this.btnRun5.Tag = "fp2";
+            this.btnRun5.Text = "运转";
+            this.btnRun5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRun5.UseVisualStyleBackColor = true;
+            this.btnRun5.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRun4
+            // 
+            this.btnRun4.CornerRadius = 20;
+            this.btnRun4.FocusColor = System.Drawing.Color.Black;
+            this.btnRun4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRun4.ForeColor = System.Drawing.Color.Snow;
+            this.btnRun4.Image = ((System.Drawing.Image)(resources.GetObject("btnRun4.Image")));
+            this.btnRun4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRun4.Location = new System.Drawing.Point(186, 4);
+            this.btnRun4.Name = "btnRun4";
+            this.btnRun4.NumberOfPulses = 3;
+            this.btnRun4.PulseSpeed = 0.3F;
+            this.btnRun4.Size = new System.Drawing.Size(97, 52);
+            this.btnRun4.TabIndex = 69;
+            this.btnRun4.Tag = "rp";
+            this.btnRun4.Text = "运转";
+            this.btnRun4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRun4.UseVisualStyleBackColor = true;
+            this.btnRun4.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRun3
+            // 
+            this.btnRun3.CornerRadius = 20;
+            this.btnRun3.FocusColor = System.Drawing.Color.Black;
+            this.btnRun3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRun3.ForeColor = System.Drawing.Color.Snow;
+            this.btnRun3.Image = ((System.Drawing.Image)(resources.GetObject("btnRun3.Image")));
+            this.btnRun3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRun3.Location = new System.Drawing.Point(186, 5);
+            this.btnRun3.Name = "btnRun3";
+            this.btnRun3.NumberOfPulses = 3;
+            this.btnRun3.PulseSpeed = 0.3F;
+            this.btnRun3.Size = new System.Drawing.Size(97, 52);
+            this.btnRun3.TabIndex = 69;
+            this.btnRun3.Tag = "dp";
+            this.btnRun3.Text = "运转";
+            this.btnRun3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRun3.UseVisualStyleBackColor = true;
+            this.btnRun3.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRun1
+            // 
+            this.btnRun1.AutoEllipsis = true;
+            this.btnRun1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRun1.CornerRadius = 20;
+            this.btnRun1.FocusColor = System.Drawing.Color.Black;
+            this.btnRun1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRun1.ForeColor = System.Drawing.Color.Snow;
+            this.btnRun1.Image = global::ALS.Properties.Resources.spstart;
+            this.btnRun1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRun1.Location = new System.Drawing.Point(188, 5);
+            this.btnRun1.Name = "btnRun1";
+            this.btnRun1.NumberOfPulses = 3;
+            this.btnRun1.PulseSpeed = 0.3F;
+            this.btnRun1.Size = new System.Drawing.Size(97, 52);
+            this.btnRun1.TabIndex = 69;
+            this.btnRun1.Tag = "bp";
+            this.btnRun1.Text = "运转";
+            this.btnRun1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRun1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRun1.UseVisualStyleBackColor = true;
+            this.btnRun1.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // btnRun2
+            // 
+            this.btnRun2.CornerRadius = 20;
+            this.btnRun2.FocusColor = System.Drawing.Color.Black;
+            this.btnRun2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRun2.ForeColor = System.Drawing.Color.Snow;
+            this.btnRun2.Image = ((System.Drawing.Image)(resources.GetObject("btnRun2.Image")));
+            this.btnRun2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRun2.Location = new System.Drawing.Point(187, 5);
+            this.btnRun2.Name = "btnRun2";
+            this.btnRun2.NumberOfPulses = 3;
+            this.btnRun2.PulseSpeed = 0.3F;
+            this.btnRun2.Size = new System.Drawing.Size(97, 52);
+            this.btnRun2.TabIndex = 69;
+            this.btnRun2.Tag = "fp";
+            this.btnRun2.Text = "运转";
+            this.btnRun2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRun2.UseVisualStyleBackColor = true;
+            this.btnRun2.Click += new System.EventHandler(this.btnRunBP_Click);
+            // 
+            // palBP
+            // 
+            this.palBP.Controls.Add(this.label5);
+            this.palBP.Controls.Add(this.txtBP);
+            this.palBP.Controls.Add(this.btnRun1);
+            this.palBP.Location = new System.Drawing.Point(475, 57);
+            this.palBP.Name = "palBP";
+            this.palBP.Size = new System.Drawing.Size(286, 62);
+            this.palBP.TabIndex = 119;
+            // 
+            // palFP
+            // 
+            this.palFP.Controls.Add(this.label7);
+            this.palFP.Controls.Add(this.btnRun2);
+            this.palFP.Controls.Add(this.txtFP);
+            this.palFP.Location = new System.Drawing.Point(475, 121);
+            this.palFP.Name = "palFP";
+            this.palFP.Size = new System.Drawing.Size(286, 62);
+            this.palFP.TabIndex = 120;
+            // 
+            // palDP
+            // 
+            this.palDP.Controls.Add(this.label14);
+            this.palDP.Controls.Add(this.btnRun3);
+            this.palDP.Controls.Add(this.txtDP);
+            this.palDP.Location = new System.Drawing.Point(475, 185);
+            this.palDP.Name = "palDP";
+            this.palDP.Size = new System.Drawing.Size(286, 62);
+            this.palDP.TabIndex = 121;
+            // 
+            // palCP
+            // 
+            this.palCP.Controls.Add(this.btnRun6);
+            this.palCP.Controls.Add(this.label19);
+            this.palCP.Controls.Add(this.txtCP);
+            this.palCP.Location = new System.Drawing.Point(475, 377);
+            this.palCP.Name = "palCP";
+            this.palCP.Size = new System.Drawing.Size(286, 62);
+            this.palCP.TabIndex = 122;
+            // 
+            // palRP
+            // 
+            this.palRP.Controls.Add(this.btnRun4);
+            this.palRP.Controls.Add(this.label15);
+            this.palRP.Controls.Add(this.txtRP);
+            this.palRP.Location = new System.Drawing.Point(475, 249);
+            this.palRP.Name = "palRP";
+            this.palRP.Size = new System.Drawing.Size(286, 62);
+            this.palRP.TabIndex = 122;
+            // 
+            // palFP2
+            // 
+            this.palFP2.Controls.Add(this.label18);
+            this.palFP2.Controls.Add(this.txtFP2);
+            this.palFP2.Controls.Add(this.btnRun5);
+            this.palFP2.Location = new System.Drawing.Point(475, 313);
+            this.palFP2.Name = "palFP2";
+            this.palFP2.Size = new System.Drawing.Size(286, 62);
+            this.palFP2.TabIndex = 122;
+            // 
             // ucRecycle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Controls.Add(this.palCP);
+            this.Controls.Add(this.palRP);
+            this.Controls.Add(this.palFP2);
+            this.Controls.Add(this.palDP);
+            this.Controls.Add(this.palFP);
+            this.Controls.Add(this.palBP);
             this.Controls.Add(this.grouper1);
             this.Name = "ucRecycle";
             this.Size = new System.Drawing.Size(790, 604);
@@ -673,10 +738,20 @@
             this.palCtrlV.ResumeLayout(false);
             this.gboxRecycle.ResumeLayout(false);
             this.grouper1.ResumeLayout(false);
-            this.gboxPump.ResumeLayout(false);
-            this.gboxPump.PerformLayout();
             this.grouper3.ResumeLayout(false);
             this.grouper2.ResumeLayout(false);
+            this.palBP.ResumeLayout(false);
+            this.palBP.PerformLayout();
+            this.palFP.ResumeLayout(false);
+            this.palFP.PerformLayout();
+            this.palDP.ResumeLayout(false);
+            this.palDP.PerformLayout();
+            this.palCP.ResumeLayout(false);
+            this.palCP.PerformLayout();
+            this.palRP.ResumeLayout(false);
+            this.palRP.PerformLayout();
+            this.palFP2.ResumeLayout(false);
+            this.palFP2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -690,12 +765,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.DataGridView dgvRecycle;
-        public System.Windows.Forms.Label lblBP;
-        public System.Windows.Forms.Label lblRP;
-        public System.Windows.Forms.Label lblDP;
-        public System.Windows.Forms.Label lblFP;
-        public System.Windows.Forms.Label lblCP;
-        public System.Windows.Forms.Label lblFP2;
+        public System.Windows.Forms.Label txtBP;
+        public System.Windows.Forms.Label txtRP;
+        public System.Windows.Forms.Label txtDP;
+        public System.Windows.Forms.Label txtFP;
+        public System.Windows.Forms.Label txtCP;
+        public System.Windows.Forms.Label txtFP2;
         public System.Windows.Forms.Panel palCtrlV;
         public System.Windows.Forms.CheckBox chkV5;
         public System.Windows.Forms.CheckBox chkV6;
@@ -705,16 +780,22 @@
         public System.Windows.Forms.CheckBox chkV1;
         private System.Windows.Forms.Label lblRecycle;
         public PulseButton.PulseButton btnReturn;
-        public PulseButton.PulseButton btnRunBP;
-        public PulseButton.PulseButton btnRunCP;
-        public PulseButton.PulseButton btnRunFP2;
-        public PulseButton.PulseButton btnRunRP;
-        public PulseButton.PulseButton btnRunDP;
-        public PulseButton.PulseButton btnRunFP;
+        public PulseButton.PulseButton btnRun1;
+        public PulseButton.PulseButton btnRun6;
+        public PulseButton.PulseButton btnRun5;
+        public PulseButton.PulseButton btnRun4;
+        public PulseButton.PulseButton btnRun3;
+        public PulseButton.PulseButton btnRun2;
         public CodeVendor.Controls.Grouper gboxRecycle;
         private CodeVendor.Controls.Grouper grouper1;
         public CodeVendor.Controls.Grouper grouper2;
         public CodeVendor.Controls.Grouper grouper3;
         public CodeVendor.Controls.Grouper gboxPump;
+        public System.Windows.Forms.Panel palBP;
+        public System.Windows.Forms.Panel palFP;
+        public System.Windows.Forms.Panel palDP;
+        public System.Windows.Forms.Panel palCP;
+        public System.Windows.Forms.Panel palRP;
+        public System.Windows.Forms.Panel palFP2;
     }
 }

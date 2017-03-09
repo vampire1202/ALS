@@ -724,65 +724,9 @@ namespace ALS.Manager
                         break;
 
                 }
-                m_btm.Update(m_mtm);
+                //m_btm.Update(m_mtm);
             }
         }
-
-        private void btnBPDirection_Click(object sender, EventArgs e)
-        {
-            Button b = (Button)sender;
-            if (b.Text == "顺时针")
-            {
-                b.Text = "逆时针";
-                b.ForeColor = Color.Orange;
-            }
-            else
-            {
-                b.Text = "顺时针";
-                b.ForeColor = Color.Green;
-            }
-
-            switch (b.Tag.ToString())
-            {
-                case "1":
-                    if (b.Text == "顺时针")
-                        m_mtm.BPDirection = true;
-                    else
-                        m_mtm.BPDirection = false;
-                    break;
-                case "2":
-                    if (b.Text == "顺时针")
-                        m_mtm.FPDirection = true;
-                    else
-                        m_mtm.FPDirection = false;
-                    break;
-                case "3":
-                    if (b.Text == "顺时针")
-                        m_mtm.DPDirection = true;
-                    else
-                        m_mtm.DPDirection = false;
-                    break;
-                case "4":
-                    if (b.Text == "顺时针")
-                        m_mtm.RPDirection = true;
-                    else
-                        m_mtm.RPDirection = false;
-                    break;
-                case "5":
-                    if (b.Text == "顺时针")
-                        m_mtm.FP2Direction = true;
-                    else
-                        m_mtm.FP2Direction = false;
-                    break;
-                case "6":
-                    if (b.Text == "顺时针")
-                        m_mtm.CPDirection = true;
-                    else
-                        m_mtm.CPDirection = false;
-                    break; 
-            }
-            m_btm.Update(m_mtm);
-        } 
 
         private void btnExit_Click_1(object sender, EventArgs e)
         {

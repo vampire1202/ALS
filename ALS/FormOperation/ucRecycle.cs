@@ -99,139 +99,139 @@ namespace ALS.FormOperation
                 {
                     if (_modPumpState.BPState.Runing)
                     {
-                        this.btnRunBP.Text = "停止";
-                        this.btnRunBP.Image = Properties.Resources.spstop;
-                        this.btnRunBP.ForeColor = Color.Red;
-                        this.lblBP.Text = _modelPumpState.BPState.Speed.ToString();
-                        this.lblBP.Enabled = false; 
+                        this.btnRun1.Text = "停止";
+                        this.btnRun1.Image = Properties.Resources.spstop;
+                        this.btnRun1.ForeColor = Color.Red;
+                        this.txtBP.Text = _modelPumpState.BPState.Speed.ToString();
+                        this.txtBP.Enabled = false; 
                     }
                     else
                     {
-                        this.btnRunBP.Text = "运转";
-                        this.btnRunBP.Image = Properties.Resources.spstart;
-                        this.btnRunBP.ForeColor = Color.White;
-                        this.lblBP.Text =  _modelPumpState.BPState.Speed.ToString();
-                        this.lblBP.Enabled = true;
+                        this.btnRun1.Text = "运转";
+                        this.btnRun1.Image = Properties.Resources.spstart;
+                        this.btnRun1.ForeColor = Color.White;
+                        this.txtBP.Text =  _modelPumpState.BPState.Speed.ToString();
+                        this.txtBP.Enabled = true;
                     }
-                    this.btnRunBP.Enabled = true;
+                    this.btnRun1.Enabled = true;
                 }
                 else 
-                    this.btnRunBP.Enabled = this.lblBP.Enabled = false; 
+                    this.btnRun1.Enabled = this.txtBP.Enabled = false; 
 
                 if (_modelTreat.FPValid)
                 {
                     if (_modPumpState.FPState.Runing)
                     {
-                        this.btnRunFP.Text = "停止";
-                        this.btnRunFP.Image = Properties.Resources.spstop;
-                        this.btnRunFP.ForeColor = Color.Red;
+                        this.btnRun2.Text = "停止";
+                        this.btnRun2.Image = Properties.Resources.spstop;
+                        this.btnRun2.ForeColor = Color.Red;
                         //this.lblFP.Text = _modelPumpState.FPState.Speed.ToString();
-                        this.lblFP.Enabled = false;
+                        this.txtFP.Enabled = false;
                     }
                     else
                     {
-                        this.btnRunFP.Text = "运转";
-                        this.btnRunFP.Image = Properties.Resources.spstart;
-                        this.btnRunFP.ForeColor = Color.White;
+                        this.btnRun2.Text = "运转";
+                        this.btnRun2.Image = Properties.Resources.spstart;
+                        this.btnRun2.ForeColor = Color.White;
                         //this.lblFP.Text = _modelPumpState.FPState.Speed.ToString();
-                        this.lblFP.Enabled = true;
+                        this.txtFP.Enabled = true;
                     }
-                    this.btnRunFP.Enabled = true;
+                    this.btnRun2.Enabled = true;
                 }
                 else
-                    this.btnRunFP.Enabled = this.lblFP.Enabled = false;
+                    this.btnRun2.Enabled = this.txtFP.Enabled = false;
 
                 if (_modelTreat.DPValid)
                 {
                     if (_modPumpState.DPState.Runing)
                     {
-                        this.btnRunDP.Text = "停止";
-                        this.btnRunDP.Image = Properties.Resources.spstop;
-                        this.btnRunDP.ForeColor = Color.Red;
+                        this.btnRun3.Text = "停止";
+                        this.btnRun3.Image = Properties.Resources.spstop;
+                        this.btnRun3.ForeColor = Color.Red;
                         //this.lblDP.Text = _modelPumpState.DPState.Speed.ToString();
-                        this.lblDP.Enabled = false;
+                        this.txtDP.Enabled = false;
                     }
                     else
                     {
-                        this.btnRunDP.Text = "运转";
-                        this.btnRunDP.Image = Properties.Resources.spstart;
-                        this.btnRunDP.ForeColor = Color.White;
+                        this.btnRun3.Text = "运转";
+                        this.btnRun3.Image = Properties.Resources.spstart;
+                        this.btnRun3.ForeColor = Color.White;
                         //this.lblDP.Text = _modelPumpState.DPState.Speed.ToString();
-                        this.lblDP.Enabled = true;
+                        this.txtDP.Enabled = true;
                     }
-                    this.btnRunDP.Enabled = true;
+                    this.btnRun3.Enabled = true;
                 }
                 else
-                    this.btnRunDP.Enabled = this.lblDP.Enabled = false;
+                    this.btnRun3.Enabled = this.txtDP.Enabled = false;
 
                 if (_modelTreat.RPValid)
                 {
                     if (_modPumpState.RPState.Runing)
                     {
-                        this.btnRunRP.Text = "停止";
-                        this.btnRunRP.Image = Properties.Resources.spstop;
-                        this.btnRunRP.ForeColor = Color.Red;
+                        this.btnRun4.Text = "停止";
+                        this.btnRun4.Image = Properties.Resources.spstop;
+                        this.btnRun4.ForeColor = Color.Red;
                         //this.lblRP.Text = _modelPumpState.RPState.Speed.ToString();
-                        this.lblRP.Enabled = false;
+                        this.txtRP.Enabled = false;
                     }
                     else
                     {
-                        this.btnRunRP.Text = "运转";
-                        this.btnRunRP.Image = Properties.Resources.spstart;
-                        this.btnRunRP.ForeColor = Color.White;
+                        this.btnRun4.Text = "运转";
+                        this.btnRun4.Image = Properties.Resources.spstart;
+                        this.btnRun4.ForeColor = Color.White;
                         //this.lblRP.Text = _modelPumpState.RPState.Speed.ToString();
-                        this.lblRP.Enabled = true;
+                        this.txtRP.Enabled = true;
                     }
-                    this.btnRunRP.Enabled = true;
+                    this.btnRun4.Enabled = true;
                 }
                 else
-                    this.btnRunRP.Enabled = this.lblRP.Enabled = false;
+                    this.btnRun4.Enabled = this.txtRP.Enabled = false;
 
                 if (_modelTreat.FP2Valid)
                 {
                     if (_modPumpState.FP2State.Runing)
                     {
-                        this.btnRunFP2.Text = "停止";
-                        this.btnRunFP2.Image = Properties.Resources.spstop;
-                        this.btnRunFP2.ForeColor = Color.Red;
-                        this.lblFP2.Text = _modelPumpState.FP2State.Speed.ToString();
-                        this.lblFP2.Enabled = false; 
+                        this.btnRun5.Text = "停止";
+                        this.btnRun5.Image = Properties.Resources.spstop;
+                        this.btnRun5.ForeColor = Color.Red;
+                        this.txtFP2.Text = _modelPumpState.FP2State.Speed.ToString();
+                        this.txtFP2.Enabled = false; 
                     }
                     else
                     {
-                        this.btnRunFP2.Text = "运转";
-                        this.btnRunFP2.Image = Properties.Resources.spstart;
-                        this.btnRunFP2.ForeColor = Color.White;
+                        this.btnRun5.Text = "运转";
+                        this.btnRun5.Image = Properties.Resources.spstart;
+                        this.btnRun5.ForeColor = Color.White;
                         //this.lblFP2.Text = _modelPumpState.FP2State.Speed.ToString();
-                        this.lblFP2.Enabled = true;
+                        this.txtFP2.Enabled = true;
                     }
-                    this.btnRunFP2.Enabled = true;
+                    this.btnRun5.Enabled = true;
                 }
                 else
-                    this.btnRunFP2.Enabled = this.lblFP2.Enabled = false;
+                    this.btnRun5.Enabled = this.txtFP2.Enabled = false;
 
                 if (_modelTreat.CPValid)
                 {
                     if (_modPumpState.CPState.Runing)
                     {
-                        this.btnRunCP.Text = "停止";
-                        this.btnRunCP.Image = Properties.Resources.spstop;
-                        this.btnRunCP.ForeColor = Color.Red;
+                        this.btnRun6.Text = "停止";
+                        this.btnRun6.Image = Properties.Resources.spstop;
+                        this.btnRun6.ForeColor = Color.Red;
                         //this.lblCP.Text = _modelPumpState.CPState.Speed.ToString();
-                        this.lblCP.Enabled = false;
+                        this.txtCP.Enabled = false;
                     }
                     else
                     {
-                        this.btnRunCP.Text = "运转";
-                        this.btnRunCP.Image = Properties.Resources.spstart;
-                        this.btnRunCP.ForeColor = Color.White;
+                        this.btnRun6.Text = "运转";
+                        this.btnRun6.Image = Properties.Resources.spstart;
+                        this.btnRun6.ForeColor = Color.White;
                         //this.lblCP.Text = _modelPumpState.CPState.Speed.ToString();
-                        this.lblCP.Enabled = true;
+                        this.txtCP.Enabled = true;
                     }
-                    this.btnRunCP.Enabled = true;
+                    this.btnRun6.Enabled = true;
                 }
                 else
-                    this.btnRunCP.Enabled = this.lblCP.Enabled = false;
+                    this.btnRun6.Enabled = this.txtCP.Enabled = false;
             }
         }
 
