@@ -2831,7 +2831,7 @@ namespace ALS
                     m_frmAdmin.btnRun1.Text = (pumpState.BPState.Runing ? "停止" : "运转");
                     m_frmAdmin.chV2.Enabled = m_frmAdmin.chV1.Enabled = (pumpState.BPState.Runing ? false : true);
                     m_frmAdmin.btnRun1.Image = (pumpState.BPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                    m_frmAdmin.btnRun1.ForeColor = (pumpState.BPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.btnRun1.ForeColor = (pumpState.BPState.Runing ? Color.Red : Color.FromArgb(15,8,100));
                     m_frmAdmin.txtBP.Enabled = (pumpState.BPState.Runing ? false : true);
                 }
                 else
@@ -2842,7 +2842,7 @@ namespace ALS
                     m_frmAdmin.palFP.Enabled = true;
                     m_frmAdmin.btnRun2.Text = (pumpState.FPState.Runing ? "停止" : "运转");
                     m_frmAdmin.btnRun2.Image = (pumpState.FPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                    m_frmAdmin.btnRun2.ForeColor = (pumpState.FPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.btnRun2.ForeColor = (pumpState.FPState.Runing ? Color.Red : Color.FromArgb(15,8,100));
                     m_frmAdmin.txtFP.Enabled = (pumpState.FPState.Runing ? false : true);
                 }
                 else
@@ -2853,7 +2853,7 @@ namespace ALS
                     m_frmAdmin.palDP.Enabled = true;
                     m_frmAdmin.btnRun3.Text = (pumpState.DPState.Runing ? "停止" : "运转");
                     m_frmAdmin.btnRun3.Image = (pumpState.DPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                    m_frmAdmin.btnRun3.ForeColor = (pumpState.DPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.btnRun3.ForeColor = (pumpState.DPState.Runing ? Color.Red : Color.FromArgb(15, 8, 100));
                     m_frmAdmin.txtDP.Enabled = (pumpState.DPState.Runing ? false : true);
                 }
                 else
@@ -2864,7 +2864,7 @@ namespace ALS
                     m_frmAdmin.palRP.Enabled = true;
                     m_frmAdmin.btnRun4.Text = (pumpState.RPState.Runing ? "停止" : "运转");
                     m_frmAdmin.btnRun4.Image = (pumpState.RPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                    m_frmAdmin.btnRun4.ForeColor = (pumpState.RPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.btnRun4.ForeColor = (pumpState.RPState.Runing ? Color.Red : Color.FromArgb(15, 8, 100));
                     m_frmAdmin.txtRP.Enabled = (pumpState.RPState.Runing ? false : true);
                 }
                 else
@@ -2875,7 +2875,7 @@ namespace ALS
                     m_frmAdmin.palFP2.Enabled = true;
                     m_frmAdmin.btnRun5.Text = (pumpState.FP2State.Runing ? "停止" : "运转");
                     m_frmAdmin.btnRun5.Image = (pumpState.FP2State.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                    m_frmAdmin.btnRun5.ForeColor = (pumpState.FP2State.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.btnRun5.ForeColor = (pumpState.FP2State.Runing ? Color.Red : Color.FromArgb(15, 8, 100));
                     m_frmAdmin.txtFP2.Enabled = (pumpState.FP2State.Runing ? false : true);
                 }
                 else
@@ -2886,7 +2886,7 @@ namespace ALS
                     m_frmAdmin.palCP.Enabled = true;
                     m_frmAdmin.btnRun6.Text = (pumpState.CPState.Runing ? "停止" : "运转");
                     m_frmAdmin.btnRun6.Image = (pumpState.CPState.Runing ? Properties.Resources.spstop : Properties.Resources.spstart);
-                    m_frmAdmin.btnRun6.ForeColor = (pumpState.CPState.Runing ? Color.Red : Color.White);
+                    m_frmAdmin.btnRun6.ForeColor = (pumpState.CPState.Runing ? Color.Red : Color.FromArgb(15, 8, 100));
                     m_frmAdmin.txtCP.Enabled = (pumpState.CPState.Runing ? false : true);
                 }
                 else
@@ -4857,7 +4857,7 @@ namespace ALS
                                     this.Invoke((EventHandler)(delegate
                                     {
                                         #region 其他设置界面 夹管阀状态
-                                        if (M_uc_OtherSet != null)
+                                        if (this.palContent.Controls.Contains(M_uc_OtherSet))
                                         {
                                             switch (M_buffer_main[3])
                                             {
@@ -4953,7 +4953,7 @@ namespace ALS
                                         #endregion
 
                                         #region 回收界面 夹管阀状态
-                                        if (M_uc_Recycle != null)
+                                        if (this.palContent.Controls.Contains(M_uc_Recycle))
                                         {
                                             switch (M_buffer_main[3])
                                             {
@@ -5048,7 +5048,7 @@ namespace ALS
                                         #endregion
 
                                         #region 流量设置界面 夹管阀状态
-                                        if (M_uc_SetFlow != null)
+                                        if (this.palContent.Controls.Contains(M_uc_SetFlow))
                                         {
                                             switch (M_buffer_main[3])
                                             {
@@ -5169,6 +5169,101 @@ namespace ALS
                                                     break;
                                                 case 0x03:
                                                     ShowWarn("W2-18");
+                                                    break;
+                                            }
+                                        }
+                                        #endregion
+
+                                        #region 管理界面 夹管阀状态
+                                        if (m_frmAdmin!=null)
+                                        {
+                                            switch (M_buffer_main[3])
+                                            {
+                                                case 0x00:
+                                                    m_frmAdmin.chV1.Image = global::ALS.Properties.Resources.clipopen;
+                                                    m_frmAdmin.chV1.Checked = false;
+                                                    break;
+                                                case 0x01:
+                                                    m_frmAdmin.chV1.Image = global::ALS.Properties.Resources.clipclose;
+                                                    m_frmAdmin.chV1.Checked = true;
+                                                    break;
+                                                case 0x03:
+                                                    ShowWarn("W2-16");
+                                                    break;
+                                            }
+
+                                            switch (M_buffer_main[4])
+                                            {
+                                                case 0x00:
+                                                    m_frmAdmin.chV2.Image = global::ALS.Properties.Resources.clipopen;
+                                                    m_frmAdmin.chV2.Checked = false;
+                                                    break;
+                                                case 0x01:
+                                                    m_frmAdmin.chV2.Image = global::ALS.Properties.Resources.clipclose;
+                                                    m_frmAdmin.chV2.Checked = true;
+                                                    break;
+                                                case 0x03:
+                                                    ShowWarn("W2-18");
+                                                    break;
+                                            }
+
+                                            switch (M_buffer_main[5])
+                                            {
+                                                case 0x00:
+                                                    m_frmAdmin.chV3.Image = global::ALS.Properties.Resources.clipopen;
+                                                    m_frmAdmin.chV3.Checked = false;
+                                                    break;
+                                                case 0x01:
+                                                    m_frmAdmin.chV3.Image = global::ALS.Properties.Resources.clipclose;
+                                                    m_frmAdmin.chV3.Checked = true;
+                                                    break;
+                                                case 0x03:
+                                                    ShowWarn("W2-20");
+                                                    break;
+                                            }
+
+                                            switch (M_buffer_main[6])
+                                            {
+                                                case 0x00:
+                                                    m_frmAdmin.chV4.Image = global::ALS.Properties.Resources.clipopen;
+                                                    m_frmAdmin.chV4.Checked = false;
+                                                    break;
+                                                case 0x01:
+                                                    m_frmAdmin.chV4.Image = global::ALS.Properties.Resources.clipclose;
+                                                    m_frmAdmin.chV4.Checked = true;
+                                                    break;
+                                                case 0x03:
+                                                    ShowWarn("W2-22");
+                                                    break;
+                                            }
+
+                                            switch (M_buffer_main[7])
+                                            {
+                                                case 0x00:
+                                                    m_frmAdmin.chV5.Image = global::ALS.Properties.Resources.clipopen;
+                                                    m_frmAdmin.chV5.Checked = false;
+                                                    break;
+                                                case 0x01:
+                                                    m_frmAdmin.chV5.Image = global::ALS.Properties.Resources.clipclose;
+                                                    m_frmAdmin.chV5.Checked = true;
+                                                    break;
+                                                case 0x03:
+                                                    ShowWarn("W2-24");
+                                                    break;
+                                            }
+
+                                            switch (M_buffer_main[8])
+                                            {
+                                                case 0x00:
+                                                    m_frmAdmin.chV6.Image = global::ALS.Properties.Resources.clipopen;
+                                                    m_frmAdmin.chV6.Checked = false;
+                                                    break;
+                                                case 0x01:
+                                                    m_frmAdmin.chV6.Image = global::ALS.Properties.Resources.clipclose;
+                                                    m_frmAdmin.chV6.Checked = true;
+                                                    break;
+                                                case 0x03:
+                                                    ShowWarn("W2-26");
                                                     break;
                                             }
                                         }
