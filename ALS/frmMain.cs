@@ -2,6 +2,9 @@
 //#define RunT
 #undef RunT
 
+//#define CheckT
+#undef CheckT
+
 //#define LOG_WARNING
 #undef LOG_WARNING                        //报警log
 
@@ -4020,6 +4023,9 @@ namespace ALS
             m_frmAdmin.uc_p3rd._Value = M_ModelValue.M_flt_PofP3rd.ToString("0.0");
             m_frmAdmin.uc_tmp._Value = M_ModelValue.M_flt_PofTMP.ToString("0.0");
             m_frmAdmin.lblPaccDec.Text = M_ModelValue.M_flt_PaccDecrement.ToString("0.0");
+            //温度监测值
+            m_frmAdmin.lblTKZ.Text = M_ModelValue.Flt_TemperatureKZ.ToString("f1");
+            m_frmAdmin.lblTJC.Text = M_ModelValue.Flt_TemperatureJC.ToString("f1");
         }
 
         void SaveData()
@@ -5414,10 +5420,12 @@ namespace ALS
 
                             M_ModelValue.M_flt_Temperature = (float)(M_ModelValue.Flt_TemperatureKZ + M_ModelValue.Flt_TemperatureJC) / 2;
                             //传感器断线故障
+#if CheckT
                             if ((M_buffer_data[5] == 0x05 && M_buffer_data[6] == 0xEE))
                                 ShowWarn("W2-08");
                             if ((M_buffer_data[3] == 0x05 && M_buffer_data[4] == 0xEE))
                                 ShowWarn("W2-09");
+#endif
                             //温差±1℃报警
                             if (M_ModelValue.M_flt_Temperature < M_ModelTreat.TargetT.Value - 1 || M_ModelValue.M_flt_Temperature > M_ModelTreat.TargetT.Value + 1)
                                 M_exsitsWarn = true;

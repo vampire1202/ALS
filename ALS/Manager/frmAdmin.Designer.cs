@@ -332,6 +332,11 @@
             this.uc_pven = new ALS.UserCtrl.uc_ShowTreatP();
             this.uc_part = new ALS.UserCtrl.uc_ShowTreatP();
             this.uc_pacc = new ALS.UserCtrl.uc_ShowTreatP();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.lblTKZ = new System.Windows.Forms.Label();
+            this.lblTJC = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.palCtrlV.SuspendLayout();
@@ -378,6 +383,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.c1_pre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3_heat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2_acc)).BeginInit();
+            this.groupBox15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -2503,6 +2509,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox15);
             this.tabPage4.Controls.Add(this.groupBox13);
             this.tabPage4.Controls.Add(this.groupBox14);
             this.tabPage4.Controls.Add(this.groupBox12);
@@ -2619,14 +2626,14 @@
             this.groupBox12.Controls.Add(this.button34);
             this.groupBox12.Location = new System.Drawing.Point(3, 16);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(133, 212);
+            this.groupBox12.Size = new System.Drawing.Size(133, 220);
             this.groupBox12.TabIndex = 1;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "声测试";
             // 
             // button32
             // 
-            this.button32.Location = new System.Drawing.Point(10, 147);
+            this.button32.Location = new System.Drawing.Point(10, 154);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(110, 38);
             this.button32.TabIndex = 0;
@@ -2637,7 +2644,7 @@
             // 
             // button33
             // 
-            this.button33.Location = new System.Drawing.Point(10, 91);
+            this.button33.Location = new System.Drawing.Point(10, 98);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(110, 38);
             this.button33.TabIndex = 0;
@@ -2648,7 +2655,7 @@
             // 
             // button34
             // 
-            this.button34.Location = new System.Drawing.Point(10, 35);
+            this.button34.Location = new System.Drawing.Point(10, 42);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(110, 38);
             this.button34.TabIndex = 0;
@@ -3412,6 +3419,7 @@
             this.pulseButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pulseButton2.Location = new System.Drawing.Point(301, 25);
             this.pulseButton2.Name = "pulseButton2";
+            this.pulseButton2.NumberOfPulses = 3;
             this.pulseButton2.PulseSpeed = 0.3F;
             this.pulseButton2.Size = new System.Drawing.Size(112, 62);
             this.pulseButton2.TabIndex = 122;
@@ -3427,6 +3435,7 @@
             this.pulseButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pulseButton1.Location = new System.Drawing.Point(167, 25);
             this.pulseButton1.Name = "pulseButton1";
+            this.pulseButton1.NumberOfPulses = 3;
             this.pulseButton1.PulseSpeed = 0.3F;
             this.pulseButton1.Size = new System.Drawing.Size(112, 62);
             this.pulseButton1.TabIndex = 122;
@@ -3442,6 +3451,7 @@
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReturn.Location = new System.Drawing.Point(34, 25);
             this.btnReturn.Name = "btnReturn";
+            this.btnReturn.NumberOfPulses = 3;
             this.btnReturn.PulseSpeed = 0.3F;
             this.btnReturn.Size = new System.Drawing.Size(112, 62);
             this.btnReturn.TabIndex = 122;
@@ -3995,6 +4005,61 @@
             this.uc_pacc.Size = new System.Drawing.Size(128, 60);
             this.uc_pacc.TabIndex = 0;
             // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.lblTJC);
+            this.groupBox15.Controls.Add(this.lblTKZ);
+            this.groupBox15.Controls.Add(this.label66);
+            this.groupBox15.Controls.Add(this.label65);
+            this.groupBox15.Location = new System.Drawing.Point(157, 247);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(130, 146);
+            this.groupBox15.TabIndex = 2;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "温控℃";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(37, 29);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(56, 16);
+            this.label65.TabIndex = 0;
+            this.label65.Text = "控制端";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(37, 86);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(56, 16);
+            this.label66.TabIndex = 0;
+            this.label66.Text = "监测端";
+            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTKZ
+            // 
+            this.lblTKZ.Font = new System.Drawing.Font("宋体", 18F);
+            this.lblTKZ.ForeColor = System.Drawing.Color.Red;
+            this.lblTKZ.Location = new System.Drawing.Point(6, 51);
+            this.lblTKZ.Name = "lblTKZ";
+            this.lblTKZ.Size = new System.Drawing.Size(118, 29);
+            this.lblTKZ.TabIndex = 1;
+            this.lblTKZ.Text = "35";
+            this.lblTKZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTJC
+            // 
+            this.lblTJC.Font = new System.Drawing.Font("宋体", 18F);
+            this.lblTJC.ForeColor = System.Drawing.Color.Red;
+            this.lblTJC.Location = new System.Drawing.Point(6, 108);
+            this.lblTJC.Name = "lblTJC";
+            this.lblTJC.Size = new System.Drawing.Size(118, 29);
+            this.lblTJC.TabIndex = 1;
+            this.lblTJC.Text = "35";
+            this.lblTJC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -4078,6 +4143,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.c1_pre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3_heat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2_acc)).EndInit();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4365,5 +4432,10 @@
         public PulseButton.PulseButton pulseButton2;
         public PulseButton.PulseButton pulseButton1;
         public PulseButton.PulseButton btnReturn;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label65;
+        public System.Windows.Forms.Label lblTJC;
+        public System.Windows.Forms.Label lblTKZ;
     }
 }
